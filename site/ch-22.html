@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>根芽#5 ｜ 解读项目，破除黑箱 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li class="active"><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>根芽#5 ｜ 解读项目，破除黑箱</h1>
+<blockquote>
+<p>显微镜看到的是细胞，X 光看到的是骨骼。理解一个系统，你需要的是 X 光。</p>
+</blockquote>
+<p>上一篇建立了功能需求的流程方法论：分析、设计、任务、执行、验证、归档。AI 按照 tasks.md 写完了代码，你回来一看，几千行新代码出现在项目里。代码能跑，测试也过了。但这就结束了吗？你真的理解这些代码吗？</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e16bbc042347407abe03e71f3b7f19cc~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1275&amp;h=558&amp;s=662118&amp;e=png&amp;b=fcf7f6" alt="image.png" /></p>
+<p>本章不仅是讲消息收发，这个具体功能的前端实现，更想聊一个更根本的问题：怎么看懂不是你写的代码。这个技能，无论是面对 AI 的产出、同事的代码、还是开源项目的源码，都一样适用。<strong>看懂代码</strong>，并不是说每一行都要完全读懂，而是要了解当前代码的结构、核心流程、实现方案，而不是技术细节。</p>
+<hr />
+<h4 id="一-黑箱一直都在">一、黑箱一直都在</h4>
+<p>黑箱（Black Box）是 <code>控制论</code> 里的概念。
+你有一个箱子，你能看到什么东西进去（输入），什么东西出来（输出），但你看不到里面发生了什么。你知道它能工作，但不知道它怎么工作。这其实和目前的 AI 编程非常像：</p>
+<blockquote>
+<p>AI 写得代码能跑，测试能过，但你不理解它内部的结构和逻辑。</p>
+</blockquote>
+<p>你知道输入（用户点发送）和输出（消息出现在屏幕上），但中间经过了哪些模块、数据怎么流转、状态怎么变化，你看不清。很多人觉得&quot;代码黑箱&quot;是 AI 编程带来的新问题。其实黑箱一直都在，只是以前我们习惯了，没把它当回事。</p>
+<hr />
+<h5 id="1-传统编程里的黑箱">1. 传统编程里的黑箱</h5>
+<p>当你接手一个十万行的项目，打开代码，每一行都是别人写的。<br />
+或是也你用了一个开源项目库，出了 bug，想看源码排查。打开一看，几百个文件，几万行代码。<br />
+甚至你回看三个月前写的代码，可能已经不知道为什么这样写。</p>
+<p>这些黑箱都指向了一个根源上的问题: <strong>代码本身就人类和计算机沟通的文字记录。</strong><br />
+它是天然对 <code>人类阅读</code> 不友好的，代码黑箱不是 AI 的专利。只要代码的意图不在你的记忆里，它对你就是黑箱。</p>
+<p>写代码是正向翻译，把人的意图翻译成机器能执行的流程指令。读代码是反向翻译，倒推回人的意图。反向翻译永远比正向翻译难，因为翻译过程中信息会衰减。你写代码时脑子里想的是&quot;这里要处理并发安全&quot;，但代码里只有一个 mutex lock。意图丢失了，只剩下了实现。</p>
+<p>传统编程中，人们一直在寻求通过技术手段来降低反向翻译的难度，形成编程界的公约和标准。</p>
+<ul>
+<li>命名规范把意图编码进变量名里（<code>userRepository</code> 比 <code>ur</code> 好读）。</li>
+<li>设计模式提供了程序员之间的共同语言（你看到 Observer 模式就知道这里有发布-订阅关系）。</li>
+<li>分层架构让你不用看代码就知道去哪找什么（数据操作在 Repository，业务逻辑在 Service，UI 在 View）。</li>
+<li>代码评审的核心问题是&quot;我能从你的代码里读出你的意图吗&quot;。</li>
+</ul>
+<p>这些手段的本质都是在试图让代码&quot;自解释&quot;。但它们有一个共同的上限：只能降低黑箱的密度，不能消除黑箱。因为翻译的有损性是根本的。再好的命名也无法表达&quot;我当时考虑了三个方案，最终选了这个，因为另外两个有什么问题&quot;。这种决策上下文，代码本身装不下。</p>
+<hr />
+<h5 id="2-ai-编程放大了黑箱">2. AI 编程放大了黑箱</h5>
+<p>AI 编程没有创造新的黑箱，但它把黑箱的增长速度提高了一个数量级。</p>
+<p>以前一个开发者一天写几千行代码，你花一天时间大概能读完。现在 AI 一天能生成几万行，你的阅读速度没变，但代码的产出速度变了。黑箱在以你跟不上的速度膨胀。</p>
+<p>更微妙的是：AI 写的代码&quot;看起来&quot;很合理。变量名规范，结构清晰，注释齐全。但 <code>&quot;看起来合理&quot;</code>和 <code>&quot;真的合理&quot;</code> 是两回事。AI 可能选了一个能跑但不该用的方案，可能引入了一个不必要的依赖，可能在某个边界条件上埋了一个坑。这些问题不会在&quot;能不能跑&quot;的层面暴露，只会在&quot;该不该这样做&quot;的层面暴露。</p>
+<p>传统编程里，黑箱的来源是&quot;别人写的代码&quot;。你至少可以去问那个人。AI 编程里，黑箱的来源是&quot;AI 写的代码&quot;。你没法问 AI &quot;你当时为什么这样写&quot;，因为它没有&quot;当时&quot;，它不记得上一次生成的上下文。每一次对话都是全新的。</p>
+<p>这意味着传统的对抗手段（代码评审、口头交流、找原作者问）在 AI 编程里部分失效了。你不能把 AI 拉进会议室问它&quot;这个设计的考量是什么&quot;。你能做的，是在代码之外建立一层可理解的抽象，让你不需要读每一行代码就能理解系统。</p>
+<p>上一篇建立的功能文档体系（analysis.md、design.md、tasks.md）就是在做这件事。它们记录的不是代码，而是代码背后的决策上下文，补上了翻译过程中丢失的那部分信息。但文档解决的是&quot;为什么这样做&quot;的问题。还有一个问题文档不直接回答：&quot;做出来的东西长什么样&quot;。这就需要另一种能力：读懂代码的结构。</p>
+<hr />
+<h5 id="3-不要读代码细节-要去读结构">3. 不要读代码细节，要去读结构</h5>
+<p>代码不是线性的叙事，它是网状的结构。函数调函数，模块依赖模块，数据在各层之间流转。你从任何一个点进去，都会被拉向四面八方。读完一个函数，你需要跳到它调用的三个函数，每个函数又调用了别的函数。很快你就忘了自己是从哪进来的。</p>
+<p>问题出在焦距上。你用显微镜去看一个城市，看到的是砖头的纹理，但你不知道这是医院还是学校。你需要的不是更强的显微镜，而是一张地图。代码也一样，模块之间怎么协作、数据怎么流转、状态怎么变化，这些结构层面的东西，是代码的&quot;地图&quot;。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8948a0351d054f95977f921a8dfdcf05~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1537&amp;h=807&amp;s=937663&amp;e=png&amp;b=faf0ed" alt="image.png" /></p>
+<p>医生不会通过观察每一个细胞来诊断病人。他先看 X 光片（骨骼），再看验血报告（血液），再看 CT（器官）。每一层抽象都在回答不同的问题。对于软件工程来说，也是类似：</p>
+<ul>
+<li>项目有哪些模块？是如何组织的？(骨骼)</li>
+<li>每个模块负责什么？，和其他模块如何写作?（器官）</li>
+<li>数据从哪来、到哪去、在哪合并？（血液）</li>
+<li>什么时候创建、什么时候销毁、谁在监听谁？（生命周期）</li>
+</ul>
+<p>这些问题比&quot;这一行代码做了什么&quot;重要得多。理解一个项目，可以有三个不同的焦距：</p>
+<table>
+<thead>
+<tr>
+<th>焦距</th>
+<th>看什么</th>
+<th>怎么看</th>
+<th>要发现的问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>远景</td>
+<td>模块与依赖</td>
+<td>看 pubspec.yaml、目录结构、barrel 文件，不打开源码</td>
+<td>不该有的依赖、循环依赖、层级混乱</td>
+</tr>
+<tr>
+<td>中景</td>
+<td>数据流与通道</td>
+<td>找 Repository、Stream、emit，只看入口和出口</td>
+<td>数据来源不清、同一份数据多处修改、通道混杂</td>
+</tr>
+<tr>
+<td>近景</td>
+<td>生命周期与事件</td>
+<td>找 listen、cancel、构造函数、销毁函数，关注时序</td>
+<td>忘记取消订阅、对象活得太长或太短、创建销毁不成对</td>
+</tr>
+</tbody>
+</table>
+<p>每一层都比上一层&quot;离代码更近&quot;，但都不需要逐行阅读。远景不打开任何源码文件就能看到，中景只看关键文件的入口和出口，近景看构造和销毁的配对关系。三个焦距合在一起，就是项目的完整画像。</p>
+<hr />
+<h4 id="二-解读消息收发">二、解读消息收发</h4>
+<p>上一章的功能文档，为我们描绘了某一功能实现过程中的所有细节。对于该功能来说，它是非常细致的。但是功能模块并非独立存在，它们将被集成到一个 <code>骨架</code> 中，需要和其他的模块交互、协作，完成任务。如果你无法把握这些脉络，那 AI 的工程迟早要失控。代码是 AI 写的，你可以通过和它交流，来 &quot;看到&quot; 当前项目的 <strong>风景</strong>，而不是对你的项目闭目不见，而置身事外。</p>
+<hr />
+<h5 id="1-远景-模块与依赖">1. 远景：模块与依赖</h5>
+<p>最远的焦距看到的是模块。一个项目有哪些模块？每个模块负责什么？谁依赖谁？
+以目前闪讯的前端为例，<code>client/modules/</code> 下有七个 package：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91f4213801b9431b9bcb8fc21550c383~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=619&amp;h=242&amp;s=16183&amp;e=png&amp;b=f3f6fb" alt="image.png" /></p>
+<p>AI 通过 yaml 中声明的依赖关系，就可以直接分析出模块间的依赖关系，如下所示：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0fcc4f57abb3475390ab8b06ba95dd80~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2076&amp;h=598&amp;s=99774&amp;e=png&amp;a=1&amp;b=f5f5f5" alt="mermaid-diagram (42).png" /></p>
+<p>可能是前期设计考虑不周，AI 生成的代码结构也不是百分百的完美。通过模块间的依赖关系，就可以很清晰地了解整体骨架，这样问题也容易暴露出来，比如这里发现 <code>flash_im_conversation</code> 依赖了 <code>flash_session</code>，我觉得不是很合理，于是直接询问：</p>
+<blockquote>
+<p>Q: flash_im_conversation 为什么会依赖flash_session</p>
+</blockquote>
+<p>此时 AI 会搜索对应模块的代码，找到 flash_im_conversation 中，哪里在使用 flash_session。最终发现，只是为了展示用户头像组件，反而引入了整个模块，这其实是不合理的：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6b7a0407a8d54c7c9cde32c92bdeda45~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=744&amp;h=269&amp;s=50082&amp;e=png&amp;b=eeedf1" alt="image.png" /></p>
+<blockquote>
+<p>Q: 为我在 docs\features\im\core\v0.0.3\client 修正这个不合理的依赖关系，重新更新设计和任务</p>
+</blockquote>
+<p>发现问题后，可以及时更正。建议不要直接让 AI 写代码，而是通过修改文档，来触发 AI 更新代码。这样才能保证文档的是最新的内容，因为过时的文档不如没有文档。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0fde251ea4a74c6cb7c1b9f1c18ff826~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2184&amp;h=598&amp;s=106385&amp;e=png&amp;a=1&amp;b=f6f6f6" alt="mermaid-diagram (43).png" /></p>
+<hr />
+<p>在远景中，一定要关注模块间的依赖关系。比如这里会话列表需要显示头像。头像组件（UserAvatar）在 flash_session 里。AI 走了最短路径：需要头像？直接依赖 flash_session。能跑，没报错。</p>
+<p>但这条依赖的语义是：<strong>&quot;会话列表模块知道用户登录会话的存在&quot;</strong>。会话列表需要知道用户怎么登录的吗？需要知道 token 怎么管理的吗？需要知道密码怎么修改的吗？都不需要。它只需要一个能渲染头像的组件。</p>
+<p>flash_session 里有几十个类：SessionCubit、SessionState、User、SessionRepository、SetPasswordPage、ChangePasswordPage、IdenticonAvatar、UserAvatar。会话列表只用了其中一个（UserAvatar），但依赖声明是模块级的。你依赖了 flash_session，就意味着 flash_session 的任何改动都可能影响你。密码管理页面重构了，会话列表要重新编译。这是不必要的耦合。</p>
+<p>更深一层：这条依赖破坏了层级结构。flash_session 和 flash_im_conversation 都是业务模块，它们应该是平级的，各自独立。一个业务模块依赖另一个业务模块，就像两个器官直接长在一起，切一个就伤另一个。</p>
+<p>解决方案很简单：把头像组件提到公共层（flash_shared），两个业务模块都依赖公共层，而不是互相依赖。依赖方向从&quot;平级互相引用&quot;变成&quot;都向下依赖公共层&quot;，层级就干净了。</p>
+<hr />
+<h5 id="2-中景-事件与数据流转">2. 中景：事件与数据流转</h5>
+<p>整体的骨架看完了，接下来看血液怎么流。数据在项目里通过什么路径流动？有几条通道？每条通道的特点是什么？闪讯前端有三条数据通道：</p>
+<table>
+<thead>
+<tr>
+<th>通道</th>
+<th>协议</th>
+<th>方向</th>
+<th>特点</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP</td>
+<td>请求-响应</td>
+<td>客户端主动</td>
+<td>拉取历史数据</td>
+<td>打开聊天页加载消息</td>
+</tr>
+<tr>
+<td>WebSocket</td>
+<td>帧推送</td>
+<td>服务端主动</td>
+<td>实时数据，随时可能来</td>
+<td>对方发来新消息</td>
+</tr>
+<tr>
+<td>内存状态</td>
+<td>Cubit emit</td>
+<td>内部</td>
+<td>乐观更新，纯内存，不经过网络</td>
+<td>点发送后消息立刻上屏</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a6ea12886ad744009d6f76621e75bf04~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1393&amp;h=485&amp;s=47109&amp;e=png&amp;b=f7f7f7" alt="image.png" /></p>
+<p>三条通道的数据格式不同（JSON / Protobuf 帧 / 本地 Message 对象），但经过 ChatCubit 合并后，都变成同一个 <code>List&lt;Message&gt;</code>，按 seq 排序，去重。UI 只监听 ChatCubit 的状态，不知道也不关心某条消息是从 HTTP 拉回来的、WebSocket 推过来的、还是本地乐观创建的。</p>
+<p>WebSocket 通道值得展开说。WsClient 是整个前端的实时数据枢纽，它从服务端收到的帧类型有很多种，但不同的业务模块只关心其中一部分。所以 WsClient 内部做了一件事：按帧类型广播到不同的 Stream。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/78a22211ea31487e9e50ba04f3053d8c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1961&amp;h=1522&amp;s=223466&amp;e=png&amp;a=1&amp;b=efefef" alt="mermaid-diagram (46).png" /></p>
+<p>WsClient 是广播站，它不知道有多少听众，也不关心。它只往 Stream 里扔数据。ChatCubit 订阅了 chatMessageStream 和 messageAckStream，收到后做三件事：过滤（是不是当前会话的？是不是自己发的？）、去重（message_id 有没有重复？）、合并（追加到列表，按 seq 排序）。ConversationListCubit 订阅了 conversationUpdateStream，收到后本地更新对应会话的预览、时间、未读数，然后重新排序。帧分发的代码只有一个 switch：</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_core/lib/src/logic/ws_client.dart
+switch (frame.type) {
+  case WsFrameType.CHAT_MESSAGE:
+    _chatMessageController.add(frame);
+  case WsFrameType.MESSAGE_ACK:
+    _messageAckController.add(frame);
+  case WsFrameType.CONVERSATION_UPDATE:
+    _conversationUpdateController.add(frame);
+  default:
+    break;
+}
+</code></pre>
+<p>三个 StreamController.broadcast()，消费者各取所需，互不干扰。新增一种帧类型时，只需要加一个 case 和一个 StreamController，不影响已有的消费者。</p>
+<hr />
+<p>接着以消息收发为例，看一条消息从发送到上屏的完整事件流。下图串联了三条通道：内存状态（创建临时消息 → emit）、WebSocket（发帧 → 收 ACK → 收 UPDATE）、Cubit 状态管理（匹配 pending → 更新列表）。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e660fce4017348ddb3f6a9396c7dc2a0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2714&amp;h=1926&amp;s=260279&amp;e=png&amp;a=1&amp;b=ececec" alt="mermaid-diagram (44).png" /></p>
+<p>ChatCubit 是消息收发的核心，它有三个关键方法，分别处理三种事件：</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_chat/lib/src/logic/chat_cubit.dart
+
+/// 发送消息：乐观更新 + WS 发帧 + 超时处理
+void sendMessage(String content) {
+  // 1. 创建临时消息，立刻上屏（内存状态通道）
+  final localMessage = Message.sending(localId, conversationId, currentUserId, content);
+  emit(current.copyWith(messages: [...current.messages, localMessage]));
+
+  // 2. 记录 pending，等 ACK 匹配
+  _pendingMessages[clientId] = localId;
+
+  // 3. 通过 WebSocket 发出去
+  _wsClient.sendMessage(conversationId: conversationId, content: content, clientId: clientId);
+
+  // 4. 10s 超时标记失败
+  Future.delayed(Duration(seconds: 10), () {
+    if (_pendingMessages.containsKey(clientId)) {
+      // 更新 status: sending → failed
+    }
+  });
+}
+
+/// 收到对方消息（来自 chatMessageStream）
+void _handleIncomingMessage(WsFrame frame) {
+  final chatMsg = ChatMessage.fromBuffer(frame.payload);
+  if (chatMsg.conversationId != conversationId) return;  // 不是当前会话，忽略
+  if (chatMsg.senderId == currentUserId) return;          // 自己发的，忽略
+  if (messages.any((m) =&gt; m.id == chatMsg.id)) return;    // 重复，忽略
+  // 追加到列表，按 seq 排序，emit
+}
+
+/// 收到 ACK（来自 messageAckStream）
+void _handleMessageAck(WsFrame frame) {
+  final ack = MessageAck.fromBuffer(frame.payload);
+  final localId = _pendingMessages.remove(clientId);
+  // 找到临时消息，替换 id/seq，status: sending → sent
+  // 按 seq 重新排序，emit
+}
+</code></pre>
+<p>三个方法，三种事件来源，最终都汇入同一个 <code>emit(ChatLoaded(messages))</code>。这就是中景焦距要看的东西：不是每一行代码怎么写，而是数据从哪来、经过什么处理、最终到哪去。</p>
+<p>怎么看数据流？三个关键词：找 Repository（HTTP 入口）、找 Stream 订阅（WebSocket 入口）、找 emit（状态出口）。顺着这三个词，就能画出任何一个模块的血管图。</p>
+<hr />
+<h5 id="3-近景-生命周期与事件">3. 近景：生命周期与事件</h5>
+<p>最近的焦距看到的是：什么时候创建、什么时候销毁、谁在监听谁。打个比方。WsClient 像一个日更的作者，每天都在发新章节（帧数据）。ChatCubit 和 ConversationListCubit 是读者，点了&quot;追更&quot;（subscribe）就能收到更新。但读者是会离开的：聊天页关了，ChatCubit 就不在了。如果它走的时候没有取消追更，作者还在往一个已经注销的账号推送通知，这就是内存泄漏。</p>
+<p>这块是最容易出 bug 的地方，也是 AI 最容易漏的地方。项目里的核心对象，生命周期长短不一：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9f2f36165b7e4cf683cbb1a3e84e4f60~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1335&amp;h=267&amp;s=30441&amp;e=png&amp;b=f1f0f4" alt="image.png" /></p>
+<p>WsClient 活得最长（登录到退出），ConversationListCubit 次之（首页存在期间），ChatCubit 最短（打开聊天页到关闭）。每次打开聊天页都会创建一个新的 ChatCubit，关闭时销毁。</p>
+<p>短命的需要监听长命的。ChatCubit 订阅 WsClient 的 Stream，但 ChatCubit 销毁时必须取消订阅，否则 WsClient 还在往一个已经不存在的对象里塞数据：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/949f2ee5480e4e2ca81a66ad0862bdb9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1340&amp;h=466&amp;s=76908&amp;e=png&amp;b=f7f7f7" alt="image.png" /></p>
+<p>代码上就是构造和销毁成对出现：</p>
+<pre><code class="language-dart">// 构造时订阅
+ChatCubit(...) : super(const ChatInitial()) {
+  _chatMessageSub = _wsClient.chatMessageStream.listen(_handleIncomingMessage);
+  _messageAckSub = _wsClient.messageAckStream.listen(_handleMessageAck);
+}
+
+// 销毁时取消
+@override
+Future&lt;void&gt; close() {
+  _chatMessageSub?.cancel();
+  _messageAckSub?.cancel();
+  return super.close();
+}
+</code></pre>
+<p>如果忘了 cancel，页面关闭后 Stream 还在往一个已经销毁的 Cubit 里塞数据，轻则内存泄漏，重则崩溃。这是 Flutter 里最常见的 bug 之一，AI 生成的代码有时候会漏掉。怎么看生命周期？找构造函数里的 listen，找 close/dispose 里的 cancel，看它们是不是成对的。再看对象是在哪里创建的，就知道它的生命周期有多长。</p>
+<hr />
+<h4 id="三-宿主环境装配">三、宿主环境装配</h4>
+<p>我们之前把模块比作拥有独立功能的 <strong>器官</strong>，但器官不能独立存活。它们需要一个宿主，把它们组装在一起，给它们供血（数据）、传导信号（事件）、编排生命节奏。</p>
+<p>在生物学里，宿主是寄生关系中提供生存环境的那一方。在软件里，宿主环境是模块运行的容器。模块自己不知道全局长什么样，不知道还有哪些其他模块存在，不知道自己的实例是怎么被创建的。这些都是宿主环境的事。</p>
+<hr />
+<h5 id="1-barrel-文件-模块的名片">1. barrel 文件：模块的名片</h5>
+<p>每个模块都有一个 barrel 文件（<code>lib/xxx.dart</code>），它是模块对外的唯一窗口。</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_chat/lib/flash_im_chat.dart
+export 'src/data/message.dart';
+export 'src/data/message_repository.dart';
+export 'src/logic/chat_cubit.dart';
+export 'src/logic/chat_state.dart';
+export 'src/view/chat_page.dart';
+export 'src/view/message_bubble.dart';
+export 'src/view/chat_input.dart';
+</code></pre>
+<p>上面的七行 export，就是这个模块的全部公开 API。外部只能看到这些类，内部的实现细节对外不可见。读一个陌生模块，先看 barrel 文件。它告诉你&quot;这个模块想让你知道什么&quot;。不在 barrel 里的东西，你不需要关心。这和人际交往一样：你认识一个人，先看他的名片，不会上来就翻他的日记。</p>
+<p>barrel 文件还暗示了模块的内部结构。data/、logic/、view/ 三个目录，对应数据层、逻辑层、视图层。这个三层架构在项目的每个模块里都一致。一致性是理解力的加速器：看懂一个模块的结构，就看懂了所有模块的结构。</p>
+<hr />
+<h5 id="2-宿主环境">2. 宿主环境</h5>
+<p>闪讯前端的宿主环境是外层的主工程，main.dart 是它的入口。从依赖关系中可以看出，宿主环境依赖所有的子模块，实现功能。在这里就是功能拼装的场所：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71e9bcbc7c4148848dae7b741b8d99fc~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=989&amp;h=636&amp;s=109356&amp;e=png&amp;b=fffafa" alt="image.png" /></p>
+<p>宿主环境做四件事：创建所有核心对象、建立它们之间的连接、注入到 Widget 树、定义路由和启动流程。模块只暴露接口（barrel 文件），宿主负责把接口对接起来。</p>
+<pre><code class="language-dart">// ---&gt; client/lib/main.dart
+runApp(
+  MultiRepositoryProvider(
+    providers: [
+      RepositoryProvider.value(value: wsClient),
+      RepositoryProvider.value(value: conversationRepo),
+      RepositoryProvider.value(value: messageRepo),
+    ],
+    child: BlocProvider.value(
+      value: sessionCubit,
+      child: FlashApp(router: router),
+    ),
+  ),
+);
+</code></pre>
+<p>读 main.dart 能回答三个问题：项目有哪些核心对象？它们之间怎么连接？依赖注入的入口在哪？
+宿主环境不在乎任何业务逻辑。它只做组装：创建对象、建立连接、注入依赖、定义路由。用一张图看 main.dart 的装配全景：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4fa1068852184d16bf0b2aca5e59e007~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3191&amp;h=886&amp;s=236465&amp;e=png&amp;a=1&amp;b=f9f9f9" alt="mermaid-diagram (47).png" /></p>
+<p>所有对象在 main.dart 里创建，通过 Provider 注入到 Widget 树。模块之间不直接传递实例，都从 context 里取。HttpClient 的 token 来自 SessionCubit，WsClient 的 token 也来自 SessionCubit。认证状态决定路由走向和 WebSocket 连接时机。</p>
+<hr />
+<h5 id="3-模块间的信号传递">3. 模块间的信号传递</h5>
+<p>宿主把模块组装在一起了，但模块之间不直接依赖。它们怎么协作？靠两种信号机制，一种像打电话，一种像听广播。</p>
+<p>打电话是回调穿透。会话列表点击一个会话，需要导航到聊天页。但 ConversationListPage 和 ChatPage 在两个不同的模块里。如果它们互相 import，就像两个邻居为了说句话把墙打通了，以后一个人装修另一个人也得跟着动。</p>
+<p>更好的方式是：ConversationListPage 暴露一个回调（&quot;有人敲门了&quot;），宿主环境（HomePage）决定怎么响应（&quot;带他去聊天页&quot;）。模块只负责报告事件，不做决策。决策权在宿主。</p>
+<pre><code class="language-dart">ConversationListPage(
+  onConversationTap: (conversation) {
+    // 宿主决定导航到哪
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) =&gt; ChatPage(conversationId: conversation.id, ...),
+    ));
+  },
+)
+</code></pre>
+<p>听广播是 Stream 订阅。WsClient 像一个电台，同时开着三个频道：消息频道（chatMessageStream）、确认频道（messageAckStream）、会话更新频道（conversationUpdateStream）。ChatCubit 打开聊天页时调到消息频道和确认频道，关闭聊天页时关掉收音机。ConversationListCubit 在首页期间一直听着会话更新频道。</p>
+<p>电台不知道有多少听众，听众也不知道还有谁在听同一个频道。两边完全解耦。新来一个听众（比如未来的&quot;在线状态模块&quot;），只需要调到对应频道，电台不用做任何改动。</p>
+<pre><code class="language-dart">// 电台：WsClient 开三个频道
+final _chatMessageController = StreamController&lt;WsFrame&gt;.broadcast();
+final _messageAckController = StreamController&lt;WsFrame&gt;.broadcast();
+final _conversationUpdateController = StreamController&lt;WsFrame&gt;.broadcast();
+
+// 听众 1：ChatCubit 打开聊天页时调频
+_chatMessageSub = wsClient.chatMessageStream.listen(_handleIncomingMessage);
+_messageAckSub = wsClient.messageAckStream.listen(_handleMessageAck);
+
+// 听众 2：ConversationListCubit 在首页期间一直听
+_updateSub = wsClient.conversationUpdateStream.listen(_handleUpdate);
+
+// 关收音机：ChatCubit 关闭聊天页时
+_chatMessageSub?.cancel();
+_messageAckSub?.cancel();
+</code></pre>
+<p>打电话是一对一的、同步的：我点了，你响应。听广播是一对多的、异步的：电台播了，谁在听谁收到。两种机制配合，模块之间既能协作，又不用互相认识。</p>
+<hr />
+<p>当你站在宿主环境之上，看见器官在系统中各司其职，看见血液沿着通道流向该去的地方，看见神经信号在模块之间精确地传导和断开，你对产品的生命，就有了真正的感知。不是对某一行代码的理解，而是对整个有机体的理解。</p>
+<p>这种感知，是 AI 给不了你的，也是 AI 替代不了你的。但它可以辅助你认知，帮助你 <code>&quot;看见&quot;</code> 你的产品。代码会越来越多，黑箱会越来越大。但只要你能看见结构，黑箱就只是一层外壳。外壳里面，生命在运转。只有你真正看见了你的应用程序，理解它的骨骼、血液和神经，它才拥有广阔的成长空间。看不见的东西，你无法引导它生长。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c5abb6c60f604d61bb3f2f982c12acca~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1296&amp;h=567&amp;s=782474&amp;e=png&amp;b=f9f3f0" alt="image.png" /></p>
+<hr />
+<h5 id="4-关于消息的测试">4. 关于消息的测试</h5>
+<p>目前，已经完成了如下的会话消息收发功能，大家可以准备两个设备，登录不同的账号来体验一下。比如现在种子里 <code>13800010001</code> 是用户 <code>朱红</code> ； <code>13800010002</code> 是用户 <code>橘橙</code>；下面是我用两台模拟器测试的效果：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a089e6dc10ef437a93eb2c5e684458f8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=690&amp;h=776&amp;s=1164688&amp;e=gif&amp;f=224&amp;b=f8f8f6" alt="15.gif" /></p>
+<p>大家有没有想过，如果我的手上没有这么多设备，而且登录不同的账号比较麻烦。如何要测朱红和别的用户间的聊天，怎么办呢？</p>
+<p>不知道你是否还记得，之前 python 做过 <code>ws_chat_test</code> 的测试，可以给制定的用户发消息。那么可以:</p>
+<blockquote>
+<p>Q: 为我准备一个 python 脚本，可以让 id=x 用户，向 id=y 的用户，发送 text= z 的消息。<br />
+其中 x,y,z 作为脚本参数。</p>
+</blockquote>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e41ac98aa93439c94cf92c204dd57aa~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1047&amp;h=410&amp;s=72537&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>这样，通过脚本，就可以以任何用户的角色，向任何人发一个文本消息。对测试阶段非常友好。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/398989af04e24f56a8f1631f589cb381~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1454&amp;h=456&amp;s=91328&amp;e=png&amp;b=0f0f0f" alt="image.png" /></p>
+<hr />
+<h4 id="四-本章小结">四、本章小结</h4>
+<p>本章在分析时，修复了一些小的问题，也进行一些归档：</p>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>消息收发后端链路</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/releases/tag/v0.10.1">v0.10.1</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/48dae06">48dae06</a></td>
+</tr>
+</tbody>
+</table>
+<p>三个焦距，加上宿主环境的装配全景，构成了一套完整的代码阅读方法。它不依赖任何特定的技术栈，Rust 项目看 Cargo.toml，Flutter 项目看 pubspec.yaml，入口不同，方法相同。</p>
+<table>
+<thead>
+<tr>
+<th>焦距</th>
+<th>看什么</th>
+<th>怎么看</th>
+<th>回答什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>远景</td>
+<td>模块与依赖</td>
+<td>pubspec.yaml / Cargo.toml</td>
+<td>骨骼怎么连？</td>
+</tr>
+<tr>
+<td>中景</td>
+<td>事件与数据流转</td>
+<td>Repository / Stream / emit</td>
+<td>血液怎么流？</td>
+</tr>
+<tr>
+<td>近景</td>
+<td>生命周期</td>
+<td>listen / cancel / 构造 / 销毁</td>
+<td>神经怎么传导？</td>
+</tr>
+</tbody>
+</table>
+<p>这套方法在 AI 编程时代尤其重要。不是因为 AI 写的代码更难读，而是因为代码产生的速度变了。你不可能逐行跟上，但你可以在每一轮 AI 产出之后，花十分钟做一次&quot;体检&quot;：依赖有没有长歪？数据流有没有绕弯路？生命周期有没有漏掉 cancel？十分钟的体检，比十小时的逐行阅读有效得多。</p>
+<p>这也是本书一直在做的事情。从功能网络到功能文档，从交互链到逻辑树，从 analysis 到 archiver，每一个工具都在帮你&quot;看见&quot;。代码是 AI 写的，但看见产品的人，是你。</p>
+<p>到这里，闪讯已经长出了嫩芽，下一篇，我们在让它继续生长：增加图片、视频与文件消息的支持。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-21.html">← 根芽#4 ｜ 流程方法论探索</a>
+      <a class="next" href="ch-23.html">根芽#6 ｜ 图片、视频、文件消息 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-黑箱一直都在">一、黑箱一直都在</a></li>
+      <li class="lv5"><a href="#1-传统编程里的黑箱">1. 传统编程里的黑箱</a></li>
+      <li class="lv5"><a href="#2-ai-编程放大了黑箱">2. AI 编程放大了黑箱</a></li>
+      <li class="lv5"><a href="#3-不要读代码细节-要去读结构">3. 不要读代码细节，要去读结构</a></li>
+      <li class="lv4"><a href="#二-解读消息收发">二、解读消息收发</a></li>
+      <li class="lv5"><a href="#1-远景-模块与依赖">1. 远景：模块与依赖</a></li>
+      <li class="lv5"><a href="#2-中景-事件与数据流转">2. 中景：事件与数据流转</a></li>
+      <li class="lv5"><a href="#3-近景-生命周期与事件">3. 近景：生命周期与事件</a></li>
+      <li class="lv4"><a href="#三-宿主环境装配">三、宿主环境装配</a></li>
+      <li class="lv5"><a href="#1-barrel-文件-模块的名片">1. barrel 文件：模块的名片</a></li>
+      <li class="lv5"><a href="#2-宿主环境">2. 宿主环境</a></li>
+      <li class="lv5"><a href="#3-模块间的信号传递">3. 模块间的信号传递</a></li>
+      <li class="lv5"><a href="#4-关于消息的测试">4. 关于消息的测试</a></li>
+      <li class="lv4"><a href="#四-本章小结">四、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

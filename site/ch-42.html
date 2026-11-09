@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>果实#8 ｜ 构建纯血鸿蒙产品 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li class="active"><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>果实#8 ｜ 构建纯血鸿蒙产品</h1>
+<p>闪讯目前的构建，已经覆盖了 <strong>Android、iOS、macOS、Windows、Linux、Web</strong> 六大平台。这是 Flutter 官方支持的所有平台，但除此之外目前还有一个正在成长的国内操作系统： HarmonyOS 纯血鸿蒙的平台。</p>
+<ul>
+<li><code>好消息</code>是：Flutter 可以支持构建出鸿蒙产物</li>
+<li><code>坏消息</code>是: 不是 Google 官方的 Flutter，而且目前最高版本是 3.41.10</li>
+</ul>
+<p>鸿蒙在对跨平台的支持上一直很用心，特别是 Flutter，从版本来看，和 Flutter 官方的稳定版已经非常接近了。我个人也在鸿蒙应用商店上架了三款 Flutter 构建的鸿蒙应用。本篇将从 0 开始，看看我们的闪讯如何构建出 HarmonyOS 的产品。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/637e5ef4af9140ffb27e3b5c72eef2de~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1046&amp;h=333&amp;s=43566&amp;e=png&amp;b=f5f7f8" alt="image.png" /></p>
+<p>本章代码更新在：<a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.30.0"> v0.30.0 迭代</a></p>
+<hr />
+<h4 id="一-前置环境准备">一、前置环境准备</h4>
+<p>鸿蒙版 Flutter 由 OpenHarmony-SIG 维护，发布在 gitcode 。</p>
+<blockquote>
+<p><code>https://gitcode.com/openharmony-tpc/flutter_flutter</code></p>
+</blockquote>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/23851d4736344300bb56d6b8d6c7eefd~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1502&amp;h=498&amp;s=116536&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<hr />
+<h5 id="1-下载-sdk">1. 下载 SDK</h5>
+<p>在前几章我们知道，构建出产品最核心的是 Flutter SDK 。而这个仓库，这就是构建鸿蒙应用需要的定制款 Flutter SDK 。我们需要把它下载下来，切换到 <strong>3.41.10-ohos-0.0.1-canary1</strong> 标签：</p>
+<pre><code># 下载仓库
+git clone https://gitcode.com/openharmony-sig/flutter_flutter.git
+
+# 切换到 3.41.10-ohos-0.0.1-canary1 标签
+cd flutter_flutter
+git checkout 3.41.10-ohos-0.0.1-canary1
+</code></pre>
+<p>SDK 准备完毕后，通过下面命令，查看当前 flutter_ohos 环境</p>
+<pre><code>cd bin
+.\flutter doctor
+</code></pre>
+<p>出现了下面的问题是很正常的，说明鸿蒙相关构建工具链环境没有配好，需要进行后续处理。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8aeddad90ae24472b0ab0cbc105b59a8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=983&amp;h=348&amp;s=77941&amp;e=png&amp;b=010101" alt="image.png" /></p>
+<hr />
+<h5 id="2-下载-deveco-studio-ide-工具">2. 下载 DevEco Studio IDE 工具</h5>
+<p>IDE 是编辑代码的场所，也是编译、运行、调试、发布等功能的工具箱。也是上面缺失的鸿蒙构建工具链的来源，安装好 IDE 这一步将至关重要:</p>
+<blockquote>
+<p>DevEco Studio 下载地址: https://developer.huawei.com/consumer/cn/download/</p>
+</blockquote>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/29481f6ad2a14b4fb9b6177425a775b3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1477&amp;h=723&amp;s=201659&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<p>工具安装非常简单，双击一直下一步即可，重要的是记一下安装的路径，比如我这里是：</p>
+<blockquote>
+<p>C:\toly\Soft\IDE\DevEco Studio</p>
+</blockquote>
+<hr />
+<h5 id="3-配置环境变量">3. 配置环境变量</h5>
+<p>其中 TOOL_HOME 是 DevEco-Studio 的地址。新版的 DevEco-Studio 中已经内置了 <code>ohpm</code>、<code>node</code>、<code>hvigor</code> 环境：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b47f792df29247cc9c5e623286fe5949~tplv-k3u1fbpfcp-jj:0:0:0:0:q75.image#?w=956&amp;h=433&amp;s=33470&amp;e=png&amp;b=ffffff" alt="" /></p>
+<ul>
+<li>macos 配置环境变量</li>
+</ul>
+<pre><code> # HamonyOS SDK
+ export TOOL_HOME=/Applications/DevEco-Studio.app/Contents 
+ export DEVECO_SDK_HOME=$TOOL_HOME/sdk 
+ export PATH=$TOOL_HOME/tools/ohpm/bin:$PATH 
+ export PATH=$TOOL_HOME/tools/hvigor/bin:$PATH 
+ export PATH=$TOOL_HOME/tools/node:$PATH 
+ export PATH=$TOOL_HOME/jbr/bin:$PATH 
+</code></pre>
+<ul>
+<li>windows 配置环境变量</li>
+</ul>
+<pre><code>TOOL_HOME = DevEco安装路径
+DEVECO_SDK_HOME = %TOOL_HOME%\sdk
+HOS_SDK_HOME=%TOOL_HOME%\sdk\default\hms
+# Path 路径:
+下载仓库路径\bin
+%TOOL_HOME%\tools\ohpm\bin
+%TOOL_HOME%\tools\hvigor\bin
+%TOOL_HOME%\tools\node
+%TOOL_HOME%\jbr\bin 
+</code></pre>
+<p>再查看一下，出现对钩即可。到这里，Flutter for 鸿蒙的环境就搭建完了。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c781e198e7104b66b798489a4727000f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=786&amp;h=159&amp;s=33966&amp;e=png&amp;b=020202" alt="image.png" /></p>
+<hr />
+<h4 id="二-构建鸿蒙产品流程">二、构建鸿蒙产品流程</h4>
+<p>对于 Flutter 鸿蒙版而言，构建过程要艰难一些，过程中可能出现插件的不支持。构建出产品是从 0 到  1 的质变，我们需要逐一破除这些兼容问题，才能让 Flutter 鸿蒙版产品破壳而出。</p>
+<hr />
+<h5 id="1-已有的-flutter-项目支持鸿蒙">1. 已有的 Flutter 项目支持鸿蒙</h5>
+<p>前面我们知道，对于 Flutter 项目而言，每个平台产品都有一个宿主项目，承载对应平台的配置和构建, 被 android、ios、web 等。鸿蒙平台也是一样，但是但谷歌官方的 Flutter 并无法生成鸿蒙的宿主项目。<br />
+构建鸿蒙相关 flutter 命令，都要使用 flutter_flutter ，我这里都使用绝对路径来调用。下面的命令会创建 <code>ohos</code></p>
+<pre><code>cd client 
+C:\toly\SDK\Flutter\flutter_flutter\bin\flutter.bat create --platforms ohos .
+</code></pre>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9a7204440814484897bd823943853ebe~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=986&amp;h=667&amp;s=50080&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<hr />
+<h5 id="2-处理插件的兼容性">2. 处理插件的兼容性</h5>
+<p>一些和平台相关的三方插件，本身不支持鸿蒙，比如 <code>path_provider</code> 需要调用原生的能力获取相关路径。但是 pub 上的插件没有兼容鸿蒙，所以编译时就会报错。需要在 <code>dependency_overrides</code> 覆写一下支持鸿蒙的版本：</p>
+<pre><code class="language-yaml">dependency_overrides:
+  path_provider:
+    git:
+      url: &quot;https://gitcode.com/openharmony-tpc/flutter_packages.git&quot;
+      path: &quot;packages/path_provider/path_provider&quot;
+  shared_preferences:
+    git:
+      url: &quot;https://gitcode.com/openharmony-tpc/flutter_packages.git&quot;
+      path: &quot;packages/shared_preferences/shared_preferences&quot;
+  path_provider_foundation: 2.4.4
+  package_info_plus:
+    git:
+      url: &quot;https://gitcode.com/CPF-Flutter/flutter_plus_plugins.git&quot;
+      ref: br_package_info_plus-v9.0.0_ohos
+      path: &quot;packages/package_info_plus/package_info_plus&quot;
+  objective_c: 2.0.0
+  record_linux: ^1.3.0
+  flutter_svg: ^2.3.0
+  webview_flutter: ^4.10.0
+  device_info_plus: ^11.0.0
+  uuid: ^4.5.0
+  sign_in_with_apple: ^6.1.0
+  tolyui_rx_layout: 1.0.2+1
+  tolyui_feedback: 0.3.6+16
+</code></pre>
+<p>另外关于 <code>drift</code> 数据库依赖的 <code>sqlite3</code> 目前还不支持鸿蒙，并在编译过程中会出错。这块暂时决定在鸿蒙平台剔除本地缓存层，只使用线上数据。等插件未来支持后，再开放接入。这块的处理比较复杂，也很富有模块拆分的思想价值，所以打算下面独立小段介绍。</p>
+<p>如果处理完毕，通过 <code>build hap --release</code> 即可构建鸿蒙的产物。如果看到需要配置调试签名的提示，那么恭喜你，即将成功。</p>
+<pre><code>C:\toly\SDK\Flutter\flutter_flutter\bin\flutter.bat build hap --release
+</code></pre>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cad9deb9bc024f7ca822ff0c41fe66b6~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1100&amp;h=169&amp;s=35881&amp;e=png&amp;b=010101" alt="image.png" /></p>
+<hr />
+<h5 id="3-运行起来鸿蒙应用">3. 运行起来鸿蒙应用</h5>
+<p>错误提示说，需要用 DevEco Studio 来设置签名。如下所示，可以打开刚才生成的 ohos 项目。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c9ac995b6c4c45c29cc2fbf032a24913~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1161&amp;h=645&amp;s=58584&amp;e=png&amp;b=383a3c" alt="image.png" /></p>
+<p>右上角操作，打开项目配置面板，签名配置选择自动生成签名：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/727199318f404008b7597a4e2ca8bc2b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1585&amp;h=648&amp;s=108329&amp;e=png&amp;b=3e4143" alt="image.png" /></p>
+<p>重新  <code>build hap --release</code>，可以看到成功构建出了 hap 包</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/520de3ff819e45cfb55b7ca03b18ed0c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1103&amp;h=112&amp;s=24648&amp;e=png&amp;b=010101" alt="image.png" /></p>
+<p>此时创建一个鸿蒙的模拟器，可以运行成功闪讯：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ea31ec571604ae694aa641a95cfb6e8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1749&amp;h=1184&amp;s=362640&amp;e=png&amp;b=2f2e2e" alt="image.png" /></p>
+<p>自此，闪讯在七个平台成功点亮，你可以在任意平台设备上使用它。核心功能都是一套代码维护，体验上没有太大的差异，最重要的是:</p>
+<blockquote>
+<p>所有的功能迭代均由 AI 完成，这是 <strong>闪讯</strong> 强大生命力的源泉。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>登录页</th>
+<th>消息</th>
+<th>通讯录</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/04d683786873410e9cfc828dc0e1b41c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1320&amp;h=2856&amp;s=351047&amp;e=png&amp;b=f7f9fb" alt="Screenshot_2026-06-04T070857.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d984e35a47684695b1f6d3b58a65e3ed~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1320&amp;h=2856&amp;s=417907&amp;e=png&amp;b=fbfbfb" alt="Screenshot_2026-06-04T070753.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b9631bc9fbda4fe4881412499a020433~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1320&amp;h=2856&amp;s=237153&amp;e=png&amp;b=fafafa" alt="Screenshot_2026-06-04T070821.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="三-发布到鸿蒙应用市场">三、发布到鸿蒙应用市场</h4>
+<p>本地运行完毕，我们来看看如何把应用发布到鸿蒙市场。首先说一点: 鸿蒙的市场生态和 iOS 非常像，都是通过应用市场统一分发，是不支持侧载的，也就是说不能直接下载安装包进行安装。发布流程也很相似:</p>
+<blockquote>
+<p>创建 APP → 签名打包 → 上传 → 完善信息 → 提交审核。</p>
+</blockquote>
+<hr />
+<h5 id="1-创建一个应用">1. 创建一个应用</h5>
+<p>在 <strong>AppGallery Connect</strong> 里登录后，可以查看和管理你的鸿蒙 APP：</p>
+<blockquote>
+<p>https://developer.huawei.com/consumer/cn/service/josp/agc/index.html#/</p>
+</blockquote>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8d8a30478bbe4efb83440b9558b2f551~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1402&amp;h=691&amp;s=645959&amp;e=png&amp;b=dce5f0" alt="image.png" /></p>
+<ul>
+<li>进入后，<strong>右上角</strong>/<strong>新建发布</strong> ，这里可以新增，填写应用名和包名：</li>
+</ul>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/96bccf08d0804686a2f99dd76ff479ef~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=849&amp;h=173&amp;s=15665&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<p>创建完会展示出来，点击就可以进入该应用的后台，维护应用的基本信息，与提交审核了。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4a424b83353a4bdd8fb63feb12bae761~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1136&amp;h=280&amp;s=24336&amp;e=png&amp;b=fcfcfc" alt="image.png" /></p>
+<hr />
+<h5 id="2-正式签名与打包上传">2. 正式签名与打包上传</h5>
+<p>我们刚才自动创建的签名是调试版的，不能作为发布证书。想要发布的话，需要生成一套发布版的签名和证书。在 DevEco Studio 里操作如下：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dde8682b334e4dae9dcf99b346a6dbc2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1007&amp;h=306&amp;s=53372&amp;e=png&amp;b=3d4042" alt="image.png" /></p>
+<table>
+<thead>
+<tr>
+<th>生成私钥</th>
+<th>生证书</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ab2aabdb59654a45b7ee25b923d65a7b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=810&amp;h=579&amp;s=53282&amp;e=png&amp;b=3e4143" alt="image.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f535796600714127885bd2383e8ba2cf~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=849&amp;h=533&amp;s=54305&amp;e=png&amp;b=3d4042" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>这两步会生成如下两个产物，请妥善保管：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/527ac5c6831f41a988430ae95b18194f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1004&amp;h=339&amp;s=34016&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<hr />
+<h5 id="3-获取发布证书">3. 获取发布证书</h5>
+<p>这里和 Apple 的后台管理很像，在这里管理证书 APPID 和 Profile 文件：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/251489e34e4c4c278703714a2581c81b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1175&amp;h=222&amp;s=20725&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>右上角新建一个发布证书，CSR 选择刚才创建的 <code>xxx.csr</code> 文件 ：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f1c2d71c377c4b918555caf446e06c29~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=897&amp;h=270&amp;s=30802&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<p>创建完毕后，点击下载，你就得到了发布证书：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/730047f20bac4c86802ffdd602aa65fe~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1247&amp;h=197&amp;s=17829&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<p>处理发布证书外，还需要准备 Profile 文件，也是创建、填写、下载：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/173548438a4c4020a8937ecc31a610eb~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1312&amp;h=615&amp;s=55789&amp;e=png&amp;b=fdfdfd" alt="image.png" /></p>
+<p>这样，你就有了如下的四个文件文件，建议你把它们收放在一起妥善保管，如果弄丢了，就再按照上面的流程新建一套。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e28eae89a16548329602bc88bf79651f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1013&amp;h=416&amp;s=45621&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>接下来，在刚才证书配置的地方，添加一个 release 签名：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e627b012a2749c39985543488474d9b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1171&amp;h=544&amp;s=50441&amp;e=png&amp;b=2f3234" alt="image.png" /></p>
+<p>把刚才几个文件选择填充进去即可：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a52281a58cc348e3a72f972cfae699b8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1416&amp;h=772&amp;s=85130&amp;e=png&amp;b=3e4044" alt="image.png" /></p>
+<hr />
+<h5 id="4-构建与上传">4. 构建与上传</h5>
+<p>DevEco Studio 中可以直接构建上传到 APP 商店，首先我们需要如下所示，选择 release 的构建模式：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1ff24009da0f4f1383d47a1620684d70~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1138&amp;h=328&amp;s=46016&amp;e=png&amp;b=3c3f41" alt="image.png" /></p>
+<p>在 <code>client\ohos\build-profile.json5</code> 中你会看到刚才添加的 release 签名，在 <code>signingConfig</code> 中设置 release ，表示启用正式版签名证书：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2d9a04d9a5584f7e8d4b5b63fae7321a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1427&amp;h=742&amp;s=167675&amp;e=png&amp;b=2f2e2e" alt="image.png" /></p>
+<p>最后在 <strong>构建/上传产品</strong> 中，就可以一键构建上传了。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/330c7e4997ab404e8c64519a145b7381~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=963&amp;h=316&amp;s=51597&amp;e=png&amp;b=3c3f41" alt="image.png" /></p>
+<p>成功后，你会在后台产品的版本信息下，看到可选择的版本。这样你就具有了提交软件的所有前提。另外，根据国家规定，国内软件上架一般都需要软著、资质 这块大家就自己处理吧，已经不是技术范畴了。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/565aa378deea432b9852c5c8419bb158~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1509&amp;h=645&amp;s=98514&amp;e=png&amp;b=7d7d7d" alt="image.png" /></p>
+<hr />
+<h4 id="四-优化可维护性">四、优化可维护性</h4>
+<p>为了支持鸿蒙，很多时候回带给项目带来一些破坏性的改变。或者某些功能因鸿蒙平台的不支持，不得不砍掉。面对这种在真实场景中存在的差异。我们需要有一定的手段去保证项目的可维护性，下面就本地缓存功能的插拔为例，介绍一下短期无法兼容功能时，该怎么办。</p>
+<hr />
+<h5 id="1-数据库的囧境">1. 数据库的囧境</h5>
+<p>闪讯使用 drift 作为本地数据库 ORM。drift 底层通过 <code>dart:ffi</code> 加载原生 SQLite 库。这条链路在六个平台上都能正常工作，但在鸿蒙上断了：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d8e7f450954f4e7b8fde002c2e53bb69~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2254&amp;h=328&amp;s=68913&amp;e=png&amp;a=1&amp;b=eeeeee" alt="mermaid-diagram - 2026-06-04T231901.973.png" /></p>
+<p><code>sqlite3</code> 包的构建 hook 不认识 <code>ohos</code> 平台，<strong>编译直接失败</strong>。这不是运行时的问题——只要 <code>sqlite3</code> 出现在依赖树里，hook 就会触发，不管你运行时用不用它。</p>
+<p>以前我使用的本地缓存是 <code>sqflite</code>，它已经有了鸿蒙版的兼容插件，但目前 AI 已经选用 drift 迭代了这么多版本，感觉这时候换掉动静有点大。倒不如暂且去掉本地缓存的支持，仅使用网络数据。我们目前的架构，要做到这一点有多难呢？</p>
+<hr />
+<h5 id="2-结构分级的优势">2. 结构分级的优势</h5>
+<p>在解决方案之前，先看看为什么闪讯的数据层 <strong>能够</strong> 被轻松拆解。航天火箭是分级结构：一级发动机负责起飞、二级负责入轨、三级负责变轨。每一级通过标准化的级间连接器对接——拆掉一级不影响二级的工作，换一个更强的一级也不需要重新设计整个火箭。</p>
+<p>很幸运的是: 闪讯的数据层也是这样设计的。在之前的缓存章节中，我们设计了如下的分层结构：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9dd62828a4414cb1a51da94ce7804e9c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1832&amp;h=861&amp;s=110062&amp;e=png&amp;a=1&amp;b=f9f7f7" alt="mermaid-diagram - 2026-06-04T232738.942.png" /></p>
+<p>业务模块只依赖 <code>LocalStore</code> 接口，不直接接触 drift 的任何类型。这意味着<strong>实现层是可更换的</strong>——如果未来需要换成 Hive、Isar、sqflite 或其他方案，只需要新建一个 <code>XxxLocalStore implements LocalStore</code>，业务层一行都不用改。这就像火箭的载荷舱不需要知道，下面装的是液氧煤油、发动机、还是氢氧发动机——它只关心&quot;推力接口&quot;是否满足。</p>
+<p>其实，这就是 <strong>依赖倒置原则（Dependency Inversion Principle, DIP）</strong></p>
+<blockquote>
+<p>高层模块不应该依赖低层模块，两者都应该依赖抽象。</p>
+</blockquote>
+<p>在这里，ChatCubit（高层）不依赖 DriftLocalStore（低层），两者都依赖 LocalStore（抽象）。正是这个原则让我们今天能把&quot;发动机&quot;拆下来换一个，而&quot;载荷舱&quot;纹丝不动。</p>
+<p>设计原则或者是设计模式，其实并不是书本上空洞的文字，而是在非常具体的场景下，在系统中发挥效力的关键链条。它是在真实工程困境中，撑住系统不崩塌的那根关键链条。</p>
+<hr />
+<h5 id="3-将-drift-实现独立拆分出去">3. 将 drift 实现独立拆分出去</h5>
+<p>首先说说我们要的结果是什么，然后再向结果去努力:</p>
+<blockquote>
+<p>在构建 <strong>鸿蒙产物</strong> 时，不依赖 drift 插件，从源头彻底剔除。可以保障编译正常。<br />
+在构建 <strong>其他平台</strong> 时，保持之前的功能，把 drift 插件实现加进来。保证功能完整。</p>
+</blockquote>
+<p>目前的状态缓存相关功能都内聚在 <code>flash_im_cache</code> 模块中，包括 <code>drift</code> 的实现。如果不引用这个库  LocalStore（抽象）将无法访问，而引入这个库 <code>drift</code> 的依赖又会被加入：</p>
+<pre><code class="diagram" style="font-size:13.5px">flash_im_cache/
+├── local_store.dart          ← 抽象接口
+├── models/                   ← 纯 Dart 模型
+├── sync_engine.dart          ← 同步引擎
+└── drift/                    ← drift 实现（依赖 drift/sqlite3）
+    ├── drift_local_store.dart
+    ├── database/
+    └── dao/
+</code></pre>
+<hr />
+<p>在编程中，有一个概念叫做 <strong>抽象与实现分离</strong>。它不只是代码层面类与类的关系，也可以作用于模块的拆解分离。但放到眼前的困境里，它变成了一把非常具体的手术刀：把 flash_im_cache 拆分为两级：</p>
+<ul>
+<li><code>flash_im_cache</code> 是纯接口包：只装&quot;契约&quot;（LocalStore 抽象、纯 Dart 模型、SyncEngine），不依赖<code>drift</code> 等具体的库。轻如空气，谁都能引。</li>
+<li><code>flash_im_cache_drift</code> 实现包：只装&quot;兑现契约的人&quot;（DriftLocalStore + AppDatabase + DAO），依赖 drift/sqlite3 那些沉重的原生链路。</li>
+</ul>
+<p>拆完之后，上层业务模块只引接口包。鸿蒙构建时不引实现包，依赖树里就不会出现 sqlite3，hook 自然无从触发。其他平台照常引入实现包，功能完整。</p>
+<p>这就像一份合同和一个承包商的关系：甲方（业务模块）只关心合同条款（接口），不关心哪个施工队来干活。换一支施工队，合同不用重签。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/80886056612444aa9413fa0d01544e4c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=601&amp;h=132&amp;s=18459&amp;e=png&amp;b=f7f8fa" alt="image.png" /></p>
+<hr />
+<h5 id="4-内聚与解耦合">4. 内聚与解耦合</h5>
+<p>&quot;内聚&quot;和&quot;解耦&quot;是一对镜像概念。</p>
+<ul>
+<li>内聚是向内看：一个模块内部的东西是否属于同一个关注点；</li>
+<li>解耦是向外看：模块之间是否只通过最小化的契约连接。</li>
+</ul>
+<p>这里 flash_im_cache 之所以能被干净地一分为二，恰恰是因为它同时满足了这两件事：</p>
+<p><strong>内聚表现</strong></p>
+<p>drift 的所有类型（AppDatabase、Companion、TableData、DAO）被严格限制在 drift/ 目录内部。它们从不出现在 LocalStore 的方法签名里，从不被上层 import。ORM 的血液在内部闭环循环，一滴都没有泄漏到外面。这不是偶然，这是有意为之的边界纪律。</p>
+<p><strong>解耦表现</strong></p>
+<p>层模块（ChatCubit、ConversationRepository）和数据实现之间，唯一的连接点是 LocalStore 这根细线。细到二十几个方法签名，参数全是纯 Dart 模型。没有泛型绑定 drift 类型，没有 Companion 或 TableData 暴露给外部。</p>
+<p>当这两个条件同时成立时，拆分的切面就是天然的。沿着 drift/ 目录的边界切一刀，两块组织各自完整，切面是干净的，没有粘连。如果当初偷了懒，让 ChatCubit 直接 import AppDatabase，让 ConversationRepository 直接访问 drift，今天这一刀就不是&quot;搬个目录&quot;，而是&quot;全身换血&quot;。这大概是依赖倒置原则最实在的回报。</p>
+<blockquote>
+<p>你在设计时多花的那十分钟定义接口，在未来某个你根本无法预见的时刻，省下了你十天的重构。</p>
+</blockquote>
+<p>如果此时想更换数据库为 sqflite，逻辑完全相同：再写一个 flash_im_cache_sqflite，实现 LocalStore 接口允诺的契约即可。系统不关心谁在兑现承诺，只关心承诺被兑现。</p>
+<hr />
+<p>在代码层面，<code>localStore</code> 的具体实现，在 main.dart 的装配中提供。这样</p>
+<ul>
+<li>在 <code>鸿蒙平台</code>：不引入实现包，drift/sqlite3 从依赖树中彻底消失</li>
+<li>其他六个平台：引入 flash_im_cache_drift 实现包，注入 DriftLocalStore ，让功能完整。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>鸿蒙：不引入实现包</th>
+<th>其他平台，引入实现包，功能完整</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/33915c9fe07249899b73b6ac13baee54~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1594&amp;h=769&amp;s=102559&amp;e=png&amp;a=1&amp;b=faf7f7" alt="mermaid-diagram - 2026-06-05T063243.554.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bfa2119321944f75a89679e70d81f6da~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1726&amp;h=979&amp;s=129168&amp;e=png&amp;a=1&amp;b=faf8f8" alt="mermaid-diagram - 2026-06-05T063156.204.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>切换实现只需要改 <code>main.dart</code> 中的一行：</p>
+<pre><code class="language-dart">----&gt;[lib/main.dart]----
+// 六平台
+localStore = await DriftLocalStore.open(user.userId);
+
+// 鸿蒙
+localStore = EmptyLocalStore();
+</code></pre>
+<hr />
+<h5 id="5-构建时的切换脚本">5. 构建时的切换脚本</h5>
+<p>这里构建鸿蒙和其他平台在代码层面出现了差异： yaml 的 覆写和 main.dart 里的装配。<br />
+一般会通过两个分支来维护不同的代码。打包鸿蒙时，同步最新分支的代码逻辑。但目前差别不大，只有两处，而且鸿蒙的打包构建频率也不高，所以采用了一个更柔和的方案，打包脚本自动切换代码状态：</p>
+<ul>
+<li>构建前自动切换为鸿蒙配置（overrides + EmptyLocalStore），</li>
+<li>构建后无论成功失败都还原为正常配置。</li>
+</ul>
+<p>另外，鸿蒙的 Flutter SDK 版本也可以写在 <code>build.json</code> ，实现配置化的管理:</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3f00788bfd544afb964b1e56c4a89352~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1355&amp;h=443&amp;s=70559&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>这样一行命令就可以构建出鸿蒙可以提交商店的 .app 分发包。差异性在构建流程上，几乎可以完全没有感知。</p>
+<blockquote>
+<p>python scripts/build_center/ohos/build_ohos.py</p>
+</blockquote>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/515e105bb85f4d7ca9c49cd69ea99911~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1002&amp;h=291&amp;s=29447&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<hr />
+<p>另外，比如在调试功能时，想持续保持鸿蒙的兼容状态。脚本也提供了切换代码状态的功能 <code>save</code>：</p>
+<blockquote>
+<p>python scripts/build_center/ohos/build_ohos.py save</p>
+</blockquote>
+<p>想恢复到非鸿蒙代码状态，只需要 <code>restore</code> 即可：</p>
+<blockquote>
+<p>python scripts/build_center/ohos/build_ohos.py restore</p>
+</blockquote>
+<hr />
+<h4 id="五-本章小结">五、本章小结</h4>
+<p>到这里，闪讯的七个平台产物构建全部完成了。</p>
+<p>回头看这段旅程，有种攀完一座山回望来路的感觉。Android 和 iOS 是熟悉的公路，Windows 和 macOS 是需要适应的山路，Linux 是人迹罕至的小径，Web 是一片看似平坦却暗藏沼泽的草地，而鸿蒙——鸿蒙是需要自己架桥才能通过的峡谷。</p>
+<p>七个平台，一套 Dart 代码。这句话说出来轻巧，但每多覆盖一个平台，不是简单的&quot;加一个构建命令&quot;。每个平台都在某个你意想不到的地方挖了一个坑：Web 端 dart:ffi 不可用、鸿蒙的 native assets hook 不认识 ohos、桌面端窗口管理的差异、iOS 的签名和沙盒……</p>
+<p>但最终能走通，靠的不是每次都想出巧妙的计策，而是最初的几个正确决策在持续发挥复利：</p>
+<ul>
+<li>定义 LocalStore 抽象接口时，不知道会有鸿蒙这个坑——但它让今天的适配变成了&quot;换一行代码&quot;。</li>
+<li>用 kApp 包装平台判断时，不知道 Web 端 Platform 会崩——但它让所有平台判断都安全了。</li>
+<li>让后端一行 nest_service 托管 Web 产物时，不知道 CORS 会有多麻烦——但同源部署让这个问题根本不存在。</li>
+</ul>
+<p>好的架构不是预见了所有问题，而是在问题出现时，给了你足够的余地去应对。就像一棵树不需要知道明年的风从哪个方向吹——它只需要根扎得够深，枝干足够柔韧。</p>
+<p>七个平台，每条命令一个产物。这本身就是 Flutter 对&quot;一次编写，处处运行&quot;这句古老承诺最诚实的兑现，虽然每一个&quot;处处&quot;都需要你亲手打磨那最后一公里。</p>
+<hr />
+<p>下一篇，也是本册最后一篇，我们将目光从&quot;构建&quot;转向&quot;生长&quot;——一棵已经扎根七片土地的树，如何让它知道自己该长高了？如何让果实从枝头安全落到用户手中？</p>
+<p>版本检测与应用升级。这不是一个华丽的功能，但它是所有后续功能抵达用户的通道。没有它，你写的每一行代码都停留在仓库里；有了它，每一次 git push 都有了变成用户指尖体验的可能。</p>
+<p>那将是另一段冒险征程的起点。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-41.html">← 果实#7 ｜ 构建 Web 产品</a>
+      <a class="next" href="ch-43.html">生生不息 ｜ 软件更新，持续成长 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-前置环境准备">一、前置环境准备</a></li>
+      <li class="lv5"><a href="#1-下载-sdk">1. 下载 SDK</a></li>
+      <li class="lv5"><a href="#2-下载-deveco-studio-ide-工具">2. 下载 DevEco Studio IDE 工具</a></li>
+      <li class="lv5"><a href="#3-配置环境变量">3. 配置环境变量</a></li>
+      <li class="lv4"><a href="#二-构建鸿蒙产品流程">二、构建鸿蒙产品流程</a></li>
+      <li class="lv5"><a href="#1-已有的-flutter-项目支持鸿蒙">1. 已有的 Flutter 项目支持鸿蒙</a></li>
+      <li class="lv5"><a href="#2-处理插件的兼容性">2. 处理插件的兼容性</a></li>
+      <li class="lv5"><a href="#3-运行起来鸿蒙应用">3. 运行起来鸿蒙应用</a></li>
+      <li class="lv4"><a href="#三-发布到鸿蒙应用市场">三、发布到鸿蒙应用市场</a></li>
+      <li class="lv5"><a href="#1-创建一个应用">1. 创建一个应用</a></li>
+      <li class="lv5"><a href="#2-正式签名与打包上传">2. 正式签名与打包上传</a></li>
+      <li class="lv5"><a href="#3-获取发布证书">3. 获取发布证书</a></li>
+      <li class="lv5"><a href="#4-构建与上传">4. 构建与上传</a></li>
+      <li class="lv4"><a href="#四-优化可维护性">四、优化可维护性</a></li>
+      <li class="lv5"><a href="#1-数据库的囧境">1. 数据库的囧境</a></li>
+      <li class="lv5"><a href="#2-结构分级的优势">2. 结构分级的优势</a></li>
+      <li class="lv5"><a href="#3-将-drift-实现独立拆分出去">3. 将 drift 实现独立拆分出去</a></li>
+      <li class="lv5"><a href="#4-内聚与解耦合">4. 内聚与解耦合</a></li>
+      <li class="lv5"><a href="#5-构建时的切换脚本">5. 构建时的切换脚本</a></li>
+      <li class="lv4"><a href="#五-本章小结">五、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

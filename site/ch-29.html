@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>枝叶#6 ｜ 综合搜索 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li class="active"><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>枝叶#6 ｜ 综合搜索</h1>
+<blockquote>
+<p>消息像鱼一样流走，搜索是那张能把它捞回来的网。</p>
+</blockquote>
+<p>闪讯能聊天、能建群、能感知在线和已读。但用户想找一个三天前聊过的人、一条提到&quot;周五开会&quot;的消息、一个叫&quot;技术交流&quot;的群，还得靠记忆翻找。这一章做综合搜索，让信息主动浮现。</p>
+<table>
+<thead>
+<tr>
+<th>综合搜索</th>
+<th>综合搜索</th>
+<th>会话内搜索</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/52c522da546e4d6c8e3ca2fcff4900f3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=211873&amp;e=png&amp;b=fcfcfc" alt="MuMu-20260428-063944-929.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1bf6ccaf058646bbbf5408fc9aaa3628~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=140103&amp;e=png&amp;b=fefefe" alt="MuMu-20260428-063734-967.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0fbd47df287f4321840e203709d8c673~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=80602&amp;e=png&amp;b=fefefe" alt="MuMu-20260428-063843-054.png" /></td>
+</tr>
+</tbody>
+</table>
+<h4 id="一-需求分析">一、需求分析</h4>
+<p>搜索是一个横切功能，它不属于好友模块，也不属于群聊模块，也不属于消息模块，但它要从这三个模块里取数据。后端需要新增搜索接口，前端需要一个全新的 flash_im_search 模块。</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>search/v0.0.1</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.17.0/docs/features/im/search/v0.0.1/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.17.0/docs/features/im/search/v0.0.1/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.17.0/docs/features/im/search/v0.0.1/client/tasks.md">tasks.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.17.0/docs/features/im/search/v0.0.1/server/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.17.0/docs/features/im/search/v0.0.1/server/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<p>下面是综合搜索相关的前后端关系鸟瞰图：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0045ee67f8b7483386d164e15bb56096~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2172&amp;h=1991&amp;s=363793&amp;e=png&amp;a=1&amp;b=fcfcfc" alt="mermaid-diagram - 2026-04-28T064607.955.png" /></p>
+<hr />
+<h5 id="1-交互链分析">1. 交互链分析</h5>
+<p>综合搜索的入口在顶部，覆盖&quot;找人&quot;、&quot;找群&quot;、&quot;找消息&quot;三个场景：</p>
+<p><strong>综合搜索</strong></p>
+<p><code>用户故事</code>：作为用户，我想在一个地方搜到联系人、群聊和聊天记录
+<code>交互链</code>：消息 Tab / 通讯录 Tab 搜索栏 → 综合搜索页 → 输入关键词 → 分区展示结果</p>
+<p>搜索结果分三个区域：联系人（好友）、群聊（已加入的群）、聊天记录（跨所有会话的消息内容）。每个区域默认展示前 3 条，点击&quot;更多联系人&quot;/&quot;更多群聊&quot;/&quot;更多消息&quot;展开全部。未输入关键词时显示搜索历史。</p>
+<p>点击联系人跳转好友详情页，点击群聊跳转 ChatPage，点击聊天记录根据匹配数量决定：只有一条匹配直接跳转 ChatPage，多条匹配先进入消息详情页列出所有匹配消息。</p>
+<table>
+<thead>
+<tr>
+<th>综合搜索结果</th>
+<th>消息详情页</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7b59d88c3f2b48fa80584f203c463093~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=139783&amp;e=png&amp;b=fefefe" alt="MuMu-20260428-064754-660.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f33b9bbbe2d64065b3f6b8974fdbce81~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=86014&amp;e=png&amp;b=ffffff" alt="MuMu-20260428-071716-320.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>会话内搜索</strong></p>
+<p><code>用户故事</code>：作为用户，我想在当前聊天中查找某条消息
+<code>交互链</code>：聊天详情页 → &quot;查找聊天内容&quot; → 输入关键词 → 匹配消息列表 → 点击进入消息详情页</p>
+<p>单聊详情页和群聊详情页都有&quot;查找聊天内容&quot;入口。搜索结果列表展示发送者头像、昵称、消息内容（关键词高亮）和时间。点击某条消息进入 SingleMessagePage 查看完整信息。</p>
+<table>
+<thead>
+<tr>
+<th>会话内搜索</th>
+<th>消息详情</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/85888a88d5ae4ce1a9820a9273deec2b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=126547&amp;e=png&amp;b=fdfdfd" alt="MuMu-20260428-072005-548.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0fbd47df287f4321840e203709d8c673~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=80602&amp;e=png&amp;b=fefefe" alt="MuMu-20260428-063843-054.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="2-逻辑流程树">2. 逻辑流程树</h5>
+<p><strong>综合搜索：三路并发</strong></p>
+<p>用户输入关键词后，前端 300ms 防抖，然后并发调用三个搜索 API。三个请求各自独立 try-catch，好友搜索失败不影响群聊和消息搜索的展示。</p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+<th>产生的新事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>用户输入关键词</td>
+<td>前端 300ms 防抖</td>
+<td>—</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>防抖结束</td>
+<td>并发调用好友搜索、已加入群搜索、消息搜索</td>
+<td>三个 HTTP 请求</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>后端处理</td>
+<td>好友：ILIKE 匹配昵称；群聊：ILIKE 匹配群名；消息：ILIKE 匹配内容，按会话分组</td>
+<td>三个响应</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>前端收到响应</td>
+<td>各自独立处理，部分失败不影响其他分区</td>
+<td>UI 刷新</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6cadac5dc9014cc094d786d4e8b30913~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2348&amp;h=1612&amp;s=210098&amp;e=png&amp;a=1&amp;b=eaeaea" alt="mermaid-diagram - 2026-04-28T072224.919.png" /></p>
+<hr />
+<p><strong>消息搜索：按会话分组</strong></p>
+<p>消息搜索不是逐条返回，而是按会话分组。每个分组包含会话信息（名称、头像、类型）、匹配总数和最近 3 条匹配消息。这样用户一眼就能看到&quot;在哪个聊天里提到了这个关键词&quot;。</p>
+<p>后端分两步查询：先找匹配的会话及匹配数（GROUP BY conversation_id），再对每个会话取最近 3 条匹配消息和会话信息。分步查询比一个巨大的 JOIN 更可控。</p>
+<blockquote>
+<p>消息搜索只搜文本消息（msg_type = 0），过滤系统消息（sender_id != 0）。图片、视频、文件的 content 是 URL，搜索无意义；系统消息（&quot;XXX 创建了群聊&quot;）也不是用户想找的内容。</p>
+</blockquote>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/525ce558c3154513bcb1a201a44963b5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1900&amp;h=1444&amp;s=207918&amp;e=png&amp;a=1&amp;b=eaeaea" alt="mermaid-diagram - 2026-04-28T072919.795.png" /></p>
+<hr />
+<h5 id="3-功能编号-新节点入网">3. 功能编号：新节点入网</h5>
+<p>这一章新增 10 个功能节点，扩展 2 个已有节点。搜索是一个横切功能，后端接口分布在三个 crate 中（im-friend、im-conversation、im-message），前端集中在一个新模块（flash_im_search）。</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>新增编号</th>
+<th>节点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D（领域）</td>
+<td>D-35</td>
+<td>好友搜索：GET /api/friends/search</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-36</td>
+<td>已加入群搜索：GET /api/conversations/search-joined-groups</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-37</td>
+<td>消息搜索：GET /api/messages/search（按会话分组）</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-38</td>
+<td>会话内消息搜索：GET /conversations/{id}/messages/search</td>
+</tr>
+<tr>
+<td>F（前端基础）</td>
+<td>F-14</td>
+<td>搜索模块：flash_im_search（SearchRepository + SearchCubit）</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-44</td>
+<td>综合搜索页：SearchPage</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-45</td>
+<td>消息搜索详情页：MessageDetailPage</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-46</td>
+<td>会话内搜索页：ConversationSearchPage</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-47</td>
+<td>单条消息详情页：SingleMessagePage</td>
+</tr>
+</tbody>
+</table>
+<p>扩展节点：P-31（单聊详情页新增&quot;查找聊天内容&quot;）、P-38（群聊详情页新增&quot;查找聊天内容&quot;）</p>
+<blockquote>
+<p>搜索不新建数据库表，不新建后端 crate。所有搜索都是对已有表的查询（friend_relations、conversations、messages），接口按数据归属分布在各自的 crate 中。前端新建一个独立模块，通过回调与外部通信，不依赖具体的页面路由。</p>
+</blockquote>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8afc13f8ad2d476e86dcdac7dc18a081~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2281&amp;h=1420&amp;s=259827&amp;e=png&amp;a=1&amp;b=fcf8f7" alt="mermaid-diagram - 2026-04-28T073115.661.png" /></p>
+<hr />
+<h4 id="二-后端-四个查询接口">二、后端：四个查询接口</h4>
+<p>搜索功能的后端比前几章要简单，不涉及 WS、不新建表、不修改已有逻辑。纯粹是在已有数据上加查询接口。但&quot;简单&quot;不等于&quot;没有设计&quot;，搜索范围、分组策略、过滤条件都需要想清楚。</p>
+<pre><code>server/modules/
+├── im-friend/src/api.rs              # 新增：GET /api/friends/search
+├── im-conversation/src/routes.rs     # 新增：GET /api/conversations/search-joined-groups
+├── im-message/src/routes.rs          # 新增：GET /api/messages/search
+│                                     #       GET /conversations/{id}/messages/search
+</code></pre>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e9b84797b78b41ea80dfab2f9eb47431~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2563&amp;h=730&amp;s=201490&amp;e=png&amp;a=1&amp;b=fcfcfc" alt="mermaid-diagram - 2026-04-28T074523.556.png" /></p>
+<hr />
+<h5 id="1-搜索范围-只搜-我的">1. 搜索范围：只搜&quot;我的&quot;</h5>
+<p>综合搜索和添加好友页的用户搜索、搜索加群页的群搜索有本质区别。后者是 <strong>&quot;找陌生人/公开群&quot;</strong>，前者是 <strong>&quot;找我已有的东西&quot;</strong>。好友搜索查 <code>friend_relations</code> 表，只返回当前用户的好友：</p>
+<pre><code class="language-sql">-- ---&gt; server/modules/im-friend/src/api.rs
+SELECT fr.friend_id, COALESCE(up.nickname, '?') AS nickname, up.avatar
+FROM friend_relations fr
+LEFT JOIN user_profiles up ON up.account_id = fr.friend_id
+WHERE fr.user_id = $1 AND up.nickname ILIKE $2
+ORDER BY up.nickname
+LIMIT $3
+</code></pre>
+<p>已加入群搜索通过 <code>INNER JOIN conversation_members</code> 过滤，只返回用户已加入且未解散的群：</p>
+<pre><code class="language-sql">-- ---&gt; server/modules/im-conversation/src/routes.rs
+SELECT c.id, c.name, c.avatar,
+    (SELECT COUNT(*) FROM conversation_members
+     WHERE conversation_id = c.id AND is_deleted = false) AS member_count
+FROM conversations c
+INNER JOIN conversation_members cm
+    ON cm.conversation_id = c.id AND cm.user_id = $1 AND cm.is_deleted = false
+WHERE c.type = 1 AND COALESCE(c.status, 0::SMALLINT) = 0 AND c.name ILIKE $2
+ORDER BY c.name
+LIMIT $3
+</code></pre>
+<p><code>COALESCE(c.status, 0::SMALLINT) = 0</code> 过滤已解散的群（status=1）。<code>0::SMALLINT</code> 的类型标注不能省，否则 sqlx 在运行时解码时会因为 INT4 和 SMALLINT 不匹配而报错。</p>
+<blockquote>
+<p>为什么不复用已有的 <code>GET /api/users/search</code> 和 <code>GET /groups/search</code>？因为它们搜的是&quot;所有用户&quot;和&quot;所有群&quot;，综合搜索需要的是&quot;我的好友&quot;和&quot;我加入的群&quot;。搜索范围不同，SQL 的 WHERE 条件完全不同，硬塞一个 <code>scope</code> 参数进去不如各写各的清晰。</p>
+</blockquote>
+<hr />
+<h5 id="2-消息搜索-分组-过滤-分页">2. 消息搜索：分组 + 过滤 + 分页</h5>
+<p>消息搜索是这一章最复杂的接口。它不是简单地 <code>SELECT * FROM messages WHERE content ILIKE</code>，而是按会话分组返回，每组包含会话信息和最近匹配的消息。</p>
+<p><strong>跨会话搜索（综合搜索用）</strong></p>
+<p>分两步查询。第一步找匹配的会话及匹配数：</p>
+<pre><code class="language-sql">-- ---&gt; server/modules/im-message/src/routes.rs
+SELECT m.conversation_id, COUNT(*) AS match_count
+FROM messages m
+INNER JOIN conversation_members cm
+    ON cm.conversation_id = m.conversation_id
+    AND cm.user_id = $1 AND cm.is_deleted = false
+WHERE m.type = 0 AND m.sender_id != 0 AND m.content ILIKE $2
+GROUP BY m.conversation_id
+ORDER BY MAX(m.created_at) DESC
+LIMIT $3
+</code></pre>
+<p>三个过滤条件各有用意：<code>m.type = 0</code> 只搜文本消息（图片/视频/文件的 content 是 URL，搜索无意义），<code>m.sender_id != 0</code> 过滤系统消息（&quot;XXX 创建了群聊&quot;不是用户想找的内容），<code>INNER JOIN conversation_members</code> 限制只搜用户参与的会话。</p>
+<p>第二步对每个会话取最近 3 条匹配消息和会话信息。单聊需要取对方的昵称和头像，群聊直接用群名和群头像：</p>
+<pre><code class="language-python">for conv_id, match_count in groups:
+    # 查会话类型
+    conv_type = SELECT type FROM conversations WHERE id = conv_id
+
+    if conv_type == 0:  # 单聊：取对方信息
+        name, avatar = SELECT nickname, avatar FROM conversation_members
+            WHERE conversation_id = conv_id AND user_id != current_user
+    else:  # 群聊：用群名
+        name, avatar = SELECT name, avatar FROM conversations WHERE id = conv_id
+
+    # 最近 3 条匹配消息
+    messages = SELECT id, nickname, avatar, content, created_at
+        FROM messages JOIN user_profiles
+        WHERE conversation_id = conv_id AND type = 0
+            AND sender_id != 0 AND content ILIKE pattern
+        ORDER BY created_at DESC LIMIT 3
+</code></pre>
+<blockquote>
+<p>为什么分两步而不是一个大 JOIN？因为一个查询要同时做 GROUP BY（按会话分组）和 LIMIT（每组取 3 条），SQL 写起来很别扭（需要窗口函数 ROW_NUMBER），分步查询更直观，性能在小数据量下没有差别。</p>
+</blockquote>
+<p><strong>会话内搜索（详情页用）</strong></p>
+<p>会话内搜索比跨会话搜索简单，不需要分组，直接返回消息列表。支持 <code>offset</code> 分页，前端 MessageDetailPage 每页加载 20 条，滚动到底部自动加载更多：</p>
+<pre><code class="language-sql">SELECT m.id, COALESCE(up.nickname, '?'), up.avatar,
+    m.content, m.seq, m.created_at
+FROM messages m
+LEFT JOIN user_profiles up ON up.account_id = m.sender_id
+WHERE m.conversation_id = $1 AND m.type = 0
+    AND m.sender_id != 0 AND m.content ILIKE $2
+ORDER BY m.created_at DESC
+LIMIT $3 OFFSET $4
+</code></pre>
+<p>返回的 <code>seq</code> 字段是消息的序列号，前端用它在消息详情页显示 <code>#42</code> 这样的编号，方便用户定位。</p>
+<hr />
+<h5 id="3-接口与测试">3. 接口与测试</h5>
+<p>四个搜索接口没有集中在一个 crate 里，而是分布在三个已有的 crate 中：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>路径</th>
+<th>crate</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/api/friends/search</td>
+<td>im-friend</td>
+<td>搜索好友（昵称模糊匹配）</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/conversations/search-joined-groups</td>
+<td>im-conversation</td>
+<td>搜索已加入的群（群名模糊匹配）</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/messages/search</td>
+<td>im-message</td>
+<td>跨会话消息搜索（按会话分组）</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/conversations/{id}/messages/search</td>
+<td>im-message</td>
+<td>会话内消息搜索（支持 offset 分页）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>为什么不新建一个 im-search crate？因为每个搜索接口操作的数据表不同，好友搜索查 friend_relations，群搜索查 conversations，消息搜索查 messages。放在各自的 crate 里，SQL 可以直接访问本模块的数据库连接，不需要跨模块依赖。前端才需要一个统一的搜索模块（flash_im_search），后端不需要。</p>
+</blockquote>
+<p>用 Python 写了一个测试脚本（curl 处理器 + 文档生成器），覆盖好友搜索（有结果/无结果）、群搜索（关键词/空关键词）、消息搜索（有结果/无结果）、会话内搜索、通配符转义，9 个步骤全部通过，自动生成 8 份接口文档。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8645d1d8505460c9e45647c2403f17c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1169&amp;h=591&amp;s=126283&amp;e=png&amp;b=0c0c0c" alt="image.png" /></p>
+<hr />
+<p>另外这里有个小趣事，当我把 12 条流程形成一个角色技能：<a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/.kiro/steering/feature-workflow.md"><strong>Feature Workflow</strong> — 功能版本开发流水线</a>。前面和它先简单聊了聊综合搜索的功能需求，然后我问它一口气完成后端功能，有没有信息。然后它说有信心。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/99470ed49884462484f24900f6201a31~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=911&amp;h=360&amp;s=70325&amp;e=png&amp;b=f0eff2" alt="image.png" /></p>
+<p>接下来就是让它自己按照流程一步步迭代，最终跑通了测试。这是一个比较有趣的实践，后期我也会关注在这种连续流程上， AI 自主迭代流程节点的效果。</p>
+<hr />
+<h4 id="三-前端-一个横切模块">三、前端：一个横切模块</h4>
+<p>后端接口就绪，前端的工作集中在一个全新的模块 flash_im_search 里。它不依赖任何已有的业务模块，通过回调与外部通信。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ed6ca5a3c16c4b27b74b2b17c6f44e47~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1932&amp;h=1472&amp;s=313082&amp;e=png&amp;a=1&amp;b=fbfafa" alt="mermaid-diagram - 2026-05-05T063620.748.png" /></p>
+<pre><code>client/modules/flash_im_search/
+├── lib/src/
+│   ├── data/
+│   │   ├── search_models.dart        # 数据模型
+│   │   └── search_repository.dart    # 四个搜索 API
+│   ├── logic/
+│   │   ├── search_cubit.dart         # 300ms 防抖 + 三路并发
+│   │   └── search_state.dart         # sealed class 四种状态
+│   └── view/
+│       ├── search_page.dart          # 综合搜索页 + 搜索历史
+│       ├── message_detail_page.dart  # 消息搜索详情页
+│       ├── conversation_search_page.dart # 会话内搜索页
+│       ├── single_message_page.dart  # 单条消息详情页
+│       └── widgets/
+│           ├── highlight_text.dart   # 关键词高亮
+│           ├── friend_search_item.dart
+│           ├── group_search_item.dart
+│           └── message_search_item.dart
+</code></pre>
+<hr />
+<h5 id="1-searchcubit-三路并发-部分失败容忍">1. SearchCubit：三路并发 + 部分失败容忍</h5>
+<p>SearchCubit 是这个模块的核心。用户每次按键都会触发 <code>search(keyword)</code>，300ms 防抖后并发调用三个 API。关键设计是部分失败容忍：</p>
+<pre><code class="language-dart">// ---&gt; flash_im_search/lib/src/logic/search_cubit.dart
+final results = await Future.wait([
+    _repository.searchFriends(keyword: keyword)
+        .then&lt;Object?&gt;((v) =&gt; v).catchError((e) =&gt; e),
+    _repository.searchJoinedGroups(keyword: keyword)
+        .then&lt;Object?&gt;((v) =&gt; v).catchError((e) =&gt; e),
+    _repository.searchMessages(keyword: keyword)
+        .then&lt;Object?&gt;((v) =&gt; v).catchError((e) =&gt; e),
+])
+
+// 类型判断区分成功和失败
+if results[0] is List&lt;FriendSearchItem&gt;: friends = results[0]
+else: friendError = results[0].toString()
+</code></pre>
+<p><code>Future.wait</code> 等所有请求完成后，根据每个结果的类型判断成功还是失败。三个都成功 emit <code>SearchSuccess</code>，至少一个失败 emit <code>SearchPartialSuccess</code>。UI 层对两种状态的渲染逻辑一样，只是 <code>SearchPartialSuccess</code> 可以额外显示错误提示。</p>
+<blockquote>
+<p>为什么不用三个独立的 <code>setState</code>？因为搜索结果要一次性展示，不能联系人先出来、群聊再出来、消息最后出来。<code>Future.wait</code> 保证三个请求都完成后才更新 UI，用户看到的是一个完整的搜索结果，不是逐步加载。</p>
+</blockquote>
+<hr />
+<h5 id="2-highlighttext-关键词高亮">2. HighlightText：关键词高亮</h5>
+<p>搜索结果中匹配的关键词需要高亮显示。<code>HighlightText</code> 组件用 <code>RichText</code> + <code>TextSpan</code> 实现，大小写不敏感匹配：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a07786029abf44e293e740b7139b2391~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=619&amp;h=194&amp;s=21008&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<pre><code class="language-dart">// ---&gt; flash_im_search/lib/src/view/widgets/highlight_text.dart
+// 按关键词拆分文本，匹配部分用蓝色，其余用默认色
+lowerText = text.toLowerCase()
+lowerKeyword = keyword.toLowerCase()
+while start &lt; text.length:
+    index = lowerText.indexOf(lowerKeyword, start)
+    if index == -1: spans.add(TextSpan(text: remaining, style: default))
+    else:
+        spans.add(TextSpan(text: before, style: default))
+        spans.add(TextSpan(text: match, style: highlight))  // 蓝色 0xFF3B82F6
+</code></pre>
+<p>这个组件在搜索结果列表、消息详情页、会话内搜索页中被复用。</p>
+<hr />
+<h5 id="3-综合搜索页">3. 综合搜索页</h5>
+<p>SearchPage 是用户看到的主界面。顶部是输入框，右侧&quot;取消&quot;按钮。Body 根据 SearchCubit 的状态切换：</p>
+<ul>
+<li><code>SearchInitial</code> → 搜索历史（SharedPreferences 存储，最多 20 条，Wrap 流式布局）</li>
+<li><code>SearchLoading</code> → 加载指示器</li>
+<li><code>SearchSuccess</code> / <code>SearchPartialSuccess</code> → 分区结果</li>
+</ul>
+<p>每个分区默认展示 3 条，点击&quot;更多联系人&quot;/&quot;更多群聊&quot;/&quot;更多消息&quot;展开全部。聊天记录分区的点击逻辑稍复杂：如果该会话只有 1 条匹配消息，直接跳转 ChatPage；如果有多条，先进入 MessageDetailPage。</p>
+<p>MessageDetailPage 不依赖综合搜索返回的 3 条预览，而是进入时重新调用会话内搜索 API 获取完整列表，每页 20 条，滚动到底部自动加载更多。综合搜索的 3 条预览只是&quot;入口&quot;，详情页才是&quot;全貌&quot;。</p>
+<table>
+<thead>
+<tr>
+<th>综合搜索结果 SearchPage</th>
+<th>消息详情页 MessageDetailPage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7b59d88c3f2b48fa80584f203c463093~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=139783&amp;e=png&amp;b=fefefe" alt="MuMu-20260428-064754-660.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f33b9bbbe2d64065b3f6b8974fdbce81~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=86014&amp;e=png&amp;b=ffffff" alt="MuMu-20260428-071716-320.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="4-主应用集成">4. 主应用集成</h5>
+<p>搜索入口有两个：消息 Tab 和通讯录 Tab 顶部的 <code>FlashSearchBar</code>（占位模式），点击后都跳转到同一个 <code>SearchPage</code>。</p>
+<pre><code class="language-dart">// ---&gt; client/lib/src/home/view/home_page.dart
+void _openSearch(BuildContext context):
+    Navigator.push(SearchPage(
+        repository: context.read&lt;SearchRepository&gt;(),
+        onFriendTap: (friendId) =&gt; _openFriendDetail(...)
+        onGroupTap: (conversationId) =&gt; _openChatById(...)
+        onMessageTap: (conversationId, messageId) =&gt; _openChatById(...)
+    ))
+</code></pre>
+<p><code>SearchRepository</code> 在 <code>main.dart</code> 中通过 <code>RepositoryProvider</code> 注入，和其他 Repository 一样。</p>
+<p>搜索模块通过三个回调（<code>onFriendTap</code> / <code>onGroupTap</code> / <code>onMessageTap</code>）与外部通信。搜索模块不知道怎么创建 ChatPage 或 FriendDetailPage，它只负责告诉外部&quot;用户点了什么&quot;，导航逻辑由 home_page 处理。</p>
+<blockquote>
+<p>为什么用回调而不是直接在搜索模块里导航？<br />
+因为搜索模块是一个独立的 package，它不依赖 flash_im_chat 或 flash_im_friend。如果让它直接 import ChatPage，就引入了对业务模块的依赖，模块边界就破了。回调把&quot;做什么&quot;和&quot;怎么导航&quot;分开，搜索模块只管前者。</p>
+</blockquote>
+<p>会话内搜索的入口在 ChatPage 的 <code>onSearchChat</code> 回调里，通过 ChatPage → 详情页 → ConversationSearchPage 的链路传递。<br />
+GroupChatInfoPage 和 PrivateChatInfoPage 都新增了&quot;查找聊天内容&quot;设置项。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0b5f846026ba4edaa512e74ea40ab408~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=890&amp;h=312&amp;s=56276&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<hr />
+<h4 id="四-本章小结">四、本章小结</h4>
+<p>上一章，总结了 12 步流水线，这一章是它的第一次完整实践。从需求分析到归档，每一步都按流程走，没有跳步。后端五步一口气完成，前端五步同样如此。</p>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>综合搜索</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.17.0">v0.17.0</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/5b819f819d0bf32e1e76f33eb49d261279de20f0">commit</a></td>
+</tr>
+</tbody>
+</table>
+<p>搜索功能本身不复杂，四个查询接口加一个前端模块。但它验证了一件事：当流水线足够成熟时，功能的复杂度不再是瓶颈，流程的顺畅度才是。AI 按照 tasks.md 逐条实现，测试脚本全部通过，flutter analyze 零 error。从&quot;让 AI 写对代码&quot;到&quot;让 AI 按流程交付功能&quot;，这个转变在这一章变得自然了。</p>
+<p>这整个功能需求开发过程中，人的重要性在于对 AI 写的代码，进行功能验证与细节反馈。本书中整体来看，AI 编程对于后端来说是更加友好的，后端提高的服务是完全可测试的。也就是说 AI 完成之后，结果对不对可以很快知晓，不会的话，可以让 AI 根据异常信息，直到修复完成。而前端充满着交互和细节流程，单纯的测试很难覆盖。</p>
+<p>下一章是本地缓存与离线同步。闪讯目前所有数据都从服务端实时拉取，没有网络就什么都看不到。引入本地数据库（SQLite），让用户在离线时也能查看历史消息和会话列表。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-28.html">← 枝叶#5 ｜ 在线状态与已读回执</a>
+      <a class="next" href="ch-30.html">桢干#1 ｜ 本地缓存与同步 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-需求分析">一、需求分析</a></li>
+      <li class="lv5"><a href="#1-交互链分析">1. 交互链分析</a></li>
+      <li class="lv5"><a href="#2-逻辑流程树">2. 逻辑流程树</a></li>
+      <li class="lv5"><a href="#3-功能编号-新节点入网">3. 功能编号：新节点入网</a></li>
+      <li class="lv4"><a href="#二-后端-四个查询接口">二、后端：四个查询接口</a></li>
+      <li class="lv5"><a href="#1-搜索范围-只搜-我的">1. 搜索范围：只搜&quot;我的&quot;</a></li>
+      <li class="lv5"><a href="#2-消息搜索-分组-过滤-分页">2. 消息搜索：分组 + 过滤 + 分页</a></li>
+      <li class="lv5"><a href="#3-接口与测试">3. 接口与测试</a></li>
+      <li class="lv4"><a href="#三-前端-一个横切模块">三、前端：一个横切模块</a></li>
+      <li class="lv5"><a href="#1-searchcubit-三路并发-部分失败容忍">1. SearchCubit：三路并发 + 部分失败容忍</a></li>
+      <li class="lv5"><a href="#2-highlighttext-关键词高亮">2. HighlightText：关键词高亮</a></li>
+      <li class="lv5"><a href="#3-综合搜索页">3. 综合搜索页</a></li>
+      <li class="lv5"><a href="#4-主应用集成">4. 主应用集成</a></li>
+      <li class="lv4"><a href="#四-本章小结">四、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

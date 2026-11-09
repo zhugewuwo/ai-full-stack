@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>果实#7 ｜ 构建 Web 产品 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li class="active"><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>果实#7 ｜ 构建 Web 产品</h1>
+<p>前面六篇完成了 <strong>服务端部署</strong>、<strong>Android/iOS移动端</strong>、<strong>Windows/macOS/Linux 桌面端</strong> 软件产品的构建。现在来看一下官方 Flutter 支持的最后一个： <strong>Web</strong> 平台。好消息是，我们之前做的桌面端界面的 UI 适配在 Web 的宽屏上依旧适应。另外还有一些具有挑战性的困难，本章将聚焦于</p>
+<ul>
+<li>
+<ol>
+<li>如何将闪讯运行到 web 平台。</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Web 中数据库的缓存数据该如何兼容。</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>如何通过脚本打包、更新、发布 Web 应用。</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>加载优化和首屏处理。</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h4 id="一-运行-web-项目">一、 运行 Web 项目</h4>
+<p>Web 平台的宿主外壳在 <code>web</code> 目录下，里面是个非常简单的 <code>index.html</code>, 以及图标资源和配置信息。Web 的运行环境应该说是最简单的，有浏览器就可以跑。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/022b62d52caa4eb3998307721c686352~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=682&amp;h=152&amp;s=8318&amp;e=png&amp;b=f7f8fa" alt="image.png" /></p>
+<hr />
+<h5 id="1-本地数据库-drift-处理">1. 本地数据库（drift）处理</h5>
+<p>将闪讯运行到 Web 端，核心挑战是处理 <code>dart:io</code> 和 <code>dart:ffi</code> 在 Web 端不可用的问题。  原来的 <code>AppDatabase</code> 使用 <code>drift/native.dart</code> 的 <code>NativeDatabase</code>，依赖 <code>dart:ffi</code> 加载原生 SQLite 二进制。Web 端不支持 <code>dart:ffi</code>，编译直接报错。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/69dce9321cb34302a869a63b246afb07~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=825&amp;h=194&amp;s=24253&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>但调研后，发现 drift 是支持 web 平台的。使用 <code>drift_flutter</code> 包的 <code>driftDatabase</code> 函数，它内部自动处理平台差异：</p>
+<ul>
+<li>原生平台：使用 <code>NativeDatabase</code>（通过 <code>sqlite3_flutter_libs</code>）</li>
+<li>Web 平台：使用 <code>WasmDatabase</code>（通过 <code>sqlite3.wasm</code> WebAssembly）</li>
+</ul>
+<p><strong>改动文件</strong>：<code>client/modules/flash_im_cache/lib/src/drift/database/app_database.dart</code></p>
+<pre><code class="language-dart">// 改动前
+import 'dart:io';
+import 'package:drift/native.dart';
+
+static Future&lt;AppDatabase&gt; open(int userId) async {
+  final dir = await getApplicationDocumentsDirectory();
+  final file = File(p.join(dir.path, 'im_cache_$userId.db'));
+  return AppDatabase(NativeDatabase.createInBackground(file));
+}
+
+// 改动后
+import 'package:drift_flutter/drift_flutter.dart';
+
+static Future&lt;AppDatabase&gt; open(int userId) async {
+  return AppDatabase(
+    driftDatabase(
+      name: 'im_cache_$userId',
+      native: DriftNativeOptions(
+        databaseDirectory: getApplicationSupportDirectory,
+      ),
+      web: DriftWebOptions(
+        sqlite3Wasm: Uri.parse('sqlite3.wasm'),
+        driftWorker: Uri.parse('drift_worker.js'),
+      ),
+    ),
+  );
+}
+</code></pre>
+<p><strong>依赖变更</strong>：<code>flash_im_cache/pubspec.yaml</code></p>
+<pre><code class="language-yaml"># 改动前
+drift: ^2.25.0
+sqlite3_flutter_libs: ^0.5.28
+
+# 改动后
+drift: ^2.25.0
+drift_flutter: 0.3.0
+sqlite3: 3.3.2
+sqlite3_flutter_libs: ^0.6.0
+</code></pre>
+<p>最后 <a href="https://github.com/simolus3/drift/blob/develop/extras/assets/sqlite3.wasm">sqlite3.wasm</a> 是在 drift 项目的案例中下载的。放在 web 目录下：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c810a81b6cc49279e9db40eed55989f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=721&amp;h=182&amp;s=10599&amp;e=png&amp;b=f1f4fb" alt="image.png" /></p>
+<hr />
+<h5 id="2-平台判断">2. 平台判断</h5>
+<p><code>dart:io</code> 的 <code>Platform</code> 类在 Web 端不可用。直接调用 <code>Platform.isWindows</code> 等会抛出运行时异常。这里使用我的 <a href="https://pub.dev/packages/fx_env">fx_env</a> 包的 <code>kApp</code> 全局对象，它在初始化时通过 <code>kIsWeb</code> 前置判断，Web 端安全返回 false。 改动清单如下：</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>原代码</th>
+<th>改为</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app.dart</code></td>
+<td><code>Platform.isWindows</code></td>
+<td><code>kApp.isWindows</code></td>
+</tr>
+<tr>
+<td><code>login_page.dart</code></td>
+<td><code>Platform.isWindows || Platform.isMacOS || Platform.isLinux</code></td>
+<td><code>kApp.isDesktop</code></td>
+</tr>
+<tr>
+<td><code>login_page.dart</code></td>
+<td><code>!Platform.isIOS</code></td>
+<td><code>!kApp.isIos</code></td>
+</tr>
+<tr>
+<td><code>desktop_login_body.dart</code></td>
+<td><code>Platform.isWindows</code></td>
+<td><code>kApp.isWindows</code></td>
+</tr>
+<tr>
+<td><code>other_login_row.dart</code></td>
+<td><code>Platform.isIOS || Platform.isMacOS</code></td>
+<td><code>kApp.isIos || kApp.isMacOS</code></td>
+</tr>
+<tr>
+<td><code>device_info.dart</code></td>
+<td>多处 <code>Platform.isXxx</code></td>
+<td><code>kIsWeb</code> 前置判断包裹</td>
+</tr>
+</tbody>
+</table>
+<p>kApp 提供了如下的 API ：</p>
+<pre><code class="language-dart">kApp.isAndroid   // bool
+kApp.isIos       // bool
+kApp.isWindows   // bool
+kApp.isMacOS     // bool
+kApp.isLinux     // bool
+kApp.isWeb       // bool
+kApp.isDesktop   // bool（Windows/macOS/Linux）
+kApp.isMobile    // bool（Android/iOS）
+</code></pre>
+<hr />
+<h5 id="3-设备信息采集-device_info-dart">3.设备信息采集（device_info.dart）</h5>
+<p><code>DeviceInfoPlugin</code> 在 Web 端需要用 <code>webBrowserInfo</code> 而不是 <code>androidInfo</code>/<code>iosInfo</code> 等。加 <code>kIsWeb</code> 前置判断，Web 端走 <code>deviceInfoPlugin.webBrowserInfo</code>：</p>
+<pre><code class="language-dart">if (!kIsWeb) {
+  if (Platform.isAndroid) { ... }
+  else if (Platform.isIOS) { ... }
+  // ...
+  platform = Platform.operatingSystem;
+} else {
+  final info = await deviceInfoPlugin.webBrowserInfo;
+  deviceName = info.browserName.name;
+  platform = 'web';
+}
+</code></pre>
+<hr />
+<h5 id="4-运行到浏览器">4. 运行到浏览器</h5>
+<p>通过 <code>flutter run -d chrome</code> 命令可以运行到 chrome 浏览器。这里加了 <strong>--web-browser-flag=&quot;--disable-web-security&quot;</strong> 的启动参数，不然本地环境中会出现接口的跨域问题。在部署时，前后端都在一个域名端口下，所以不会有问题。</p>
+<blockquote>
+<p>flutter run -d chrome --dart-define-from-file=.env.dev --web-browser-flag=&quot;--disable-web-security&quot;</p>
+</blockquote>
+<p>这样，我们的闪讯又点亮了一个平台：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7d7b957548444f4eb21d8ea177e91810~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1957&amp;h=1490&amp;s=253322&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<hr />
+<h4 id="二-打包与部署">二、打包与部署</h4>
+<p>打包部署时将 flutter 项目，构建成为 web 产品，然后放在服务器上托管。这样任何人都可以通过 <strong>浏览器</strong>
+访问链接，来使用闪讯的 web 端。</p>
+<hr />
+<h5 id="1-flutter-打包-web-项目">1. Flutter 打包 web 项目</h5>
+<p>我想要使用 <code>ip:端口/im/</code> 的链接访问 web 站点。使用 <code>--base-href /im/</code> 会把 <code>index.html</code> 中的 <code>&lt;base href=&quot;/&quot;&gt;</code> 改为 <code>&lt;base href=&quot;/im/&quot;&gt;</code>，所有资源（JS、CSS、字体）都会从 <code>/im/</code> 路径加载。</p>
+<p>drift 在 Web 端使用 WebAssembly 版的 SQLite。<code>DriftWebOptions</code> 中指定的 wasm 路径必须是绝对路径：</p>
+<pre><code class="language-dart">web: DriftWebOptions(
+  sqlite3Wasm: Uri.parse('/im/sqlite3.wasm'),
+  driftWorker: Uri.parse('/im/drift_worker.js'),
+)
+</code></pre>
+<p>这样一行命令就可以构建出 web 产物，你可以在 <code>client\build\web</code> 里看到它：</p>
+<blockquote>
+<p>flutter build web --release --base-href /im/ --dart-define-from-file=.env.production</p>
+</blockquote>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cbf4453c74c3424a9150c9410e505889~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1338&amp;h=757&amp;s=91487&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>东西有了，接下来就是，改把这个东西放在那里？</p>
+<hr />
+<h5 id="2-rust-后端的网站托管">2. Rust 后端的网站托管</h5>
+<p>Rust 后端目前已经有了 tower-http 的 ServeDir + ServeFile 托管静态文件，之前隐私协议介绍通过它呈现的。这里同样也可以将 im 的 web 产物交给它：</p>
+<pre><code class="language-rust">use tower_http::services::{ServeDir, ServeFile};
+
+let app = Router::new()
+    .merge(auth_routes())
+    .merge(conversation_routes())
+    // ... 其他 API 路由 ...
+    .nest_service(&quot;/im&quot;, 
+        ServeDir::new(&quot;static/web&quot;)
+            .fallback(ServeFile::new(&quot;static/web/index.html&quot;))
+    );
+</code></pre>
+<ul>
+<li><code>ServeDir::new(&quot;static/web&quot;)</code> — 把 static/web/ 目录映射到 /im/ 路径，访问
+main.dart.js
+就返回
+main.dart.js</li>
+<li><code>.fallback(ServeFile::new(...))</code> — 找不到文件时返回 index.html，让 Flutter 的客户端路由接管（SPA 必须）</li>
+<li><code>nest_service(&quot;/im&quot;, ...)</code> — 挂载到 /im 子路径</li>
+</ul>
+<p>然后把 web 放在服务器上的的 <code>static</code> 下，更新重启后端服务即可。文件结构如下：</p>
+<pre><code class="diagram" style="font-size:13.5px">├── flash-im              # 后端二进制
+├── .env                  # 环境变量
+├── static/
+│   ├── web/              # Flutter Web 产物
+│   │   ├── index.html
+│   │   ├── main.dart.js
+│   │   ├── sqlite3.wasm
+│   │   └── assets/
+│   ├── agreement.html    # 协议页面
+│   └── privacy.html
+├── uploads/              # 用户上传的文件
+└── migrations/           # 数据库迁移
+</code></pre>
+<p>这样，你就可以通过 <code>ip:端口/im</code> 来访问站点了：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/94bd5a3075df4fa786260c2bca66b1ce~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2547&amp;h=1461&amp;s=275164&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<hr />
+<h5 id="3-脚本一键部署">3. 脚本一键部署</h5>
+<p>整个流程还是很固定的，可以用脚本一键部署，完成打包和上传:</p>
+<pre><code class="language-bash"># 构建 + 部署到服务器
+python scripts/build_center/build_web.py --deploy root@你的服务器官网ip
+</code></pre>
+<p>脚本做的事：</p>
+<ol>
+<li><code>flutter build web --release --base-href /im/</code> 构建产物</li>
+<li><code>tar -czf</code> 压缩为 <code>flash_im_web.tar.gz</code>，放到产出文件夹</li>
+<li><code>scp</code> 上传到服务器 <code>/tmp/</code></li>
+<li><code>ssh</code> 远程解压到 <code>~/server/flash_im/static/web/</code></li>
+<li>删除临时压缩包</li>
+</ol>
+<hr />
+<h4 id="三-flutter-web-的优化">三、Flutter web 的优化</h4>
+<p>禁用缓存的情况下，查看目前部署的 web 项目。下面有四个值得关注的指标:</p>
+<ul>
+<li><strong>transferred</strong> : 网络实际传输的字节数（压缩后的大小）。这是浏览器从服务器下载的总流量。</li>
+<li><strong>resources</strong>: 解压后的资源原始大小。浏览器收到压缩数据后解压还原的总量。</li>
+<li><strong>Finish</strong>: 从页面开始加载到最后一个请求完成的总耗时。包括所有资源（JS、Wasm、图片、字体）全部下载完毕的时间点。</li>
+<li><strong>Load</strong>:  页面 window.onload 事件触发的时间，表示初始资源（HTML 引用的 JS、CSS）加载完毕。注意它比 Finish 小，因为 Finish 包含了异步加载的资源（比如 canvaskit.wasm 是 Flutter 引擎启动后才去下载的）</li>
+</ul>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/211634cd05d240c2938bbc7139087633~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1315&amp;h=430&amp;s=96282&amp;e=png&amp;b=fdfcfc" alt="image.png" /></p>
+<p>目前传输 <code>8.0/13.1M</code> 压缩情况不佳, 首屏 Load  <code>6.51s</code>, Finish 需要 <code>8.65s</code>，这是很难忍受的。如果加载过一次，第二次进入就会非常快了，现在关键在于 <strong>用户首次进入</strong> 体感不佳。</p>
+<hr />
+<h5 id="1-为什么首屏这么耗时">1. 为什么首屏这么耗时</h5>
+<p>要优化之前，先搞清楚慢在哪。Flutter Web 和 React/Vue 这类传统 Web 框架的加载模型完全不同。它不是渐进式渲染 DOM，而是把整个 Dart 运行时 + 渲染引擎 + 业务代码打包成一坨巨大的 JS/Wasm 文件，浏览器必须全部下载完、解析完、执行完，才能画出第一个像素。</p>
+<ol>
+<li><strong>JS Bundle 大</strong> — <code>main.dart.js</code> 通常 3-5MB。这里面包含了 Dart 运行时、框架代码、所有业务逻辑。相比之下，一个典型 React 应用的首屏 JS 可能只有几百 KB。</li>
+<li><strong>CanvasKit/skwasm 渲染引擎大</strong> — canvaskit.wasm 有 2M 多，它本质上是 Skia 图形引擎的 WebAssembly 版本，相当于浏览器里跑了一个&quot;迷你 GPU 驱动&quot;。</li>
+<li><strong>串行加载</strong> — 浏览器必须按顺序完成：下载 JS → 解析 → 执行 → 下载 canvaskit.wasm → 初始化渲染引擎 → 渲染第一帧。任何一步慢了都会阻塞后续步骤。</li>
+<li><strong>客户端渲染</strong> — Flutter Web 是纯客户端渲染，白屏时间 = 全量加载时间，用户在引擎就绪前什么都看不到。</li>
+</ol>
+<p>简单说：用户打开页面后，浏览器要先下载十几 MB 的&quot;工具箱&quot;（运行时 + 渲染引擎 + 业务代码），全部准备好后才开始干活。这就是白屏的本质。</p>
+<hr />
+<h5 id="2-服务端压缩-gzip-brotli">2. 服务端压缩（Gzip / Brotli）</h5>
+<p>目前服务端返回的数据并未进行压缩，目前的 Rust 服务可以启用对返回数据的压缩。只需要添加一行 <code>CompressionLayer</code>，服务端传输的数据就从 <code>8.0M → 4.8M</code>。如下所示，Finsh 到了 <code>3.69s</code>:</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f4702781c9f349cd86aebf3ff2f630b3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=991&amp;h=351&amp;s=66960&amp;e=png&amp;b=fdfcfc" alt="image.png" /></p>
+<pre><code class="language-rust">use tower_http::compression::CompressionLayer;
+
+.nest_service(&quot;/im&quot;, ServeDir::new(&quot;static/web&quot;).fallback(ServeFile::new(&quot;static/web/index.html&quot;)))
+// Gzip/Brotli 压缩：JS/Wasm 文件压缩率 ~70%
+.layer(CompressionLayer::new())
+</code></pre>
+<p>这对 <code>main.dart.js</code> 这种文本非常适应，但是对 <code>canvaskit.wasm</code> 这种文件是没有效力的。下面看看如何对这块进行优化。</p>
+<hr />
+<h5 id="3-增加原生-web-启动页">3. 增加原生 Web 启动页</h5>
+<p>可以看到 flutter web 的包体积大小很难压到很低，因为 <code>wasm</code> 必然会存在。这些你删不掉也改不了，它们是 Flutter Web 能跑起来的前提。这不是说 Flutter Web 就必须在一开始等待几秒的白屏，我们可以在 web 原生写有些酷炫的加载动画，等 Flutter 准备完毕再进入，这就像游戏一样，不一定要求要秒开，它的价值在于它的内容。</p>
+<p>实现思路：在 Flutter 引擎启动之前，用纯 HTML/CSS 在 <code>index.html</code> 里画一个加载动画。前面说过原生的改动需要在对应原生文件夹，这里在 <code>web/index.html</code> 里增加一个 <code>loading-screen</code> 的覆盖界面，具体可让 AI 发挥。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff1f47fe49834e1a8056b5502856797a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1275&amp;h=399&amp;s=98839&amp;e=png&amp;b=f0eff3" alt="image.png" /></p>
+<p>等 Flutter 渲染出第一帧后，把动画移除。两个世界的交接点是 <code>flutter-first-frame</code> 事件。</p>
+<pre><code class="language-js">  // Flutter 第一帧渲染后移除加载页
+  window.addEventListener('flutter-first-frame', function() {
+    cancelAnimationFrame(animId);
+    const el = document.getElementById('loading-screen');
+    if (el) {
+      el.classList.add('fade-out');
+      setTimeout(() =&gt; el.remove(), 600);
+    }
+  });
+</code></pre>
+<p>这样进入后，原生的 html 就可以立刻渲染出一个等待连接的动画界面，可以缓解用户第一次进入时的等待焦虑。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/668062734a044a55854a08aef035d15c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1404&amp;h=967&amp;s=140571&amp;e=png&amp;b=0a0e1a" alt="image.png" /></p>
+<hr />
+<h4 id="四-关于-wasm-的介绍">四、关于 WASM 的介绍</h4>
+<p>Flutter Web 的支持，离不开 WASM ，本节我们就展开说说它是什么。</p>
+<p>WebAssembly（简称 WASM）是一种运行在浏览器里的二进制指令格式。你可以把它理解为&quot;浏览器的汇编语言&quot;——不是给人读的，是给机器跑的。</p>
+<hr />
+<h5 id="1-wasm-和-javascript-的区别">1. WASM 和 JavaScript 的区别</h5>
+<p>传统 Web 应用只能用 JavaScript。JS 是文本格式，浏览器拿到后要经历：下载文本 → 解析语法 → 编译为字节码 → JIT 优化 → 执行。每一步都有开销。</p>
+<p>WASM 换了个思路：把源代码（C/C++/Rust/Dart/Go...）在构建时就编译成紧凑的二进制格式。浏览器拿到后几乎可以直接执行，跳过了文本解析和大量 JIT 开销。好处是：</p>
+<ul>
+<li><strong>更快</strong>：二进制格式加载更快，执行接近原生速度</li>
+<li><strong>更小</strong>：同样逻辑，二进制比 JS 文本更紧凑</li>
+<li><strong>语言无关</strong>：任何语言都可以编译为 WASM，不只是 JS</li>
+<li><strong>更安全</strong>：二进制指令没有变量名、没有注释、没有可读结构，逆向难度极高。JS 混淆后仍然能还原出业务逻辑，而 WASM 的反编译成本和反编译 C++ 的 <code>.so</code> 文件差不多</li>
+</ul>
+<p>WASM 不是要取代 JavaScript——它是 JS 的补充。适合 CPU 密集型的工作（图形渲染、音视频编解码、游戏引擎），而 JS 仍然负责 DOM 操作和浏览器 API 交互。</p>
+<p>Flutter Web 的 <code>canvaskit.wasm</code>（Skia 图形引擎）就是 WASM 的典型应用：把 C++ 写的 Skia 编译成 WASM，浏览器里就能跑原生级的 2D 渲染。</p>
+<hr />
+<h5 id="2-flutter-的-wasm-编译">2. Flutter 的 WASM 编译</h5>
+<p>传统模式下，Dart 代码通过 <code>dart2js</code> 编译成 JavaScript。浏览器拿到的是一个巨大的 <code>main.dart.js</code> 文件，由 JS 引擎执行。也就是上面看到的这个文件:</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6043bbe1aeea46a486abbef8b9feb55d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=719&amp;h=130&amp;s=53276&amp;e=png&amp;b=f5f8fc" alt="image.png" /></p>
+<p>WASM 模式下，Dart 代码通过 <code>dart2wasm</code> 编译成 WebAssembly 二进制格式（<code>main.dart.wasm</code>）。WebAssembly 是一种紧凑的二进制指令格式，浏览器可以直接编译为机器码执行，跳过了 JS 引擎的解释和 JIT 开销。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f8a2a0f905eb4c008597e3c5e3164f6c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=904&amp;h=138&amp;s=23111&amp;e=png&amp;b=ebf2fd" alt="image.png" /></p>
+<p>好比把一本小说从&quot;中文翻译成英文再给外国人读&quot;变成&quot;直接用他母语写&quot;——中间损耗少了一截。<br />
+Flutter 3.24+ 稳定支持，只需在构建命令加 <code>--wasm</code>：</p>
+<pre><code class="language-bash">flutter build web --wasm --releas --base-href /im/ --dart-define-from-file=.env.production
+</code></pre>
+<hr />
+<h5 id="3-多线程渲染">3. 多线程渲染</h5>
+<p>不管选哪种编译模式，Flutter Web 都需要下载一个图形引擎——因为它不用浏览器自带的 DOM/Canvas API 画界面，而是自带了一整套 Skia 渲染引擎。这是 Flutter 跨平台一致性的代价，也是&quot;工具箱&quot;里最重的一块，没法去掉。</p>
+<table>
+<thead>
+<tr>
+<th>编译模式</th>
+<th>渲染引擎文件</th>
+<th>体积</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JS 模式（默认）</td>
+<td><code>canvaskit.wasm</code></td>
+<td>~2.2 MB</td>
+<td>Skia + JS 桥接层，单线程</td>
+</tr>
+<tr>
+<td>WASM 模式</td>
+<td><code>skwasm_heavy.wasm</code></td>
+<td>~1.8 MB</td>
+<td>Skia 原生 WasmGC，支持多线程</td>
+</tr>
+</tbody>
+</table>
+<p>两者本质上做同一件事：提供 2D 图形绘制能力。skwasm 去掉了 JS 中间层，渲染线程可以独立于主线程运行，动画不会被业务逻辑卡住。</p>
+<p>skwasm 支持多线程渲染，可以把绘制工作分给多个 Web Worker 并行执行，通过 <code>SharedArrayBuffer</code> 共享内存。但浏览器出于安全考虑默认禁用了 <code>SharedArrayBuffer</code>（防止 Spectre 侧信道攻击）。</p>
+<p>要解锁它，服务端必须在响应头中声明页面处于&quot;安全隔离&quot;状态：</p>
+<pre><code class="language-rust">// COOP/COEP 头：启用 SharedArrayBuffer
+.layer(SetResponseHeaderLayer::overriding(
+    HeaderName::from_static(&quot;cross-origin-embedder-policy&quot;),
+    HeaderValue::from_static(&quot;credentialless&quot;),
+))
+.layer(SetResponseHeaderLayer::overriding(
+    HeaderName::from_static(&quot;cross-origin-opener-policy&quot;),
+    HeaderValue::from_static(&quot;same-origin&quot;),
+))
+</code></pre>
+<ul>
+<li><code>Cross-Origin-Embedder-Policy: credentialless</code> — &quot;我不会偷偷加载带凭证的跨域资源&quot;</li>
+<li><code>Cross-Origin-Opener-Policy: same-origin</code> — &quot;我不会和跨域窗口共享进程&quot;</li>
+</ul>
+<p>两个头配齐，浏览器才开放 <code>SharedArrayBuffer</code>，多线程渲染才能生效。<strong>不配的后果：</strong> 应用仍能正常运行，但默默退化为单线程，性能优势打折扣（不会报错，只是变慢）。</p>
+<blockquote>
+<p>参考：<a href="https://docs.flutter.cn/platform-integration/web/wasm">Flutter 官方 Wasm 文档</a></p>
+</blockquote>
+<hr />
+<h4 id="五-本章总结">五、本章总结</h4>
+<p>Web 端的部署比想象中简单。后端加一行 <code>nest_service</code> 就能托管静态文件，不需要 Nginx、不需要 Docker、不需要额外的基础设施。同源部署避免了 CORS 的所有麻烦。真正花时间的是两件事：</p>
+<ul>
+<li><strong>兼容适配</strong>（一次性工作）：<code>dart:ffi</code> 不可用（drift_flutter 解决）、<code>Platform</code> 不可用（kApp 解决）、<code>DeviceInfoPlugin</code> 需要走 webBrowserInfo 路径。搞定之后后续迭代就和其他平台一样了。</li>
+<li><strong>加载体验优化</strong>（持续调优）：Flutter Web 的产物天然比传统 Web 框架大。Dart 运行时 + Skia 渲染引擎 + 业务代码，压缩后仍有 4-5MB。源码层面能做的有限（编译器本身就会 tree shaking），不要试图让 Flutter Web 的首次加载比 React 更快，架构决定了做不到。但通过压缩减小实际等待时间、通过 Loading 动画掩盖等待感知、通过浏览器缓存让回访用户秒开，三管齐下用户体感就不会差。</li>
+</ul>
+<p>至此，闪讯覆盖了 <strong>Android、iOS、macOS、Windows、Linux、Web</strong> 六大平台。同一套 Dart 代码，同一套业务逻辑，用户在任何设备上都能使用。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-40.html">← 果实#6 ｜ 构建 Linux 产品</a>
+      <a class="next" href="ch-42.html">果实#8 ｜ 构建纯血鸿蒙产品 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-运行-web-项目">一、 运行 Web 项目</a></li>
+      <li class="lv5"><a href="#1-本地数据库-drift-处理">1. 本地数据库（drift）处理</a></li>
+      <li class="lv5"><a href="#2-平台判断">2. 平台判断</a></li>
+      <li class="lv5"><a href="#3-设备信息采集-device_info-dart">3.设备信息采集（device_info.dart）</a></li>
+      <li class="lv5"><a href="#4-运行到浏览器">4. 运行到浏览器</a></li>
+      <li class="lv4"><a href="#二-打包与部署">二、打包与部署</a></li>
+      <li class="lv5"><a href="#1-flutter-打包-web-项目">1. Flutter 打包 web 项目</a></li>
+      <li class="lv5"><a href="#2-rust-后端的网站托管">2. Rust 后端的网站托管</a></li>
+      <li class="lv5"><a href="#3-脚本一键部署">3. 脚本一键部署</a></li>
+      <li class="lv4"><a href="#三-flutter-web-的优化">三、Flutter web 的优化</a></li>
+      <li class="lv5"><a href="#1-为什么首屏这么耗时">1. 为什么首屏这么耗时</a></li>
+      <li class="lv5"><a href="#2-服务端压缩-gzip-brotli">2. 服务端压缩（Gzip / Brotli）</a></li>
+      <li class="lv5"><a href="#3-增加原生-web-启动页">3. 增加原生 Web 启动页</a></li>
+      <li class="lv4"><a href="#四-关于-wasm-的介绍">四、关于 WASM 的介绍</a></li>
+      <li class="lv5"><a href="#1-wasm-和-javascript-的区别">1. WASM 和 JavaScript 的区别</a></li>
+      <li class="lv5"><a href="#2-flutter-的-wasm-编译">2. Flutter 的 WASM 编译</a></li>
+      <li class="lv5"><a href="#3-多线程渲染">3. 多线程渲染</a></li>
+      <li class="lv4"><a href="#五-本章总结">五、本章总结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

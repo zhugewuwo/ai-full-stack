@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>经络#3 ｜ 前端 - 从启动到认证 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li class="active"><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>经络#3 ｜ 前端 - 从启动到认证</h1>
+<blockquote>
+<p>生命在体内酝酿许久，终要破壳而出，迎接第一缕光。</p>
+</blockquote>
+<p>前面的章节里，我们一直在打地基：后端搭了框架、做了模块化、接上了数据库，前端也在 playground 里跑通了验证码登录、聊天室这些原型。但这些都还是&quot;体内&quot;的事——在实验室里验证可行性，离一个真正的产品还有距离。这一篇，前端要从 playground 走出来，开始构建真正的产品形态。</p>
+<hr />
+<h4 id="一-应用的启动">一、应用的启动</h4>
+<p>应用的启动，是用户和产品第一次的互动。从 <strong>点击图标 -&gt; 应用启动</strong>，这是一条最简单的交互链，但其中蕴含着丰富的逻辑处理。我们还是从 <code>desgin</code> -&gt; <code>tasks</code> 的流程，先充分讨论需求细节，再让 AI 为我们统一处理编程过程。</p>
+<hr />
+<h5 id="1-功能设计-desgin">1. 功能设计 desgin</h5>
+<p>先和 AI 沟通需求设计，把你可以想到的要点，尽可能和它诉说：<a href="https://github.com/toly1994328/flash_im_by_ai/blob/6dc666f8a6f975cfbf037e935e3a65c60cd40400/docs/features/starter/v0.0.1/client/design.md"><strong>我的结果供参考</strong></a></p>
+<blockquote>
+<p>Q: /feature-designer 我现在想脱离游乐场，开始真正进行闪讯 APP 的创作。<br />
+目前要实现应用的启动页，表现为 logo+ Flash IM 文字，我会为你提供 logo 。<br />
+启动过程中，需要加载本地的的配置、缓存资源，比如认证数据。<br />
+跳转的登录页或主页面，先使用文字空白页展示。<br />
+为我合理设计启动模块，需要层次分明、数据流转明确。</p>
+</blockquote>
+<p>应用启动跳到 <code>SplashPage</code>，在其中访问本地存储的信息，查看有没有认证信息，如果没有调到登录界面，有的话跳到主页。流程如下所示：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cc9e3e77aff445719a40db160432b6fb~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1405&amp;h=849&amp;s=70769&amp;e=png&amp;b=f8f8f8" alt="image.png" /></p>
+<hr />
+<p>经过详细讨论后，AI 为我设计的结构如下。<code>starter</code> 作为一个独立的模块，通过一个文件夹统一维护。结构如下所示：</p>
+<pre><code class="diagram" style="font-size:12.9px">client/lib/src/
+├── app.dart                            # FlashApp，MaterialApp.router 接入 GoRouter
+├── router.dart                         # GoRouter 路由配置，默认路由为闪屏页
+├── domain/
+│   └── model/
+│       └── user.dart                   # User 模型（本地缓存 + 接口共用，含 toJson/fromJson）
+├── auth/
+│   └── view/
+│       └── login_page.dart             # 登录页（当前为文本占位，后续实现）
+├── home/
+│   └── view/
+│       └── home_page.dart              # 首页（当前为文本占位，后续实现）
+└── starter/
+    ├── data/
+    │   ├── model/
+    │   │   └── startup_result.dart     # StartupResult + 启动事件类型
+    │   └── repository/
+    │       └── startup_repository.dart # 从 SharedPreferences 读取缓存，通过 Stream 暴露事件流
+    └── view/
+        └── splash_page.dart            # 闪屏页：logo.png + Flash IM + StreamBuilder 跳转
+</code></pre>
+<hr />
+<h5 id="2-任务拆解-task">2. 任务拆解 task</h5>
+<p>设计确认后，继续让 AI 拆任务。<a href="https://github.com/toly1994328/flash_im_by_ai/blob/6dc666f8a6f975cfbf037e935e3a65c60cd40400/docs/features/starter/v0.0.1/client/tasks.md"><strong>我的结果供参考</strong></a></p>
+<blockquote>
+<p>Q: /feature-task-maker 完善任务规划</p>
+</blockquote>
+<p>启动流程整体也不是太复杂，按照设计文档写出下面的任务：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aa975354e7e2497d84cd1b431184f2a2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=850&amp;h=548&amp;s=86555&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<table>
+<thead>
+<tr>
+<th>启动页</th>
+<th>登录页</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e47b29c4203a4507a6a63095087bf64e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=68810&amp;e=png&amp;b=ffffff" alt="MuMu-20260321-190901-287.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/72d6f10742fd4a1d96914d60c040d72a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=25344&amp;e=png&amp;b=fef7ff" alt="MuMu-20260321-190947-703.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="3-认知拓展">3. 认知拓展</h5>
+<p>接下来，基于当前 AI 生成的代码进行一些评鉴。整体主流程的设计，我也参与很多讨论。其中最丰富的是我和它探讨启动模块和认证模块的关系。在启动时，要查看用户是否已经认证过，所以启动模块 <code>starter</code> 和认证模块 <code>auth</code> 的边界，一开始容易被混淆。最初 AI 的方案，是让启动页直接依赖 <code>auth</code> 模块来判断登录状态。这种做法的问题在于：</p>
+<blockquote>
+<p>它把“流程控制”和“业务能力”耦合在了一起，启动不再只是启动，而是掺入了认证逻辑。</p>
+</blockquote>
+<p>后来它又尝试反过来设计，让启动模块变成一个被观察者，由各个需要认证的模块去监听它的状态变化。这个思路看似解耦，实际上是把问题转移了：<br />
+启动模块本来是一个短生命周期的流程节点，却被强行提升成了一个全局状态源。结果是，其他模块开始依赖一个本不该长期存在的对象，这种依赖关系在时间维度上是不合理的。</p>
+<hr />
+<p>本质上，启动模块的职责很单一，就是完成初始化工作，比如加载本地配置、读取缓存、恢复必要的运行上下文，以及在这个过程中 <code>“顺带”</code> 检查一次当前的认证状态。一旦这些工作完成，它的使命就结束了，它不应该继续参与系统的长期状态维护。就像你进入游乐园检票之后，检票员和你再无瓜葛，你在园内的任何设施的游玩，都和检票员无关。</p>
+<p>认证状态的维护，是一个应用全生命周期的状态，它和认证流程是紧密相关的。理应在认证模块本身去独立维护，启动器只需要负责 <code>告知</code> 即可。仅一次的交互之后，它们再无关联。它为我更新了流程图：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/36e9692715c54abba284a6da5e8e862f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2173&amp;h=2162&amp;s=284581&amp;e=png&amp;a=1&amp;b=ebebeb" alt="mermaid-diagram (12).png" /></p>
+<hr />
+<h4 id="二-登录认证的成长">二、登录认证的成长</h4>
+<p>现在启动后到的登录界面还是空白，我们在游乐场做过一版登录界面，现在可以借鉴一下。另外，在启动页也分析了认证状态的维护。本章完成的结果如下图所示，大家让 AI 生成代码前，可以截图让它参考实现，或者你也可以截自己喜欢登录和个人界面。</p>
+<table>
+<thead>
+<tr>
+<th>登录页</th>
+<th>个人中心</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/26741c751c914ce49ef9d998556f8570~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=134637&amp;e=png&amp;b=ffffff" alt="MuMu-20260322-001926-837.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c2bc3a41f76e4114b4bb5c2b44eb33d2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=103355&amp;e=png&amp;b=f8f8f8" alt="MuMu-20260322-010159-380.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="1-讨论设计与任务">1. 讨论设计与任务</h5>
+<p>接下来，继续调出 feature-designer，来为我们设计，这里先跟它大致描绘一下你想在前端想干什么。<a href="https://github.com/toly1994328/flash_im_by_ai/blob/6dc666f8a6f975cfbf037e935e3a65c60cd40400/docs/features/auth/v0.0.1/client/design.md"><strong>我的结果供参考</strong></a></p>
+<blockquote>
+<p>Q: /feature-designer 我现在想脱离游乐场，开始真正进行闪讯 APP 的创作。<br />
+基于目前的接口功能，为我设计一个简约风格的登录认证功能。界面参考游乐场的登录，要求：<br />
+[1].支持手机号验证码+密码登录。用户登录后检测是否有密码，没有的话弹出设置提示框。<br />
+[2].认证的 Token 需要持久化，下次启动需要保持登录状态。<br />
+[3].进入应用，底部三个 Tab 分别是消息、通讯录、我的，前两个暂时留白。<br />
+[4].我的界面参考游乐场已实现的界面，支持简易的退出登录。<br />
+[5].使用 Bloc 的 Cubit 进行状态管理，代码尽可能保持合理的结构分层。<br />
+有什么问题都可以和我及时沟通。</p>
+</blockquote>
+<p>下面是沟通后，AI 给的登录流程：</p>
+<ul>
+<li><strong>LoginPage</strong> 作为视图层，负责交互事件的触发，比如发送验证码、点击登录。</li>
+<li><strong>LoginMixin</strong> 作为逻辑层，负责维护处理逻辑和维护界面状态数据。这里额外设计了一个策略层，便于后续其他登录方式的拓展。</li>
+<li><strong>AuthRepository</strong> 负责数据层，调用后端接口，得到认证数据。</li>
+<li><strong>AuthCubit</strong> 是全局的认证状态维护者，登录成功之后通知它更新状态。</li>
+</ul>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c98442b5c04a490bb0e937f05d6d648c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3020&amp;h=2122&amp;s=323740&amp;e=png&amp;a=1&amp;b=e9e9e9" alt="mermaid-diagram (16).png" /></p>
+<p>最终设计的认证相关的代码结构如下：</p>
+<pre><code class="diagram" style="font-size:13.5px">client/lib/src/
+ ...
+├── auth/
+│   ├── data/
+│   │   ├── model/
+│   │   │   └── login_result.dart       # LoginResult 数据模型 — 新建
+│   │   └── repository/
+│   │       └── auth_repository.dart    # 认证仓库（API + Token 持久化）— 新建
+│   ├── logic/
+│   │   ├── auth/
+│   │   │   ├── auth_cubit.dart         # 全局认证状态（已有，需扩展 onPasswordSet）
+│   │   │   └── auth_state.dart         # AuthState（已有）
+│   │   └── login/
+│   │       ├── login_mixin.dart        # 登录页逻辑 Mixin — 新建
+│   │       └── strategy/
+│   │           ├── sms_login_strategy.dart      # 验证码登录策略 — 新建
+│   │           └── password_login_strategy.dart  # 密码登录策略 — 新建
+│   └── view/
+│       ├── login_page.dart             # 登录页（页面组装）— 重写
+│       └── components/
+│           ├── action_button.dart      # ActionButton — 启用/禁用态按钮
+│           ├── agreement_row.dart      # AgreementRow — 协议勾选行
+│           ├── labeled_input.dart      # LabeledInput — 带标签的底线输入行
+│           ├── sms_login_form.dart     # SmsLoginForm — 验证码表单
+│           └── password_login_form.dart # PasswordLoginForm — 密码表单
+│
+├── home/
+│   ├── view/
+│   │   └── home_page.dart              # 三 Tab 主页（已有占位，需重写）
+│   └── profile/
+│       ├── profile_page.dart           # &quot;我的&quot;页面（微信风格列表布局）— 新建
+│       └── set_password_page.dart      # 密码设置独立页面 — 新建
+</code></pre>
+<p>设计确认后，继续让 AI 拆任务。这块后面我就不细说了，我都会给出 <a href="https://github.com/toly1994328/flash_im_by_ai/blob/6dc666f8a6f975cfbf037e935e3a65c60cd40400/docs/features/auth/v0.0.1/client/tasks.md"><strong>我的结果供参考</strong></a></p>
+<blockquote>
+<p>Q: /feature-task-maker 完善任务规划</p>
+</blockquote>
+<hr />
+<h5 id="2-交流过程中的细节">2. 交流过程中的细节</h5>
+<p>这里来分享一下和 AI 交流的细节。对登录状态管理，有三个阶段的烟花。一开始，它的设计是将登录状态 LoginState 作为 sealed class，每种状态一个子类：</p>
+<pre><code class="language-dart">sealed class LoginState {}
+class LoginInitial extends LoginState { final bool isSmsMode; }
+class SmsSending extends LoginState {}
+class SmsSent extends LoginState { final String code; final bool isSmsMode; }
+class LoginLoading extends LoginState {}
+class LoginSuccess extends LoginState { final LoginResult loginResult; final User user; }
+class LoginFailure extends LoginState { final String message; final bool isSmsMode; }
+</code></pre>
+<p>我看起来就很别扭，就让它分析了一下，这种方式存在的潜在风险，下面是它的回复:</p>
+<ol>
+<li><strong>状态维度混淆</strong>：<code>isSmsMode</code>（UI 模式）是持久的，<code>SmsSending</code>/<code>LoginLoading</code>（操作状态）是瞬时的。两个维度被拆成不同的子类，每次状态切换都会丢失另一维度的信息。</li>
+<li><strong>信息丢失</strong>：<code>SmsSending</code> 和 <code>LoginLoading</code> 没有 <code>isSmsMode</code>，emit 后 UI 不知道当前模式。发完验证码（<code>SmsSent</code>）点登录变成 <code>LoginLoading</code>，验证码信息丢了。</li>
+<li><strong>扩展性差</strong>：加新登录方式需要在每个子类里都带上模式标识，子类数量膨胀。</li>
+</ol>
+<p>Sealed class 适合状态之间互斥且信息不重叠的场景。登录页的状态有两个独立维度（模式 + 操作），不适合用互斥子类建模。</p>
+<hr />
+<p>然后我意识到其实登录界面也是短生命周期的。它的目的就是校验用户是不是有资格进入，然后给张门票。和游乐园检票的职能很类似，所以它和启动时校验一下，本质上明没有太大区别，只不过这里多了一些表单的填写。登录页的状态是 <strong>页面级</strong>的，生命周期随页面销毁，不需要跨组件共享，用状态管理框架是过度设计。</p>
+<blockquote>
+<p>Q: 其实我感觉登录本质上是一个得到 token 的抽象能力，它的界面数据也只是在自己的生命周期内，没有复杂的共享需求，有必要使用状态管理吗？</p>
+</blockquote>
+<p>然后让它用 mixin 把状态数据和业务逻辑从 State 类里抽出来，LoginPage 的 State 只管 UI 构建，mixin 管数据和方法。职责分离，但不引入额外框架。然后是方案二：</p>
+<pre><code class="language-dart">mixin LoginMixin on State&lt;LoginPage&gt; {
+  bool isSmsMode = true;
+  bool isLoading = false;
+  bool agreed = false;
+  int countdown = 0;
+  final phoneCtrl = TextEditingController();
+  final credentialCtrl = TextEditingController();
+  // sendSms(), login(), toggleMode()...
+}
+
+class _LoginPageState extends State&lt;LoginPage&gt; with LoginMixin {
+  @override
+  Widget build(BuildContext context) { /* 纯 UI */ }
+}
+</code></pre>
+<ul>
+<li>职责分离：逻辑在 mixin，视图在 State</li>
+<li>无框架开销：不需要 BlocProvider、BlocConsumer</li>
+<li>生命周期自然：页面销毁时 mixin 的 dispose 自动清理</li>
+</ul>
+<hr />
+<p>当时代码上它已经为我写了一版，然后我看着 <code>LoginMixin</code> 里复杂的变量，感觉不同的认证方式所需的数据全部杂糅到了一块，后面要增加其他认证，就要在这锅粥里折腾。于是让它帮我在好好设计一些，能让不同的登录方式维护自身必要的数据。下面是 AI 的建议:</p>
+<p>不同登录方式有各自的输入控件和校验逻辑，它们不是继承关系，而是组合关系——LoginMixin 同时持有多个策略对象，按需激活。切换模式只是换个状态，各策略的状态互不丢失。</p>
+<p>同时，&quot;怎么登录&quot;这件事应该留在策略内部。如果 <code>login()</code> 写死在 Mixin 里，每种登录方式的调用逻辑都耦合在一起，新增方式要改 Mixin。更关键的是，三方登录（微信/Google）的流程完全不同——不是&quot;填表单 → 调接口&quot;，而是&quot;OAuth 回调 → 拿 token&quot;，写死在 Mixin 里根本塞不进去。</p>
+<p>所以策略需要一个轻量的抽象基类，只约束共性：能校验、能登录、能销毁。<code>login()</code> 下沉到策略自身，Mixin 只做调度。抽象基类 <code>LoginStrategy</code>：</p>
+<pre><code class="language-dart">abstract class LoginStrategy {
+  bool get isValid;
+  Future&lt;LoginResultData&gt; login(AuthRepository repo);
+  void dispose();
+}
+</code></pre>
+<ul>
+<li><code>isValid</code> — 当前输入是否满足登录条件</li>
+<li><code>login(repo)</code> — 执行登录，返回统一结果 <code>({LoginResult loginResult, User user})</code></li>
+<li><code>dispose()</code> — 释放资源</li>
+</ul>
+<p>这里不强制 <code>sendSms()</code>、<code>countdown</code> 等特有能力——这些是具体策略的私有行为，不属于公共契约。</p>
+<pre><code class="diagram" style="font-size:13.5px">LoginStrategy（抽象基类）
+├── isValid
+├── login(repo) → LoginResultData
+├── dispose()
+
+LoginMixin（持有 + 调度）
+├── agreed、isLoading、mode
+├── smsStrategy: SmsLoginStrategy
+├── passwordStrategy: PasswordLoginStrategy
+├── currentStrategy → 当前激活的策略
+├── login() → currentStrategy.login(repo) → AuthCubit.login → go('/home')
+├── toggleMode() → 切换 mode
+
+SmsLoginStrategy extends LoginStrategy
+├── phoneCtrl、codeCtrl、countdown
+├── login(repo) → repo.login(phone, credential, 'sms')
+├── sendSms()（特有）
+
+PasswordLoginStrategy extends LoginStrategy
+├── accountCtrl（手机号/用户名/邮箱）、passwordCtrl
+├── login(repo) → repo.login(phone, credential, 'password')
+</code></pre>
+<p>写完后，我觉得还不错，虽然可能好没有尽善尽美。但后续增加一个认证方式，改动就会小很多：</p>
+<ul>
+<li>加邮箱验证码登录：新建 <code>EmailLoginStrategy extends LoginStrategy</code>，LoginMixin 里注册，LoginPage 加一套输入 UI</li>
+<li>加三方登录（微信/Google）：新建 <code>WechatLoginStrategy extends LoginStrategy</code>，OAuth 回调拿到 token 后走 <code>login(repo)</code> 统一返回</li>
+<li>所有方式最终都通过 <code>LoginStrategy.login(repo)</code> 返回统一的 <code>LoginResultData</code>，汇入 <code>AuthCubit.login()</code></li>
+</ul>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4f43e39e859048dcb891affad15f8009~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=825&amp;h=327&amp;s=56987&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<hr />
+<h4 id="三-前端分层结构总览">三、前端分层结构总览</h4>
+<p>经过启动模块和认证模块的开发，前端的代码已经有了一定的体量。在继续往前走之前，值得停下来看一眼全局——目前的代码是怎么组织的，各层之间是什么关系。这不是认为规定必须是这样的，而是在开发过程中自然长出来的结构。</p>
+<hr />
+<h5 id="1-目录结构">1. 目录结构</h5>
+<p>乍一看文件不少，但规律很明显。<code>src/</code> 下分成三类东西：</p>
+<ul>
+<li><code>application/</code> — 应用基础设施，配置、路由、网络客户端，只在启动时组装一次</li>
+<li><code>domain/</code> — 跨模块共享的业务模型，比如 User，后续还会有 Message、Contact</li>
+<li>业务模块（starter、auth、home）— 每个内部都是 <code>data / logic / view</code> 三层</li>
+</ul>
+<p>这不是我们预先规定的模板，而是在和 AI 反复讨论中自然收敛出来的。</p>
+<pre><code class="diagram" style="font-size:13.5px">client/lib/
+├── main.dart                              # 入口：创建依赖、组装路由、启动 App
+└── src/
+    ├── application/                       # 应用基础设施（非业务）
+    │   ├── app.dart                       # FlashApp：MaterialApp.router 壳
+    │   ├── config.dart                    # 全局配置（服务器地址、端口）
+    │   ├── router.dart                    # GoRouter 路由表
+    │   └── http_client.dart               # Dio 单例 + Token 拦截器
+    │
+    ├── domain/                            # 跨模块共享的领域模型
+    │   └── model/
+    │       └── user.dart
+    │
+    ├── starter/                           # 启动模块
+    │   ├── data/
+    │   │   ├── model/
+    │   │   │   └── startup_result.dart
+    │   │   └── repository/
+    │   │       └── startup_repository.dart
+    │   └── view/
+    │       └── splash_page.dart
+    │
+    ├── auth/                              # 认证模块
+    │   ├── data/
+    │   │   ├── model/
+    │   │   │   └── login_result.dart
+    │   │   └── repository/
+    │   │       └── auth_repository.dart
+    │   ├── logic/
+    │   │   ├── auth/                      # 全局认证状态
+    │   │   │   ├── auth_cubit.dart
+    │   │   │   └── auth_state.dart
+    │   │   └── login/                     # 登录页逻辑
+    │   │       ├── login_mixin.dart
+    │   │       └── strategy/
+    │   │           ├── login_strategy.dart
+    │   │           ├── sms_login_strategy.dart
+    │   │           └── password_login_strategy.dart
+    │   └── view/
+    │       ├── login_page.dart
+    │       └── components/
+    │           ├── action_button.dart
+    │           ├── agreement_row.dart
+    │           ├── labeled_input.dart
+    │           ├── sms_login_form.dart
+    │           └── password_login_form.dart
+    │
+    └── home/                              # 主页模块
+        ├── view/
+        │   └── home_page.dart
+        └── profile/
+            ├── profile_page.dart
+            └── set_password_page.dart
+</code></pre>
+<hr />
+<h5 id="2-职责与通信">2. 职责与通信</h5>
+<p>用一句话概括每层干什么：</p>
+<table>
+<thead>
+<tr>
+<th>层</th>
+<th>职责</th>
+<th>典型产物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>和外部世界打交道——网络请求、本地缓存读写</td>
+<td>AuthRepository、StartupRepository、LoginResult</td>
+</tr>
+<tr>
+<td>logic</td>
+<td>业务规则和状态管理——不关心 UI 长什么样</td>
+<td>AuthCubit、LoginMixin、LoginStrategy</td>
+</tr>
+<tr>
+<td>view</td>
+<td>纯 UI 构建——不关心数据从哪来</td>
+<td>LoginPage、ProfilePage、SmsLoginForm</td>
+</tr>
+</tbody>
+</table>
+<p>依赖方向是单向的：<code>view → logic → data</code>。view 层可以调用 logic 层的方法，logic 层可以调用 data 层的接口，但反过来不行。这条规则保证了每一层都可以<strong>独立替换</strong>。</p>
+<blockquote>
+<p>换个 UI 框架不影响业务逻辑，换个后端接口不影响界面。</p>
+</blockquote>
+<hr />
+<p>在这两个模块的开发中，我们用了两种不同的状态管理方式，这不是随意的，而是根据状态的生命周期来选择的：</p>
+<table>
+<thead>
+<tr>
+<th>状态</th>
+<th>方式</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>认证状态（是否登录、Token、用户信息）</td>
+<td>AuthCubit（flutter_bloc）</td>
+<td>应用全生命周期，多个页面需要读取</td>
+</tr>
+<tr>
+<td>登录表单状态（手机号、验证码、倒计时）</td>
+<td>StatefulWidget + Mixin</td>
+<td>页面级，随页面销毁，无共享需求</td>
+</tr>
+</tbody>
+</table>
+<p>简单来说：需要跨页面共享的状态，用 Cubit 挂在 App 顶层；只在当前页面用的状态，<code>setState</code> 就够了。不是所有状态都值得上框架，过度设计反而增加复杂度。</p>
+<hr />
+<p>目前模块之间的通信方式很克制，只有两种：</p>
+<p><strong>回调通知</strong>：starter 完成启动后，通过 <code>onStartupComplete</code> 回调把结果交给 main.dart，main.dart 再调用 <code>AuthCubit.applyStartupSnapshot()</code>。starter 不知道 AuthCubit 的存在，它只管把数据交出去。</p>
+<p><strong>读取全局状态</strong>：HomePage、ProfilePage 通过 <code>context.read&lt;AuthCubit&gt;()</code> 读取认证状态。这是 flutter_bloc 提供的标准方式，AuthCubit 挂在 Widget 树顶层，任何子节点都能访问。</p>
+<p>没有事件总线，没有全局单例，没有全局注入。通信路径越少，代码越容易理解。后续如果模块变多、通信变复杂，再考虑引入更重的机制也不迟。</p>
+<hr />
+<h5 id="3-对-ai-编程的意义">3. 对 AI 编程的意义</h5>
+<p>这套结构不复杂，但它有一个好处：<strong>每个文件该放在哪里，不需要想。</strong> 新加一个模块，照着 data / logic / view 三层建目录；新加一个登录方式，在 strategy 里加一个文件。结构本身就是文档，打开目录树就知道项目在干什么。</p>
+<p>这种分层对 AI 编程有很实际的意义。AI 在处理你的需求时，首先要做的就是定位——改哪个文件、加在哪里。如果代码是一锅粥，所有逻辑混在几个大文件里，AI 需要通读大量代码才能理解上下文，定位成本很高，出错概率也大。</p>
+<p>而分层结构给了 AI 一套明确的寻址规则：你说&quot;改登录逻辑&quot;，它知道去 <code>logic/login/</code>；你说&quot;加个接口调用&quot;，它知道去 <code>data/repository/</code>；你说&quot;调整界面&quot;，它知道去 <code>view/</code>。层次越清晰，AI 的定位越准，生成的代码越容易落在正确的位置。</p>
+<p>对人来说也一样。接手一个陌生项目，最怕的不是代码复杂，而是不知道从哪看起。分层结构提供了一张地图——先看 <code>application/</code> 了解应用怎么启动和组装，再看某个模块的 <code>data/</code> 了解它和外部怎么交互，<code>logic/</code> 了解业务规则，<code>view/</code> 了解界面长什么样。每一层的职责是确定的，你不需要把整个项目读一遍才能开始干活。</p>
+<hr />
+<h4 id="四-本章小结">四、本章小结</h4>
+<p>到这里，登录的整体流程，已经从一开始的内存乞丐版，升级到了数据入门版。闪讯的登录，已经可以将真实的用户的数据，存入到后端系统。这里可以留个小作业:</p>
+<blockquote>
+<p>基于目前的需求、或者你新开一个需求，完成邮箱登录的前后端功能，来检验一下你的学习成果。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前端从启动到认证</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/releases/tag/v0.5.0">v0.5.0</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/86a1c529742ebd70244078f3e20d41559e4f1f4f">86a1c52</a></td>
+</tr>
+</tbody>
+</table>
+<p>这一章，前端从 playground 走了出来，开始构建真正的产品形态：</p>
+<ul>
+<li><strong>启动模块落地</strong>——SplashPage 读取本地缓存，判断认证状态，一次性交接给 AuthCubit 后退场。启动器和认证模块的边界，在反复讨论中变得清晰：短生命周期的流程节点，不该承担长期状态维护的职责。</li>
+<li><strong>认证模块成型</strong>——从验证码登录到密码登录，从登录页到个人中心，完整的认证链路跑通了，并且具有良好的结构。</li>
+<li><strong>分层结构浮现</strong>——<code>application/</code> 放应用基础设施，<code>domain/</code> 放跨模块共享模型，业务模块内部 <code>data / logic / view</code> 三层各司其职。</li>
+</ul>
+<p>我们目前还是采用的 <code>文件夹</code> 隔离模块的方式，这种方式便于初期的理解。但这种隔离方式并不是模块化的最优解。比如想在 starter 的模块中，代码文件可以访问 auth 的内容，我们只是 <strong>人为规定</strong> 不要乱依赖。而这种认为，可能在某些为了便利性时而被破坏。</p>
+<p>后面的随着前后端代码的增长，以及我们对事物之间联系的深入理解。会陆续将 <code>模块</code> 的概念，分化为物理层面独立的 <code>&quot;器官&quot;</code>，甚至通过接口契约，这个 <code>&quot;器官&quot;</code> 可以直接移植到其他的项目中工作。下一篇，我们将不忙着赶进度，而是基于目前已经完成的认证系统，好好探讨一下 <strong>事物之间联系</strong> 这一个非常重要的认知。</p>
+<hr />
+<p><strong>认知拓展：和 AI 一起做架构决策</strong></p>
+<p>这一章里，很多架构决策不是我一个人拍板的，而是在和 AI 的对话中逐步收敛出来的。比如登录状态管理的三次演化——第一版 Sealed Class 是 AI 给的方案，我看着别扭，让它自己分析问题；第二版单 Mixin 是我提出的方向，AI 帮我实现后我发现了新的问题；第三版策略模式是我们一起讨论出来的。</p>
+<p>这个过程有点像结对编程，但节奏更快。AI 的优势是它能迅速给出一个完整方案，让你看到全貌；你的优势是你能从全貌中嗅到不对劲的地方。它写得快，你看得准，两者配合起来，架构决策的质量反而比一个人闷头想要高。</p>
+<p>但有一点要注意：AI 给的第一版方案，往往不是最优的。不是因为它能力不够，而是因为它还不够了解你的偏好和项目的上下文。你需要把&quot;这里不对&quot;说出来，它才能往更好的方向调整。<strong>沉默地接受，是 AI 编程中最大的浪费。</strong></p>
+<p>再回首，你可以看到和 AI 讨论的过程中，我们已经不知不觉积攒了对项目来说，最宝贵的文档资产。这不只是让 AI 了解该干什么，更可以让人了解功能需求在干什么，这也是项目成长的轨迹。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c27fd502277f4b63aff5c234f2687eed~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=971&amp;h=365&amp;s=27594&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-13.html">← 经络#2 ｜ 后端 - 认证系统升级</a>
+      <a class="next" href="ch-15.html">经络#4 ｜ 事物的相互关系 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-应用的启动">一、应用的启动</a></li>
+      <li class="lv5"><a href="#1-功能设计-desgin">1. 功能设计 desgin</a></li>
+      <li class="lv5"><a href="#2-任务拆解-task">2. 任务拆解 task</a></li>
+      <li class="lv5"><a href="#3-认知拓展">3. 认知拓展</a></li>
+      <li class="lv4"><a href="#二-登录认证的成长">二、登录认证的成长</a></li>
+      <li class="lv5"><a href="#1-讨论设计与任务">1. 讨论设计与任务</a></li>
+      <li class="lv5"><a href="#2-交流过程中的细节">2. 交流过程中的细节</a></li>
+      <li class="lv4"><a href="#三-前端分层结构总览">三、前端分层结构总览</a></li>
+      <li class="lv5"><a href="#1-目录结构">1. 目录结构</a></li>
+      <li class="lv5"><a href="#2-职责与通信">2. 职责与通信</a></li>
+      <li class="lv5"><a href="#3-对-ai-编程的意义">3. 对 AI 编程的意义</a></li>
+      <li class="lv4"><a href="#四-本章小结">四、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

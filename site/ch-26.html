@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>枝叶#3 ｜ 加群与审批 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li class="active"><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>枝叶#3 ｜ 加群与审批</h1>
+<blockquote>
+<p>最好的规则不是挡住所有人，而是让对的人走最短的路。</p>
+</blockquote>
+<p>上一章我们让闪讯从两人对话走向了多人群聊，群主可以选人建群，成员可以在群里收发消息。但有一个问题：用户只能通过&quot;被邀请&quot;的方式进入群聊。这就像一个只有后门的餐厅，菜再好，路人也进不来。这一章要给群聊装上&quot;正门&quot;，核心功能和界面效果如下所示 ：</p>
+<ul>
+<li>用户可以搜索群聊、主动申请加入，</li>
+<li>群主会收到申请通知，可以审批入群申请。</li>
+<li>同时提供一个最小的群聊详情页，展示成员列表和入群验证开关。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>用户: 搜索群聊</th>
+<th>群主: 审批通知</th>
+<th>群聊信息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a2bbeaf0e1bb4a6e976556af8f501ed8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=182457&amp;e=png&amp;b=fafafa" alt="" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2a4a42cd1567449db3f88d13a600238d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=106714&amp;e=png&amp;b=fbfbfb" alt="" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/99ca0b21e4a249b594e2e69c93d74c1a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=96493&amp;e=png&amp;b=f9f9f9" alt="" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="一-需求分析">一、需求分析</h4>
+<p>从&quot;被邀请&quot;到&quot;主动加入&quot;，看起来只是多了一个入口，实际上引入了一整条新的链路：搜索 → 申请 → 审批 → 加入。这条链路的复杂度集中在两个地方：入群申请的分支逻辑（同一个接口要处理&quot;直接加入&quot;和&quot;等待审批&quot;两种场景），以及群主端的实时通知推送。</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>group/v0.0.2</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.14.0/docs/features/im/group/v0.0.2/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.14.0/docs/features/im/group/v0.0.2/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.14.0/docs/features/im/group/v0.0.2/client/tasks.md">tasks.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.14.0/docs/features/im/group/v0.0.2/server/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.14.0/docs/features/im/group/v0.0.2/server/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<p>先鸟瞰一下本章涉及的前后端模块：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cc7585f47f40491d89f58d851de2bc28~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2350&amp;h=1040&amp;s=221541&amp;e=png&amp;a=1&amp;b=fcf8f8" alt="mermaid-diagram (80).png" /></p>
+<hr />
+<h5 id="1-交互链分析">1. 交互链分析</h5>
+<p>本章有四条交互链，覆盖了&quot;搜索加群&quot;的完整生命周期：</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>用户故事</th>
+<th>操作路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>搜索并直接加入</td>
+<td>作为用户，我想搜索并加入一个不需要审批的群聊</td>
+<td>加好友/群 → 搜索群聊 → 输入关键词 → 点击&quot;加入&quot; → 确认 → 直接加入</td>
+</tr>
+<tr>
+<td>搜索并申请加入</td>
+<td>作为用户，我想申请加入一个需要审批的群聊</td>
+<td>加好友/群 → 搜索群聊 → 输入关键词 → 点击&quot;申请&quot; → 填写留言 → 等待审批</td>
+</tr>
+<tr>
+<td>群主审批</td>
+<td>作为群主，我想审批入群申请</td>
+<td>收到 WS 通知 → 通讯录红点 → 群通知页 → 同意/拒绝</td>
+</tr>
+<tr>
+<td>群详情与设置</td>
+<td>作为群主，我想查看群成员并控制入群验证</td>
+<td>群聊右上角 → 群详情页 → 成员网格 → 切换入群验证开关</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>① 搜索并直接加入（无需验证）</strong></p>
+<p>用户在通讯录 Tab 点击&quot;加好友/群&quot;（原&quot;添加朋友&quot;页面扩展），页面新增&quot;搜索群聊&quot;入口。点击进入 SearchGroupPage，顶部搜索栏输入关键词，300ms 防抖触发远程搜索。未加入且无需验证的群显示蓝色&quot;加入&quot;按钮，点击后弹出确认对话框，确认后直接加入。</p>
+<table>
+<thead>
+<tr>
+<th>加好友/群入口</th>
+<th>搜索群聊</th>
+<th>加入成功</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/549f2b6410664457bfa01882de5c2efd~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=216945&amp;e=png&amp;b=f8f8f8" alt="MuMu-20260419-221022-472.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a2bbeaf0e1bb4a6e976556af8f501ed8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=182457&amp;e=png&amp;b=fafafa" alt="MuMu-20260419-181754-814.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bbcdf7f36ac54af289f7931bff309ddc~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=207872&amp;e=png&amp;b=f9f9f9" alt="MuMu-20260419-220940-952.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>② 搜索并申请加入（需验证）</strong></p>
+<p>操作路径和上面类似，但需要验证的群显示橙色&quot;申请&quot;按钮。点击后弹出对话框，包含群信息预览和可选的留言输入框。发送申请后按钮变为灰色&quot;已申请&quot;。</p>
+<table>
+<thead>
+<tr>
+<th>用户:添加页</th>
+<th>用户: 搜索群聊</th>
+<th>用户: 申请入群</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/05eacda4af71412ba013e3319a8b2657~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=114491&amp;e=png&amp;b=fafafa" alt="MuMu-20260419-222608-485.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a2bbeaf0e1bb4a6e976556af8f501ed8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=182457&amp;e=png&amp;b=fafafa" alt="MuMu-20260419-181754-814.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fac4f4d3382b44959c72a7ac3b9fa257~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=156752&amp;e=png&amp;b=727272" alt="MuMu-20260419-181607-338.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>③ 群主处理入群申请</strong></p>
+<p>群主收到 WS 推送的 GROUP_JOIN_REQUEST 帧，通讯录 Tab 的&quot;群通知&quot;入口显示红点角标。进入群通知页看到申请列表，每条显示申请者信息和留言，右侧有&quot;拒绝&quot;和&quot;同意&quot;按钮。</p>
+<table>
+<thead>
+<tr>
+<th>群主: 审批通知</th>
+<th>群主: 审批处理</th>
+<th>用户: 加入群聊</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2a4a42cd1567449db3f88d13a600238d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=106714&amp;e=png&amp;b=fbfbfb" alt="MuMu-20260419-181635-146.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/734c1ed0359a40f49521a92ef8455da5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=62332&amp;e=png&amp;b=fdfdfd" alt="MuMu-20260419-181828-139.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/47e985cd13d5464585f14c65dc33e905~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=175598&amp;e=png&amp;b=fafafa" alt="MuMu-20260419-183001-618.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>④ 查看群详情与切换入群验证</strong></p>
+<p>群聊 ChatPage 右上角点击群图标进入群详情页。页面展示群名、群号、成员网格（头像 + 昵称，群主有橙色角标）。群主可以看到&quot;入群验证&quot;开关，切换后即时生效。</p>
+<table>
+<thead>
+<tr>
+<th>ChatPage</th>
+<th>群聊详情</th>
+<th>入群验证开关</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/47e985cd13d5464585f14c65dc33e905~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=175598&amp;e=png&amp;b=fafafa" alt="MuMu-20260419-183001-618.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/99ca0b21e4a249b594e2e69c93d74c1a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=96493&amp;e=png&amp;b=f9f9f9" alt="MuMu-20260419-181423-271.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/79a74543d6a147a69ea7f0e4f722cd62~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=102120&amp;e=png&amp;b=f9f9f9" alt="MuMu-20260419-222217-660.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="2-逻辑流程树">2. 逻辑流程树</h5>
+<p>交互链画的是用户走的路，逻辑树画的是系统跑的路。本章有三条关键事件流：搜索、入群申请（分支逻辑）、群主审批。其中入群申请是最复杂的——同一个接口根据群的配置走两条完全不同的路径。</p>
+<p><strong>搜索事件流</strong></p>
+<p>搜索看起来简单，但后端要在一次查询中返回四个维度的信息（成员数、是否已加入、是否需验证、是否已申请），前端根据这四个字段渲染四种按钮状态。</p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+<th>产生的新事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>用户输入关键词</td>
+<td>前端 300ms 防抖后 <code>GET /groups/search?keyword=xxx</code></td>
+<td>HTTP 请求</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>后端搜索</td>
+<td>纯数字按群号精确匹配，非数字按群名 ILIKE 模糊搜索，关联查 member_count / is_member / join_verification / has_pending_request</td>
+<td>返回 GroupSearchResult 列表</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>前端渲染</td>
+<td>根据三个字段决定按钮状态</td>
+<td>搜索结果展示</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/81f4265332934a39936d6ec78023c22e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2285&amp;h=2498&amp;s=334991&amp;e=png&amp;a=1&amp;b=eaeaea" alt="" /></p>
+<p>搜索结果中每个群的按钮状态由三个布尔字段决定，形成一张决策表：</p>
+<table>
+<thead>
+<tr>
+<th>is_member</th>
+<th>has_pending_request</th>
+<th>join_verification</th>
+<th>按钮状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>true</td>
+<td>—</td>
+<td>—</td>
+<td>&quot;已加入&quot;（灰色，不可点击）</td>
+</tr>
+<tr>
+<td>false</td>
+<td>true</td>
+<td>—</td>
+<td>&quot;已申请&quot;（灰色，不可点击）</td>
+</tr>
+<tr>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>&quot;加入&quot;（蓝色）</td>
+</tr>
+<tr>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td>&quot;申请&quot;（橙色）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>四种状态全部由后端一次查询返回，前端不需要额外请求。这是&quot;胖查询&quot;的典型场景——多做一点 SQL 关联，省掉前端多次网络往返。</p>
+</blockquote>
+<hr />
+<p><strong>入群申请事件流（分支逻辑）</strong></p>
+<p>这是本章最核心的逻辑。同一个 <code>POST /groups/{id}/join</code> 接口，根据群的 <code>join_verification</code> 设置走两条完全不同的路径：无需验证时直接加入（同步），需要验证时创建申请并通过 WS 推送通知群主（异步）。</p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+<th>产生的新事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>用户点击&quot;加入&quot;或&quot;申请&quot;</td>
+<td>前端 <code>POST /groups/{id}/join</code>，body: <code>{ message? }</code></td>
+<td>HTTP 请求</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>后端校验</td>
+<td>群存在且 type=1、用户非成员、无待处理申请</td>
+<td>—</td>
+</tr>
+<tr>
+<td>T3a</td>
+<td>无需验证</td>
+<td>直接 INSERT conversation_members + 刷新宫格头像 → 返回 <code>auto_approved: true</code></td>
+<td>用户立即加入</td>
+</tr>
+<tr>
+<td>T3b</td>
+<td>需要验证</td>
+<td>INSERT group_join_requests → 返回 <code>auto_approved: false</code></td>
+<td>申请已创建</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>需审批时</td>
+<td>后端通过 WS 推送 GROUP_JOIN_REQUEST 帧给群主</td>
+<td>群主收到通知</td>
+</tr>
+</tbody>
+</table>
+<p>T3a 和 T3b 的分叉点在 <code>join_verification</code> 字段——这个字段存在 <code>group_info</code> 表中，上一章创建群聊时默认为 false，本章新增的群详情页允许群主切换它。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/82a49804ecf846988d4df91b4e6c2ccd~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3164&amp;h=2504&amp;s=393396&amp;e=png&amp;a=1&amp;b=eaeaea" alt="mermaid-diagram (84).png" /></p>
+<blockquote>
+<p>注意 T4 的 <code>tokio::spawn</code>——WS 推送是异步的，不阻塞 HTTP 响应。用户点击&quot;申请&quot;后立即收到 200，WS 通知在后台发送。如果群主不在线，通知会丢失，但申请已写入数据库，群主下次打开群通知页时能看到。</p>
+</blockquote>
+<hr />
+<p><strong>群主审批事件流</strong></p>
+<p>群主收到 WS 推送后，通讯录 Tab 显示红点角标。进入群通知页看到申请列表，点击&quot;同意&quot;或&quot;拒绝&quot;触发审批。</p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+<th>产生的新事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>群主点击&quot;同意&quot;或&quot;拒绝&quot;</td>
+<td>前端 <code>POST /groups/{id}/join-requests/{rid}/handle</code></td>
+<td>HTTP 请求</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>后端校验</td>
+<td>当前用户是群主、申请存在且 status=0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>T3a</td>
+<td>同意</td>
+<td>UPDATE status=1 + INSERT conversation_members + 刷新宫格头像 + 发系统消息</td>
+<td>申请者加入群聊</td>
+</tr>
+<tr>
+<td>T3b</td>
+<td>拒绝</td>
+<td>UPDATE status=2</td>
+<td>申请被驳回</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e1977bb546b4d29bb5a872795462b5f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2760&amp;h=1944&amp;s=279730&amp;e=png&amp;a=1&amp;b=ebebeb" alt="mermaid-diagram (86).png" /></p>
+<p><strong>状态流转</strong></p>
+<p>入群申请的生命周期很清晰——从不存在到待处理，再到已同意或已拒绝。被拒绝后可以重新申请（创建新记录），不会阻塞。</p>
+<table>
+<thead>
+<tr>
+<th>实体</th>
+<th>触发事件</th>
+<th>前状态</th>
+<th>后状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GroupJoinRequest</td>
+<td>POST /join（需审批）</td>
+<td>不存在</td>
+<td>status=0（待处理）</td>
+</tr>
+<tr>
+<td>GroupJoinRequest</td>
+<td>群主同意</td>
+<td>status=0</td>
+<td>status=1（已同意）</td>
+</tr>
+<tr>
+<td>GroupJoinRequest</td>
+<td>群主拒绝</td>
+<td>status=0</td>
+<td>status=2（已拒绝）</td>
+</tr>
+<tr>
+<td>ConversationMember</td>
+<td>直接加入 / 群主同意</td>
+<td>不存在</td>
+<td>joined</td>
+</tr>
+<tr>
+<td>conversations.avatar</td>
+<td>新成员加入</td>
+<td>旧宫格头像</td>
+<td>刷新后的宫格头像</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="3-功能编号-新节点入网">3. 功能编号：新节点入网</h5>
+<p>这次新增 10 个功能节点，闪讯的功能网络从 71 个增长到 81 个。</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>新增编号</th>
+<th>节点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D（领域）</td>
+<td>D-19</td>
+<td>群搜索：按群名模糊搜索或群号精确匹配</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-20</td>
+<td>入群申请：无需验证直接加入，需验证创建申请 + WS 通知</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-21</td>
+<td>入群审批：群主同意或拒绝</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-22</td>
+<td>入群通知查询：聚合群主的所有入群申请</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-23</td>
+<td>群成员查询与设置：群详情 + 入群验证开关</td>
+</tr>
+<tr>
+<td>F（前端基础）</td>
+<td>F-10</td>
+<td>群通知 WS 帧分发：WsClient 新增 groupJoinRequestStream</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-34</td>
+<td>群搜索与入群：SearchGroupPage</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-35</td>
+<td>群通知页：GroupNotificationsPage</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-36</td>
+<td>群通知角标：GroupNotificationCubit</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-37</td>
+<td>群聊详情页：GroupChatInfoPage</td>
+</tr>
+</tbody>
+</table>
+<p>同时有 3 个已有节点被扩展：</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>扩展内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I-09</td>
+<td>帧分发器新增 GROUP_JOIN_REQUEST 帧类型</td>
+</tr>
+<tr>
+<td>F-06</td>
+<td>WsClient 帧分发新增 groupJoinRequestStream</td>
+</tr>
+<tr>
+<td>P-25</td>
+<td>添加朋友页改为&quot;加好友/群&quot;，新增搜索群聊入口</td>
+</tr>
+</tbody>
+</table>
+<p>从依赖关系看，新节点和已有网络的接触点集中在三个方向：</p>
+<ul>
+<li>D-20（入群申请）依赖 I-09（帧分发器）做 WS 推送，这是群聊模块第一次和 WS 模块产生直接依赖</li>
+<li>P-34（搜索群聊页）通过 P-25（加好友/群页面）的回调接入，不是独立入口</li>
+<li>P-36（群通知角标）监听 F-10（WS 帧分发），驱动通讯录 Tab 红点——和好友通知角标是同一个模式</li>
+</ul>
+<blockquote>
+<p>上一章群聊是已有网络的&quot;加密&quot;，这一章则是&quot;延伸&quot;——从群内向群外生长，让群聊从封闭系统变成开放系统。</p>
+</blockquote>
+<p>到这里，需求分析的三个投影面就齐了：交互链告诉用户走什么路，逻辑树告诉系统做什么，编号告诉我们新功能在网络中的位置。下面是群聊局域网络的总览关系图：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0ff75888ee014433a5cc64ba1461bd84~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3004&amp;h=1755&amp;s=318788&amp;e=png&amp;a=1&amp;b=fbfafa" alt="mermaid-diagram (87).png" /></p>
+<hr />
+<h4 id="二-后端-im-group-从-1-个接口扩展到-7-个">二、后端：im-group 从 1 个接口扩展到 7 个</h4>
+<p>上一章 im-group crate 只有一个 <code>POST /groups</code> 创建群聊。这一章要扩展到 7 个路由，覆盖搜索、入群、审批、通知查询、群详情、群设置。更重要的变化是 im-group 第一次依赖了 im-ws——入群申请需要通过 WS 推送通知群主，这意味着 <code>GroupApiState</code> 要注入 <code>MessageDispatcher</code>。</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-group/src/routes.rs
+#[derive(Clone)]
+pub struct GroupApiState {
+    pub service: Arc&lt;GroupService&gt;,
+    pub msg_service: Arc&lt;MessageService&gt;,
+    pub dispatcher: Arc&lt;MessageDispatcher&gt;,  // 新增：WS 推送
+}
+</code></pre>
+<p>依赖关系从上一章的 <code>im-group → flash-core + im-message</code> 变成了 <code>im-group → flash-core + im-message + im-ws</code>。这个新依赖是单向的——im-ws 不知道 im-group 的存在，它只提供 <code>send_to_user</code> 能力。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/925f654823b247f984d96e2b14ad965d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2644&amp;h=2015&amp;s=354512&amp;e=png&amp;b=f5f8fe" alt="mermaid-diagram-2026-04-19-232850.png" /></p>
+<hr />
+<h5 id="1-数据模型">1. 数据模型</h5>
+<p>本章新增一张表 <code>group_join_requests</code>，同时给 <code>group_info</code> 加了一个 <code>group_no</code> 字段。数据表关系如下：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/70834b8e1fe44967930aa1599186c7c9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3012&amp;h=1345&amp;s=288434&amp;e=png&amp;b=fffefe" alt="mermaid-diagram-2026-04-19-233706.png" /></p>
+<p><strong>群号（group_no）</strong></p>
+<p>群号是用户搜索群聊的另一种方式——除了按群名模糊搜索，还可以输入群号精确匹配。用 PostgreSQL 的 <code>SEQUENCE</code> 自增，从 10001 开始：</p>
+<pre><code class="language-sql">-- ---&gt; server/migrations/20260419_006_group_join.sql
+CREATE SEQUENCE IF NOT EXISTS group_no_seq START WITH 10001;
+ALTER TABLE group_info ADD COLUMN IF NOT EXISTS group_no BIGINT UNIQUE DEFAULT nextval('group_no_seq');
+</code></pre>
+<p>群号在创建群聊时自动分配（<code>DEFAULT nextval</code>），不需要业务代码干预。从 10001 开始而不是 1，是为了避免和用户 ID 混淆——用户搜索时输入一个数字，后端需要判断是群号还是群名，如果群号从 1 开始就容易和用户 ID 撞车。</p>
+<hr />
+<p><strong>入群申请表（group_join_requests）</strong></p>
+<pre><code class="language-sql">-- ---&gt; server/migrations/20260419_006_group_join.sql
+CREATE TABLE IF NOT EXISTS group_join_requests (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    conversation_id UUID NOT NULL,
+    user_id BIGINT NOT NULL,
+    message VARCHAR(200),
+    status SMALLINT NOT NULL DEFAULT 0,  -- 0=待处理 1=已同意 2=已拒绝
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX idx_group_join_requests_conv ON group_join_requests(conversation_id, status);
+CREATE INDEX idx_group_join_requests_user ON group_join_requests(user_id, status);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>决策</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>独立表而非复用 friend_requests</td>
+<td>好友是双向关系（from_user → to_user），入群是单向申请（user → conversation），字段语义不同</td>
+</tr>
+<tr>
+<td>status 用 SMALLINT 而非 ENUM</td>
+<td>和项目其他表保持一致（conversations.type 也是 SMALLINT），扩展方便</td>
+</tr>
+<tr>
+<td>不加 UNIQUE(conversation_id, user_id)</td>
+<td>允许同一用户对同一群有多条历史记录（被拒绝后可重新申请），通过业务逻辑限制&quot;同时只有一条 status=0 的申请&quot;</td>
+</tr>
+<tr>
+<td>两个索引分别覆盖群维度和用户维度</td>
+<td>群主查询按 conversation_id + status，用户查询按 user_id + status，各走各的索引</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="2-三层架构">2. 三层架构</h5>
+<p>im-group 的路由从 1 个扩展到 7 个，但三层架构不变。<br />
+routes 解析请求、service 校验逻辑、repository 操作数据库。变化的是每一层的&quot;厚度&quot;。</p>
+<pre><code>server/modules/im-group/src/
+├── models.rs       # 扩展：GroupSearchResult / JoinRequestItem / JoinResult / GroupDetail ...
+├── repository.rs   # 扩展：search_groups / join_group_direct / create_join_request / ...
+├── service.rs      # 扩展：search_groups / join_group / handle_join_request / ...
+├── routes.rs       # 扩展：7 个路由 handler
+└── lib.rs          # 不变
+</code></pre>
+<p><strong>routes.rs — 从 1 个路由到 7 个</strong></p>
+<p>上一章 routes.rs 只有一个 <code>create_group</code>。现在它是 im-group 的&quot;门面&quot;，7 个路由覆盖群聊的完整生命周期：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-group/src/routes.rs
+pub fn group_routes(state: GroupApiState) -&gt; Router {
+    Router::new()
+        .route(&quot;/groups&quot;, post(create_group))                                      // 创建群聊（已有）
+        .route(&quot;/groups/search&quot;, get(search_groups))                               // 搜索群聊
+        .route(&quot;/groups/{id}/join&quot;, post(join_group))                              // 入群申请
+        .route(&quot;/groups/{id}/join-requests/{rid}/handle&quot;, post(handle_join_request)) // 群主审批
+        .route(&quot;/groups/join-requests&quot;, get(list_join_requests))                   // 入群通知列表
+        .route(&quot;/groups/{id}/detail&quot;, get(get_group_detail))                       // 群详情
+        .route(&quot;/groups/{id}/settings&quot;, put(update_group_settings))                // 群设置
+        .with_state(state)
+}
+</code></pre>
+<p>routes 层除了解析请求和调 service，还负责两件&quot;跨模块&quot;的事：发系统消息（调 <code>msg_service.send_system</code>）和推送 WS 通知（调 <code>dispatcher.notify_group_join_request</code>）。这两个依赖通过 <code>GroupApiState</code> 注入，service 层不感知——service 只返回结果，由 routes 决定&quot;接下来通知谁&quot;。</p>
+<hr />
+<p><strong>service.rs — 校验 + 分支判断</strong></p>
+<p>service 层是业务规则的守门人。它不碰数据库（那是 repository 的事），只做三件事：校验输入、判断分支、编排调用。
+本章最有意思的设计是 <code>join_group</code> 的返回值——它不返回 HTTP 响应，而是返回一个枚举 <code>JoinResult</code>，让 routes 层根据枚举值决定后续动作：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-group/src/models.rs
+pub enum JoinResult {
+    AutoApproved,                                          // 无需验证，已直接加入
+    PendingApproval { request_id: Uuid, owner_id: i64 },   // 需要验证，申请已创建
+}
+</code></pre>
+<blockquote>
+<p>为什么不在 service 层直接发 WS 通知？因为 service 不知道 <code>MessageDispatcher</code> 的存在——它只依赖 <code>GroupRepository</code>。WS 推送是&quot;通知&quot;而非&quot;业务逻辑&quot;，放在 routes 层更合适。这和上一章系统消息放在 routes 层是同一个原则。</p>
+</blockquote>
+<hr />
+<p><strong>repository.rs — 从 2 个方法到 12 个</strong></p>
+<p>repository 层是最&quot;重&quot;的一层，从上一章的 <code>create_group</code> + <code>build_grid_avatar</code> 扩展到 12 个方法。但它们可以分成四组：</p>
+<table>
+<thead>
+<tr>
+<th>组</th>
+<th>方法</th>
+<th>职责</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>搜索</td>
+<td><code>search_groups</code></td>
+<td>一次查询返回 4 个维度的信息</td>
+</tr>
+<tr>
+<td>入群</td>
+<td><code>join_group_direct</code> / <code>create_join_request</code> / <code>find_pending_request</code></td>
+<td>直接加入 or 创建申请</td>
+</tr>
+<tr>
+<td>审批</td>
+<td><code>get_join_request</code> / <code>update_join_request_status</code> / <code>list_join_requests</code></td>
+<td>查询和更新申请状态</td>
+</tr>
+<tr>
+<td>详情</td>
+<td><code>get_group_info</code> / <code>get_group_members</code> / <code>update_group_settings</code> / <code>get_group_owner</code> / <code>is_member</code></td>
+<td>群信息和权限校验</td>
+</tr>
+</tbody>
+</table>
+<p>其中 <code>join_group_direct</code> 被两个场景复用——无需验证时的直接加入，和群主同意后的加入。它做两件事：INSERT conversation_members（ON CONFLICT 恢复已删除成员）+ 刷新宫格头像。</p>
+<hr />
+<h5 id="3-核心逻辑">3. 核心逻辑</h5>
+<p>7 个接口中，入群申请是最值得展开的——一个接口、两条路径、三层协作。其他接口的模式都能从它身上找到影子。</p>
+<p><strong>搜索群聊：一条 SQL 返回四个维度</strong></p>
+<p>搜索的挑战不在于&quot;怎么搜&quot;，而在于一次查询要带回前端渲染四种按钮状态所需的全部信息。service 层判断 keyword 是纯数字（走群号精确匹配）还是文本（走群名 ILIKE），repository 层用子查询一次性关联出四个字段：</p>
+<pre><code class="language-sql">-- ---&gt; server/modules/im-group/src/repository.rs
+SELECT c.id, c.name, c.avatar, c.owner_id, gi.group_no,
+    (SELECT COUNT(*) FROM conversation_members
+     WHERE conversation_id = c.id AND is_deleted = false) AS member_count,
+    EXISTS(SELECT 1 FROM conversation_members
+     WHERE conversation_id = c.id AND user_id = $1 AND is_deleted = false) AS is_member,
+    COALESCE(gi.join_verification, false) AS join_verification,
+    EXISTS(SELECT 1 FROM group_join_requests
+     WHERE conversation_id = c.id AND user_id = $1 AND status = 0) AS has_pending_request
+FROM conversations c
+LEFT JOIN group_info gi ON gi.conversation_id = c.id
+WHERE c.type = 1 AND c.name ILIKE $2
+LIMIT 20
+</code></pre>
+<blockquote>
+<p>EXISTS 子查询找到一条就返回，不会全表扫描。多做一点 SQL 关联，省掉前端多次网络往返。</p>
+</blockquote>
+<p><strong>入群申请：一个接口，两条路径</strong></p>
+<p>这是本章的技术核心。service 层做三重校验（群存在、非成员、无待处理申请），然后根据 <code>join_verification</code> 分支，返回枚举告诉 routes 层&quot;走哪条路&quot;：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-group/src/service.rs
+fn join_group(user_id, conversation_id, message):
+    owner_id = repo.get_group_owner(conversation_id)?       // 群不存在 → 404
+    if repo.is_member(conversation_id, user_id): return 400  // 已是成员
+    if repo.find_pending_request(...).is_some(): return 400   // 有待处理申请
+
+    if !repo.get_join_verification(conversation_id):
+        repo.join_group_direct(conversation_id, user_id)     // 直接加入 + 刷新头像
+        return AutoApproved
+    else:
+        request_id = repo.create_join_request(conversation_id, user_id, message)
+        return PendingApproval { request_id, owner_id }
+</code></pre>
+<p>routes 层根据枚举值决定&quot;通知谁&quot;——<code>AutoApproved</code> 同步发系统消息，<code>PendingApproval</code> 异步推送 WS 通知：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-group/src/routes.rs
+match result {
+    AutoApproved =&gt; {
+        msg_service.send_system(conv_id, &quot;{name} 加入了群聊&quot;)
+        return { auto_approved: true }
+    }
+    PendingApproval { request_id, owner_id } =&gt; {
+        tokio::spawn(async move {
+            dispatcher.notify_group_join_request(owner_id, ...)
+        });
+        return { auto_approved: false }
+    }
+}
+</code></pre>
+<blockquote>
+<p><code>tokio::spawn</code> 把 WS 推送从请求链路中剥离——通知失败不影响申请创建，这是&quot;最终一致性&quot;的选择。群主不在线时通知丢失，但申请已入库，下次打开群通知页能看到。</p>
+</blockquote>
+<hr />
+<p><strong>入群审批与群详情</strong></p>
+<p>审批（<code>POST /groups/{id}/join-requests/{rid}/handle</code>）的模式和入群申请对称：校验群主身份 → 校验申请 status=0 → 同意则复用 <code>join_group_direct</code> 加成员，拒绝则更新 status=2。</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-group/src/service.rs
+fn handle_join_request(owner_id, conversation_id, request_id, approved):
+    actual_owner = repo.get_group_owner(conversation_id)?
+    if actual_owner != owner_id: return 403
+
+    (_, applicant_id, status) = repo.get_join_request(request_id)?
+    if status != 0: return 400  // 已处理
+
+    if approved:
+        repo.update_join_request_status(request_id, 1)
+        repo.join_group_direct(conversation_id, applicant_id)
+        return Some(applicant_id)  // routes 层据此发系统消息
+    else:
+        repo.update_join_request_status(request_id, 2)
+        return None
+</code></pre>
+<p>service 返回 <code>Some(applicant_id)</code> 而不是 <code>bool</code>——routes 层需要知道&quot;谁被同意了&quot;，查昵称后发系统消息&quot;XXX 加入了群聊&quot;。</p>
+<p>群详情（<code>GET /groups/{id}/detail</code>）和群设置（<code>PUT /groups/{id}/settings</code>）是两个轻量接口，源码在同一个 service.rs 中。两者共享一个权限模式：先查身份，再决定放行。区别在于群详情是&quot;群成员可看&quot;（<code>is_member</code> 校验），群设置是&quot;群主可改&quot;（<code>owner_id</code> 校验）。</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-group/src/service.rs
+fn get_group_detail(user_id, conversation_id):
+    if !repo.is_member(conversation_id, user_id): return 403
+    return GroupDetail { repo.get_group_info(...)?, repo.get_group_members(...)? }
+
+fn update_group_settings(user_id, conversation_id, join_verification):
+    if repo.get_group_owner(conversation_id)? != user_id: return 403
+    repo.update_group_settings(conversation_id, join_verification)
+</code></pre>
+<hr />
+<p><strong>WS 推送与 Protobuf</strong></p>
+<p><code>MessageDispatcher</code> 新增 <code>notify_group_join_request</code>，和已有的 <code>notify_friend_request</code> 结构完全一致——构造 Protobuf 消息、包装成 WsFrame、调 <code>send_to_user</code>。Protobuf 新增一个帧类型 <code>GROUP_JOIN_REQUEST = 10</code> 和一个 <code>GroupJoinRequestNotification</code> 消息，8 个字段覆盖申请者信息和群信息。</p>
+<pre><code class="language-protobuf">// ---&gt; proto/ws.proto
+enum WsFrameType {
+  // ... 已有 0~9
+  GROUP_JOIN_REQUEST = 10;
+}
+
+message GroupJoinRequestNotification {
+  string request_id = 1;
+  string conversation_id = 2;
+  string group_name = 3;
+  string user_id = 4;
+  string nickname = 5;
+  string avatar = 6;
+  string message = 7;
+  int64 created_at = 8;
+}
+</code></pre>
+<hr />
+<h5 id="4-接口与测试">4. 接口与测试</h5>
+<p>后端接口完成后，使用 <code>Link Test Writer</code> 生成接口测试，并基于测试自动生成接口文档。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>路径</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/groups</td>
+<td>创建群聊（已有）</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/groups/search?keyword=</td>
+<td>搜索群聊（群名模糊 / 群号精确）</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/groups/{id}/join</td>
+<td>入群申请（分支：直接加入 / 创建申请）</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/groups/{id}/join-requests/{rid}/handle</td>
+<td>群主审批（同意 / 拒绝）</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/groups/join-requests</td>
+<td>查询入群申请列表（群主视角）</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/groups/{id}/detail</td>
+<td>群详情（群信息 + 成员列表）</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/groups/{id}/settings</td>
+<td>群主修改群设置（入群验证开关）</td>
+</tr>
+</tbody>
+</table>
+<p>测试链路包含 22 个步骤，覆盖所有正常路径和边界情况：搜索（群名 / 群号 / 单字 / 已是成员）→ 入群（无需验证 / 需验证 / 重复申请 / 已是成员）→ 审批（同意 / 拒绝 / 非群主 / 已处理 / 被拒后重新申请）→ 群详情（成员可看 / 非成员 403）→ 群设置（开启 / 关闭 / 验证生效 / 非群主 403）。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/564672fd7ff3498b8b1e94555dbaebd2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1103&amp;h=565&amp;s=57160&amp;e=png&amp;b=0c0c0c" alt="image.png" /></p>
+<p>测试通过后，脚本自动生成接口文档到 <code>docs/features/im/group/api/group_join/doc/</code>。可供前端实现时参考接口请求及响应结果：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b81bcd71552842d997d1a11b129d46e0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=987&amp;h=562&amp;s=71575&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<hr />
+<h4 id="三-前端-从被动邀请到主动加入">三、前端：从被动邀请到主动加入</h4>
+<p>后端 7 个接口就绪，前端的工作分三块：搜索入群（SearchGroupPage）、群主审批（GroupNotificationsPage）、群聊详情（GroupChatInfoPage），加上 WS 帧分发扩展和主应用集成。所有新页面放在 <code>flash_im_group</code> 模块中，WS 扩展放在 <code>flash_im_core</code> 中。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3ef139e57b6049a1902d3536dd9d1404~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3177&amp;h=1306&amp;s=305220&amp;e=png&amp;a=1&amp;b=fcfafa" alt="mermaid-diagram (88).png" /></p>
+<pre><code>client/modules/
+├── flash_im_group/lib/src/
+│   ├── data/
+│   │   ├── group_repository.dart         # 扩展：+6 个新方法
+│   │   └── group_models.dart             # 扩展：GroupSearchResult / JoinRequestItem
+│   ├── logic/
+│   │   └── group_notification_cubit.dart # 新建：WS 驱动 pendingCount
+│   └── view/
+│       ├── search_group_page.dart        # 新建：搜索群聊页
+│       ├── group_notifications_page.dart # 新建：群通知页
+│       └── group_chat_info_page.dart     # 新建：群聊详情页
+├── flash_im_core/lib/src/
+│   └── logic/ws_client.dart              # 扩展：+groupJoinRequestStream
+├── flash_im_friend/lib/src/
+│   └── view/add_friend_page.dart         # 扩展：改名&quot;加好友/群&quot; + 搜索群聊入口
+
+client/lib/src/
+└── home/view/home_page.dart              # 扩展：Cubit 注入 + 群通知入口 + 群详情回调
+</code></pre>
+<hr />
+<h5 id="1-ws-扩展">1. WS 扩展</h5>
+<p>入群申请的实时通知需要一条完整的链路：后端 <code>MessageDispatcher</code> 推送 GROUP_JOIN_REQUEST 帧 → WsClient 接收并分发 → GroupNotificationCubit 监听并更新 pendingCount → 通讯录 Tab 红点角标刷新。WsClient 是这条链路的中间节点。</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_core/lib/src/logic/ws_client.dart
+
+// 1. 新增 StreamController（和 friendRequestStream 同级）
+final _groupJoinRequestController = StreamController&lt;WsFrame&gt;.broadcast();
+Stream&lt;WsFrame&gt; get groupJoinRequestStream =&gt; _groupJoinRequestController.stream;
+
+// 2. 帧分发 switch 中新增 case
+case WsFrameType.GROUP_JOIN_REQUEST:
+    _groupJoinRequestController.add(frame);
+
+// 3. dispose 中关闭
+_groupJoinRequestController.close();
+</code></pre>
+<p>这是项目中第四次用这个模式了（前三次是 chatMessage、friendRequest、friendAccepted）。每种帧类型一个独立的 Stream，消费方按需订阅，互不干扰。WsClient 不解析 payload——它只负责按帧类型分发，具体的 Protobuf 解码留给消费方。</p>
+<blockquote>
+<p>这种&quot;分发不解析&quot;的设计让 WsClient 保持轻量。它不需要知道 GroupJoinRequestNotification 长什么样，只需要知道帧类型是 10 就往对应的 Stream 里扔。新增帧类型时只改三行代码。</p>
+</blockquote>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/66d90a7e2c42407c90712c0ca129dd7b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3186&amp;h=1554&amp;s=245554&amp;e=png&amp;b=fdfdfd" alt="mermaid-diagram-2026-04-20-065922.png" /></p>
+<hr />
+<h5 id="2-搜索群聊页">2. 搜索群聊页</h5>
+<blockquote>
+<p>client/modules/flash_im_group/lib/src/view/search_group_page.dart</p>
+</blockquote>
+<p>SearchGroupPage 是纯 StatefulWidget，不用 Cubit——搜索状态是页面级的，离开即销毁。这个页面有三个值得展开的设计点。</p>
+<p><strong>搜索栏：右侧 loading 而非全页面 loading</strong></p>
+<p>没有用 FlashSearchBar（那个是只读的点击入口），而是自定义了一个带右侧 loading 指示器的输入框。搜索时保留上一次的结果不闪烁，只在搜索框右侧显示 16px 的小转圈：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f0c5f26577c3482eb866927e40925658~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=648&amp;h=103&amp;s=5800&amp;e=png&amp;b=f7f7f7" alt="image.png" /></p>
+<pre><code class="language-dart">Row(children: [
+    Icon(Icons.search),
+    Expanded(child: TextField(onChanged: _onChanged, hintText: '群名 / 群号')),
+    if (_isLoading)
+      SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2)),
+])
+</code></pre>
+<blockquote>
+<p>搜索是高频操作，全页面 loading 会让结果消失再出现，视觉上很&quot;闪&quot;。右侧小指示器让用户知道&quot;正在搜索&quot;，同时保留上一次的结果。</p>
+</blockquote>
+<p>防抖用 Timer 实现，300ms 内的连续输入只触发最后一次搜索。</p>
+<hr />
+<p><strong>四种按钮状态</strong></p>
+<p>搜索结果的按钮根据后端返回的三个字段渲染四种状态。<code>_joiningIds</code>（<code>Set&lt;String&gt;</code>）记录正在发送请求的群 ID，防止重复点击：</p>
+<table>
+<thead>
+<tr>
+<th>不可点击</th>
+<th>可点击</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/42b3f22f3a034ac4bc581351b194c4ce~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=623&amp;h=118&amp;s=12401&amp;e=png&amp;b=fdfdfd" alt="image.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ccf68b734a234a75b4c1ad9ab7bb067f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=643&amp;h=109&amp;s=13021&amp;e=png&amp;b=fefefe" alt="image.png" /></td>
+</tr>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4b9ea97ef1bc47b8968a7c7007edc6e9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=651&amp;h=108&amp;s=12914&amp;e=png&amp;b=fdfdfd" alt="image.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/49a4cf0a84854cc1909784ae310f0c4c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=650&amp;h=110&amp;s=13201&amp;e=png&amp;b=fefefe" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-dart">Widget _buildActionButton(GroupSearchResult group):
+    if group.isMember:          return _tag('已加入', gray)
+    if group.hasPendingRequest: return _tag('已申请', gray)
+    if _joiningIds.contains(group.id): return CircularProgressIndicator()
+    if group.joinVerification:  return _outlineTag('申请', orange)
+    return _filledTag('加入', blue)
+</code></pre>
+<hr />
+<p><strong>入群对话框</strong></p>
+<p>点击按钮后弹出 AlertDialog，顶部群信息预览（头像 + 群名 + 成员数 + 群号），需要验证时额外显示留言输入框（maxLength: 100）。确认后调 <code>repository.joinGroup</code>，根据 <code>auto_approved</code> 显示不同的 Toast。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/63a50d44707c451b9939efb4f965a067~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=655&amp;h=429&amp;s=56999&amp;e=png&amp;b=e8e7ef" alt="image.png" /></p>
+<hr />
+<h5 id="3-群通知页与群详情页">3. 群通知页与群详情页</h5>
+<p><strong>群通知页</strong>和好友申请列表是同一个模式——左侧头像、中间信息、右侧操作按钮。区别在于中间多了&quot;申请加入 {群名}&quot;和留言，按钮样式和好友申请页对齐（灰色&quot;拒绝&quot;文字 + 蓝色&quot;同意&quot;填充按钮）。审批后调 <code>notificationCubit.decrementCount()</code> 减少角标。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c9b331904290485d8a09aa8047f633be~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=598&amp;h=220&amp;s=29029&amp;e=png&amp;b=fdfdfd" alt="image.png" /></p>
+<p><strong>群聊详情页</strong>是本版本的最小实现。成员网格用 <code>LayoutBuilder</code> + <code>Wrap</code> 布局，每行 5 个，默认 2 行，超出显示&quot;查看更多&quot;。群主头像右下角有橙色&quot;群主&quot;角标。群主可见的入群验证开关用 <code>CupertinoSwitch</code>，activeTrackColor 设为主题蓝 <code>#3B82F6</code>。切换时先乐观更新 UI，请求失败则回滚。</p>
+<table>
+<thead>
+<tr>
+<th>ChatPage</th>
+<th>群聊详情</th>
+<th>入群验证开关</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/47e985cd13d5464585f14c65dc33e905~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=175598&amp;e=png&amp;b=fafafa" alt="MuMu-20260419-183001-618.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/99ca0b21e4a249b594e2e69c93d74c1a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=96493&amp;e=png&amp;b=f9f9f9" alt="MuMu-20260419-181423-271.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/79a74543d6a147a69ea7f0e4f722cd62~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=102120&amp;e=png&amp;b=f9f9f9" alt="MuMu-20260419-222217-660.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="4-主应用集成与模块协作">4. 主应用集成与模块协作</h5>
+<blockquote>
+<p>client/lib/src/home/view/home_page.dart</p>
+</blockquote>
+<p>home_page 是所有新功能的组装点。上一章它负责串联好友模块和群聊模块（Friend → SelectableMember 转换），这一章它的组装工作更多——要注入 Cubit、合并角标、注入回调、传递群详情入口。</p>
+<hr />
+<p><strong>GroupNotificationCubit 注入</strong></p>
+<p>home_page 创建 GroupNotificationCubit，传入 GroupRepository 和 WsClient.groupJoinRequestStream。Cubit 创建后立即调 <code>loadPendingCount()</code> 从服务端加载初始值：</p>
+<pre><code class="language-dart">// ---&gt; client/lib/src/home/view/home_page.dart
+_groupNotifCubit = GroupNotificationCubit(
+  repository: context.read&lt;GroupRepository&gt;(),
+  groupJoinRequestStream: context.read&lt;WsClient&gt;().groupJoinRequestStream,
+)..loadPendingCount();
+</code></pre>
+<blockquote>
+<p>为什么在 home_page 创建而不是用 BlocProvider 在 widget tree 顶层注入？因为 GroupNotificationCubit 需要 WsClient 的 Stream，而 WsClient 是登录后才创建的。home_page 是登录后的第一个页面，在这里创建时机刚好。</p>
+</blockquote>
+<hr />
+<p><strong>通讯录 Tab 角标合并</strong></p>
+<p>通讯录 Tab 的红点角标需要合并两个来源——好友通知的 pendingCount 来自 FriendCubit，群通知的来自 GroupNotificationCubit。两者独立管理，Tab 角标显示两者之和：</p>
+<pre><code class="language-dart">// ---&gt; client/lib/src/home/view/home_page.dart
+Widget _buildPendingBadge():
+    return BlocBuilder&lt;FriendCubit, FriendState&gt;(
+      builder: (context, friendState) =&gt;
+        BlocBuilder&lt;GroupNotificationCubit, GroupNotificationState&gt;(
+          bloc: _groupNotifCubit,
+          builder: (context, groupState) {
+            total = friendState.pendingCount + groupState.pendingCount
+            if total &lt;= 0: return SizedBox.shrink()
+            return Badge(count: total)
+          },
+        ),
+    )
+</code></pre>
+<p>通讯录列表中，&quot;群通知&quot;入口用 <code>BlocBuilder</code> 监听 GroupNotificationCubit，根据 pendingCount 显示独立的红点角标。进入群通知页返回后，调 <code>loadPendingCount()</code> 重新校准。</p>
+<hr />
+<p><strong>搜索群聊入口：回调注入</strong></p>
+<p>AddFriendPage 的&quot;搜索群聊&quot;入口通过 <code>onSearchGroup</code> 回调接入。home_page 在构造 AddFriendPage 时注入这个回调，点击后 push SearchGroupPage。这个模式和上一章的 <code>onCreated</code> 回调一样——模块不直接认识对方，组装层负责串联：</p>
+<pre><code class="language-dart">// ---&gt; client/lib/src/home/view/home_page.dart
+AddFriendPage(
+  repository: context.read&lt;FriendRepository&gt;(),
+  onSearchGroup: () =&gt; Navigator.push(context, MaterialPageRoute(
+    builder: (_) =&gt; SearchGroupPage(
+      repository: context.read&lt;GroupRepository&gt;(),
+      baseUrl: AppConfig.baseUrl,
+    ),
+  )),
+)
+</code></pre>
+<hr />
+<p><strong>群详情入口：三处 ChatPage 构建</strong></p>
+<p>用户有三条路径进入群聊 ChatPage（主页会话列表、我的群聊列表、创建群聊后跳转），每处构建 ChatPage 时都要传入 <code>onGroupInfo</code> 回调，跳转 GroupChatInfoPage 页面：</p>
+<pre><code class="language-dart">// ---&gt; client/lib/src/home/view/home_page.dart
+ChatPage(
+  conversationId: conversation.id,
+  isGroup: true,
+  onGroupInfo: () =&gt; Navigator.push(context, MaterialPageRoute(
+    builder: (_) =&gt; GroupChatInfoPage(
+      repository: context.read&lt;GroupRepository&gt;(),
+      conversationId: conversation.id,
+      baseUrl: AppConfig.baseUrl,
+      currentUserId: user.userId.toString(),
+    ),
+  )),
+)
+</code></pre>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2e217320c09243c4b6c0deee66272fe5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3065&amp;h=998&amp;s=272236&amp;e=png&amp;b=fcfafa" alt="mermaid-diagram-2026-04-20-073518.png" /></p>
+<hr />
+<h4 id="四-本章小结">四、本章小结</h4>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>搜索加群与入群审批</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.14.0">v0.14.0</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/cc9501884d23c2f6b23e4788efae795bbd9254aa">commit</a></td>
+</tr>
+</tbody>
+</table>
+<p>这一章让闪讯的群聊从&quot;只能被邀请&quot;变成了&quot;可以主动加入&quot;。后端 im-group crate 从 1 个接口扩展到 7 个，新增 group_join_requests 表和 group_no 字段，新增 GROUP_JOIN_REQUEST WS 帧类型。前端新增 3 个页面（SearchGroupPage、GroupNotificationsPage、GroupChatInfoPage）、1 个应用级 Cubit（GroupNotificationCubit）、WsClient 扩展 groupJoinRequestStream，AddFriendPage 改为&quot;加好友/群&quot;。功能网络从 71 个节点增长到 81 个。</p>
+<p>核心挑战有两个。一是入群申请的分支逻辑——同一个 <code>POST /groups/{id}/join</code> 接口，根据 <code>join_verification</code> 走&quot;直接加入&quot;或&quot;创建申请等待审批&quot;两条路径，service 层用 <code>JoinResult</code> 枚举区分，路由层根据返回值决定是发系统消息还是 WS 推送。二是实时通知链路——入群申请通过 <code>tokio::spawn</code> 异步推送 WS 帧给群主，前端 GroupNotificationCubit 监听 WS Stream 驱动红点角标，进入群通知页时用 HTTP 查询校准。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>功能节点</th>
+<th>层级</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-19</td>
+<td>群搜索</td>
+<td>领域</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>D-20</td>
+<td>入群申请</td>
+<td>领域</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>D-21</td>
+<td>入群审批</td>
+<td>领域</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>D-22</td>
+<td>入群通知查询</td>
+<td>领域</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>D-23</td>
+<td>群成员查询与设置</td>
+<td>领域</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>F-10</td>
+<td>群通知 WS 帧分发</td>
+<td>前端基础</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>P-34</td>
+<td>群搜索与入群</td>
+<td>前端业务</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>P-35</td>
+<td>群通知页</td>
+<td>前端业务</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>P-36</td>
+<td>群通知角标</td>
+<td>前端业务</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>P-37</td>
+<td>群聊详情页</td>
+<td>前端业务</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>I-09</td>
+<td>帧分发器</td>
+<td>基础设施</td>
+<td>扩展</td>
+</tr>
+<tr>
+<td>F-06</td>
+<td>WsClient 帧分发</td>
+<td>前端基础</td>
+<td>扩展</td>
+</tr>
+<tr>
+<td>P-25</td>
+<td>添加朋友页</td>
+<td>前端业务</td>
+<td>扩展</td>
+</tr>
+</tbody>
+</table>
+<p>下一章要做的是群成员管理——邀请入群、踢人、退群、转让群主、解散群聊，以及更完整的群设置。群聊的&quot;骨架&quot;已经搭好，下一步是给它装上&quot;肌肉&quot;。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-25.html">← 枝叶#2 ｜ 创建群聊</a>
+      <a class="next" href="ch-27.html">枝叶#4 ｜ 群聊管理 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-需求分析">一、需求分析</a></li>
+      <li class="lv5"><a href="#1-交互链分析">1. 交互链分析</a></li>
+      <li class="lv5"><a href="#2-逻辑流程树">2. 逻辑流程树</a></li>
+      <li class="lv5"><a href="#3-功能编号-新节点入网">3. 功能编号：新节点入网</a></li>
+      <li class="lv4"><a href="#二-后端-im-group-从-1-个接口扩展到-7-个">二、后端：im-group 从 1 个接口扩展到 7 个</a></li>
+      <li class="lv5"><a href="#1-数据模型">1. 数据模型</a></li>
+      <li class="lv5"><a href="#2-三层架构">2. 三层架构</a></li>
+      <li class="lv5"><a href="#3-核心逻辑">3. 核心逻辑</a></li>
+      <li class="lv5"><a href="#4-接口与测试">4. 接口与测试</a></li>
+      <li class="lv4"><a href="#三-前端-从被动邀请到主动加入">三、前端：从被动邀请到主动加入</a></li>
+      <li class="lv5"><a href="#1-ws-扩展">1. WS 扩展</a></li>
+      <li class="lv5"><a href="#2-搜索群聊页">2. 搜索群聊页</a></li>
+      <li class="lv5"><a href="#3-群通知页与群详情页">3. 群通知页与群详情页</a></li>
+      <li class="lv5"><a href="#4-主应用集成与模块协作">4. 主应用集成与模块协作</a></li>
+      <li class="lv4"><a href="#四-本章小结">四、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

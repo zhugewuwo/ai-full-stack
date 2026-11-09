@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>桢干#5 ｜ 养护根基，虫害不生 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li class="active"><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>桢干#5 ｜ 养护根基，虫害不生</h1>
+<blockquote>
+<p>治未病者，不治已病。</p>
+</blockquote>
+<p>《黄帝内经》里有句话：上工治未病，不治已病。意思是：高明的医生在病还没发作时就治好了，而不是等病发了才去治。</p>
+<p>软件项目也是一样。大多数团队的日常是：写功能、发版本、出 bug、修 bug、继续写功能。代码质量的维护被动地依赖 <code>&quot;出了问题再说&quot;</code> 。但真正让项目长期健康成长的，不是修 bug 的速度，而是根系在良好的土壤中，来避免 bug 的滋生的。常见的&quot;土壤恶化&quot;征兆有：</p>
+<ul>
+<li><strong>不敢动</strong>：某个文件 2000 多行，大家都知道该拆，但谁也不愿意动，因为不知道改了会不会坏</li>
+<li><strong>改一处崩三处</strong>：修了一个 bug，结果引入了两个新 bug，因为模块之间的依赖关系不透明</li>
+<li><strong>只加不减</strong>：新功能不断往同一个类里塞，因为&quot;放这里最方便&quot;，文件越来越胖</li>
+<li><strong>调试靠 print</strong>：出了问题就加 print，修完了忘删，控制台全是噪音</li>
+<li><strong>新人上手慢</strong>：接手一个模块，要花半天时间搞清楚&quot;这个文件到底在干什么&quot;</li>
+</ul>
+<p>这些征兆单独看都不致命，但它们会互相叠加。由于不敢删掉已有代码，所以只加不减，只加不减所以越来越难懂，越来越难懂所以更不敢动。恶性循环一旦形成，每次迭代都在给未来埋雷。这一章我们将来聊一聊如何养好这片土壤。</p>
+<hr />
+<h4 id="一-从报告到行动">一、从报告到行动</h4>
+<p>发现问题是第一步，但发现之后怎么办？体检报告列了 13 个问题，不可能一次全修。需要判断哪些值得现在动手，哪些可以等。我们选了 ChatCubit 作为第一个治理目标，因为它是聊天模块的核心，改动频率最高，痛感最强。</p>
+<h5 id="1-问题在哪">1、问题在哪</h5>
+<p>体检报告里，ChatCubit 被标记为 🟡 一般问题：</p>
+<blockquote>
+<p>chat_cubit.dart 773 行，30+ 个方法，承担了消息收发、文件上传下载、撤回、置顶、多选、转发、已读回执等所有职责。</p>
+</blockquote>
+<p>&quot;职责过多&quot;四个字说起来轻巧，但它意味着：</p>
+<ul>
+<li>加一个新功能（比如语音消息），你要在 773 行的文件里找到合适的位置插入</li>
+<li>改一个 bug（比如撤回后预览没更新），你要理解整个文件的上下文才能确定影响范围</li>
+<li>新人接手这个模块，第一反应是&quot;这文件也太长了&quot;</li>
+</ul>
+<p>体检报告给出的处方是&quot;拆分为 mixin&quot;。但怎么拆？拆完怎么保证没改坏？</p>
+<hr />
+<h5 id="2-为什么不能直接动刀">2、为什么不能直接动刀</h5>
+<p>&quot;不就是把方法从一个文件搬到另一个文件吗？&quot;</p>
+<p>表面上是这样。但 ChatCubit 不是一个简单的工具类，它是一个有状态的对象，内部有 5 个 Stream 订阅、多个 Timer、一个 pending 消息队列。方法之间有隐式依赖：</p>
+<ul>
+<li><code>sendMessage</code> 往 <code>_pendingMessages</code> 里写数据，<code>_handleMessageAck</code> 从里面读</li>
+<li><code>_handleIncomingMessage</code> 收到消息后调 <code>_reportReadSeq</code></li>
+<li><code>recallMessage</code> 修改消息内容后要同步写缓存、更新会话预览</li>
+</ul>
+<p>这些依赖关系编译器看不到。你把方法搬到 mixin 里，编译通过了，但运行时某个状态没同步到，bug 就埋下了。而且这种 bug 不会立刻暴露，可能要在特定时序下才会触发。</p>
+<p>所以结论是：<strong>先织网，再动刀。</strong></p>
+<hr />
+<h5 id="3-单元测试的必要性">3、单元测试的必要性</h5>
+<p>很多人觉得&quot;写测试&quot;是锦上添花的事，功能都做不完，哪有时间写测试。但在重构场景下，测试不是锦上添花，是救命绳。</p>
+<p>没有测试的重构是什么体验？改完了，编译通过了，你心里没底，只能打开模拟器一个个功能点过。发消息试试、撤回试试、置顶试试、多选删除试试……手动验证 14 个场景，每次改动都要过一遍，半小时就没了。而且手动测试会遗漏，你可能忘了测&quot;发送超时&quot;这个边界情况，bug 就这样上线了。</p>
+<p>有测试的重构是什么体验？改完了，跑一遍测试，十几秒出结果，14 个全绿，收工。如果有红的，错误信息直接告诉你哪个行为变了，定位到具体的场景，修复范围极小。</p>
+<p>测试的价值不在于&quot;证明代码是对的&quot;，而在于&quot;让你敢改代码&quot;。对于一个 772 行的文件要拆成 5 个文件这种大改动，没有测试兜底，谁都不敢下刀。</p>
+<p>说实话，之前前端的开发流程是偷懒了。后端有 Python 脚本做接口测试，每次改完跑一遍就知道接口是否正常。前端却一直裸奔，没有单元测试，全靠手动在模拟器上点。这次重构让我意识到，在一个良好的编码流程里，单元测试不是可选项，是必要环节。特别是状态管理层这种核心逻辑，输入输出明确，非常适合写测试。后续新增的 Cubit 都会同步补上测试，不再欠这笔债。</p>
+<hr />
+<h4 id="二-织网-测试基础设施">二、织网：测试基础设施</h4>
+<p>决定要拆 ChatCubit 之后，第一件事不是动代码，而是搭测试。测试是安全网，网织好了才能放心走钢丝。但要给 ChatCubit 写测试，首先得解决一个前提问题：它当前的代码根本不可测试。</p>
+<p>次重构虽然不是新功能，但我们依然走了完整的开发工作流：<strong>需求分析（analysis.md）→ 设计（design.md）→ 任务拆解（tasks.md）→ 逐步执行</strong>。分析阶段列出了 14 个需要验证的场景，设计阶段确定了接口抽取 + mock 层 + TestFixtures 的技术方案，任务清单把整个过程拆成了 13 个可逐步执行的步骤。即使是重构，也值得用结构化的方式来做，而不是&quot;想到哪改到哪&quot;。</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>需求分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>im-test/v0.21.0</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/im-test/v0.21.0/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/im-test/v0.21.0/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/im-test/v0.21.0/client/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="1-无法完成的测试窘境">1、无法完成的测试窘境</h5>
+<p>前端测试有一个天然的窘境：它依赖的东西太多了。</p>
+<p>想测 ChatCubit 的&quot;发送消息&quot;逻辑，你需要：一个能连接的 WebSocket 服务、一个能响应的 HTTP 后端、一个本地数据库。这三样东西在开发机上跑着的时候，你可以手动点一下验证。但要写成自动化测试，你得把这三样东西都启动起来，还得保证它们的状态是干净的、可预测的。</p>
+<p>特别是本地数据库。我们用的是 drift + SQLite，它依赖原生平台的 SQLite 库。<code>flutter test</code> 跑在纯 Dart VM 上，根本没有原生环境，SQLite 压根加载不起来。也就是说，只要你的代码里直接引用了 LocalStore 的真实实现，测试就会在启动阶段直接崩溃，连跑都跑不起来。类似的还有摄像头、扫码、文件选择器这些硬件相关的能力，测试环境里压根不存在这些东西。</p>
+<p>这就是为什么很多前端项目&quot;没有单元测试&quot;。不是不想写，是写不了。代码和外部环境耦合太紧，脱离了真实环境就跑不起来。解决这个窘境的思路是：把&quot;外部环境&quot;从代码里抽离出来，用替身代替。</p>
+<hr />
+<h5 id="2-mock-模拟测试的可行性">2、 mock 模拟测试的可行性</h5>
+<p>先说什么是 mock，说白了就是 <code>&quot;替身&quot;</code>。电影里有替身演员，不需要真的从楼上跳下去，只需要看起来像跳了就行。测试里的 mock 也一样：不需要真的发 HTTP 请求、真的连 WebSocket，只需要模拟&quot;如果发了请求，会返回什么结果&quot;。</p>
+<p>比如测试&quot;发送图片&quot;这个场景，我们不需要真的上传一张图片到服务器，只需要告诉 mock：&quot;当调用 uploadImage 时，返回一个 ImageUploadResult&quot;。ChatCubit 拿到这个结果后的处理逻辑，和真实上传返回的结果是一样的。这样前端的 <strong>流程</strong> 就可以测试是不是通畅的。</p>
+<p>有人会问：测试里用的是假数据，真实环境里数据千变万化，mock 测试能说明什么问题？</p>
+<p>关键在于理解我们测的是什么。ChatCubit 的职责是&quot;状态管理&quot;：给它一个输入（消息列表、WS 帧、用户操作），它产出一个输出（新的 state）。这个输入到输出的映射关系是确定的，和数据的具体内容无关。</p>
+<p>比如&quot;收到 ACK 后消息状态变为 sent&quot;这个行为，不管消息内容是&quot;你好&quot;还是一张图片，逻辑都是一样的：找到 pending 消息，替换 ID，改 status。mock 数据只需要满足&quot;有一条 pending 消息&quot;这个前提条件，具体内容是什么不影响测试的有效性。换句话说:</p>
+<blockquote>
+<p>我们测的不是&quot;数据对不对&quot;，而是&quot;逻辑对不对&quot;。数据对不对是后端接口测试的事（Python 脚本已经覆盖了），逻辑对不对是单元测试的事。两者各管一层，互不替代。</p>
+</blockquote>
+<p>这就引出了 <code>单元测试</code> 和 <code>集成测试</code> 的这两个不同的领域。单元测试验证的是&quot;这个零件本身工作正常&quot;，集成测试验证的是&quot;零件组装在一起能跑通&quot;。我们的 Python 接口测试脚本就是一种集成测试：它真的发 HTTP 请求到后端，验证整条链路。而 ChatCubit 的单元测试是把它从链路中摘出来，单独验证它的状态转换逻辑。</p>
+<p>两者不是替代关系，是互补关系。单元测试跑得快（12 秒）、定位精准（哪个场景红了一目了然），适合在开发过程中频繁运行。集成测试跑得慢（要启动后端）、覆盖面广（能发现接口变更导致的问题），适合在发版前跑一遍。先有单元测试保证零件质量，再有集成测试保证组装正确，两层防线叠加才稳。</p>
+<hr />
+<h5 id="3-可测试性改造">3、可测试性改造</h5>
+<p>但要用 mock，代码本身得支持&quot;把真实依赖替换成替身&quot;。这件事之所以可行，是因为前后端分离的架构：前端只在意&quot;能不能拿到数据&quot;，不在意&quot;数据是谁给的&quot;。不管是真实的后端接口返回的，还是 mock 对象伪造的，只要数据结构一致，前端的处理逻辑就是一样的。</p>
+<p>但 ChatCubit 原来直接依赖 <code>MessageRepository</code>（一个具体类），内部会发 HTTP 请求。你没法把一个具体类换成替身，除非它依赖的是接口。</p>
+<pre><code class="language-dart">// 之前：直接依赖具体类
+class ChatCubit {
+  final MessageRepository _repository;
+}
+
+// 之后：依赖抽象接口
+class ChatCubit {
+  final IMessageRepository _repository;
+}
+</code></pre>
+<p>一行改动，ChatCubit 就变得可测试了。测试时注入 mock，生产时注入真实实现。这不只是为了测试，也是为了扩展性。未来如果要换数据源，只需要写一个新的实现，ChatCubit 一行不用改。</p>
+<hr />
+<p>另外 ChatCubit 有三个外部依赖，每个需要不同的 mock 策略：</p>
+<table>
+<thead>
+<tr>
+<th>依赖</th>
+<th>Mock 方式</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IMessageRepository</td>
+<td>mocktail 自动 mock</td>
+<td>纯接口，方法多，手写太累</td>
+</tr>
+<tr>
+<td>WsClient</td>
+<td>手写 FakeWsClient</td>
+<td>需要精确控制 stream 时序</td>
+</tr>
+<tr>
+<td>LocalStore</td>
+<td>mocktail 自动 mock</td>
+<td>已是抽象类，直接 mock</td>
+</tr>
+</tbody>
+</table>
+<p>其中 FakeWsClient 是关键。ChatCubit 的很多行为是由 WS 事件驱动的（收到消息、收到 ACK、收到撤回通知），测试时需要精确控制&quot;什么时候触发什么事件&quot;。FakeWsClient 暴露 StreamController，测试代码往里面 add 一个帧，ChatCubit 就会响应：</p>
+<pre><code class="language-dart">class FakeWsClient extends WsClient {
+  final chatMessageController = StreamController&lt;WsFrame&gt;.broadcast();
+  final messageAckController = StreamController&lt;WsFrame&gt;.broadcast();
+  // ...
+}
+
+// 测试中：模拟服务端返回 ACK
+fakeWs.messageAckController.add(ackFrame);
+// ChatCubit 收到 ACK，更新消息状态
+</code></pre>
+<hr />
+<h5 id="4-测试数据工厂">4、测试数据工厂</h5>
+<p>mock 层解决了&quot;怎么隔离外部依赖&quot;的问题，但还有一个问题：测试里用的假数据，怎么保证和真实数据结构一致？</p>
+<p>如果你在测试里手写一个 Map 来模拟消息，真实代码里的 Message 类改了字段名，测试还是能通过（因为它用的是旧结构），但生产代码已经坏了。这种&quot;测试绿了但代码是坏的&quot;比没有测试还危险。</p>
+<p>解决方案：用工厂方法构造测试数据，工厂方法使用和生产代码相同的模型类。</p>
+<pre><code class="language-dart">class TestFixtures {
+  static Message message({
+    String id = 'msg_1',
+    String content = 'hello',
+    int seq = 1,
+  }) =&gt; Message(id: id, content: content, seq: seq, ...);
+}
+</code></pre>
+<p>如果 <code>Message</code> 类新增了一个 required 字段，<code>TestFixtures.message()</code> 编译就会报错，强制你同步更新。数据一致性靠编译器保证，不靠人记忆。</p>
+<hr />
+<p>基础设施就绪后，列出 ChatCubit 的所有核心行为，每个写一个测试。不追求 100% 覆盖率，但要覆盖所有用户可感知的行为路径：</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>场景</th>
+<th>验证什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>加载消息</td>
+<td>emit 正确的状态序列</td>
+</tr>
+<tr>
+<td>2</td>
+<td>发送文本</td>
+<td>本地消息立即出现，WsClient 被调用</td>
+</tr>
+<tr>
+<td>3</td>
+<td>收到 ACK</td>
+<td>ID 替换，status 变为 sent</td>
+</tr>
+<tr>
+<td>4</td>
+<td>发送超时</td>
+<td>10 秒后 status 变为 failed</td>
+</tr>
+<tr>
+<td>5</td>
+<td>接收消息</td>
+<td>WS 帧解析正确，列表更新</td>
+</tr>
+<tr>
+<td>6</td>
+<td>主动撤回</td>
+<td>消息内容变为撤回文案</td>
+</tr>
+<tr>
+<td>7</td>
+<td>置顶</td>
+<td>pinnedMessages 列表更新</td>
+</tr>
+<tr>
+<td>8</td>
+<td>多选删除</td>
+<td>选中的消息从列表移除</td>
+</tr>
+<tr>
+<td>9</td>
+<td>引用回复</td>
+<td>replyTo 正确设置和清除</td>
+</tr>
+<tr>
+<td>10</td>
+<td>收到撤回</td>
+<td>WS 帧触发后内容变更</td>
+</tr>
+<tr>
+<td>11</td>
+<td>已读回执</td>
+<td>peerReadSeq 更新</td>
+</tr>
+<tr>
+<td>12</td>
+<td>加载更多</td>
+<td>旧消息合并，去重正确</td>
+</tr>
+</tbody>
+</table>
+<p>14 个测试跑一遍 12 秒（其中超时场景要等 11 秒），全绿。这意味着 ChatCubit 当前的所有行为已经被固定下来了。接下来不管怎么拆，只要测试还是绿的，行为就没变。</p>
+<hr />
+<h4 id="三-mixin-拆分">三、Mixin 拆分</h4>
+<p>测试全绿，可以放心搬代码了。拆分的原则是按职责域划分：每个 mixin 只管一件事，通过抽象 getter 访问共享状态，不直接依赖 ChatCubit 的内部实现。</p>
+<h5 id="1-拆分策略">1、拆分策略</h5>
+<p>772 行代码，30+ 个方法，按职责域分成 5 个文件：</p>
+<pre><code class="diagram" style="font-size:13.5px">flash_im_chat/lib/src/logic/
+├── chat_cubit.dart          ~250 行（核心：消息加载/发送/接收/ACK）
+├── chat_ws_mixin.dart       ~45 行（WS 订阅注册/取消 + 抽象回调）
+├── chat_file_mixin.dart     ~270 行（图片/视频/文件上传下载）
+├── chat_pin_mixin.dart      ~100 行（置顶 + 撤回）
+└── chat_select_mixin.dart   ~50 行（多选模式）
+</code></pre>
+<p>每个 mixin 通过抽象 getter 访问 ChatCubit 的字段，保持封装性：</p>
+<pre><code class="language-dart">mixin ChatFileMixin on Cubit&lt;ChatState&gt; {
+  IMessageRepository get repository;  // 抽象 getter
+  WsClient get wsClient;
+  String get conversationId;
+  // ...
+
+  Future&lt;void&gt; sendImageFromFile(String filePath) async {
+    // 通过 getter 访问，不依赖具体实现
+    final result = await repository.uploadImage(filePath);
+    // ...
+  }
+}
+</code></pre>
+<p>ChatCubit 本体实现这些 getter：</p>
+<pre><code class="language-dart">class ChatCubit extends Cubit&lt;ChatState&gt;
+    with ChatWsMixin, ChatFileMixin, ChatPinMixin, ChatSelectMixin {
+
+  @override
+  IMessageRepository get repository =&gt; _repository;
+  @override
+  WsClient get wsClient =&gt; _wsClient;
+  // ...
+}
+</code></pre>
+<hr />
+<h5 id="2-ws-订阅集中管理">2、WS 订阅集中管理</h5>
+<p>原来 5 个 StreamSubscription 散落在构造函数和 close 里，容易漏掉 cancel。拆出 ChatWsMixin 后，注册和取消集中在一个地方：</p>
+<pre><code class="language-dart">mixin ChatWsMixin on Cubit&lt;ChatState&gt; {
+  void initWsListeners() {
+    _wsSubs.addAll([
+      wsClient.chatMessageStream.listen(onChatMessage),
+      wsClient.messageAckStream.listen(onMessageAck),
+      wsClient.messageRecalledStream.listen(onMessageRecalled),
+      wsClient.pinChangedStream.listen(onPinChanged),
+      wsClient.readReceiptStream.listen(onReadReceipt),
+    ]);
+  }
+
+  void disposeWsListeners() {
+    for (final sub in _wsSubs) { sub.cancel(); }
+    _wsSubs.clear();
+  }
+}
+</code></pre>
+<p>构造函数只调 <code>initWsListeners()</code>，close 只调 <code>disposeWsListeners()</code>。新增 stream 监听只需在 mixin 里加一行。回调通过抽象方法分发给具体实现，职责清晰。</p>
+<hr />
+<h5 id="3-每拆一步-跑一遍测试">3、每拆一步，跑一遍测试</h5>
+<p>拆分不是一次性完成的，而是分步进行：</p>
+<ol>
+<li>创建 ChatFileMixin，搬移文件操作方法 → 跑测试 → 14 个全绿 ✅</li>
+<li>创建 ChatPinMixin，搬移置顶和撤回 → 跑测试 → 14 个全绿 ✅</li>
+<li>创建 ChatSelectMixin，搬移多选模式 → 跑测试 → 14 个全绿 ✅</li>
+<li>创建 ChatWsMixin，集中订阅管理 → 跑测试 → 14 个全绿 ✅</li>
+</ol>
+<p>每一步都有测试兜底。如果某一步搬错了（比如忘了把某个状态同步过去），测试会立刻变红，你知道问题出在刚才这一步，修复范围很小。</p>
+<hr />
+<h4 id="四-成果与沉淀">四、成果与沉淀</h4>
+<p>这里以一个大文件的拆解优化过程为例，介绍了前端单元测试的意义，以及对现有功能的重构流程。在未来的版本迭代中，每隔几个版本，可以对项目进行一次大体检，尽可能减少滋养虫害的温床。另外，在体检和治理完成后，可以把经验教训沉淀为 <code>规范</code> ，它可以让树木生长的土壤更加肥沃。这种正向的生长反馈，才是一种可持续发展。</p>
+<hr />
+<h5 id="1-数据对比">1、数据对比</h5>
+<p>经过织网、动刀、优化三个阶段，回头看看收获了什么。先看硬指标，重构前后的核心数据变化：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>重构前</th>
+<th>重构后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chat_cubit.dart 有效代码</td>
+<td>772 行</td>
+<td>250 行</td>
+</tr>
+<tr>
+<td>文件数</td>
+<td>1</td>
+<td>5（本体 + 4 个 mixin）</td>
+</tr>
+<tr>
+<td>单文件最大行数</td>
+<td>772</td>
+<td>~270</td>
+</tr>
+<tr>
+<td>单元测试</td>
+<td>0</td>
+<td>14 个场景</td>
+</tr>
+<tr>
+<td>可独立测试的单元</td>
+<td>1</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>772 行变成 250 行，不是删了代码，而是把代码按职责分散到了各自的文件里。总代码量基本没变，但每个文件只管一件事，认知负担大幅降低。</p>
+<hr />
+<h5 id="2-日常开发体感">2、日常开发体感</h5>
+<p>数字上的变化是表面的，真正的收益体现在日常开发中：</p>
+<ul>
+<li><strong>加功能变简单了。</strong> 下次要加&quot;语音消息&quot;，只需要在 ChatFileMixin 里加一个 <code>sendVoiceFromFile</code> 方法。文件操作相关的逻辑都在这个 mixin 里，上下文清晰，不需要在 772 行的文件里翻来翻去找位置，不需要担心改动影响到撤回或置顶的逻辑。而且因为有测试，加完新方法后跑一遍，确认没有破坏已有行为，就可以放心提交。</li>
+<li><strong>改 bug 变快了。</strong> 如果置顶功能出了问题，直接打开 ChatPinMixin 的 100 行代码，问题一定在这里面。不需要理解整个 ChatCubit 的上下文，不需要在脑子里维护 30 个方法的调用关系。100 行代码从头到尾读一遍也就两分钟，bug 在哪里一目了然。</li>
+<li><strong>新人上手变容易了。</strong> 看到 5 个文件名就知道这个模块管什么事：<code>chat_file_mixin</code>（文件操作）、<code>chat_pin_mixin</code>（置顶撤回）、<code>chat_select_mixin</code>（多选模式）、<code>chat_ws_mixin</code>（WS 订阅）、<code>chat_cubit</code>（核心消息流）。想了解某个功能怎么实现的，打开对应文件就行，不需要读完 772 行才能形成全局认知。</li>
+<li><strong>重构变安全了。</strong> 14 个测试在那里守着，任何改动 12 秒就能验证。以后再想优化某个 mixin 的内部实现（比如把文件上传改成分片上传），不需要手动验证所有场景，跑一遍测试全绿就行。这种&quot;改完立刻知道对不对&quot;的安全感，是之前裸奔时完全没有的。</li>
+</ul>
+<hr />
+<h5 id="3-经验沉淀为规范">3、经验沉淀为规范</h5>
+<p>重构做完了，但如果不把经验记录下来，下次遇到同样的问题还是会犯同样的错。所以最后一步是把这次踩过的坑、总结出的原则写入 steering 文件，让它成为项目的长期记忆。</p>
+<p><strong>Flutter 代码风格</strong>（<code>.kiro/steering/flutter/code-style.md</code>）：</p>
+<pre><code>## 代码质量
+
+- 单个文件超过 500 行考虑拆分，可以基于 mixin 合理拆分职能。
+- 3 个以上参数总是成组传递时，提取为值对象（如 ChatContext）。
+- 重复出现的转换逻辑用 extension 封装（如 `Message.toCached()`）。
+- async 操作后使用 BuildContext 前必须检查 mounted。
+</code></pre>
+<p>这些规范不是凭空规定的，是踩过坑之后总结的。写进 steering 后，AI 在日常开发中会自动遵守，同类问题不会再出现。</p>
+<hr />
+<h4 id="本章小结">本章小结</h4>
+<p>回顾这两篇的内容，我们做了一件事：把一个&quot;不敢动&quot;的模块变成了一个&quot;随便改&quot;的模块。772 行变成 250 行只是表象，真正变化的是我们和这段代码的关系——从&quot;小心翼翼绕着走&quot;变成了&quot;放心大胆往里加&quot;。<code>授之以鱼，不如授之以渔</code>，其他的大文件也可以按照这种流程，让 AI 尝试优化一下结构。</p>
+<p>这个过程中有几个认知上的转变值得记住：</p>
+<ul>
+<li><strong>测试不是负担，是资产。</strong> 用写 14 个测试花了大概20分钟，但它们会在未来每一次改动中持续发挥价值。每次跑测试的 12 秒，省下的是耗时的手动验证和不确定性带来的焦虑。投入一次，收益无限次。</li>
+<li><strong>重构不是额外的工作，是开发的一部分。</strong> 很多人把重构当作&quot;有空了再做&quot;的事，结果永远没空。这次我们把重构当作一个正式的版本（v0.21.0），走完整的工作流，有分析、有设计、有任务清单。它和新功能开发享有同等的地位，因为它对项目健康的贡献不亚于任何一个新功能。</li>
+<li><strong>规范是活的，不是死的。</strong> steering 文件里的每一条规则都有它的&quot;出生故事&quot;——是某次体检发现的问题、某次重构踩的坑。它不是某个人拍脑袋写的教条，而是项目在成长过程中自然沉淀出来的智慧。项目在长大，规范也在长大。</li>
+</ul>
+<p>最后想说的是：代码质量不是一个终点，而是一个持续的过程。今天的 250 行，明天加了新功能可能又变成 400 行。重要的不是某个时刻的数字，而是你有没有能力在它膨胀时再次治理它——有测试兜底、有规范指引、有工作流保障。这种能力，才是真正的&quot;根基&quot;，才是成长真正的可能性。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-33.html">← 桢干#4 ｜ 项目体检，望闻问切</a>
+      <a class="next" href="ch-35.html">果实#1 ｜ 后端部署 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-从报告到行动">一、从报告到行动</a></li>
+      <li class="lv5"><a href="#1-问题在哪">1、问题在哪</a></li>
+      <li class="lv5"><a href="#2-为什么不能直接动刀">2、为什么不能直接动刀</a></li>
+      <li class="lv5"><a href="#3-单元测试的必要性">3、单元测试的必要性</a></li>
+      <li class="lv4"><a href="#二-织网-测试基础设施">二、织网：测试基础设施</a></li>
+      <li class="lv5"><a href="#1-无法完成的测试窘境">1、无法完成的测试窘境</a></li>
+      <li class="lv5"><a href="#2-mock-模拟测试的可行性">2、 mock 模拟测试的可行性</a></li>
+      <li class="lv5"><a href="#3-可测试性改造">3、可测试性改造</a></li>
+      <li class="lv5"><a href="#4-测试数据工厂">4、测试数据工厂</a></li>
+      <li class="lv4"><a href="#三-mixin-拆分">三、Mixin 拆分</a></li>
+      <li class="lv5"><a href="#1-拆分策略">1、拆分策略</a></li>
+      <li class="lv5"><a href="#2-ws-订阅集中管理">2、WS 订阅集中管理</a></li>
+      <li class="lv5"><a href="#3-每拆一步-跑一遍测试">3、每拆一步，跑一遍测试</a></li>
+      <li class="lv4"><a href="#四-成果与沉淀">四、成果与沉淀</a></li>
+      <li class="lv5"><a href="#1-数据对比">1、数据对比</a></li>
+      <li class="lv5"><a href="#2-日常开发体感">2、日常开发体感</a></li>
+      <li class="lv5"><a href="#3-经验沉淀为规范">3、经验沉淀为规范</a></li>
+      <li class="lv4"><a href="#本章小结">本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

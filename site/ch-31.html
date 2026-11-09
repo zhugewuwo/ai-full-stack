@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>桢干#2 ｜ 消息功能扩展 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li class="active"><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>桢干#2 ｜ 消息功能扩展</h1>
+<blockquote>
+<p>一条消息发出去之后，故事才刚刚开始。</p>
+</blockquote>
+<p>闪讯的消息能发、能收、能存，但发出去之后就像泼出去的水——你不能撤回它，不能回复它，不能删除它，甚至不能复制它。长按一条消息，什么都不会发生。这一章补齐消息的&quot;售后服务&quot;：长按菜单、复制、撤回、引用回复、本地删除、多选批量删除。</p>
+<table>
+<thead>
+<tr>
+<th>长按菜单</th>
+<th>消息撤回</th>
+<th>引用回复</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e1a8509b2d3499b95ba6436c9cc2012~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=168440&amp;e=png&amp;b=fafafa" alt="MuMu-20260506-230540-471.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/14f551f228ab4d76aed10d0e47954c3a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=161510&amp;e=png&amp;b=fbfbfb" alt="MuMu-20260507-062025-761.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a623133c3a044dc0a9303e21a7f8d8a5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=163942&amp;e=png&amp;b=fafafa" alt="MuMu-20260506-230754-550.png" /></td>
+</tr>
+</tbody>
+</table>
+<h4 id="一-需求分析">一、需求分析</h4>
+<p>消息操作看起来是一堆零散的小功能，但它们共享一个入口（长按菜单）和一套状态管理模式（ChatCubit 扩展）。真正的复杂度藏在细节里：撤回需要前后端协调，引用需要在 extra 里嵌套数据，删除需要&quot;本地不可见但不影响对方&quot;的语义，多选需要整个列表切换交互模式。</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>operation/v0.0.1</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.19.0/docs/features/im/operation/v0.0.1/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.19.0/docs/features/im/operation/v0.0.1/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.19.0/docs/features/im/operation/v0.0.1/client/tasks.md">tasks.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.19.0/docs/features/im/operation/v0.0.1/server/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.19.0/docs/features/im/operation/v0.0.1/server/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f646d2f22ee64d3ab9429337c878b33f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2532&amp;h=992&amp;s=194391&amp;e=png&amp;a=1&amp;b=fcfcfc" alt="mermaid-diagram - 2026-05-07T063406.970.png" /></p>
+<hr />
+<h5 id="1-交互链分析">1. 交互链分析</h5>
+<p>六个场景，从&quot;长按弹出菜单&quot;到&quot;批量删除&quot;，覆盖消息的完整操作生命周期：</p>
+<p><strong>长按菜单</strong></p>
+<p><code>用户故事</code>：作为用户，我长按一条消息，想看到可以对它做什么。</p>
+<table>
+<thead>
+<tr>
+<th>左侧</th>
+<th>右侧</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dc003c7ca136404b95ae9d691577e65d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=617&amp;h=235&amp;s=18032&amp;e=png&amp;b=fcfcfc" alt="image.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/83fdd5108edc41e5b37ffc08d12352eb~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=620&amp;h=227&amp;s=23808&amp;e=png&amp;b=fcfcfc" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>长按消息气泡，弹出微信风格的深色气泡菜单。菜单项不是固定的——文本消息有&quot;复制&quot;，图片没有；自己发的消息有&quot;撤回&quot;（2 分钟内），别人的没有；系统消息不弹菜单。菜单定位在气泡附近，左侧消息左对齐，右侧消息右对齐，不遮挡消息内容。</p>
+<table>
+<thead>
+<tr>
+<th>菜单项</th>
+<th>文本消息</th>
+<th>图片/视频/文件</th>
+<th>自己发的</th>
+<th>别人发的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>复制</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>引用</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>撤回</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅（2分钟内）</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>删除</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>多选</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>消息撤回</strong></p>
+<p><code>用户故事</code>：作为用户，我发错了消息，想在 2 分钟内撤回。支持重新编辑以便用户基于之前消息修改。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fd2ae157ee1b4a9fbe76cf637755005d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=618&amp;h=142&amp;s=12473&amp;e=png&amp;b=fcfcfc" alt="image.png" /></p>
+<p>点击&quot;撤回&quot;后，前端发 HTTP 请求到后端。后端做三件事：校验是否本人发的、是否在 2 分钟内、标记 status=1。然后通过 WS 广播 MESSAGE_RECALLED 帧给会话所有成员。所有客户端收到后，将该消息替换为灰色居中标签：&quot;你撤回了一条消息&quot;或&quot;对方撤回了一条消息&quot;。</p>
+<p>撤回不是删除。消息行还在，seq 连续性不受影响，只是内容被替换了。这和微信的行为一致。撤回后还有一个容易忽略的问题：退出聊天页再进来，撤回状态会不会丢？如果只改内存不写本地，答案是&quot;会丢&quot;。所以撤回后必须同步写入 LocalStore，把撤回后的消息（带 <code>_recalled: true</code> 标记）持久化。</p>
+<hr />
+<p><strong>引用回复</strong></p>
+<p><code>用户故事</code>：作为用户，我想回复某条特定消息，让对方知道我在说哪条。</p>
+<table>
+<thead>
+<tr>
+<th>引用预览条</th>
+<th>引用气泡</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c9685f8bd9e94bc2936d71124393cdf1~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=624&amp;h=189&amp;s=15748&amp;e=png&amp;b=f7f7f7" alt="image.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d56d3e04d66e40b1965f2a27d6c4593e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=620&amp;h=164&amp;s=13180&amp;e=png&amp;b=fdfdfd" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>点击&quot;引用&quot;后，输入框上方出现引用预览条，显示被引用消息的发送者和内容摘要。用户输入回复内容后发送，消息的 extra 字段携带 <code>reply_to</code> 对象。对方收到后，消息气泡下方嵌套一个引用气泡，显示被引用的原消息。</p>
+<p>引用不需要后端改动。extra 是 JSONB 字段，前端往里塞什么后端照存不误。引用信息是&quot;快照&quot;而非&quot;引用&quot;——存的是发送时的内容摘要，不是消息 ID 的实时查询。原消息被撤回后，引用气泡里的内容不会变。</p>
+<hr />
+<p><strong>复制</strong></p>
+<p><code>用户故事</code>：作为用户，我想复制一条文本消息的内容。</p>
+<p>点击&quot;复制&quot;，将消息 content 写入系统剪贴板，底部弹出 SnackBar &quot;已复制&quot;。只有文本消息显示复制选项，图片/视频/文件不显示。一行代码的事，但没有长按菜单就做不到。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f6fdf1de79924b428e219d9163cd943e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=620&amp;h=253&amp;s=22116&amp;e=png&amp;b=fcfcfc" alt="image.png" /></p>
+<hr />
+<p><strong>本地删除</strong></p>
+<p><code>用户故事</code>：作为用户，我想删除某条消息，不想再看到它。</p>
+<p>点击&quot;删除&quot;，弹出底部确认弹窗。确认后将消息 ID 写入本地回收站表（local_trash），消息从列表中消失。不通知服务端，不影响对方。</p>
+<table>
+<thead>
+<tr>
+<th>气泡框</th>
+<th>确认弹窗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a58d9c7af7aa4d5e9c0b45d3902d3420~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=150894&amp;e=png&amp;b=fbfbfb" alt="MuMu-20260507-064451-716.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d0378c3c12c74bdf8c29168a872a4330~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=134341&amp;e=png&amp;b=737373" alt="MuMu-20260507-064343-785.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>多选模式</strong></p>
+<p><code>用户故事</code>：作为用户，我想批量删除多条消息。</p>
+<p>点击&quot;多选&quot;进入多选模式。整个列表的交互模式切换：每条消息左侧出现勾选框，底部输入框替换为操作栏（删除 + 取消），整行点击都响应选择。勾选多条后点击&quot;删除&quot;，弹出确认弹窗，确认后批量标记本地已删除。</p>
+<p>多选模式是一个全局状态切换，由 ChatCubit 的 <code>isMultiSelect</code> 标志控制。进入多选时记录初始选中的消息 ID，退出时清空。勾选框不在 MessageBubble 内部——它在 ChatPage 层面用 Row 包裹，这样系统消息和撤回消息也能被选中。</p>
+<table>
+<thead>
+<tr>
+<th>多选模式</th>
+<th>批量删除确认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/05a2118636844356b54801c44a664007~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=171345&amp;e=png&amp;b=fbfbfb" alt="MuMu-20260507-064533-189.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/712fa731897d441cb072f18153112e84~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=151697&amp;e=png&amp;b=737373" alt="MuMu-20260507-064842-413.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="2-逻辑流程树">2. 逻辑流程树</h5>
+<p><strong>消息撤回：前后端协调</strong></p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>用户点击&quot;撤回&quot;</td>
+<td>ChatCubit.recallMessage → HTTP POST</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>后端校验</td>
+<td>是否本人、是否 2 分钟内、是否已撤回</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>校验通过</td>
+<td>UPDATE status=1 + WS 广播 MESSAGE_RECALLED</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>所有客户端收到帧</td>
+<td>_replaceWithRecalled → 内存替换 + 写入 LocalStore</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>会话预览更新</td>
+<td>_syncConversationPreview → onConversationChanged</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2565c4936b82411fa13b14ddd01b6115~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2654&amp;h=1858&amp;s=259648&amp;e=png&amp;a=1&amp;b=ededed" alt="mermaid-diagram - 2026-05-07T065513.002.png" /></p>
+<p>撤回的发起者也会收到 MESSAGE_RECALLED 帧（后端广播给会话所有成员，包括自己）。前端根据 sender_id 判断展示文案：&quot;你撤回了一条消息&quot;还是&quot;对方撤回了一条消息&quot;。</p>
+<blockquote>
+<p>为什么发起者也要收帧？因为用户可能在多个设备登录。A 设备撤回，B 设备也要看到撤回效果。统一走 WS 推送，不需要特殊处理多端同步。</p>
+</blockquote>
+<p><strong>引用回复：数据流</strong></p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>用户点击&quot;引用&quot;</td>
+<td>ChatCubit.setReplyTo → emit replyTo</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>输入框上方显示预览条</td>
+<td>ReplyPreviewBar 渲染</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>用户发送消息</td>
+<td>sendMessage 读取 state.replyTo，构建 extra.reply_to</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>发送完成</td>
+<td>clearReplyTo，预览条消失</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>对方收到消息</td>
+<td>解析 extra.reply_to，MessageBubble 嵌套 ReplyBubble</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1aed732b792c4cdaad36d604a3eaa52d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2574&amp;h=2094&amp;s=252820&amp;e=png&amp;a=1&amp;b=ebebeb" alt="mermaid-diagram - 2026-05-07T065726.000.png" /></p>
+<p>extra.reply_to 的结构：</p>
+<pre><code class="language-json">{
+  &quot;reply_to&quot;: {
+    &quot;message_id&quot;: &quot;uuid&quot;,
+    &quot;sender_name&quot;: &quot;张三&quot;,
+    &quot;content&quot;: &quot;明天几点开会？&quot;,
+    &quot;msg_type&quot;: 0
+  }
+}
+</code></pre>
+<blockquote>
+<p>为什么存内容快照而不是只存 message_id？因为原消息可能被撤回或删除。如果只存 ID，引用气泡需要实时查询原消息，查不到就显示&quot;消息已删除&quot;。存快照更简单，引用气泡永远有内容可显示，不依赖原消息的存在。</p>
+</blockquote>
+<p><strong>本地删除：静默移除</strong></p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>用户确认删除</td>
+<td>ChatCubit.deleteMessage</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>写入回收站</td>
+<td>store.moveToTrash(messageId, 'message')</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>内存过滤</td>
+<td>messages.where(m.id != messageId) + emit</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>会话预览更新</td>
+<td>_syncConversationPreview</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3f5a757148f94557bc4453b2c5ba5e94~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2730&amp;h=1506&amp;s=205681&amp;e=png&amp;a=1&amp;b=ececec" alt="mermaid-diagram - 2026-05-07T065920.801.png" /></p>
+<p>这里有两个体验细节：</p>
+<p>第一，删除后不能调 <code>loadMessages()</code> 重新加载。重新加载会触发 Loading → Loaded 状态切换，整个列表闪一下。正确做法是在内存中过滤掉被删消息，直接 emit 新列表。用户看到的效果是消息&quot;静默消失&quot;，没有任何闪烁。</p>
+<p>第二，删除后会话列表的最后一条消息预览要更新。如果删的是最后一条，会话列表还显示它的内容就不对了。ChatCubit 删除后调用 <code>_syncConversationPreview</code>，更新 LocalStore 里的会话预览，再通过 <code>onConversationChanged</code> 回调通知会话列表刷新。</p>
+<hr />
+<h5 id="3-功能编号-新节点入网">3. 功能编号：新节点入网</h5>
+<p>8 个新节点 + 5 个扩展，这是实战卷以来单章新增节点最多的一次。但改动集中在 flash_im_chat 模块内部，不新建模块，不改架构。后端只加一个接口，前端是主战场。</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>编号</th>
+<th>节点</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D（领域）</td>
+<td>D-40</td>
+<td>消息撤回</td>
+<td>POST /recall + WS 广播 MESSAGE_RECALLED</td>
+</tr>
+<tr>
+<td>F（前端基础）</td>
+<td>F-17</td>
+<td>MESSAGE_RECALLED WS 帧分发</td>
+<td>WsClient 新增 messageRecalledStream</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-48</td>
+<td>长按菜单</td>
+<td>微信风格 Overlay 气泡菜单</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-49</td>
+<td>消息撤回展示</td>
+<td>撤回提示替换 + 本地持久化</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-50</td>
+<td>引用回复</td>
+<td>ReplyBubble + ReplyPreviewBar + extra.reply_to</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-51</td>
+<td>多选模式</td>
+<td>勾选框 + 底部操作栏 + 批量删除</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-52</td>
+<td>本地删除</td>
+<td>local_trash + 静默移除 + 会话预览同步</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-53</td>
+<td>删除确认弹窗</td>
+<td>showTolyPopPicker 底部确认</td>
+</tr>
+</tbody>
+</table>
+<p>扩展节点：I-06（proto 新增 MESSAGE_RECALLED 帧类型）、D-06（messages.status=1 表示已撤回）、F-06（WsClient 新增 stream）、P-07（sendMessage 支持 extra.reply_to）。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/94fa43cdbcc14c1e9abc59530477e828~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2715&amp;h=1004&amp;s=221651&amp;e=png&amp;a=1&amp;b=fbfbfb" alt="mermaid-diagram - 2026-05-07T070455.636.png" /></p>
+<hr />
+<h4 id="二-后端实现">二、后端实现</h4>
+<p>消息操作的六个功能里，只有撤回需要后端参与。复制、引用、删除、多选都是纯前端的事。引用回复复用已有的 extra JSONB 字段，后端照存不误。本地删除只操作客户端的 SQLite，服务端完全不知情。</p>
+<p>所以后端这一节的代码量不大，但设计决策不少。一个看似简单的&quot;撤回&quot;接口，背后涉及权限校验、时间窗口、状态机、WS 广播、会话预览联动。下面按&quot;协议定义 → 接口实现 → 广播与联动&quot;的顺序展开。</p>
+<hr />
+<h5 id="1-协议与状态机">1. 协议与状态机</h5>
+<p><strong>proto 扩展</strong></p>
+<p>ws.proto 新增 MESSAGE_RECALLED 帧类型（第 17 个，从 0 编号）：</p>
+<pre><code class="language-protobuf">// ---&gt; proto/ws.proto
+enum WsFrameType {
+  // ... 0~15 已有
+  MESSAGE_RECALLED = 16;
+}
+</code></pre>
+<p>message.proto 新增 MessageRecalled 消息体：</p>
+<pre><code class="language-protobuf">// ---&gt; proto/message.proto
+message MessageRecalled {
+  string message_id = 1;
+  string conversation_id = 2;
+  string sender_id = 3;
+  string sender_name = 4;
+}
+</code></pre>
+<p>四个字段。sender_name 是为了群聊里直接展示&quot;张三撤回了一条消息&quot;，省去前端查昵称的开销。proto 修改后 <code>cargo build</code> 自动触发 <code>build.rs</code> 重新编译，前端的 protobuf_dart 也需要同步重新生成。</p>
+<p><strong>消息状态机</strong></p>
+<p>messages 表的 <code>status</code> 字段在项目初期就预留了，这次撤回用到了 1：</p>
+<table>
+<thead>
+<tr>
+<th>status</th>
+<th>含义</th>
+<th>查询行为</th>
+<th>前端展示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>正常</td>
+<td>正常返回</td>
+<td>正常气泡</td>
+</tr>
+<tr>
+<td>1</td>
+<td>已撤回</td>
+<td>正常返回</td>
+<td>灰色居中标签</td>
+</tr>
+<tr>
+<td>2</td>
+<td>已删除</td>
+<td>过滤不返回</td>
+<td>不展示</td>
+</tr>
+</tbody>
+</table>
+<p>状态转换是单向不可逆的：<code>0 → 1</code>（撤回）、<code>0 → 2</code>（删除）。撤回后的消息仍然返回给客户端——因为 seq 是连续的，如果不返回这一行，客户端翻页时会发现 seq 有空洞，可能误以为消息丢失。</p>
+<hr />
+<h5 id="2-撤回接口实现">2. 撤回接口实现</h5>
+<pre><code>POST /conversations/{conv_id}/messages/{msg_id}/recall
+Authorization: Bearer {token}
+</code></pre>
+<p>Handler 七步顺序执行，任一步失败通过 <code>AppError</code> 返回对应 HTTP 状态码：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-message/src/routes.rs
+async fn recall_message(
+    State(state): State&lt;AppState&gt;,
+    Path((conv_id, msg_id)): Path&lt;(String, String)&gt;,
+    claims: Claims,
+) -&gt; Result&lt;Json&lt;Value&gt;, AppError&gt; {
+    let user_id = claims.user_id;
+
+    // 1. 查消息（同时校验 conversation_id，防止跨会话撤回）
+    let msg = state.message_repo
+        .find_by_id(&amp;msg_id, &amp;conv_id).await?
+        .ok_or(AppError::not_found(&quot;消息不存在&quot;))?;
+
+    // 2. 校验是否本人发送
+    if msg.sender_id != user_id {
+        return Err(AppError::forbidden(&quot;只能撤回自己的消息&quot;));
+    }
+
+    // 3. 校验时间窗口（2 分钟）
+    if (Utc::now() - msg.created_at).num_seconds() &gt; 120 {
+        return Err(AppError::forbidden(&quot;超过撤回时限&quot;));
+    }
+
+    // 4. 校验是否已撤回
+    if msg.status == 1 {
+        return Err(AppError::bad_request(&quot;消息已撤回&quot;));
+    }
+
+    // 5. 标记撤回
+    state.message_repo.update_status(&amp;msg_id, 1).await?;
+
+    // 6. 更新会话预览
+    state.message_service.update_conversation_preview(&amp;conv_id).await?;
+
+    // 7. 广播 MESSAGE_RECALLED 帧
+    let payload = MessageRecalled { message_id: msg_id, conversation_id: conv_id, ... };
+    let frame = WsFrame::new(WsFrameType::MessageRecalled, payload.encode_to_vec());
+    for uid in state.conversation_repo.get_member_ids(&amp;conv_id).await? {
+        state.ws_state.send(uid, frame.clone());
+    }
+
+    Ok(Json(json!({&quot;message&quot;: &quot;ok&quot;})))
+}
+</code></pre>
+<p><strong>校验顺序的考量</strong>：先查消息（404）→ 再校验权限（403）→ 再校验时间（403）→ 最后校验状态（400）。顺序影响错误信息的准确性：消息不存在就说&quot;不存在&quot;，不说&quot;没权限&quot;；不是你的消息就说&quot;没权限&quot;，不说&quot;超时了&quot;。</p>
+<p><strong>find_by_id 的 WHERE 条件</strong>同时包含 id 和 conversation_id。安全考虑：防止用户猜测 message_id 撤回其他会话的消息。虽然后面还有 sender_id 校验兜底，但多一层过滤更安全。</p>
+<hr />
+<h5 id="3-广播与联动">3. 广播与联动</h5>
+<p><strong>WS 广播范围</strong>：会话所有成员，包括撤回发起者自己。</p>
+<p>为什么包括自己？两个原因：</p>
+<ol>
+<li><strong>多端同步</strong>：手机撤回，电脑也要看到效果。不广播给自己，其他设备不知道。</li>
+<li><strong>代码简洁</strong>：排除发起者需要多一个过滤条件。前端收到自己发起的撤回推送，<code>_replaceWithRecalled</code> 是幂等的（已撤回的消息直接跳过），不需要特殊处理。</li>
+</ol>
+<p><strong>会话预览更新</strong>：撤回后如果撤回的是最后一条消息，会话列表还显示原始内容就不对了。<code>update_conversation_preview</code> 重新查询最新消息生成预览：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-message/src/service.rs
+pub async fn update_conversation_preview(&amp;self, conv_id: &amp;str) -&gt; Result&lt;()&gt; {
+    let latest = self.repo.find_latest_one(conv_id).await?;
+    let preview = match latest {
+        None =&gt; String::new(),
+        Some(msg) if msg.status == 1 =&gt; &quot;撤回了一条消息&quot;.to_string(),
+        Some(msg) =&gt; match msg.msg_type {
+            1 =&gt; &quot;[图片]&quot;.to_string(),
+            2 =&gt; &quot;[视频]&quot;.to_string(),
+            3 =&gt; &quot;[文件]&quot;.to_string(),
+            _ =&gt; msg.content.chars().take(50).collect(),
+        },
+    };
+    self.conversation_repo.update_preview(conv_id, &amp;preview).await
+}
+</code></pre>
+<p>这个方法抽成 service 层而不是内联在 handler 里，因为未来管理员删除消息也需要调用它。</p>
+<p><strong>离线用户的最终一致性</strong>：如果撤回时对方离线，不会收到 MESSAGE_RECALLED 帧。但下次上线时 SyncEngine 增量同步会拉到 status=1 的消息，前端据此展示撤回提示。撤回的最终一致性有保障，只是离线用户有延迟。</p>
+<hr />
+<h5 id="4-错误处理与测试">4. 错误处理与测试</h5>
+<p>测试覆盖 8 个场景：正常撤回、超时、撤回别人的、重复撤回、撤回后查询（status=1 仍在列表）、撤回后会话预览更新、WS 广播验证（两端都收到帧）。</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>场景</th>
+<th>验证</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A 发送一条消息</td>
+<td>200，返回 msg_id</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A 撤回消息（2 分钟内）</td>
+<td>200</td>
+</tr>
+<tr>
+<td>3</td>
+<td>查询消息列表验证 status=1</td>
+<td>撤回后消息仍在列表，status=1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>重复撤回同一条</td>
+<td>400 &quot;消息已撤回&quot;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>B 撤回 A 的消息</td>
+<td>403 &quot;只能撤回自己的消息&quot;</td>
+</tr>
+<tr>
+<td>6</td>
+<td>撤回超时消息（旧消息）</td>
+<td>403 &quot;超过撤回时限&quot;</td>
+</tr>
+<tr>
+<td>7</td>
+<td>撤回后会话预览更新</td>
+<td>last_message_preview 反映最新状态</td>
+</tr>
+<tr>
+<td>8</td>
+<td>B 查询消息列表看到 status=1</td>
+<td>间接验证广播效果：对方也能看到撤回</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>时间窗口测试：不能真等 2 分钟。测试时插入一条 created_at 为 3 分钟前的消息，尝试撤回，验证 403。</p>
+</blockquote>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9bea5fa000d64440b2212c7422aaaac9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1086&amp;h=520&amp;s=103720&amp;e=png&amp;b=0c0c0c" alt="image.png" /></p>
+<hr />
+<h4 id="三-前端实现">三、前端实现</h4>
+<p>后端只加了一个接口，前端要做六件事。但它们有一个共同的入口——长按菜单，和一个共同的状态管理中心——ChatCubit。不新建模块，所有改动在 flash_im_chat 内部完成。</p>
+<pre><code>flash_im_chat/lib/src/
+├── data/
+│   ├── message.dart              # Message 模型扩展（isRecalled）
+│   └── message_repository.dart   # 新增 recallMessage + store getter
+├── logic/
+│   ├── chat_cubit.dart           # 核心：撤回/引用/删除/多选逻辑
+│   └── chat_state.dart           # 新增 replyTo / isMultiSelect / selectedIds
+└── view/
+    ├── message_action_menu.dart  # 新建：长按菜单 Overlay
+    ├── reply_preview_bar.dart    # 新建：输入框上方引用预览条
+    ├── chat_page.dart            # 改造：长按手势 + 多选 UI + 确认弹窗
+    └── bubble/
+        ├── message_bubble.dart   # 改造：撤回展示 + 引用嵌套
+        └── reply_bubble.dart     # 新建：引用气泡组件
+</code></pre>
+<p>8 个文件，新建 3 个，修改 5 个。下面按实现顺序展开。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/52072e7559fe4e7e8a43d21ac2d7f495~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2645&amp;h=1083&amp;s=177757&amp;e=png&amp;a=1&amp;b=fcfbfb" alt="mermaid-diagram - 2026-05-07T080541.989.png" /></p>
+<hr />
+<h5 id="1-长按菜单-messageactionmenu">1. 长按菜单：MessageActionMenu</h5>
+<p>用自定义 Overlay 实现微信风格的深色气泡菜单。不用 PopupMenuButton 组件，因为它的样式难以定制、定位不灵活、没法画尖角。通过 Builder 拿到气泡的 BuildContext，长按时获取全局坐标：</p>
+<table>
+<thead>
+<tr>
+<th>左侧</th>
+<th>右侧</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dc003c7ca136404b95ae9d691577e65d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=617&amp;h=235&amp;s=18032&amp;e=png&amp;b=fcfcfc" alt="image.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/83fdd5108edc41e5b37ffc08d12352eb~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=620&amp;h=227&amp;s=23808&amp;e=png&amp;b=fcfcfc" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-dart">// ---&gt; flash_im_chat/lib/src/view/bubble/message_bubble.dart
+Flexible(child: Builder(
+  builder: (bubbleCtx) =&gt; GestureDetector(
+    onLongPressStart: onLongPress != null ? (_) =&gt; onLongPress!(bubbleCtx) : null,
+    child: _buildBubble(),
+  ),
+)),
+</code></pre>
+<p>菜单项根据消息类型和发送者动态过滤：</p>
+<pre><code class="language-dart">// ---&gt; flash_im_chat/lib/src/view/message_action_menu.dart
+static List&lt;MenuAction&gt; _getActions(Message message, bool isMe) {
+  if (message.isSystem || message.isRecalled) return [];
+  return [
+    if (message.isText) MenuAction.copy,
+    MenuAction.reply,
+    if (isMe &amp;&amp; _isWithinRecallWindow(message)) MenuAction.recall,
+    MenuAction.delete,
+    MenuAction.multiSelect,
+  ];
+}
+</code></pre>
+<p>关闭方式用 <code>TapRegion</code> 而不是全屏遮罩——全屏 GestureDetector 会拦截滚动手势，导致弹出菜单后列表无法滑动：</p>
+<pre><code class="language-dart">// ---&gt; flash_im_chat/lib/src/view/message_action_menu.dart
+TapRegion(
+  onTapOutside: (_) =&gt; widget.onDismiss(),
+  child: FadeTransition(opacity: _opacity, child: _buildMenu(showAbove)),
+)
+</code></pre>
+<blockquote>
+<p>定位策略：上方空间 &gt; 90px 则菜单在上，否则在下。左侧消息左对齐气泡左边缘，右侧消息右对齐气泡右边缘。尖角用 CustomPainter 四段贝塞尔曲线绘制，对准气泡中心。</p>
+</blockquote>
+<hr />
+<h5 id="2-气泡框实现过程的艰辛">2. 气泡框实现过程的艰辛</h5>
+<p>如何绘制一个符合我预期的气泡框，花费了我不少心力。 AI 在流程上、知识广度上非常强大，但是具体的细节方面目前还差强人意。一开始它只是给个小三角形，我感觉看起来不太舒服，我希望左右下都可以有顺畅的过度，如下所示：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dc003c7ca136404b95ae9d691577e65d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=617&amp;h=235&amp;s=18032&amp;e=png&amp;b=fcfcfc" alt="image.png" /></p>
+<p>调了很久，AI 的结果始终非常糟糕，即使通过使用三次贝塞尔曲线，AI 也无法了解我需要的现状。最后我干脆让 AI 制作了一个 html 的前端气泡圆角编辑器，如下所示：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8273072cb8a74bc98db9f827a767018e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1605&amp;h=987&amp;s=118382&amp;e=png&amp;b=1a1a2e" alt="image.png" /></p>
+<p>可以将编辑区放大、移动，然后针对底部的贝赛尔曲线，拖拽控制柄得到我满意的形状：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2d7683dd39d74d12a638f2a8108ab05f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1600&amp;h=722&amp;s=73518&amp;e=png&amp;b=1a1a2e" alt="image.png" /></p>
+<p>在右侧区域会实时更新展示对于的 <code>dart</code> 绘制代码。碰到 AI 解决不了的问题，我更应该发挥自己的主观能动性，借助 AI 在其他的途径上寻找解决方案，而不是让 AI 在哪里死磕。</p>
+<pre><code>static const _arrowSize = 6;
+static const _radius = 12;
+// aW = 9
+final tipY = edge + aH;
+final midY = edge + aH * 0.5;
+path.lineTo(arrowX + aW, edge);
+path.cubicTo(arrowX + aW * 0.47, edge, arrowX + aW * 0.48, midY + aH * -0.2, arrowX + aW * 0.3, midY);
+path.cubicTo(arrowX + aW * 0.21, midY + aH * 0.26, arrowX + 0.8, tipY - 0.5, arrowX, tipY);
+path.cubicTo(arrowX - 0.8, tipY - 0.5, arrowX - aW * 0.21, midY + aH * 0.26, arrowX - aW * 0.3, midY);
+path.cubicTo(arrowX - aW * 0.48, midY + aH * -0.2, arrowX - aW * 0.47, edge, arrowX - aW, edge);
+</code></pre>
+<hr />
+<h5 id="3-消息撤回-前后端协调-本地持久化">3. 消息撤回：前后端协调 + 本地持久化</h5>
+<p>三步：发请求 → 收推送 → 写本地。HTTP 成功后立即本地替换，不等 WS 推送：</p>
+<pre><code class="language-dart">// ---&gt; flash_im_chat/lib/src/logic/chat_cubit.dart
+Future&lt;void&gt; recallMessage(String messageId) async {
+  await _repository.recallMessage(conversationId, messageId);
+  _replaceWithRecalled(messageId, isMe: true);
+}
+</code></pre>
+<p>WS 推送到达时再次调用，幂等跳过已处理的消息：</p>
+<pre><code class="language-dart">// ---&gt; flash_im_chat/lib/src/logic/chat_cubit.dart
+void _replaceWithRecalled(String messageId, {required bool isMe}) {
+  final updated = messages.map((m) {
+    if (m.id == messageId) {
+      if (m.isRecalled) return m; // 幂等：已处理过直接跳过
+      final extra = &lt;String, dynamic&gt;{'_recalled': true};
+      if (isMe &amp;&amp; m.type == MessageType.text) {
+        extra['_original_content'] = m.content; // 保存原始文本供重新编辑
+      }
+      return m.copyWith(
+        content: isMe ? '你撤回了一条消息' : '${m.senderName}撤回了一条消息',
+        extra: extra,
+      );
+    }
+    return m;
+  }).toList();
+  // emit + 写入 LocalStore + 同步会话预览
+}
+</code></pre>
+<p>撤回后 MessageBubble 检测 <code>_original_content</code>，显示蓝色&quot;重新编辑&quot;按钮，点击将原始内容填入输入框。</p>
+<blockquote>
+<p>幂等的重要性：<code>_replaceWithRecalled</code> 被调用两次（HTTP 后 + WS 推送）。不做幂等判断，第二次会把 <code>_original_content</code> 覆盖为&quot;你撤回了一条消息&quot;。</p>
+</blockquote>
+<hr />
+<h5 id="4-引用回复-三个组件协作">4. 引用回复：三个组件协作</h5>
+<p>点击&quot;引用&quot; → 预览条出现 → 发送时构建 extra → 对方收到后渲染引用气泡。</p>
+<table>
+<thead>
+<tr>
+<th>引用预览条</th>
+<th>引用气泡</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c9685f8bd9e94bc2936d71124393cdf1~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=624&amp;h=189&amp;s=15748&amp;e=png&amp;b=f7f7f7" alt="image.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d56d3e04d66e40b1965f2a27d6c4593e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=620&amp;h=164&amp;s=13180&amp;e=png&amp;b=fdfdfd" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-dart">// ---&gt; flash_im_chat/lib/src/logic/chat_cubit.dart (sendMessage 改造)
+if (current.replyTo != null) {
+  final reply = current.replyTo!;
+  extra = {
+    'reply_to': {
+      'message_id': reply.id,
+      'sender_name': reply.senderName,
+      'content': reply.isText
+          ? (reply.content.length &gt; 30 ? '${reply.content.substring(0, 30)}...' : reply.content)
+          : reply.isImage ? '[图片]' : reply.isVideo ? '[视频]' : '[文件]',
+      'msg_type': reply.type.index,
+    },
+  };
+}
+emit(current.copyWith(clearReplyTo: true));
+</code></pre>
+<p>ReplyBubble 放在消息气泡<strong>下方</strong>（Column children: [bubble, replyWidget]），背景色 #F5F5F5，左侧蓝色竖线。位置选择&quot;下方&quot;是因为引用是补充信息，视觉权重应低于消息本身。</p>
+<blockquote>
+<p>存内容快照而不是 message_id 引用。原消息可能被撤回或删除，快照保证引用气泡永远有内容可显示。</p>
+</blockquote>
+<hr />
+<h5 id="5-本地删除和多选模式">5. 本地删除和多选模式</h5>
+<p>本地删除后，不能调 <code>loadMessages()</code>（会触发 Loading → Loaded 状态切换），正确做法是内存过滤 + 直接 emit：</p>
+<pre><code class="language-dart">// ---&gt; flash_im_chat/lib/src/logic/chat_cubit.dart
+Future&lt;void&gt; deleteMessage(String messageId) async {
+  final store = _store ?? _repository.store;
+  await store.moveToTrash(messageId, 'message');
+  final updated = messages.where((m) =&gt; m.id != messageId).toList();
+  emit(current.copyWith(messages: updated));
+  _syncConversationPreview(store, updated);
+}
+</code></pre>
+<p>删除前弹确认弹窗使用 tolyui 中的 <a href="https://pub.dev/packages/tolyui_feedback_modal">tolyui_feedback_modal</a> ,便于实现类似微信的底部弹框操作选项。另外红色&quot;删除&quot;按钮只在弹窗里出现，气泡菜单里保持白色。删除后通过 <code>_syncConversationPreview</code> 更新会话列表预览 + <code>onConversationChanged</code> 回调通知刷新。</p>
+<hr />
+<p>进入多选后，ChatPage 整体变形：每条消息左侧滑入勾选框，底部输入框替换为操作栏。</p>
+<pre><code class="language-dart">// ---&gt; flash_im_chat/lib/src/view/chat_page.dart
+GestureDetector(
+  behavior: isInMultiSelect ? HitTestBehavior.opaque : HitTestBehavior.deferToChild,
+  onTap: isInMultiSelect ? () =&gt; cubit.toggleSelect(msg.id) : null,
+  child: Row(
+    children: [
+      AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        width: isInMultiSelect ? 44 : 0,
+        child: isInMultiSelect ? Icon(
+          isSelected ? Icons.check_circle : Icons.radio_button_unchecked,
+          color: isSelected ? Color(0xFF3B82F6) : Color(0xFFCCCCCC),
+        ) : null,
+      ),
+      Expanded(child: bubble),
+    ],
+  ),
+)
+</code></pre>
+<p>勾选框在 ChatPage 层面用 Row 包裹，不在 MessageBubble 内部——这样系统消息和撤回消息也能被选中。批量删除复用 <code>deleteMessage</code> 逻辑，逐条 moveToTrash 后一次性 emit。</p>
+<hr />
+<h4 id="四-本章小结">四、本章小结</h4>
+<p>这一章做了六件事，但本质上只做了一件：给消息加上&quot;售后服务&quot;。发出去的消息不再是泼出去的水，用户可以撤回它、回复它、删除它、批量处理它。</p>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>消息操作</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.19.0">v0.19.0</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.19.0">commit</a></td>
+</tr>
+</tbody>
+</table>
+<p>技术上，这一章的特点是&quot;改动面广但改动深度浅&quot;。不新建模块，不改架构，所有代码集中在 flash_im_chat 内部。ChatCubit 从 200 行膨胀到 400 行，但每个方法都很短，职责清晰。长按菜单是一个独立的 Overlay 组件，和 ChatPage 通过回调解耦。引用回复是三个小组件的协作。本地删除复用了上一章建好的 local_trash 基础设施。</p>
+<p>有几个设计决策值得回顾：</p>
+<ul>
+<li><strong>撤回用 extra 标记而不是 MessageStatus 枚举</strong>。发送状态和内容状态是两个维度，不应该混在一起。<code>extra: {'_recalled': true}</code> 灵活且不侵入已有逻辑。</li>
+<li><strong>删除后静默移除而不是重新加载</strong>。一个 emit 的区别，但用户体验天差地别。从 ChatLoaded 到 ChatLoaded，BlocBuilder 只做 diff；从 ChatLoading 到 ChatLoaded，整个列表重建。</li>
+<li><strong>引用存快照而不是存引用</strong>。原消息可能被撤回或删除，存快照保证引用气泡永远有内容可显示。代价是原消息修改后引用不会更新，但消息本身就不支持编辑，所以没有这个问题。</li>
+</ul>
+<p>下一章，我们将继续对消息功能进行优化拓展，但不再详细介绍代码的实现了。而是根据功能需求，对整个 AI 工作流程，进行梳理和说明。毕竟我们已经通过这套流程迭代了近 10 次的功能，也是时候进行一下总结和说明了。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-30.html">← 桢干#1 ｜ 本地缓存与同步</a>
+      <a class="next" href="ch-32.html">桢干#3 ｜ AI 全栈开发流程梳理 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-需求分析">一、需求分析</a></li>
+      <li class="lv5"><a href="#1-交互链分析">1. 交互链分析</a></li>
+      <li class="lv5"><a href="#2-逻辑流程树">2. 逻辑流程树</a></li>
+      <li class="lv5"><a href="#3-功能编号-新节点入网">3. 功能编号：新节点入网</a></li>
+      <li class="lv4"><a href="#二-后端实现">二、后端实现</a></li>
+      <li class="lv5"><a href="#1-协议与状态机">1. 协议与状态机</a></li>
+      <li class="lv5"><a href="#2-撤回接口实现">2. 撤回接口实现</a></li>
+      <li class="lv5"><a href="#3-广播与联动">3. 广播与联动</a></li>
+      <li class="lv5"><a href="#4-错误处理与测试">4. 错误处理与测试</a></li>
+      <li class="lv4"><a href="#三-前端实现">三、前端实现</a></li>
+      <li class="lv5"><a href="#1-长按菜单-messageactionmenu">1. 长按菜单：MessageActionMenu</a></li>
+      <li class="lv5"><a href="#2-气泡框实现过程的艰辛">2. 气泡框实现过程的艰辛</a></li>
+      <li class="lv5"><a href="#3-消息撤回-前后端协调-本地持久化">3. 消息撤回：前后端协调 + 本地持久化</a></li>
+      <li class="lv5"><a href="#4-引用回复-三个组件协作">4. 引用回复：三个组件协作</a></li>
+      <li class="lv5"><a href="#5-本地删除和多选模式">5. 本地删除和多选模式</a></li>
+      <li class="lv4"><a href="#四-本章小结">四、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>经络#5 ｜ 模块的物理边界 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li class="active"><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>经络#5 ｜ 模块的物理边界</h1>
+<blockquote>
+<p>好的隔离不是让彼此疏远，而是让协作更清晰</p>
+</blockquote>
+<p>上一章我们建立了&quot;关系视角&quot;，其中在模块级说过：<strong>模块之间的关系应该比类之间更加克制。</strong>
+但回头看我们自己的代码，&quot;克制&quot;二字做得并不好。</p>
+<ul>
+<li>auth 目录下的内部组件被 home 随意 import，</li>
+<li>AuthCubit 从启动活到关闭却管着用户资料</li>
+<li>ActionButton 放在 auth 里却被 home 拿去用。</li>
+</ul>
+<p>目录结构看着像模块化，实际上没有任何隔离。就像在地上画了几条线，说 <code>&quot;这是你的地盘，那是我的地盘&quot;</code> ，但谁都可以随意跨过去。这一章，我们要把地上的线变成真正的围墙。</p>
+<hr />
+<h4 id="一-假模块化与真模块化">一、假模块化与真模块化</h4>
+<p>我们已经按职责，把代码分进了不同的文件夹，看起来井井有条。但如果你试着从 home 模块里 import auth 的一个内部组件——编译器不会拦你，甚至不会给你一个警告。这说明我们的&quot;模块&quot;只是视觉上的分区，只是一种 <code>&quot;人为约定&quot;</code>, 不是真正的隔离。</p>
+<hr />
+<h5 id="1-目录不是边界">1.目录不是边界</h5>
+<p>在上一次的认证升级过程中：</p>
+<ul>
+<li>后端的模块化,把 main.rs 拆成 auth、ws、mock、util 四个目录。</li>
+<li>前端也按 auth、starter、home 分了文件夹。</li>
+</ul>
+<p>但这只是&quot;目录级模块化&quot;，本质上是把代码分了类，没有建立真正的边界。看一个具体的问题。如下，三行 import 表示: home 模块不仅知道 auth 模块的存在，还知道它内部的目录结构、文件命名、甚至组件的具体位置。</p>
+<pre><code class="language-dart">// home/profile/set_password_page.dart
+import '../../auth/view/components/action_button.dart';  // 直接 import auth 的内部组件
+import '../../auth/logic/auth/auth_cubit.dart';           // 直接 import auth 的内部状态
+import '../../auth/data/repository/auth_repository.dart'; // 直接 import auth 的内部仓库
+</code></pre>
+<p>如果 auth 内部重构，比如把 <code>action_button.dart</code> 从 <code>components/</code> 移到 <code>widgets/</code>。那么home 模块就会编译失败。这就是假模块化的代价：<strong>内部变化会波及外部。</strong> 模块的&quot;内部实现&quot;根本不是内部的，因为没有任何机制阻止外部直接访问。</p>
+<hr />
+<h5 id="2-真正的物理隔离-前端">2.真正的物理隔离(前端)</h5>
+<p>真正的模块化，是让每个模块成为独立的 <strong>类库</strong> ——前端是独立的 Dart package，后端是独立的 Rust crate。每个类库有自己的依赖声明（<code>pubspec.yaml</code> / <code>Cargo.toml</code>），通过显式的导出文件（barrel file / <code>pub</code> 可见性）控制公开 API。</p>
+<p>那怎么把 auth 从一个目录变成一个独立的 Dart package？(你也可以和 AI 谈论一下)<br />
+我在 <code>client</code> 前端目录创建一个 <code>modules</code> 的文件夹，统一维护模块。这条命令创建一个标准的 Dart package 结构</p>
+<blockquote>
+<p>Q: 在 client/modules 中为我创建 flash_auth 的独立 package，<br />
+并将之前的 auth 转移到独立模块</p>
+</blockquote>
+<pre><code class="language-bash">cd client/modules
+flutter create --template=package flash_auth
+</code></pre>
+<p>模块目录结构的项目结构如下：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b5373ff27e4b453aa259acde54600051~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1478&amp;h=592&amp;s=110355&amp;e=png&amp;b=fffdfd" alt="image.png" /></p>
+<p><code>lib/flash_auth.dart</code> 是这个模块的入口文件（barrel file）。外部 import 这个 package 时，只能看到这个文件里导出的内容。把 auth 相关的代码搬进 <code>lib/src/</code> 目录后，在 barrel file 里声明公开 API。导出的几个可见类，就是 auth 模块的全部公开 API。外部只能写：</p>
+<pre><code class="language-dart">import 'package:flash_auth/flash_auth.dart';
+</code></pre>
+<p>拿到 AuthRepository、LoginResult、LoginPage。至于 auth 内部用了什么策略模式、LoginMixin 怎么组织、SmsLoginForm 长什么样——外部完全不知道，也不可能知道。Dart 的 package 机制保证了 <code>src/</code> 目录下的文件对外不可见，这不是约定，是语言级别的 <strong>硬约束</strong>。</p>
+<hr />
+<p>主 app 通过 <code>pubspec.yaml</code> 的 path 依赖引入这个 package：</p>
+<pre><code class="language-yaml"># client/pubspec.yaml
+dependencies:
+  flash_auth:
+    path: modules/flash_auth
+</code></pre>
+<p>之前 home 模块那三行越界的 import：</p>
+<pre><code class="language-dart">import '../../auth/view/components/action_button.dart';  // ❌ 编译错误
+import '../../auth/logic/auth/auth_cubit.dart';           // ❌ 编译错误
+import '../../auth/data/repository/auth_repository.dart'; // ❌ 编译错误
+</code></pre>
+<p>现在全部编译失败。想用 AuthRepository？可以，它在 barrel file 里导出了。想用 ActionButton？不行，它是 auth 的内部组件，没有导出。  你被迫去思考：这个组件是不是应该放到一个共享的地方？</p>
+<p>这就是物理隔离：<strong>不是靠自觉，而是靠编译器。</strong> 你想越界？编译器直接报错。</p>
+<hr />
+<h5 id="3-真正的物理隔离-后端">3.真正的物理隔离(后端)</h5>
+<p>后端的思路一样，但每种语言都有自己特有的类库管理方式。Rust 用 workspace 机制实现物理隔离。它会把一个项目拆成多个 crate，每个 crate 有自己的 <code>Cargo.toml</code>，通过 <code>pub</code> 关键字控制哪些内容对外可见。当目前的后端是一个标准的 <strong>单项目</strong>：</p>
+<pre><code class="diagram" style="font-size:13.5px">server/
+├── Cargo.toml          # 一个 [package]，所有依赖都在这里
+└── src/
+    ├── main.rs          # 入口
+    ├── state.rs         # AppState
+    ├── auth/            # 目录
+    ├── ws/              # 目录
+    ├── mock/            # 目录
+    └── util/            # 目录
+</code></pre>
+<p>这里的问题和前端一样，<code>ws/auth.rs</code> 可以直接访问 auth 文件夹下的内部实现，编译器不会拦你。</p>
+<hr />
+<blockquote>
+<p>Q: 在 server/modules 中为我创建 flash_auth 的独立 package，<br />
+并将之前的 auth 转移到独立模块</p>
+</blockquote>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2229716df8b741e6abde491c5cb98513~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=412&amp;s=82570&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>上面使用 <code>mod </code> 表示是模块私有的。这样外界代码如果使用 auth 模块私有的, 否则编译器直接报错。这和前端的逻辑完全一致：没导出的，对外界而言就是不存在的。</p>
+<hr />
+<h4 id="二-认证与用户的拆分">二、认证与用户的拆分</h4>
+<p>模块化不只是把代码搬到不同的 package 里。如果只是原封不动地搬，问题还是在——只不过从&quot;目录里的混乱&quot;变成了&quot;package 里的混乱&quot;。真正的模块化，要求我们重新审视每个模块的职责边界。让模块物理隔离，可以更好地暴露目前已知的依赖关系。</p>
+<hr />
+<h5 id="1-authcubit-的身份危机">1. AuthCubit 的身份危机</h5>
+<p>先看当前的 AuthCubit：</p>
+<pre><code class="language-dart">class AuthCubit extends Cubit&lt;AuthState&gt; {
+  void login({required String token, required User? user, required bool hasPassword}) { ... }
+  void logout() { ... }
+  void onPasswordSet() { ... }
+}
+</code></pre>
+<p>它叫&quot;Auth&quot;Cubit，但它持有的东西——token、user、hasPassword——并不全是认证的。token 是认证的产物，但 user（昵称、头像、手机号）是用户资料，hasPassword 是用户属性。它从应用启动活到关闭，管着用户的一切信息。如何增加用户资料的编辑，功能该放在哪里?</p>
+<hr />
+<p>问题出在哪？<strong>认证和用户被混为一谈了。</strong></p>
+<ul>
+<li>认证回答的是&quot;你是谁&quot;——验证身份、拿到 Token、结束。它是一个短生命周期的动作，到登录成功那一刻就完成了使命。</li>
+<li>用户回答的是&quot;你是什么样的人&quot;——昵称、头像、手机号、密码状态。它是一个长生命周期的实体，跟随整个会话存在。</li>
+</ul>
+<hr />
+<h5 id="2-三个模块的关系">2. 三个模块的关系</h5>
+<p>经过拆分，客户端形成了三个职责清晰的模块：启动（flash_starter）、认证（flash_auth）、用户会话（flash_session）。它们之间的关系如下：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/62c6ec647d764c8e95636dfedcdf9a34~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2479&amp;h=1108&amp;s=208541&amp;e=png&amp;a=1&amp;b=f7f1ef" alt="mermaid-diagram (23).png" /></p>
+<p>图中用四种颜色区分数据流转：</p>
+<ul>
+<li><strong>蓝色</strong>：启动流程，SplashPage 通过 StartupTask 抽象执行任务，结果回调到 main.dart 统一处理跳转</li>
+<li><strong>橙色</strong>：认证流程，登录 → Token 回传 → activate 激活会话</li>
+<li><strong>绿色</strong>：会话生命周期，拉取资料、读取状态、退出登录</li>
+</ul>
+<p>这样处理后，可以看到这三个模块完全独立，没有任何的直接相互依赖。组装区的 main.dart 成为它们彼此沟通的场所，下面是TM的职责边界：</p>
+<table>
+<thead>
+<tr>
+<th>模块</th>
+<th>生命周期</th>
+<th>职责</th>
+<th>公开 API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flash_starter</td>
+<td>一次性——冷启动时</td>
+<td>执行启动任务列表，回调结果给组装层</td>
+<td>SplashPage, StartupTask&lt;T&gt;, OnStartupComplete</td>
+</tr>
+<tr>
+<td>flash_auth</td>
+<td>短——登录动作开始到 Token 获取</td>
+<td>发送验证码、验证身份、返回 Token</td>
+<td>AuthRepository, LoginPage, LoginResult</td>
+</tr>
+<tr>
+<td>flash_session</td>
+<td>长——从 activate 到 deactivate</td>
+<td>维护用户会话：Token、资料、密码状态、本地缓存</td>
+<td>SessionCubit, SessionRepository, SessionState, User</td>
+</tr>
+</tbody>
+</table>
+<p>三个模块现在都是独立的 Dart package，统一放在 <code>client/modules/</code> 下。它们之间互不依赖——没有任何 import 指向彼此。连接它们的是主工程的 <code>main.dart</code>——组装层。</p>
+<pre><code class="diagram" style="font-size:13.5px">flash_auth ──LoginResult──→ main.dart ──activate()──→ flash_session
+                              ↑
+                          组装层：唯一知道三个模块的地方
+</code></pre>
+<p>认证模块只管&quot;证明你是谁&quot;，拿到 Token 就交出去；<br />
+会话模块只管&quot;你在这段时间里是什么样的&quot;，接到 Token 就开始工作；
+启动模块只管&quot;冷启动时该做什么&quot;，执行完任务就通过回调，交还控制权。</p>
+<p>三个模块各自独立演进，互不干扰。这就是物理隔离带来的好处——不是不让它们合作，而是让合作只发生在一个明确的、可控的地方。未来的更新迭代，也可以在内部进化，就像前后端分离，只要保证接口不变，内部可以翻天覆地 —— 这就为成长留足了空间。</p>
+<p>关于这两个模块的拆分，和 AI 讨论输出的最终结果如下，大家可以和自己的 AI ，对于模块化这个话题自己多聊聊。我的可以作为参考答案：</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>前端设计</th>
+<th>前端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>session-v0.0.1</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/4d90cde77700d6849f1c00f9e88d30103be57ae3/docs/features/session/v0.0.1/client/design.md">/client/design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/4d90cde77700d6849f1c00f9e88d30103be57ae3/docs/features/session/v0.0.1/client/tasks.md">/client/tasks.md</a></td>
+</tr>
+<tr>
+<td>starter-v0.0.1</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/4d90cde77700d6849f1c00f9e88d30103be57ae3/docs/features/starter/v0.0.1/client/design.md">/client/design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/4d90cde77700d6849f1c00f9e88d30103be57ae3/docs/features/starter/v0.0.1/client/tasks.md">/client/tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>📌 <strong>存档点 v0.5.1</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>模块化重构 - 前端物理隔离</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/releases/tag/v0.5.1">v0.5.1</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/5a7751c">5a7751c</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="三-用户功能增加">三、用户功能增加</h4>
+<p>下面，我们要进一步基于目前的模块化，来新增一个功能需求，大家从中可以体会一下，各个模块分离的好处。想在想完善一下用户相关的细节:</p>
+<blockquote>
+<p>需要做的用户信息编辑，包括修改昵称、头像。<br />
+用户设置密码和修改密码独立，设置密码是现在的，修改密码需要增加原密码。<br />
+用户默认头像使用对称方块图案，支持随机更换。</p>
+</blockquote>
+<p>本节除了做功能，还会引入一个 <code>测试链</code> 的概念。并且增加新的 AI 角色助手 <code>Link Test Writer</code>。<br />
+它可以脱离前端，帮我们快速验证后端的接口流程的正确性。也可以产出接口文档，来辅助 AI 在前端的开发。</p>
+<hr />
+<h5 id="1-后端用户模块">1. 后端用户模块</h5>
+<p>借助这个机会，也让后端把用户相关的内容，隔离出一个独立的模块。如下所示，为了用户功能需求的代码改动，将专注在这里处理：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6f3affe6d9e4c2194a3321be4336ac2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1232&amp;h=580&amp;s=109878&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>后面和 AI 讨论需求的具体沟通的细节，就不在展开了，因为可能涉及一些弯路。但我会把最终到达的目的地，也就是设计和任务文档分享出来。看完后，你就能非常清晰的知道目前阶段该做什么事。另外核心一些东西，我会单独拎出来说说。</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>session-v0.0.2</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/session/v0.0.2/server/design.md">/server/design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/session/v0.0.2/server/tasks.md">/server/tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<p>和 AI 仔细沟通，尽量诉说你的需求点，让它明确自己的任务，这点非常重要。我就很喜欢和 AI 细致沟通的感觉：我的设想、我的疑惑、我的灵光一闪，它都可以捕捉到，并落实到具体的任务细节中。比如下面，当任务规划完毕，让它执行时，它看完所有的相关文件，说了然于胸，就是我和他之间一次成功的互动：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6d1449ee68c24006a295a2b9a4216bce~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=935&amp;h=271&amp;s=60192&amp;e=png&amp;b=e9e8ec" alt="image.png" /></p>
+<p>这里有功能上的两个小细节说一下:</p>
+<p><strong>数据库的变动</strong><br />
+当前需求想要为用户增加个性签名，可以更好地展示自己。之前数据表没有存储，所以需要为 <code>user_profiles</code> 表增加一个 <code>signature</code> 字段。一般来说可以使用更新的语句来操作表，但是目前在开发阶段，数据库表的变动可能比较频繁，在第一版上线之前，我这里数据库的改动都会 <code>重置数据库</code> 然后重新建表。也就是任务中的这块：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b360398ca8454a00a5d5450114b215f3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1077&amp;h=525&amp;s=65030&amp;e=png&amp;b=ebebed" alt="image.png" /></p>
+<p><strong>用户的头像</strong></p>
+<p>Github 用户有如下的默认头像，这个看起来挺不错。在当前阶段，我并不想引入图片上传，所以想引入这种策略作为用户的默认头像，在用户注册时自动设置。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0e767355041848178dadcea54eed3fca~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=935&amp;h=311&amp;s=24616&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<hr />
+<h5 id="2-前端用户信息优化">2.前端用户信息优化</h5>
+<p>接口开发完毕后，继续优化前端的功能交互和界面展示。设计、任务文档如下：</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>session-v0.0.2</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/session/v0.0.2/client/design.md">/client/design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/session/v0.0.2/client/tasks.md">/client/tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<p>这里界面就不自己额外设计了，我直接参考微信的表现，截图丢给 AI ：</p>
+<table>
+<thead>
+<tr>
+<th>我的</th>
+<th>个人资料</th>
+<th>修改资料</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90052c301aca427fbe76c6755ba6c795~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=74651&amp;e=png&amp;b=f3f3f3" alt="MuMu-20260326-073632-153.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/46496ccc7d70400eba42c1d8b8fb09ce~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=71527&amp;e=png&amp;b=f9f9f9" alt="MuMu-20260326-073650-971.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/837bdaeb9ab4489d88556e4bcb84a134~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=49982&amp;e=png&amp;b=f7f7f7" alt="MuMu-20260326-073944-096.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>截图给 AI ，它给的第一版，大概能完成个 80% 的还完度。如果有不满意的细节，可以继续和它交流：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7107f2995ee14051882575da24aed0b0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=879&amp;h=342&amp;s=54121&amp;e=png&amp;b=e7e6ea" alt="image.png" /></p>
+<hr />
+<h5 id="2-在实践中-组织你的开发大军">2.在实践中，组织你的开发大军</h5>
+<p>我觉得后端开发阶段，接口测试起来太麻烦，也不太想用前端的接口来验证，于是有了测试链的构想。是基于这个痛点的场景，和 AI 沟通，然后引导它一步步做出，针对一个功能需求点的测试链。下面是我聊天过程中 <strong>逐步</strong> 的输入:</p>
+<blockquote>
+<p>1.后端我希望有个 test_link 机制，制作一条基于curl请求的测试链<br />
+2.可以在脚本过程中，针对于每个接口，写一个文档，包括 请求链接、参数、响应结果、完整curl<br />
+3.这样吧，我们在 docs\features\session\api 里面统一维护，request\test_lnk.md 是测试用例链。docs 是接口文档，其中每个接口一个文档、按序号编号。另外有个 00_link.md 就像大纲一样展示链条的测试情况，点击可以跳转到对于结果<br />
+4.可以再写一份 shell 脚本吗，给读者参考</p>
+</blockquote>
+<p>脚本执行完毕后，会生成如下的接口汇报文档，点击可链接跳转：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aff692452b444892837bdc9afdd9a6a9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1257&amp;h=624&amp;s=164409&amp;e=png&amp;b=f0eff2" alt="image.png" /></p>
+<p>其中接口文档是非常细致的，每个文档</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e98b2b62bd56419b8fce9ff4babd2ebe~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1439&amp;h=800&amp;s=192858&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>接下来，这个能力是针对所有需求都可复用的。这就是 <a href="https://github.com/toly1994328/flash_im_by_ai/blob/c4d8d7b570e104a971f95065deba142e2a279a87/.kiro/steering/link-test-writer.md">link_test_writer</a> 诞生的过程。</p>
+<blockquote>
+<p>很好，整理当前模块规律，为我写一个 link_test_writer 的角色，处理模块的请求连书写吧。</p>
+</blockquote>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a71ea85299e2481688b0fc2ab5cdacb1~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1207&amp;h=488&amp;s=121994&amp;e=png&amp;b=edecf0" alt="image.png" /></p>
+<p>古法编程时，如果后端给我这样的文档，我会非常开心。但现实是:没有人有功夫写这么详细的文档，这就导致接口对接比较麻烦。因为面对的是不确定性，以及未知的数据结构，你还要自己请求、解析。流程非常繁琐，而对于 AI 来说，接口写完后，顺便生成它是一件很轻松的事。<br />
+在执行前端任务时，让它参考相关的接口文档来实现，错误率将大幅下降，我这里一次就成功了。</p>
+<blockquote>
+<p>为我执行 docs\features\session\v0.0.2\client\tasks.md，其中接口相关文档可以参考   docs\features\session\api\docs\user_profile</p>
+</blockquote>
+<p><strong>纸上学来终觉浅，绝知此事要躬行</strong>，
+在实践中不断发现问题、解决问题、总结问题、升华问题。才能不断集结你的 AI 技能大军。使用这些角色技能，一定要知道它需要解决的痛点，不然把别人的一堆文档拿来，作用有限。就像你是军队统帅，对自己手下将领的才能能力都不清楚，又该如何调度呢？</p>
+<hr />
+<h4 id="四-本章小结">四、本章小结</h4>
+<p>这一章做了三件事：<strong>隔离、拆分、实践</strong>。可以发现 <code>用户功能增加</code> 的这个需求，代码的改动，几乎都被收敛到一个模块，认证、启动这些纹丝不动。不知道你能不能体会这种、如器官般的协作方式。</p>
+<blockquote>
+<p>📌 <strong>存档点 v0.6.0</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>session v0.0.2 完成（服务端+客户端）</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/releases/tag/v0.6.0">v0.6.0</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/c7467c4">c7467c4</a></td>
+</tr>
+</tbody>
+</table>
+<p>第一件事是把&quot;目录级模块化&quot;升级为&quot;物理隔离&quot;。之前的 auth 文件夹只是视觉上的分区，任何人都可以 import 内部文件，编译器不会拦你。把它变成独立的 Dart package / Rust crate 后，<code>src/</code> 下的文件对外天然不可见——不是靠自觉，而是靠编译器。barrel file 成为模块的唯一出口，你想越界，编译器直接报错。</p>
+<p>第二件事是拆分认证与用户会话。AuthCubit 之前既管 Token 又管用户资料，职责模糊。拆分后，flash_auth 只负责&quot;证明你是谁&quot;，生命周期到拿到 Token 就结束；flash_session 负责&quot;你在这段时间里是什么样的&quot;，从 activate 到 deactivate 全程维护。三个模块（starter、auth、session）互不依赖，只在 main.dart 组装层连接。</p>
+<pre><code class="diagram" style="font-size:13.5px">flash_session/lib/src/
+├── data/       # SessionRepository, User
+├── logic/      # SessionCubit, SessionState
+└── view/       # EditProfilePage, SetPasswordPage, ChangePasswordPage
+    └── widget/ # IdenticonAvatar, UserCard, UserAvatar
+</code></pre>
+<p>第三件事是在实践中验证这套架构。新增用户资料编辑、密码管理拆分、默认头像渲染，所有改动都收敛在 flash_session 模块内部，不波及 flash_auth，也不波及 flash_starter。ProfilePage 留在主工程，因为它未来会聚合多个模块的内容——这本身就是模块边界的一次判断：<strong>属于单一模块的放进去，属于组装层的留外面</strong>。</p>
+<p>测试链机制的引入，让后端接口验证脱离前端独立运行，产出的接口文档又反哺前端开发，形成闭环。link_test_writer 角色的诞生，是从具体痛点出发，逐步引导 AI 形成可复用能力的典型过程。</p>
+<p>物理隔离的本质不是让模块彼此疏远，而是让协作只发生在明确的、可控的地方。模块内部可以翻天覆地，只要暴露给外界的功能不变，外界无感。这就为每个模块的独立演进，留足了空间。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-15.html">← 经络#4 ｜ 事物的相互关系</a>
+      <a class="next" href="ch-17.html">经络#6 ｜ 生命的时间跨度 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-假模块化与真模块化">一、假模块化与真模块化</a></li>
+      <li class="lv5"><a href="#1-目录不是边界">1.目录不是边界</a></li>
+      <li class="lv5"><a href="#2-真正的物理隔离-前端">2.真正的物理隔离(前端)</a></li>
+      <li class="lv5"><a href="#3-真正的物理隔离-后端">3.真正的物理隔离(后端)</a></li>
+      <li class="lv4"><a href="#二-认证与用户的拆分">二、认证与用户的拆分</a></li>
+      <li class="lv5"><a href="#1-authcubit-的身份危机">1. AuthCubit 的身份危机</a></li>
+      <li class="lv5"><a href="#2-三个模块的关系">2. 三个模块的关系</a></li>
+      <li class="lv4"><a href="#三-用户功能增加">三、用户功能增加</a></li>
+      <li class="lv5"><a href="#1-后端用户模块">1. 后端用户模块</a></li>
+      <li class="lv5"><a href="#2-前端用户信息优化">2.前端用户信息优化</a></li>
+      <li class="lv5"><a href="#2-在实践中-组织你的开发大军">2.在实践中，组织你的开发大军</a></li>
+      <li class="lv4"><a href="#四-本章小结">四、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

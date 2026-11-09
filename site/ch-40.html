@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>果实#6 ｜ 构建 Linux 产品 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li class="active"><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>果实#6 ｜ 构建 Linux 产品</h1>
+<p>Android、iOS、macOS、Windows 四大主流平台的打包搞定了，闪讯已经可以覆盖绝大多数用户。但还有一个群体不能忽略——Linux 桌面用户。虽然市场份额不大，但 Linux 用户往往是开发者、极客、技术决策者，他们对产品的口碑传播力不可小觑。本章围绕以下几个点展开：</p>
+<ul>
+<li>如何在 Windows 通过 WSL2 的 Linux 构建桌面应用</li>
+<li>打包 .AppImage 产物</li>
+<li>桌面端界面的适配，更好地符合用户体验。</li>
+</ul>
+<blockquote>
+<p>Flutter 的 Linux 桌面支持已经 stable，同一套代码无需修改即可编译为原生 Linux 应用。</p>
+</blockquote>
+<p>Linux 桌面端构建，在 <code>v0.28.0</code> 迭代里，模块是 <code>ui/desktop/v0.0.2</code></p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ui/desktop/v0.0.2</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/ui/desktop/v0.0.2/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/ui/desktop/v0.0.2/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/ui/desktop/v0.0.2/client/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="一-环境准备-在-windows-上构建-linux">一、环境准备：在 Windows 上构建 Linux</h4>
+<p>在 Windows 上构建 Linux 应用听起来有点矛盾。但 WSL2（Windows Subsystem for Linux 2）让这件事变得理所当然。它不是模拟器，而是一个跑在 Windows 里的真正 Linux 内核，性能接近原生。如果你有 Linux 平台的设备，那可以省去准备 Linux 平台这一步。</p>
+<hr />
+<h5 id="1-确认-wsl2-已就绪">1. 确认 WSL2 已就绪</h5>
+<p>Windows 11 自带 WSLg（Linux GUI 支持），可以直接在 Windows 桌面上显示 Linux 应用窗口——这意味着你构建完 Linux 版闪讯后，能直接在 Windows 桌面上看到它跑起来。</p>
+<pre><code class="language-powershell"># PowerShell 中检查
+wsl --version
+
+WSL 版本: 2.6.3.0
+内核版本: 6.6.87.2-1
+WSLg 版本: 1.0.71
+MSRDC 版本: 1.2.6353
+Direct3D 版本: 1.611.1-81528511
+DXCore 版本: 10.0.26100.1-240331-1435.ge-release
+Windows: 10.0.26200.8457
+</code></pre>
+<p>如果没装过，一条命令搞定：</p>
+<pre><code class="language-powershell">wsl --install -d Ubuntu-22.04
+</code></pre>
+<hr />
+<h5 id="2-安装构建依赖">2. 安装构建依赖</h5>
+<p>Flutter Linux 桌面应用基于 GTK，构建需要一套 C/C++ 工具链：</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install -y clang cmake ninja-build pkg-config libgtk-3-dev
+</code></pre>
+<p>目前项目用到了视频缩略图（fc_native_video_thumbnail），还需要 FFmpeg 开发库：</p>
+<pre><code class="language-bash">sudo apt install -y libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libavfilter-dev
+</code></pre>
+<p>可以安装一下中文字体，否则界面上所有中文都是方块：</p>
+<pre><code class="language-bash">sudo apt install -y fonts-noto-cjk
+</code></pre>
+<p>drift 本地数据库需要安装一下 SQLite3：</p>
+<pre><code class="language-bash">sudo apt install -y libsqlite3-dev
+</code></pre>
+<hr />
+<h5 id="3-安装-linux-版-flutter-sdk">3. 安装 Linux 版 Flutter SDK</h5>
+<p>在 WSL 里装一个 Linux 原生的 Flutter SDK，下面的命令会现在 Flutter 3.44.0 版本:</p>
+<pre><code class="language-bash">cd ~
+mkdir -p SDK &amp;&amp; cd SDK
+wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.44.0-stable.tar.xz
+tar xf flutter_linux_3.44.0-stable.tar.xz
+</code></pre>
+<p>这里有个容易踩的坑：WSL 的 PATH 会继承 Windows 的环境变量，直接输入 <code>flutter</code> 可能调用的是 Windows 版。Windows 版 Flutter 在 Linux 里运行会报 <code>bash\r: No such file or directory</code>，Windows 换行符惹的祸。可以把这里的 Flutter PATH 放在最前面优先使用：</p>
+<pre><code class="language-bash">echo 'export PATH=&quot;$HOME/SDK/flutter/bin:$PATH&quot;' &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre>
+<p>验证一下 Linux 环境下的 Flutter 命令：</p>
+<pre><code class="language-bash">which flutter
+# /home/toly/SDK/flutter/bin/flutter
+
+flutter doctor
+# [✓] Flutter  [✓] Linux toolchain
+</code></pre>
+<hr />
+<h4 id="二-构建与运行">二、构建与运行</h4>
+<p>环境就绪，接下来就是 Flutter 最擅长的事，一条命令出产物。</p>
+<hr />
+<h5 id="1-解决-mnt-c-的权限问题">1. 解决 /mnt/c 的权限问题</h5>
+<p>WSL 访问 Windows 文件系统（<code>/mnt/c/...</code>）时，文件权限模型和 Linux 原生不同。Flutter 构建过程中 CMake 的 install 步骤需要设置文件权限，在 <code>/mnt/c</code> 上会报 &quot;Permission denied&quot;。</p>
+<p>解决方案很优雅：用符号链接把 build 输出目录指向 WSL 原生文件系统：</p>
+<pre><code class="language-bash">cd /mnt/c/toly/Project/AIGC/flash_im_v1/client
+rm -rf build/linux
+mkdir -p ~/flash_build/linux
+ln -s ~/flash_build/linux build/linux
+</code></pre>
+<p>源码还在 Windows 上（方便用编辑器），构建产物写到 WSL 原生路径（有完整 Linux 权限）。两全其美。</p>
+<hr />
+<h5 id="2-开发运行">2. 开发运行</h5>
+<p>命令中只需要指定 <code>-d linux</code> 即可：</p>
+<pre><code class="language-bash">cd /mnt/c/toly/Project/AIGC/flash_im_v1/client
+flutter pub get
+flutter run -d linux --dart-define-from-file=.env.dev
+</code></pre>
+<p>WSLg 会自动把 Linux GUI 窗口显示在 Windows 桌面上，和原生 Windows 窗口并排显示。支持热重载，体验和移动端开发一致。之前做的桌面端 UI 适配（三栏布局、侧栏浮层、弹窗化操作），在 Linux 下同样生效——毕竟是同一套代码。</p>
+<table>
+<thead>
+<tr>
+<th>登录页</th>
+<th>消息页</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bb7ef39354e5417c9ee4424a73b1cdb1~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=912&amp;h=612&amp;s=128124&amp;e=png&amp;b=e5eef8" alt="image.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3019773cdd7448ffab22f508da0d808d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1252&amp;h=852&amp;s=124967&amp;e=png&amp;b=fcfcfc" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="3-关于-libsqlite3-的自动打包">3. 关于 libsqlite3 的自动打包</h5>
+<p>开发时需要 <code>sudo apt install libsqlite3-dev</code>，否则运行报 <code>Failed to load dynamic library 'libsqlite3.so'</code>。但分发给用户时不能要求他们也装这个。在 <code>client/linux/CMakeLists.txt</code> 里加了自动打包：</p>
+<pre><code class="language-cmake">find_library(SQLITE3_LIB sqlite3)
+if(SQLITE3_LIB)
+  install(FILES &quot;${SQLITE3_LIB}&quot; DESTINATION &quot;${INSTALL_BUNDLE_LIB_DIR}&quot;
+    COMPONENT Runtime)
+endif()
+</code></pre>
+<p>构建后 bundle 里会包含 <code>libsqlite3.so</code>，用户不需要额外安装任何依赖，下载即用。</p>
+<hr />
+<h5 id="4-构建-release">4. 构建 release</h5>
+<pre><code class="language-bash">flutter build linux --release --dart-define-from-file=.env.production
+</code></pre>
+<p>产物在 <code>build/linux/x64/release/bundle/</code>：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/13b401e3408246eda635634bdbc2fdef~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=851&amp;h=269&amp;s=17038&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<p>双击 <code>flash_im</code> 就能启动。把整个 <code>bundle/</code> 压缩发给别人，对方解压就能用。但这样不够优雅——用户还得解压、找可执行文件、设置权限。我们需要一个更好的分发方式。</p>
+<hr />
+<h5 id="5-appimage-打包与分发">5、AppImage 打包与分发</h5>
+<p>Linux 桌面应用没有统一的&quot;应用商店&quot;，分发方式五花八门。对于当前阶段，<strong>AppImage</strong> 是最务实的选择——单个文件，任何 Linux 发行版都能跑，用户 <code>chmod +x</code> 后双击即可使用。不需要安装，不需要 root 权限，不需要处理依赖。类似 macOS 的 .app，但更轻量。</p>
+<p>整个打包流程已经自动化，放在了 <code>build_linux.sh</code> 脚本中：</p>
+<pre><code class="language-bash">bash scripts/build_center/build_linux.sh
+</code></pre>
+<p>脚本做了这些事：</p>
+<ol>
+<li><code>flutter clean</code> + <code>flutter pub get</code>——干净构建</li>
+<li><code>flutter build linux --release</code>——编译产物</li>
+<li>准备 AppDir 结构——按 AppImage 规范组织文件</li>
+<li>创建 <code>.desktop</code> 文件——Linux 桌面快捷方式元数据</li>
+<li>创建 <code>AppRun</code> 启动脚本——设置 LD_LIBRARY_PATH</li>
+<li>下载 <code>appimagetool</code>——如果本地没有，自动从 GitHub 下载</li>
+<li>打包为 <code>FlashIM-x86_64.AppImage</code></li>
+</ol>
+<p>产物输出到 <code>scripts/build_center/dest/linux/flash_im.AppImage</code>。它就是我们要分发的 Linux 产品：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/68679547a1ce4ce29eb5328007a45a11~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1153&amp;h=153&amp;s=24056&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<hr />
+<h4 id="三-桌面端的导航优化">三、桌面端的导航优化</h4>
+<p>在本章的 v0.28.0 版本迭代的重头戏是，桌面端交互体验的全面升级。让闪讯在大屏幕上真正有&quot;桌面应用&quot;的感觉，而不是一个被拉宽的手机界面。之前界面基本上全屏的跳转，这在桌面端的体验上可谓是灾难。本章节结合微信桌面端的交互，优化一下闪讯在桌面端的某些体验。</p>
+<hr />
+<h5 id="1-群组信息">1. 群组信息</h5>
+<p>在移动端，查看聊天详情是一个很自然的操作：点击右上角按钮，全屏跳转到详情页，看完按返回键回来。<br />
+但在桌面端，这个交互就很别扭了。你正在看聊天记录，想瞄一眼群成员列表，结果整个聊天页面被替换成了详情页，看完还得点返回。</p>
+<p>微信桌面端的做法是：点击右上角按钮，右侧滑出一个面板，聊天内容还在左边，详情在右边。想看就看，不想看点一下外面就收起来了，交互成本几乎为零。另外滑出的侧栏视图是和移动端一致的，可以复用之前的界面：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bfb8d8e0d2ca41179234a3e1c355a970~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1784&amp;h=1190&amp;s=204765&amp;e=png&amp;b=fdfdfd" alt="image.png" /></p>
+<p>闪讯的实现也是这个思路，但技术细节上有几个值得展开的地方。</p>
+<hr />
+<p><strong>外部点击收起</strong></p>
+<p>侧栏展开后，用户点击外部的任何位置应该自动收起侧栏。传统做法是在侧栏外面盖一层半透明的 <code>GestureDetector</code>，但这样会拦截聊天区的所有手势（滚动、长按、点击消息等）。</p>
+<p>Flutter 3.10+ 提供了 <code>TapRegion</code> 组件，它能检测&quot;点击发生在自身区域之外&quot;的事件，不需要额外的遮罩层，不会拦截其他手势：</p>
+<pre><code class="language-dart">TapRegion(
+  onTapOutside: _showChatDetail
+      ? (_) =&gt; _toggleChatDetail()
+      : null,
+  child: /* 侧栏内容 */,
+)
+</code></pre>
+<p>一行代码搞定。侧栏内部的点击（滚动列表、点击按钮）不会触发 <code>onTapOutside</code>，只有点击侧栏外面才会。</p>
+<hr />
+<p><strong>局部导航栈</strong></p>
+<p>侧栏里显示的是群详情页或单聊详情页，这些页面内部有很多操作：邀请入群、踢人、编辑群名、查找聊天内容。如果不做特殊处理，这些操作的 <code>Navigator.push</code> 会走外层 Navigator，仍然会导致进入一个全屏的界面。如果一个个修改适配的话，工作量又会非常大。解决方案是给侧栏套一个独立的 <code>Navigator</code>：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a161ec8ffc7b44a6b895ddd621dfdbca~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1784&amp;h=1190&amp;s=194163&amp;e=png&amp;b=fdfdfd" alt="image.png" /></p>
+<pre><code class="language-dart">class ChatDetailSidebar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Navigator(
+      key: ValueKey('detail_${conversation.id}'),
+      onGenerateRoute: (_) =&gt; MaterialPageRoute(
+        builder: (navContext) {
+          if (conversation.isGroup) {
+            return GroupChatInfoPage(
+              showAppBar: false,
+              onSearchChat: () =&gt; _pushSearch(navContext, context),
+              ...
+            );
+          }
+          return PrivateChatInfoPage(showAppBar: false, ...);
+        },
+      ),
+    );
+  }
+}
+</code></pre>
+<p>这样侧栏内的所有 <code>Navigator.push</code> 都在 320px 的区域内完成页面跳转，体感和移动端是一致的。比如用户在侧栏里点&quot;查找聊天内容&quot;，搜索页会在侧栏内打开（带返回按钮），而不是全屏跳转。</p>
+<hr />
+<h5 id="2-弹窗化操作">2. 弹窗化操作</h5>
+<p>桌面端的另一个大问题是：很多操作在移动端是全屏页面（发起群聊、加好友、综合搜索），但在桌面端全屏跳转会让用户丢失当前上下文。解决方案是把这些操作改为弹窗形式。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e5163a28413944c99df2683f8a438529~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1784&amp;h=1190&amp;s=186188&amp;e=png&amp;b=757575" alt="image.png" /></p>
+<p>每个弹窗内部都有独立的 Navigator，可以保证子页面跳转不会跳出弹窗：</p>
+<pre><code class="language-dart">void showAddFriendDialog(BuildContext ctx) {
+  final screenHeight = MediaQuery.of(ctx).size.height;
+  final dialogHeight = (screenHeight * 0.8).clamp(0.0, 800.0);
+  showDialog(
+    context: ctx,
+    builder: (_) =&gt; Dialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: SizedBox(
+          width: 420,
+          height: dialogHeight,
+          child: Navigator(
+            onGenerateRoute: (_) =&gt; MaterialPageRoute(
+              builder: (_) =&gt; UserSearchPage(
+                repository: ctx.read&lt;FriendRepository&gt;(),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+</code></pre>
+<p>比如&quot;加好友&quot;弹窗里搜索到一个用户，点击查看资料，资料页会在弹窗内打开（带返回按钮）。用户始终在 420×80% 的弹窗范围内操作，不会跳出去。</p>
+<hr />
+<h5 id="3-其他界面的桌面端视频">3、其他界面的桌面端视频</h5>
+<p>之前的通讯录 Tab 点击&quot;新的朋友&quot;、&quot;群通知&quot;、&quot;群聊&quot;、用户都是全屏跳转。在桌面端，这些应该在右侧面板直接显示。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d6750ffd35b7441fb3c81c60d3d9f05e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1784&amp;h=1190&amp;s=96030&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<p>另外，我的界面也把设置和个人信息简单整合了一些。后面有时间也可以更细致地进行设计。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f5fd05d337e94a93860bae60a2faa7c5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1784&amp;h=1190&amp;s=75725&amp;e=png&amp;b=f8f8f8" alt="image.png" /></p>
+<p>侧边栏底部的按钮，参考微信弹出操作菜单。这里使用了我的 tolyui 中的 <a href="https://pub.dev/packages/tolyui_navigation">tolyui_navigation</a> 组件实现。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/13043bbbcb6e4f859331c8bf28adf7c8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1784&amp;h=1190&amp;s=179178&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<p>最后还增加了意见反馈的小功能，会把用户输入的信息发送给闪讯团队的会话。虽然小，但涉及了完整的前端闭环：UI 输入 → 创建会话 → 发送消息 → 激活会话。</p>
+<table>
+<thead>
+<tr>
+<th>意见反馈</th>
+<th>发送消息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9a3d16540c874eaa8d729fdac047735b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1784&amp;h=1190&amp;s=147335&amp;e=png&amp;b=757575" alt="image.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/648cc6d1e4144a2b9e3eb3bcb7e90948~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1784&amp;h=1190&amp;s=171751&amp;e=png&amp;b=fefefe" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="四-本章总结">四、本章总结</h4>
+<p>Linux 桌面端的构建，技术上比 macOS 和 Windows 都简单。没有签名证书、没有公证流程、没有 Inno Setup。<code>flutter build linux</code> 一条命令出产物，<code>appimagetool</code> 一条命令打包。真正花时间的是 WSL 环境搭建、权限、Flutter SDK 版本这些琐碎问题。</p>
+<p>但一旦环境搞定，后续的迭代就是无脑执行脚本的事。<code>bash scripts/build_center/build_linux.sh</code>，等几分钟，拿到 AppImage，发给用户。</p>
+<p>至此，闪讯已经覆盖了 <strong>Android、iOS、macOS、Windows、Linux</strong> 五大平台。同一套 Dart 代码，同一套业务逻辑，只是 UI 层根据平台做了适配（移动端底部导航 + 全屏跳转，桌面端侧边栏 + 三栏布局 + 弹窗化操作）。这就是 Flutter 跨平台的价值，不是&quot;一次编写到处运行&quot;的理想主义，而是&quot;一次编写，每个平台微调一下就能用&quot;的务实主义。</p>
+<p>回头看这个项目的桌面端演进：v0.26.0 做了基础的三栏布局和响应式切换，v0.27.0 加了扫码登录和 Windows 构建，v0.28.0 把交互体验打磨到了可用的程度。三个版本，从&quot;能看&quot;到&quot;能用&quot;到&quot;好用&quot;。每一步都不大，但累积起来差距很明显。</p>
+<p>后续可以做的事情还有很多：侧栏宽度可拖拽、快捷键支持、系统托盘、桌面通知。但那些是锦上添花的事，当前的基础已经足够支撑日常使用了。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-39.html">← 果实#5 ｜ 构建 Windows 产品</a>
+      <a class="next" href="ch-41.html">果实#7 ｜ 构建 Web 产品 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-环境准备-在-windows-上构建-linux">一、环境准备：在 Windows 上构建 Linux</a></li>
+      <li class="lv5"><a href="#1-确认-wsl2-已就绪">1. 确认 WSL2 已就绪</a></li>
+      <li class="lv5"><a href="#2-安装构建依赖">2. 安装构建依赖</a></li>
+      <li class="lv5"><a href="#3-安装-linux-版-flutter-sdk">3. 安装 Linux 版 Flutter SDK</a></li>
+      <li class="lv4"><a href="#二-构建与运行">二、构建与运行</a></li>
+      <li class="lv5"><a href="#1-解决-mnt-c-的权限问题">1. 解决 /mnt/c 的权限问题</a></li>
+      <li class="lv5"><a href="#2-开发运行">2. 开发运行</a></li>
+      <li class="lv5"><a href="#3-关于-libsqlite3-的自动打包">3. 关于 libsqlite3 的自动打包</a></li>
+      <li class="lv5"><a href="#4-构建-release">4. 构建 release</a></li>
+      <li class="lv5"><a href="#5-appimage-打包与分发">5、AppImage 打包与分发</a></li>
+      <li class="lv4"><a href="#三-桌面端的导航优化">三、桌面端的导航优化</a></li>
+      <li class="lv5"><a href="#1-群组信息">1. 群组信息</a></li>
+      <li class="lv5"><a href="#2-弹窗化操作">2. 弹窗化操作</a></li>
+      <li class="lv5"><a href="#3-其他界面的桌面端视频">3、其他界面的桌面端视频</a></li>
+      <li class="lv4"><a href="#四-本章总结">四、本章总结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

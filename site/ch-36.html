@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>果实#2 ｜ 构建 Android 产品 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li class="active"><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>果实#2 ｜ 构建 Android 产品</h1>
+<p>上一篇我们把后端部署到了云服务器，闪讯的&quot;大脑&quot;已经 7×24 小时在线了。但其他用户想要访问，需要一个装在手机里的 App 应用程序。这一篇，我们来把闪讯打包成一个真正的 Android 应用产品。围绕以下几个点展开:</p>
+<ul>
+<li>如何设置应用的名称和图标。</li>
+<li>如何打包构建 Android 应用产物，并进行尺寸瘦身。</li>
+<li>签名和发布到市场的准备和流程。</li>
+<li>用户协议与隐私政策、用户注销申请。</li>
+<li>优化登录方式 <code>github登录</code>、设置界面优化。 (顺便新增功能)</li>
+</ul>
+<hr />
+<h4 id="一-产物的形式">一、产物的形式</h4>
+<p>在开发阶段，我们一直用 <code>flutter run</code> 把应用跑在模拟器或真机上。但这种方式有个问题：它依赖你的电脑，依赖 USB 线，依赖开发环境。你没法把它发给朋友装，使用安卓手机的朋友，可能会从软件商店或者网上下载 apk 的安装包。第一阶段，我们先打包出一个能用的安装包。</p>
+<hr />
+<h5 id="1-构建前的代码准备">1. 构建前的代码准备</h5>
+<p>在构建之前，我们需要更新一下 <code>名称和图标</code>，因为目前还是 Flutter 的默认图标，以及 flash_im 名称。</p>
+<table>
+<thead>
+<tr>
+<th>修改前</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e5ad15a68f794a939ac14789b37af9a4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=250&amp;h=250&amp;s=54816&amp;e=png&amp;b=fdfbfb" alt="image.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3aa5225b3ce6479f903af47d97a2b4d4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=250&amp;h=249&amp;s=76579&amp;e=png&amp;b=905f4d" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>下面的修改都可以交给 AI 来处理，文中写出来只是强调一下：</p>
+<ul>
+<li>Android 应用的名称可以修改文件：<code>client/android/app/src/main/AndroidManifest.xml</code></li>
+</ul>
+<pre><code class="language-xml">&lt;application
+    android:label=&quot;闪讯&quot;
+    ...&gt;
+</code></pre>
+<ul>
+<li>图标可以使用 <code>flutter_launcher_icons</code> 插件自动处理。</li>
+</ul>
+<p><strong>步骤 1</strong>：准备一张 512×512 以上的 logo 图片，放到 <code>client/assets/images/logo.png</code></p>
+<p><strong>步骤 2</strong>：在 <code>client/pubspec.yaml</code> 的 <code>dev_dependencies</code> 中添加：</p>
+<pre><code class="language-yaml">flutter_launcher_icons: ^0.14.0
+</code></pre>
+<p>并在 pubspec.yaml 末尾添加配置：</p>
+<pre><code class="language-yaml">flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: &quot;assets/images/logo.png&quot;
+</code></pre>
+<ul>
+<li>并在 pubspec.yaml 末尾添加配置：</li>
+</ul>
+<pre><code class="language-yaml">flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: &quot;assets/images/logo.png&quot;
+</code></pre>
+<p><strong>步骤 3</strong>：运行生成命令：</p>
+<pre><code class="language-bash">cd client
+flutter pub get
+dart run flutter_launcher_icons
+</code></pre>
+<p>这样会在 <code>client\android\app\src\main\res</code> 文件夹下，自动生成对应的 logo 图片。现在运行项目，就可以看到应用 logo 和 名字变化了。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ad8586b38d5e4ebd9343749ac5d282d1~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=827&amp;h=503&amp;s=24569&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<hr />
+<h5 id="2-打包应用">2. 打包应用</h5>
+<p>最简单的打包方式是在前端项目的命令行中，使用 Flutter 命令来打包:</p>
+<pre><code>cd client 
+flutter build apk -v
+</code></pre>
+<p>这就是最终的产物，把它发送给你的朋友，安装后，你们就可以聊天了。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/59342f32e15943b28a85b0ec6bc2ff69~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=876&amp;h=204&amp;s=37108&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<hr />
+<h5 id="3-打包环境配置">3. 打包环境配置</h5>
+<p>还记得吗? 我们后端有 <code>.env</code> 来配置端口号、数据库链接等固定的值。Flutter 这里的服务器 ip 和端口号还是写死在代码里的。另外开发环境和线上环境不一样，这会导致频繁修改，如果发布时忘记改回来，那闪讯对外就完全不可用了。所以我们需要优化一下，如何区分环境进行运行和打包。</p>
+<p>Flutter 支持打包盒运行时传入 <code>--dart-define-from-file</code> 置顶配置文件。于是我们可以准备两套环境，运行打包时指定一下，就可以动态控制代码。这样就从 <code>改代码</code> 变成了 <code>改配置</code> :</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/59beb29a004b4eef9e1a1c3eefaad6ca~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1063&amp;h=264&amp;s=38360&amp;e=png&amp;b=f0eef2" alt="image.png" /></p>
+<pre><code class="language-dart">class AppConfig {
+  static const String host = String.fromEnvironment('SERVER_HOST', defaultValue: '192.168.1.75');
+  static const int port = int.fromEnvironment('SERVER_PORT', defaultValue: 9600);
+  static String get baseUrl =&gt; 'http://$host:$port';
+}
+</code></pre>
+<p>比如打包发布版本的包，可以使用:</p>
+<blockquote>
+<p>flutter build apk --release --dart-define-from-file=.env.production</p>
+</blockquote>
+<p>开发阶段，使用 <code>.env.dev</code> 的配置：</p>
+<blockquote>
+<p>flutter run --dart-define-from-file=.env.dev</p>
+</blockquote>
+<hr />
+<h5 id="4-关于-cpu-架构产物">4. 关于 CPU 架构产物</h5>
+<p>查看一下刚才命令行直接打包的产物体积，会发现 <code>lib</code> 占了 92.5% 。 里面有着三个文件夹：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aaa801d0b73d4c7a8fee2692010704cb~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=887&amp;h=366&amp;s=40542&amp;e=png&amp;b=f4f6fa" alt="image.png" /></p>
+<p>关键在于 <strong>CPU 架构</strong> ， Android 手机的处理器有不同的指令集，就像不同国家说不同的语言：</p>
+<table>
+<thead>
+<tr>
+<th>架构</th>
+<th>代号</th>
+<th>对应设备</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>64 位 ARM</td>
+<td>arm64-v8a</td>
+<td>2017 年后几乎所有手机</td>
+</tr>
+<tr>
+<td>32 位 ARM</td>
+<td>armeabi-v7a</td>
+<td>2016 年前的老旧设备</td>
+</tr>
+<tr>
+<td>x86_64</td>
+<td>x86_64</td>
+<td>部分模拟器</td>
+</tr>
+</tbody>
+</table>
+<p>Flutter 默认构建的是 <strong>fat APK</strong>（胖包）：把三种架构的机器码全部塞进一个包里。<br />
+三套 .so 文件，每套都是完整的引擎 + 业务代码。这就是为什么 30 MB 的东西变成了 80 MB。</p>
+<blockquote>
+<p>比如你要去俄国旅行，行李箱里却同时装了俄语词典、法语词典、德语词典。到了俄本只用得上俄语那本，另外两本白白占空间。</p>
+</blockquote>
+<hr />
+<p>首先，x86_64 版的模拟器安装包应该要去掉，用户一般都使用真机，没有必要为了模拟器增加三分之一的软件包大小。其次，目前 <code>arm64-v8a</code> 设备占比超过 95% ，剩余的都是近十年前的存量低端机，是否为了支持 <code>armeabi-v7a</code> 增加三分之一的软件包大小，也需要你权衡。</p>
+<p>Flutter 命令提供了 <code>--split-per-abi</code> 的参数，用于把安装包按架构拆分成独立的包：</p>
+<blockquote>
+<p>flutter build apk --release --target-platform android-arm64,android-arm --split-per-abi --dart-define-from-file=.env.production</p>
+</blockquote>
+<p>这样拆成两个包，大小都在 30M 一下。低端机可以通过下载对于的安装包来使用。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2696350a585f49258adb30ff816e3c21~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=746&amp;h=103&amp;s=15583&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<hr />
+<h5 id="5-app-大小进一步优化">5. APP 大小进一步优化</h5>
+<p><code>--split-per-abi</code> 把应用大小减到了 <code>29.1MB</code> ，但是依然还有优化的空间。</p>
+<blockquote>
+<p><a href="">tasks_app_size.md</a> 是我让 AI 搜索一下，常规的安卓体积包优化方案，<br />
+再让它基于当前项目，给出的优化任务。</p>
+</blockquote>
+<p>执行完后，可以发现，体积包直接减半，来到了 <code>14.3MB</code> :</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/950cb4aaf96d4f6e98048003bbdb443a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=716&amp;h=77&amp;s=12181&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<hr />
+<h5 id="6-构建脚本">6. 构建脚本</h5>
+<p>目前 Flutter 打包安卓的命令越来越长，而且还需要区分环境。为了更方便打包流程，另外也可以顺便维护一下打包产物：</p>
+<blockquote>
+<p><a href="">build_android.py</a> 就是打包安卓的脚本。未来不同的平台打包，使用专门的脚本处理。包括服务端的打包构建。</p>
+</blockquote>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6bbaa55a667c4f6e9e18e4db4945f791~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1341&amp;h=617&amp;s=143715&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<hr />
+<h4 id="二-应用整体功能优化">二、应用整体功能优化</h4>
+<p>发布到商店之前，最后进行一下合规的处理，比如用户协议、隐私政策的展示等；另外设置页页趁此优化一下。这里把它视为一个新的功能迭代，在 <code>v0.24.0</code> 上开发。</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>starter/v0.0.2</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/starter/v0.0.2/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/starter/v0.0.2/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/starter/v0.0.2/client/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="1-用户协议-隐私政策">1. 用户协议、隐私政策</h5>
+<p>用户协议和隐私政策是 APP 想上架商店必须的。这里让 AI 写了一下，并放在后端的静态资源里，通过链接可以直接访问。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aebfb4b138dc42758cb4b59833d1f615~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=546&amp;h=249&amp;s=11736&amp;e=png&amp;b=f0eff2" alt="image.png" /></p>
+<p>前端需要在应用启动时，检测有没有同意时弹出引导。点击时通过 webview 承载展示对于的静态网页。</p>
+<table>
+<thead>
+<tr>
+<th>启动</th>
+<th>用户协议</th>
+<th>隐私政策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f0bc35837d7345548635e2444ce7dd78~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=129796&amp;e=png&amp;b=757575" alt="image.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/94a223b126f24799aedd61e1862de8fa~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=276520&amp;e=png&amp;b=fefefe" alt="image.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b050cb821dc64c8b99db9af1ea24715e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=282511&amp;e=png&amp;b=fefefe" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>另外，在 v0.23.0 的功能迭代上，我增加了一个 github 登录的功能，并且优化了一下登录界面的表现。当没有勾选时，会先拦截，给出提示信息：</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auth/v0.0.3</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/auth/v0.0.3/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/auth/v0.0.3/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/auth/v0.0.3/client/tasks.md">tasks.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/auth/v0.0.3/server/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/auth/v0.0.3/server/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>登录界面</th>
+<th>校验是否同意</th>
+<th>设置界面增加入口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e8938d9a9ec043a08efcf46034341860~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=130409&amp;e=png&amp;b=ffffff" alt="image.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b0bb4a93aa184927adb68de6c804b883~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=143196&amp;e=png&amp;b=ffffff" alt="image.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6fe5bc46ebc34d55a05954efb5b16ba5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=63527&amp;e=png&amp;b=f8f8f8" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="2-设置界面整体优化">2. 设置界面整体优化</h4>
+<p>之前我的界面比较简陋，这次优化了一下。参考微信的设置，把信息集中到独立界面。并增加了账号管理、关于闪讯、我的名片等入口，看起来更正规一些。</p>
+<table>
+<thead>
+<tr>
+<th>我的</th>
+<th>设置页</th>
+<th>关于闪讯</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c0e7cfe1ae1543369201a4c28773d066~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=60344&amp;e=png&amp;b=f4f4f4" alt="image.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3cd84b433199492bbfbbb4020e745dc0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=63813&amp;e=png&amp;b=f8f8f8" alt="image.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4e6d6849089d4a66bd395c0a8489dc6a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=126035&amp;e=png&amp;b=f6f6f6" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="三-别人如何下载应用">三、别人如何下载应用</h4>
+<p>构建出了产物，下面一个问题就是: <code>如何让别人能得到产物</code>。毕竟直接发送安装给别人，是很难传播的。有两条路可以走:</p>
+<ul>
+<li><strong>正规路线</strong>: 最好的方式是上架到应用市场里，这样任何人可以直接搜索，下载你的软件，也更。</li>
+<li><strong>野生路线</strong>: 在 github 上给下载方式、或搭建一个网页，展示你的产品，并附带下载链接。</li>
+</ul>
+<p>这两条路都可以走，但野生的比较简单，完全可以自主控制。正规路线上架的流程可以说会非常坎坷，甚至是上不了架。特别是对于个人开发者。</p>
+<hr />
+<h5 id="1-应用的签名">1. 应用的签名</h5>
+<p>正规路线需要对应用进行签名，才能上架。我们可以使用 JDK 自带的 <code>keytool</code> 来生产相关的文件。如下所示：（如果找不到 JDK 在哪里，可以让 AI 帮你搜一下）</p>
+<pre><code>cd client/android
+&amp; &quot;C:\toly\Soft\IDE\AS2025\jbr\bin\keytool.exe&quot; -genkey -v -keystore flash-im-release.jks -keyalg RSA -keysize 2048 -validity 10000 -alias flash-im
+</code></pre>
+<p>然后会让你输入一个密码，可以随便输一个。这个密码将和生成的 <code>flash-im-release.jks</code> 绑定，后面打包时需要用到。后面的一系列问题，直接 <code>enter</code> 进入下一步即可。最后一步输入 <code>y</code> 确认：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/16bc9789f83049c49bc2cd336f93fc82~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=849&amp;h=440&amp;s=68013&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<p>会生成一个 <code>flash-im-release.jks</code> 文件，然后把密码给 AI ，让它为你生成 <code>key.properties</code> 的配置信息，已经配置项目的构建逻辑：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/59ca115fd15b4785bb576fe81c130636~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=684&amp;h=247&amp;s=17133&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<hr />
+<h5 id="2-打包谷歌版产物">2. 打包谷歌版产物</h5>
+<p>目前我的 FlutterUnit 已经上架了谷歌商店，对上架谷歌的流程还是比较清楚的。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c6603be6d4844780806a9d4c30aeff04~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1102&amp;h=141&amp;s=23544&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>Android 的安装包有两种格式，上架到谷歌需要打 <code>aab</code> 的包：</p>
+<table>
+<thead>
+<tr>
+<th>格式</th>
+<th>后缀</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>APK</td>
+<td><code>.apk</code></td>
+<td>传统安装包，可以直接安装，适合分发给朋友</td>
+</tr>
+<tr>
+<td>AAB</td>
+<td><code>.aab</code></td>
+<td>Google Play 专用格式，上架应用商店用</td>
+</tr>
+</tbody>
+</table>
+<p>构建脚本增加 <code>--aab</code> 即可打包 aab 的产物：</p>
+<blockquote>
+<p>python scripts/build_center/build_android.py --aab</p>
+</blockquote>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4fd95a09234d4b9caea75939808411c4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=947&amp;h=223&amp;s=37377&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<p>AAB 不是直接给用户安装的包，而是交给 Google Play 的&quot;半成品&quot;。Google Play 会根据每个用户的手机型号，动态裁剪出最小的 APK 推送给他。</p>
+<ul>
+<li>arm64 的手机只收到 arm64 的代码</li>
+<li>高分辨率手机只收到高清资源</li>
+<li>中文用户只收到中文语言包</li>
+</ul>
+<p>虽然现在看着是 56.1MB，但最终用户下载的体积可能只有 25~30 MB。</p>
+<hr />
+<h5 id="3-谷歌商店上架">3. 谷歌商店上架</h5>
+<p>首先你需要成为谷歌开发者，这一步需要交 $25，一次性的永久生效。</p>
+<blockquote>
+<p>接入控制台: https://play.google.com/console<br />
+首页/创建应用 ，提交基本信息</p>
+</blockquote>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d1fdce1a36f54417a71f451b3ebf9348~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1512&amp;h=1093&amp;s=133996&amp;e=png&amp;b=f7f9fd" alt="image.png" /></p>
+<hr />
+<p>个人开发者需要上架谷歌商店，需要 <code>至少12名、14 天</code> 的封闭测试:</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7b7191e2e94344edbb4f3cccea8b6345~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1643&amp;h=583&amp;s=123446&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<blockquote>
+<p>测试和发布/测试/封闭式测试/创建轨道/创建新的发布版</p>
+</blockquote>
+<p>然后把打的包上传一下就行了：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e9cf435bf44b4eb3b2aa889643a42100~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2011&amp;h=536&amp;s=46124&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>后续的测试、审核过程就需要大家自己去持续关注了。另外国内也有很多商店，比如华为、小米、OPPO等，需要上架还需要软著、经营证件等，基本上个人开发者很难上架，如果有小公司大家也可以去折腾一下。</p>
+<hr />
+<h5 id="4-野生路线">4. 野生路线</h5>
+<p>野生路线其实，你只要将打包的 apk 丢到一个可供下载的地方即可。也不一定非要丢到自己的服务器上，毕竟占空间、下载也耗流量。很多开源软件都会在 github 的 release 页面给出对于的安装包。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a592faf8efc24132801e9555bd51d79e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1478&amp;h=591&amp;s=120571&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>在 Assets 下，别人就可以下载对应的安装包了。后续脚本还可以支持一下，自动发布 release 和上传安装包，这样升级就更加方便。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6fa024dea4e24c7c959f640e0ceb7ea9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=963&amp;h=222&amp;s=23049&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<hr />
+<h4 id="四-本章总结">四、本章总结</h4>
+<p>走到这里，闪讯已经从一个&quot;只能连着电脑跑&quot;的工程项目，变成了一个可以发给朋友装在手机里的真实产品。回头看这个过程，其实就做了几件事：把代码变成安装包、把安装包瘦身、给安装包盖个章（签名）、然后想办法递到用户手里。每一步都不难，但串起来就是一个完整的&quot;从开发者到用户&quot;的旅程。</p>
+<p>有几个感受分享一下：</p>
+<ul>
+<li><strong>体积优化比想象中简单。</strong> 80 MB 听起来很吓人，但其实不是你代码写多了，而是打包机制默认把同样的东西复制了好几份。知道原因后，一两行配置就能砍掉一半。</li>
+<li><strong>签名没那么神秘。</strong> 本质就是一把钥匙，证明&quot;这个包确实是你发的&quot;。一条命令生成，四行配置引用，仅此而已。</li>
+<li><strong>分发才是真正的挑战。</strong> 技术上构建一个 APK 很快，但要让陌生人能搜到、能信任、愿意装，这背后是商店审核、合规要求、用户信任的综合考验。好在野生路线（GitHub Release）让我们可以先跑起来，不必等万事俱备。</li>
+<li><strong>构建脚本是给未来的自己写的。</strong> 今天记得每个参数的含义，三个月后大概率忘光。把它固化成脚本，下次一行命令就好，不用再翻文档。</li>
+</ul>
+<p>到这一步，闪讯已经是一个&quot;能用&quot;的产品了。接下来要做的，是让它变成一个&quot;好用&quot;的产品——但那是后面的故事了。下一篇，我们将焦点聚集在 iOS 产品的构件上。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-35.html">← 果实#1 ｜ 后端部署</a>
+      <a class="next" href="ch-37.html">果实#3 ｜ 构建 iOS 产品 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-产物的形式">一、产物的形式</a></li>
+      <li class="lv5"><a href="#1-构建前的代码准备">1. 构建前的代码准备</a></li>
+      <li class="lv5"><a href="#2-打包应用">2. 打包应用</a></li>
+      <li class="lv5"><a href="#3-打包环境配置">3. 打包环境配置</a></li>
+      <li class="lv5"><a href="#4-关于-cpu-架构产物">4. 关于 CPU 架构产物</a></li>
+      <li class="lv5"><a href="#5-app-大小进一步优化">5. APP 大小进一步优化</a></li>
+      <li class="lv5"><a href="#6-构建脚本">6. 构建脚本</a></li>
+      <li class="lv4"><a href="#二-应用整体功能优化">二、应用整体功能优化</a></li>
+      <li class="lv5"><a href="#1-用户协议-隐私政策">1. 用户协议、隐私政策</a></li>
+      <li class="lv4"><a href="#2-设置界面整体优化">2. 设置界面整体优化</a></li>
+      <li class="lv4"><a href="#三-别人如何下载应用">三、别人如何下载应用</a></li>
+      <li class="lv5"><a href="#1-应用的签名">1. 应用的签名</a></li>
+      <li class="lv5"><a href="#2-打包谷歌版产物">2. 打包谷歌版产物</a></li>
+      <li class="lv5"><a href="#3-谷歌商店上架">3. 谷歌商店上架</a></li>
+      <li class="lv5"><a href="#4-野生路线">4. 野生路线</a></li>
+      <li class="lv4"><a href="#四-本章总结">四、本章总结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

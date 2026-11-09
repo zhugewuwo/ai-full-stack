@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>枝叶#4 ｜ 群聊管理 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li class="active"><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>枝叶#4 ｜ 群聊管理</h1>
+<blockquote>
+<p>建城是一次性的浪漫，治城是重复性的琐碎。前者需要魄力，后者需要耐心。</p>
+</blockquote>
+<p>上一章给群聊装上了&quot;正门&quot;——用户可以搜索群聊、主动申请加入，群主可以审批。但群主的权力仅限于&quot;开门&quot;和&quot;关门&quot;。一个真正可用的群聊还需要更多治理能力：邀请新成员、踢人、退群、转让群主、解散群聊、发布群公告、修改群名。这一章要把群聊从&quot;能用&quot;推向&quot;好用&quot;。</p>
+<hr />
+<h4 id="一-需求分析">一、需求分析</h4>
+<p>邀请、踢人、退群、转让、解散、群公告、改群名——每个操作的权限要求不同，完成后可能触发一连串副作用（刷新头像、发系统消息、标记状态）。复杂度不在于单个接口有多难，而在于它们之间的权限模型和副作用链条。本版本会引入群主和普通成员两级角色，群主拥有对群的一些管理操作权限。</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>group/v0.0.3</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.15.0/docs/features/im/group/v0.0.3/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.15.0/docs/features/im/group/v0.0.3/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.15.0/docs/features/im/group/v0.0.3/client/tasks.md">tasks.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.15.0/docs/features/im/group/v0.0.3/server/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.15.0/docs/features/im/group/v0.0.3/server/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<p>本章涉及的前后端模块鸟瞰：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0ea9173100394d1c8daf9f1b2578e9a0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1631&amp;h=2141&amp;s=269627&amp;e=png&amp;a=1&amp;b=fcfbfb" alt="mermaid-diagram (89).png" /></p>
+<hr />
+<h5 id="1-交互链分析">1. 交互链分析</h5>
+<p>群详情页是所有操作的入口。目前它只有成员网格和入群验证开关，这一章要把它扩展为完整的群管理中心。从邀请到踢人，从转让到解散，每个操作都从这里出发：</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>用户故事</th>
+<th>操作路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>邀请入群</td>
+<td>作为群成员，我想邀请好友加入</td>
+<td>群详情 → &quot;+&quot; → 选人页（已有成员预选）→ 完成 → 批量加入</td>
+</tr>
+<tr>
+<td>群主踢人</td>
+<td>作为群主，我想移除不合适的成员</td>
+<td>群详情 → &quot;-&quot; → MemberPickerPage 移除模式 → 选择 → 移除</td>
+</tr>
+<tr>
+<td>退出群聊</td>
+<td>作为普通成员，我想退出不再关注的群</td>
+<td>群详情 → &quot;退出群聊&quot; → 确认 → 返回会话列表</td>
+</tr>
+<tr>
+<td>转让群主</td>
+<td>作为群主，我想把群主身份转让</td>
+<td>群详情 → &quot;转让群主&quot; → 选人 → 确认</td>
+</tr>
+<tr>
+<td>解散群聊</td>
+<td>作为群主，我想解散不再需要的群</td>
+<td>群详情 → &quot;解散群聊&quot; → 二次确认 → 返回会话列表</td>
+</tr>
+<tr>
+<td>群公告</td>
+<td>作为群主，我想发布重要信息</td>
+<td>群详情 → 群公告 → 编辑 → 发布</td>
+</tr>
+<tr>
+<td>修改群名</td>
+<td>作为群主，我想修改群名</td>
+<td>群详情 → 群聊名称 → EditGroupNamePage → 确认</td>
+</tr>
+</tbody>
+</table>
+<p>所有操作的入口都是群详情页（GroupChatInfoPage）。群主和普通成员看到的界面不同——群主多了踢人按钮、入群验证开关、转让和解散入口，普通成员只有邀请和退出。</p>
+<table>
+<thead>
+<tr>
+<th>群详情页</th>
+<th>邀请入群</th>
+<th>群公告</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/61a5933dbdcb4cc19beb42527a7dddba~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=123109&amp;e=png&amp;b=fcfcfc" alt="MuMu-20260422-230754-620.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/85b8ed4908ad46a6b3110cf37cc535a7~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=117737&amp;e=png&amp;b=fcfcfc" alt="MuMu-20260422-231327-398.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9e0224362f0f4623b41e5744792fd44c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=179268&amp;e=png&amp;b=faf9f9" alt="MuMu-20260422-231407-272.png" />)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="2-逻辑流程树">2. 逻辑流程树</h5>
+<p>邀请入群是这批接口中最复杂的——涉及批量操作、ON CONFLICT 恢复、宫格头像刷新、系统消息。其他接口（踢人、退群、转让、解散、公告、改名）都是&quot;校验权限 → 操作数据库 → 发系统消息&quot;的标准模式。</p>
+<p><strong>邀请入群事件流</strong></p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+<th>产生的新事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>用户选好友点击完成</td>
+<td>前端 <code>POST /groups/{id}/members</code>，body: <code>{ member_ids }</code></td>
+<td>HTTP 请求</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>后端校验</td>
+<td>群存在、当前用户是成员、不超过 max_members、群未解散</td>
+<td>—</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>批量加入</td>
+<td>INSERT conversation_members × N（ON CONFLICT 恢复已删除成员）+ 刷新宫格头像</td>
+<td>成员加入</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>系统消息</td>
+<td>send_system &quot;XXX 邀请了 YYY、ZZZ 加入群聊&quot;</td>
+<td>所有成员收到</td>
+</tr>
+</tbody>
+</table>
+<p>邀请入群和&quot;群主同意入群申请&quot;复用同一个 <code>join_group_direct</code> 方法——数据库操作完全一样，只是触发入口不同。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9c681778e046478a999f80d5cf6c4e11~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2706&amp;h=1554&amp;s=252568&amp;e=png&amp;a=1&amp;b=ebebeb" alt="mermaid-diagram (90).png" /></p>
+<hr />
+<p><strong>解散群聊事件流</strong></p>
+<p>解散的逻辑不复杂，但有一个操作顺序的陷阱——系统消息必须在标记 status=1 之前发送，否则 <code>send</code> 会被自己的 status 校验拦截。</p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+<th>产生的新事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>群主确认解散</td>
+<td>前端 <code>POST /groups/{id}/disband</code></td>
+<td>HTTP 请求</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>后端校验</td>
+<td>当前用户是群主</td>
+<td>—</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>系统消息</td>
+<td>send_system &quot;群聊已解散&quot;（此时 status 还是 0，消息能广播）</td>
+<td>所有成员收到</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>标记解散</td>
+<td>UPDATE conversations SET status=1</td>
+<td>群聊状态变更</td>
+</tr>
+</tbody>
+</table>
+<p>权限校验的代码模式完全一样——service 层开头查 owner_id，和当前 user_id 比较，不匹配返回 403：</p>
+<table>
+<thead>
+<tr>
+<th>接口</th>
+<th>权限要求</th>
+<th>校验方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST /members（邀请）</td>
+<td>群成员</td>
+<td>is_member</td>
+</tr>
+<tr>
+<td>DELETE /members/{uid}（踢人）</td>
+<td>群主</td>
+<td>owner_id == user_id</td>
+</tr>
+<tr>
+<td>POST /leave（退群）</td>
+<td>普通成员（群主不可）</td>
+<td>owner_id != user_id</td>
+</tr>
+<tr>
+<td>PUT /transfer（转让）</td>
+<td>群主</td>
+<td>owner_id == user_id</td>
+</tr>
+<tr>
+<td>POST /disband（解散）</td>
+<td>群主</td>
+<td>owner_id == user_id</td>
+</tr>
+<tr>
+<td>PUT /announcement（公告）</td>
+<td>群主</td>
+<td>owner_id == user_id</td>
+</tr>
+<tr>
+<td>PUT /groups/{id}（改名）</td>
+<td>群主</td>
+<td>owner_id == user_id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>状态流转</strong></p>
+<table>
+<thead>
+<tr>
+<th>实体</th>
+<th>触发事件</th>
+<th>前状态</th>
+<th>后状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ConversationMember</td>
+<td>邀请入群</td>
+<td>不存在 / is_deleted=true</td>
+<td>is_deleted=false</td>
+</tr>
+<tr>
+<td>ConversationMember</td>
+<td>踢人 / 退群</td>
+<td>is_deleted=false</td>
+<td>is_deleted=true</td>
+</tr>
+<tr>
+<td>conversations.status</td>
+<td>解散群聊</td>
+<td>0（正常）</td>
+<td>1（已解散）</td>
+</tr>
+<tr>
+<td>conversations.owner_id</td>
+<td>转让群主</td>
+<td>原群主 ID</td>
+<td>新群主 ID</td>
+</tr>
+<tr>
+<td>conversations.name</td>
+<td>修改群名</td>
+<td>旧群名</td>
+<td>新群名</td>
+</tr>
+<tr>
+<td>group_info.announcement</td>
+<td>发布公告</td>
+<td>NULL / 旧公告</td>
+<td>新公告内容</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="3-功能编号-新节点入网">3. 功能编号：新节点入网</h5>
+<p>这次新增的节点几乎全部&quot;长&quot;在 im-group 内部——后端接口都在同一个 crate 中，前端页面都在 flash_im_group 模块中。唯一的跨模块影响是 <code>MessageService.send</code> 新增 status 校验和 <code>GROUP_INFO_UPDATE</code> WS 帧。功能网络从 81 个节点增长到 93 个。</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>新增编号</th>
+<th>节点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I（基础设施）</td>
+<td>I-13</td>
+<td>AppError 统一错误处理</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-24</td>
+<td>邀请入群：批量添加成员 + 刷新头像 + 系统消息</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-25</td>
+<td>踢人：群主移除成员</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-26</td>
+<td>退出群聊：普通成员退出</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-27</td>
+<td>转让群主：更新 owner_id</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-28</td>
+<td>解散群聊：标记 status=1 + 系统消息</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-29</td>
+<td>群公告：群主发布/编辑公告</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-30</td>
+<td>修改群名：群主修改群名 + 系统消息 + GROUP_INFO_UPDATE 推送</td>
+</tr>
+<tr>
+<td>F（前端基础）</td>
+<td>F-11</td>
+<td>GROUP_INFO_UPDATE WS 帧分发：群信息变更实时推送</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-38</td>
+<td>群详情页扩展：邀请/踢人/退群 + 群公告 + 群名编辑 + 转让/解散独立按钮</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-39</td>
+<td>邀请入群选人页：复用 CreateGroupPage</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-40</td>
+<td>群公告页：查看/编辑/发布</td>
+</tr>
+</tbody>
+</table>
+<p>同时有 3 个已有节点被扩展：</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>扩展内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-23</td>
+<td>群详情接口返回 announcement + status 字段</td>
+</tr>
+<tr>
+<td>P-37</td>
+<td>群聊详情页从最小版本扩展到完整版本</td>
+</tr>
+<tr>
+<td>F-06</td>
+<td>WsClient 新增 groupInfoUpdateStream（监听 GROUP_INFO_UPDATE 帧）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>搜索加群是&quot;延伸&quot;——从群内向群外生长。这一章是&quot;加厚&quot;——在已有的群内结构上叠加治理能力，同时新增 GROUP_INFO_UPDATE 帧让群信息变更能实时推送到所有成员。</p>
+</blockquote>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9cd41ee6d409454ebdbf7dcf7b1dc49a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2429&amp;h=780&amp;s=162189&amp;e=png&amp;a=1&amp;b=fcfbfb" alt="mermaid-diagram (95).png" /></p>
+<hr />
+<h4 id="二-后端-im-group-的生长">二、后端：im-group 的生长</h4>
+<p>上一章 im-group 有 7 个路由（创建/搜索/入群/审批/通知查询/群详情/群设置），这一章翻倍到 14 个。但架构不变——三层各司其职，依赖关系不变（im-group → flash-core + im-message + im-ws）。变化的是每一层的&quot;厚度&quot;，以及两个意外的基础设施改进：AppError 统一错误处理和 GROUP_INFO_UPDATE WS 帧。</p>
+<pre><code>server/
+├── modules/
+│   ├── flash-core/src/error.rs            # 新建：AppError 统一错误类型
+│   ├── im-group/src/
+│   │   ├── models.rs                      # 扩展：+4 个请求类型
+│   │   ├── repository.rs                  # 扩展：+9 个新方法
+│   │   ├── service.rs                     # 扩展：+7 个新方法（每个都有权限校验）
+│   │   └── routes.rs                      # 扩展：从 7 个路由到 14 个（含系统消息 + GROUP_INFO_UPDATE 推送）
+│   ├── im-message/src/service.rs          # 扩展：send 拦截已解散群
+│   └── im-ws/src/dispatcher.rs            # 扩展：notify_group_info_update 方法
+├── proto/
+│   ├── ws.proto                           # 扩展：GROUP_INFO_UPDATE = 11
+│   └── message.proto                      # 扩展：GroupInfoUpdate 消息
+</code></pre>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/49bc1539b84e474bbc28035780fa880a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2124&amp;h=1013&amp;s=182808&amp;e=png&amp;a=1&amp;b=fcf7f6" alt="mermaid-diagram (93).png" /></p>
+<hr />
+<h5 id="1-数据模型">1. 数据模型</h5>
+<p>本章新增一个迁移文件，做两件事：给 <code>conversations</code> 加 <code>status</code> 字段，给 <code>group_info</code> 加 <code>announcement</code> 相关字段。</p>
+<pre><code class="language-sql">-- ---&gt; server/migrations/20260420_007_group_manage.sql
+ALTER TABLE conversations ADD COLUMN IF NOT EXISTS status SMALLINT NOT NULL DEFAULT 0;
+-- 0=正常, 1=已解散
+
+ALTER TABLE group_info ADD COLUMN IF NOT EXISTS announcement TEXT;
+ALTER TABLE group_info ADD COLUMN IF NOT EXISTS announcement_updated_at TIMESTAMPTZ;
+ALTER TABLE group_info ADD COLUMN IF NOT EXISTS announcement_updated_by BIGINT;
+</code></pre>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ecc366e7be9d4d6e8dccc4349b5ae876~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1551&amp;h=926&amp;s=91866&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<table>
+<thead>
+<tr>
+<th>决策</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status</code> 放 conversations 而非 group_info</td>
+<td>MessageService.send 需要校验解散状态，放 conversations 查询更直接（不需要 JOIN group_info）</td>
+</tr>
+<tr>
+<td>解散不删成员和消息</td>
+<td>历史消息仍可查看，用 status=1 标记即可</td>
+</tr>
+<tr>
+<td>announcement 放 group_info</td>
+<td>群公告是群配置的一部分，和 join_verification 同级</td>
+</tr>
+<tr>
+<td>announcement_updated_by 记录发布者</td>
+<td>未来可能展示&quot;谁发布的&quot;，预留字段</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="2-核心逻辑">2. 核心逻辑</h5>
+<p>新增的接口模式高度一致：routes 解析请求 → service 校验权限 → repository 操作数据库 → routes 发系统消息。踢人、退群、转让、群公告、改群名都是这个套路，不再逐个展开。这里只完整展开邀请入群——它是唯一涉及批量操作和多重副作用的接口。</p>
+<hr />
+<p><strong>邀请入群：批量操作与副作用链</strong></p>
+<p>邀请入群是唯一允许普通成员操作的接口（其他都要求群主）。一次请求可能加入多个成员，每个成员都可能触发 ON CONFLICT（之前被踢过的成员重新加入），加完后还要刷新宫格头像、发系统消息。</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-group/src/service.rs
+fn add_members(user_id, conversation_id, member_ids):
+    // 1. 校验群未解散
+    status = repo.get_conversation_status(conversation_id)?
+    if status != 0: return Err(AppError::bad_request(&quot;群聊已解散&quot;))
+
+    // 2. 校验当前用户是群成员
+    if !repo.is_member(conversation_id, user_id): return Err(AppError::forbidden(&quot;非群成员&quot;))
+
+    // 3. 校验不超过 max_members
+    current_count = repo.get_member_count(conversation_id)?
+    max = repo.get_max_members(conversation_id)?
+    if current_count + member_ids.len() &gt; max: return Err(AppError::bad_request(&quot;超过群人数上限&quot;))
+
+    // 4. 批量加入（ON CONFLICT 恢复已删除成员）
+    added = repo.add_members(conversation_id, member_ids)?
+
+    // 5. 刷新宫格头像
+    repo.build_grid_avatar(conversation_id)?
+
+    return added
+</code></pre>
+<p>repository 层的 <code>add_members</code> 用循环逐个 INSERT，每个都带 <code>ON CONFLICT (conversation_id, user_id) DO UPDATE SET is_deleted = false</code>。返回实际新增的数量（跳过已在群中的成员）。</p>
+<p>routes 层拿到结果后，查邀请者昵称和被邀请者昵称，拼接系统消息&quot;XXX 邀请了 YYY、ZZZ 加入群聊&quot;。</p>
+<blockquote>
+<p>为什么不用一条 INSERT ... VALUES (...), (...), ... 批量插入？因为需要统计&quot;实际新增了几个&quot;——ON CONFLICT 时 PostgreSQL 的 affected_rows 行为不够可靠（有些版本把 UPDATE 也算进去）。逐个 INSERT 虽然多几次 IO，但语义清晰，群成员数量级（≤200）下性能不是问题。</p>
+</blockquote>
+<hr />
+<p><strong>解散群聊</strong></p>
+<p>解散的代码很短，但有一个容易踩的坑：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-group/src/routes.rs
+async fn disband(state, headers, path):
+    state.service.disband(user_id, conv_id)?          // 1. 校验群主身份
+    state.msg_service.send_system(conv_id, &quot;群聊已解散&quot;)  // 2. 先发系统消息
+    state.service.update_status(conv_id, 1)?           // 3. 再标记解散
+</code></pre>
+<p>第 2 步和第 3 步的顺序不能反。如果先标记 status=1，<code>MessageService.send</code> 内部的 status 校验会拦截自己的系统消息，群成员永远不知道群被解散了。解散后，前端会禁用输入框。但如果有人绕过 UI 直接调 API 发消息呢？<code>MessageService.send</code> 开头加了一道防线：</p>
+<pre><code class="language-sql">-- ---&gt; server/modules/im-group/src/repository.rs
+SELECT COALESCE(status, 0::SMALLINT) FROM conversations WHERE id = $1
+</code></pre>
+<p><code>0::SMALLINT</code> 的类型标注不能省。如果写成 <code>COALESCE(status, 0)</code>，PostgreSQL 会把 <code>0</code> 当作 INT4，COALESCE 的返回类型提升为 INT4，但 Rust 端用 <code>i16</code> 接收——运行时 sqlx 解码报错。</p>
+<hr />
+<h5 id="3-apperror-一个-500-错误催生的基础设施">3. AppError：一个 500 错误催生的基础设施</h5>
+<p>这个 bug 也直接促成 AppError 的诞生。我也在一直等待这一刻，之前 AI 在后端实现上一直没出问题，接口测试也是一次通过，所以没有异常捕捉的契机。</p>
+<p>实现完 7 个接口后跑测试，接口 <code>POST /groups/{id}/members</code> 返回 500。客户端看到的是一个光秃秃的状态码，服务端终端什么都没有——没有错误日志，没有 panic，没有任何线索。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5677105566da41b79b86bcf89eb1d3b0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=861&amp;h=76&amp;s=9279&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<p>根因是目前项目中大量使用的反模式：</p>
+<pre><code class="language-rust">// ❌ 这行代码吞掉了所有错误信息
+.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)
+</code></pre>
+<p>下划线 <code>_</code> 把 sqlx 返回的详细错误信息丢掉了。服务端只知道&quot;出错了&quot;，不知道&quot;出了什么错&quot;。每次遇到 500 都要重复&quot;加 println → 编译 → 测试&quot;的循环。</p>
+<p>解决方案是在 <code>flash-core</code> 中新增统一错误类型 <code>AppError</code>：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/flash-core/src/error.rs
+pub struct AppError {
+    pub status: StatusCode,
+    pub message: String,
+    pub detail: Option&lt;String&gt;,
+}
+</code></pre>
+<p>三个关键实现让它成为&quot;装上就有效&quot;的基础设施：</p>
+<pre><code class="language-rust">// 1. sqlx::Error 自动转换——数据库错误不再被吞
+impl From&lt;sqlx::Error&gt; for AppError {
+    fn from(err: sqlx::Error) -&gt; Self {
+        AppError::internal(err, &quot;database&quot;)
+    }
+}
+
+// 2. IntoResponse——自动打印日志 + 返回结构化 JSON
+impl IntoResponse for AppError {
+    fn into_response(self) -&gt; Response {
+        if let Some(ref detail) = self.detail {
+            println!(&quot;❌ {}&quot;, detail);  // 服务端自动打印
+        }
+        let body = json!({
+            &quot;error&quot;: self.message,
+            &quot;status&quot;: self.status.as_u16(),
+            &quot;detail&quot;: self.detail,  // 客户端也能看到
+        });
+        (self.status, Json(body)).into_response()
+    }
+}
+
+// 3. From&lt;StatusCode&gt;——旧代码不用改
+impl From&lt;StatusCode&gt; for AppError {
+    fn from(status: StatusCode) -&gt; Self { AppError::status(status) }
+}
+</code></pre>
+<p>有了 AppError，原来五行的 <code>.map_err</code> 变成一个 <code>?</code>：</p>
+<pre><code class="language-rust">// 旧：错误被吞，500 时无法排查
+let status = repo.get_status(id).await
+    .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+
+// 新：错误自动捕获 + 打印 + 返回给客户端
+let status = repo.get_status(id).await?;
+</code></pre>
+<p>这样，在接口测试时，异常信息就可以立刻定位到，大大节省排查的精力。另外统一的异常处理，也会让代码的可读性增加。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7b96a95d00c5438caf9fc2ba8f1df1b1~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1025&amp;h=125&amp;s=24384&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<blockquote>
+<p>统一错误处理应该是基础设施的一部分——不是等出了问题再加，而是项目初期就该有。这次是被一个 COALESCE 类型不匹配的 bug 逼出来的，但它的价值远超这一个 bug。以后的项目就可以在一开始引入异常捕捉的机制。</p>
+</blockquote>
+<hr />
+<h5 id="4-group-_info-_update-群信息变更的实时推送">4. GROUP_INFO_UPDATE：群信息变更的实时推送</h5>
+<p>改群名后，所有成员的会话列表和 ChatPage 标题需要实时更新。改公告后，ChatPage 的黄色横幅也要同步刷新。这些如果全靠 <code>ConversationUpdate</code> 帧来做，感觉会话更新承担的职责就太重了，会引入不必要的属性。而且群组的信息更新，更适合引入一个独立的帧来处理，这样群组管理需要增加其他功能，也不会引发会话模块的变动。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/68eb62b5c1a6466fa22a835615cb81a0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=571&amp;h=184&amp;s=14900&amp;e=png&amp;b=f5f0ef" alt="image.png" /></p>
+<p>所以新增一个独立的 WS 帧类型 <code>GROUP_INFO_UPDATE</code>（type = 11），只在群信息变更时才推送：</p>
+<pre><code class="language-protobuf">// ---&gt; proto/message.proto
+message GroupInfoUpdate {
+    string conversation_id = 1;
+    optional string name = 2;
+    optional string avatar = 3;
+    optional string announcement = 4;
+    optional int32 status = 5;
+}
+</code></pre>
+<p><code>MessageDispatcher</code> 新增 <code>notify_group_info_update</code> 方法，通过 <code>ws_state.send_to_users</code> 推送给所有群成员。routes 层在改名/改公告时通过 <code>tokio::spawn</code> 异步调用：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-group/src/routes.rs（update_group handler 末尾）
+let member_ids = state.service.repo().get_member_ids(conv_id).await?;
+tokio::spawn(async move {
+    dispatcher.notify_group_info_update(&amp;member_ids, &amp;conv_id_str, name, avatar, None, None).await;
+});
+</code></pre>
+<blockquote>
+<p><code>ConversationUpdate</code> 负责消息预览和未读数（每条消息触发，保持轻量），<code>GROUP_INFO_UPDATE</code> 负责群信息变更（改名/改公告/解散时触发，语义清晰）。两种帧各司其职，不互相污染。</p>
+</blockquote>
+<hr />
+<h5 id="5-接口与测试">5. 接口与测试</h5>
+<p>im-group 的路由从 7 个扩展到 14 个：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>路径</th>
+<th>说明</th>
+<th>权限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/groups/{id}/members</td>
+<td>邀请入群</td>
+<td>群成员</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/groups/{id}/members/{uid}</td>
+<td>踢人</td>
+<td>群主</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/groups/{id}/leave</td>
+<td>退群</td>
+<td>普通成员</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/groups/{id}/transfer</td>
+<td>转让群主</td>
+<td>群主</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/groups/{id}/disband</td>
+<td>解散群聊</td>
+<td>群主</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/groups/{id}/announcement</td>
+<td>群公告</td>
+<td>群主</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/groups/{id}</td>
+<td>修改群信息</td>
+<td>群主</td>
+</tr>
+</tbody>
+</table>
+<p>测试脚本包含 22 个步骤，覆盖所有正常路径和边界情况：邀请（成功 / 非成员 403 / 超人数上限）→ 踢人（成功 / 非群主 403 / 踢群主 400）→ 退群（成功 / 群主退群 400）→ 转让（成功 / 新群主非成员 400）→ 解散（成功 / 解散后发消息被拦截）→ 群公告（发布 / 编辑）→ 修改群名（成功 / 空名 400）。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cc23860799c34cbcb4f52b694edb3e02~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1115&amp;h=496&amp;s=52513&amp;e=png&amp;b=0c0c0c" alt="image.png" /></p>
+<p>全部 22 步 PASS。测试脚本自动生成接口文档到 <code>docs/features/im/group/api/group_manage/doc/</code>。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/26409938adf84abe8479e23ccb5dd6f9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=664&amp;h=357&amp;s=27590&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<hr />
+<h4 id="三-前端-群详情页-管理中心">三、前端：群详情页 - &quot;管理中心&quot;</h4>
+<p>后端 7 个新接口就绪，前端的工作量比预期更大。不只是给 GroupChatInfoPage 加功能，还催生了一个通用组件的下沉（MemberPickerPage）和一条新的 WS 实时推送链路（GROUP_INFO_UPDATE）。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3ae83cf355a94ababe8e3b7127522bf3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3978&amp;h=1431&amp;s=402978&amp;e=png&amp;a=1&amp;b=fcfbfb" alt="mermaid-diagram (94).png" /></p>
+<pre><code>client/modules/
+├── flash_shared/lib/src/
+│   ├── member_picker_page.dart           # 新建：通用选人页面（从 CreateGroupPage 提取）
+│   ├── selectable_member.dart            # 新建：可选成员数据模型（从 group_models 下沉）
+│   └── pinyin_util.dart                  # 迁移：拼音工具（从 flash_im_friend 下沉）
+├── flash_im_group/lib/src/
+│   ├── data/
+│   │   └── group_repository.dart         # 扩展：+7 个新方法
+│   └── view/
+│       ├── group_chat_info_page.dart     # 大幅扩展：完整群管理中心
+│       ├── edit_group_name_page.dart     # 新建：独立编辑群名页面
+│       ├── create_group_page.dart        # 重构：变为 MemberPickerPage 的薄包装
+│       └── group_announcement_page.dart  # 新建：群公告页
+├── flash_im_chat/lib/src/
+│   └── view/
+│       └── chat_page.dart                # 扩展：已解散状态 + 群公告横幅 + GROUP_INFO_UPDATE 监听
+├── flash_im_core/lib/src/
+│   └── logic/ws_client.dart              # 扩展：+groupInfoUpdateStream
+├── flash_im_conversation/lib/src/
+│   └── logic/conversation_list_cubit.dart # 扩展：监听 groupInfoUpdateStream 更新会话列表 name/avatar
+
+client/lib/src/
+└── home/view/home_page.dart              # 扩展：传入 groupDetailFetcher + 退群/解散导航
+</code></pre>
+<hr />
+<h5 id="1-memberpickerpage-从业务组件到通用组件">1. MemberPickerPage：从业务组件到通用组件</h5>
+<p>第 25 章写 CreateGroupPage 时，选人交互（字母索引 + 已选横条 + 搜索过滤）是和&quot;创建群聊&quot;绑在一起的。这一章<code>邀请入群</code>需要同样的选人交互，<code>踢人</code>也需要。只是勾选颜色从绿色变成红色，按钮文案从&quot;完成&quot;变成&quot;移除&quot;。</p>
+<table>
+<thead>
+<tr>
+<th>邀请入群</th>
+<th>移除群成员</th>
+<th>创建群聊</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fa654a2663c441d383b7ee20ccbd4d2e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=116890&amp;e=png&amp;b=fcfcfc" alt="MuMu-20260423-080231-427.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7f86ba4313d9435a8bb191d5d78c7c7f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=98008&amp;e=png&amp;b=f9f9f9" alt="MuMu-20260423-080252-590.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/099f97ebb3c042138b369d033cb4e0e9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=119577&amp;e=png&amp;b=fcfcfc" alt="MuMu-20260423-080334-928.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>与其给 CreateGroupPage 加一堆 <code>isRemoveMode</code> / <code>confirmLabel</code> 参数，不如把选人能力提取为一个与业务无关的通用组件 <code>MemberPickerPage</code>，放到 <code>flash_shared</code> 中。这样 邀请入群、移除群成员、创建群聊 等选择成员的界面都可以复用一套界面代码：</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_shared/lib/src/member_picker_page.dart
+class MemberPickerPage extends StatefulWidget {
+  final List&lt;SelectableMember&gt; members;
+  final Set&lt;String&gt; lockedIds;       // 锁定的成员（灰色勾选，不可取消）
+  final String title;                // &quot;选择联系人&quot; / &quot;移除成员&quot;
+  final String confirmLabel;         // &quot;完成&quot; / &quot;移除&quot;
+  final int minNewSelection;         // 最少选几个新成员
+  final bool isRemoveMode;           // 红色勾选 + 红色按钮
+  final void Function(MemberPickerResult)? onConfirm;
+}
+</code></pre>
+<p><code>CreateGroupPage</code> 变成了 <code>MemberPickerPage</code> 的薄包装——只加了群名自动拼接逻辑（≤3 人用顿号，&gt;3 人取前三 + &quot;等&quot;），其他全部委托给通用组件。
+同时下沉的还有 <code>SelectableMember</code>（从 group_models.dart）和 <code>PinyinUtil</code>（从 flash_im_friend）。这样 <code>flash_im_group</code> 和 <code>flash_im_friend</code> 都能直接用，不需要互相依赖。</p>
+<blockquote>
+<p>第 25 章说&quot;等后续邀请入群、@提醒、转发消息等场景也需要选人时，可以把 SelectableMember 提升到 flash_shared&quot;——这一章就兑现了。MemberPickerPage 现在支持三种场景：创建群聊、邀请入群、移除成员。未来 @提醒、转发消息可以直接复用。</p>
+</blockquote>
+<p>邀请入群时的三个细节：</p>
+<ul>
+<li>顶部横条只展示新选的人，已有成员不出现</li>
+<li>列表中已有成员灰色勾选不可点击</li>
+<li>&quot;完成(N)&quot;的 N 只计新选人数</li>
+</ul>
+<hr />
+<h5 id="2-群详情页-一个页面-两种面孔">2. 群详情页：一个页面，两种面孔</h5>
+<p>GroupChatInfoPage 根据 <code>_isOwner</code> 动态渲染完全不同的操作入口：</p>
+<p><strong>群主看到的</strong>：成员网格（含 +/- 按钮）→ 群头像（只展示）→ 群聊名称（可编辑）→ 群号 → 群公告 → 入群验证开关 → 蓝色&quot;转让群主&quot;按钮 → 红色&quot;解散群聊&quot;按钮。<br />
+<strong>普通成员看到的</strong>：成员网格（只有 + 按钮）→ 群头像（只展示）→ 群聊名称（只读）→ 群号 → 群公告 → 红色&quot;退出群聊&quot;按钮。</p>
+<p>非群主不展示入群验证开关和群管理相关入口。无 onTap 的设置项箭头隐藏但保持占位（颜色设为 transparent），不影响行高和对齐。</p>
+<blockquote>
+<p>client/modules/flash_im_group/lib/src/view/group_chat_info_page.dart</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>群主视角</th>
+<th>成员视角</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0260b3c670254e8bb842cfc01550f3b2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=123748&amp;e=png&amp;b=fcfcfc" alt="MuMu-20260423-080458-236.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6ae61aef93574855a441c81c33275e31~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=74646&amp;e=png&amp;b=fafafa" alt="MuMu-20260423-080519-372.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>踢人：MemberPickerPage 移除模式</strong></p>
+<p>群主点击&quot;-&quot;按钮，把可移除的成员（排除群主）转为 <code>SelectableMember</code> 列表，push <code>MemberPickerPage</code>（<code>isRemoveMode: true</code>）。红色勾选 + 红色&quot;移除&quot;按钮，选好后逐个调 <code>repository.removeMember</code>。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fe93eb8883d24e468e79d5b1ff0455ea~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=447&amp;h=259&amp;s=17626&amp;e=png&amp;b=fbfbfb" alt="image.png" /></p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_group/lib/src/view/group_chat_info_page.dart
+void _showRemoveSheet():
+    removable = members.where(m =&gt; m.user_id != ownerId)
+    selectableMembers = removable.map(m =&gt; SelectableMember(
+        id: m.user_id, nickname: m.nickname, avatar: m.avatar,
+        letter: PinyinUtil.getFirstLetter(m.nickname),
+    ))
+    ....
+    MemberPickerPage(
+        members: selectableMembers,
+        title: '移除成员',
+        confirmLabel: '移除',
+        isRemoveMode: true,   // 红色勾选 + 红色按钮
+        onConfirm: (result) {
+            for uid in result.newIds:
+                await repository.removeMember(conversationId, uid)
+            Toast(&quot;已移除 ${result.newIds.length} 人&quot;)
+            _load()
+        },
+    )
+</code></pre>
+<hr />
+<p><strong>群名编辑：EditGroupNamePage</strong></p>
+<p>群主点击&quot;群聊名称&quot;行时 push <code>EditGroupNamePage</code>——独立页面，展示群头像 + 输入框（预填当前群名），底部&quot;确定&quot;按钮（内容未变化时置灰）。比 AlertDialog 更好的编辑体验。</p>
+<table>
+<thead>
+<tr>
+<th>修改群名称</th>
+<th>修改群名提示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67e54e6ea21240438ecec9c2bcbab546~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=61666&amp;e=png&amp;b=ffffff" alt="MuMu-20260423-081419-712.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a394367053544e8b899f5655daf14fdd~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=189510&amp;e=png&amp;b=faf9f9" alt="MuMu-20260423-081435-978.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>修改群名后后端发系统消息&quot;XXX 将群名修改为「YYY」&quot;，并通过 GROUP_INFO_UPDATE 推送给所有群成员。</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_group/lib/src/view/group_chat_info_page.dart
+Future&lt;void&gt; _showEditNameDialog():
+    newName = await push EditGroupNamePage(
+        currentName: detail.name,
+        avatar: resolveUrl(detail.avatar),  
+    )
+    if newName != null &amp;&amp; newName != currentName:
+        await repository.updateGroup(conversationId, name: newName)
+        _load()
+</code></pre>
+<hr />
+<p><strong>转让与解散：底部独立按钮</strong></p>
+<p>不走&quot;群管理&quot;菜单，转让和解散直接作为底部的两个独立按钮。转让用蓝色（<code>#3B82F6</code>），解散用红色（<code>#F44336</code>），视觉上区分操作的严重程度。</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_group/lib/src/view/group_chat_info_page.dart
+// 群主底部
+if (_isOwner) ...[
+    _buildActionButton('转让群主', Color(0xFF3B82F6), _showTransferSheet),
+    _buildActionButton('解散群聊', Color(0xFFF44336), _confirmDisband),
+]
+// 普通成员底部
+else
+    _buildActionButton('退出群聊', Color(0xFFF44336), _confirmLeave)
+</code></pre>
+<p>已解散的群聊，并不会从会话里消失，而是禁用聊天、查看信息的功能。用户仍然可以看到历史消息。</p>
+<table>
+<thead>
+<tr>
+<th>解散群聊</th>
+<th>禁用功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4a08fd4077fe45a3b197758afa26c5ee~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=128657&amp;e=png&amp;b=737373" alt="MuMu-20260423-081802-761.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/96c59e39ee4a4f77943c97011cee4b4e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=178441&amp;e=png&amp;b=f9f9f9" alt="MuMu-20260423-081849-778.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="3-群公告页">3. 群公告页</h5>
+<p>群公告页有两种模式：查看和编辑。通过 <code>_isEditing</code> 状态切换。</p>
+<p><strong>查看模式</strong>：有公告时全屏展示（白色卡片 + 圆角 8 + 行高 1.6），无公告时居中&quot;暂无群公告&quot;+ 群主可见的&quot;发布群公告&quot;按钮。<br />
+<strong>编辑模式</strong>（仅群主）：AppBar 右侧&quot;编辑&quot;按钮切换到编辑模式，TextField（maxLines: null, minLines: 8, maxLength: 200），AppBar 右侧变为&quot;发布&quot;按钮。发布后后端发系统消息&quot;XXX 更新了群公告&quot;，并通过 GROUP_INFO_UPDATE 推送公告内容给所有群成员。</p>
+<table>
+<thead>
+<tr>
+<th>查看模式</th>
+<th>编辑模式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/08b8ade83f304cf7a80644106e269053~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=446&amp;h=156&amp;s=8216&amp;e=png&amp;b=fcfcfc" alt="image.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/76e6141f5bbe4525b2b0baf948d1a78c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=444&amp;h=193&amp;s=8906&amp;e=png&amp;b=fdfdfd" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_group/lib/src/view/group_chat_info_page.dart
+Future&lt;void&gt; _openAnnouncement():
+    // push 公告页，await 返回值
+    result = await Navigator.push(GroupAnnouncementPage(
+        repository: widget.repository,
+        conversationId: widget.conversationId,
+        currentAnnouncement: detail['announcement'],
+        isOwner: _isOwner,
+    ))
+    // 公告页 pop 时带回新公告文本，非 null 说明有更新
+    if result != null: _load()  // 重新加载群详情
+
+// ---&gt; client/modules/flash_im_group/lib/src/view/group_announcement_page.dart
+Future&lt;void&gt; _publish():
+    await repository.updateAnnouncement(conversationId, text)
+    Navigator.pop(context, text)  // 把新公告文本带回给群详情页
+
+// ---&gt; client/modules/flash_im_group/lib/src/data/group_repository.dart
+Future&lt;void&gt; updateAnnouncement(String groupId, String announcement):
+    await _dio.put('/groups/$groupId/announcement', data: {'announcement': announcement})
+    // 后端收到后：校验群主身份 → 更新 group_info 表
+    //   → send_system &quot;XXX 更新了群公告&quot;
+    //   → GROUP_INFO_UPDATE 推送给所有群成员
+</code></pre>
+<hr />
+<h5 id="4-异步拉取与-ws-实时同步">4. 异步拉取与 WS 实时同步</h5>
+<p>ChatPage 新增三个参数：<code>isDisband</code>（bool）、<code>announcement</code>（String?）、<code>groupDetailFetcher</code>（异步回调）。</p>
+<p><strong>进入时异步拉取</strong>：<code>groupDetailFetcher</code> 由 home_page 注入（调 <code>GroupRepository.getGroupDetail</code>），ChatPage 在 initState 中异步调用，拿到最新的 announcement 和 status。<br />
+<strong>WS 实时同步</strong>：ChatPage 监听 <code>WsClient.groupInfoUpdateStream</code>，收到 GROUP_INFO_UPDATE 帧时动态更新 <code>_title</code>（群名）、<code>_announcement</code>（公告横幅）、<code>_isDisband</code>（解散状态）。A 改了群名，B 在 ChatPage 里立刻看到标题变化——不需要退出重进。</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_chat/lib/src/view/chat_page.dart
+_groupInfoSub = context.read&lt;WsClient&gt;().groupInfoUpdateStream.listen((frame) {
+    final update = GroupInfoUpdate.fromBuffer(frame.payload);
+    if (update.conversationId != widget.conversationId) return;
+    setState(() {
+        if (update.hasName()) _title = update.name;
+        if (update.hasAnnouncement()) _announcement = update.announcement;
+        if (update.hasStatus()) _isDisband = update.status == 1;
+    });
+});
+</code></pre>
+<blockquote>
+<p><code>ConversationUpdate</code> 负责消息预览和未读数（每条消息触发），<code>GROUP_INFO_UPDATE</code> 负责群信息变更（改名/改公告时触发）。ChatPage 和 ConversationListCubit 各自监听自己关心的帧，互不干扰。</p>
+</blockquote>
+<hr />
+<p><strong>会话列表实时同步</strong></p>
+<p>ConversationListCubit 也监听 <code>groupInfoUpdateStream</code>。收到 GROUP_INFO_UPDATE 帧时，更新匹配会话的 name 和 avatar。这样改群名后，会话列表的群名也实时更新——和 ChatPage 标题同步。</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_conversation/lib/src/logic/conversation_list_cubit.dart
+_groupInfoSub = _wsClient?.groupInfoUpdateStream.listen(_handleGroupInfoUpdate);
+
+void _handleGroupInfoUpdate(WsFrame frame):
+    update = GroupInfoUpdate.fromBuffer(frame.payload)
+    conversations = current.conversations.map((c) {
+        if c.id == update.conversationId:
+            return c.copyWith(
+                name: update.hasName() ? update.name : c.name,
+                avatar: update.hasAvatar() ? update.avatar : c.avatar,
+            )
+        return c
+    })
+    emit(ConversationListLoaded(conversations))
+</code></pre>
+<p>比如群主更新了群名称，<code>柿红</code> 在会话列表页：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8336cd27e8fa4ad68531af518e7549c8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=923&amp;h=440&amp;s=62432&amp;e=png&amp;b=fcfcfc" alt="image.png" /></p>
+<p>此时 <code>柿红</code> 被推送 GROUP_INFO_UPDATE 帧，正是因为上面的操作，会话列表才能在不主动刷新的情况下，及时更新：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f3f258ae93b444c4938646af5995c0fc~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=454&amp;h=142&amp;s=16213&amp;e=png&amp;b=f6f6f6" alt="image.png" /></p>
+<hr />
+<h5 id="6-主应用集成与模块协作">6. 主应用集成与模块协作</h5>
+<blockquote>
+<p>client/lib/src/home/view/home_page.dart</p>
+</blockquote>
+<p>home_page 是所有群聊功能的组装点——它不实现业务逻辑，只负责把各个模块的能力串联在一起。这一章它要注入三个新回调，每个都解决一个跨模块的协作问题。</p>
+<p><strong>groupDetailFetcher：让 ChatPage 不依赖 GroupRepository</strong></p>
+<p>ChatPage 在 <code>flash_im_chat</code> 模块中，GroupRepository 在 <code>flash_im_group</code> 模块中。如果 ChatPage 直接 import GroupRepository，两个模块就产生了耦合。解法是通过回调注入——home_page 同时认识两个模块，由它负责&quot;翻译&quot;：</p>
+<pre><code class="language-dart">// ---&gt; client/lib/src/home/view/home_page.dart
+ChatPage(
+    conversationId: conversation.id,
+    isGroup: true,
+    groupDetailFetcher: () =&gt;
+        context.read&lt;GroupRepository&gt;().getGroupDetail(conversation.id),
+    // ...
+)
+</code></pre>
+<p>ChatPage 只知道&quot;调这个回调能拿到群详情&quot;，不知道数据从哪来。和第 25 章 <code>friendsFetcher</code> 的设计思路一样——模块只定义自己需要什么，由组装层负责提供。</p>
+<hr />
+<p><strong>friendsFetcher：好友数据到选人页的桥梁</strong></p>
+<p>邀请入群需要好友列表，但 GroupChatInfoPage 不认识 FriendCubit。home_page 复用已有的 <code>_friendsToMembers()</code> 方法，把 <code>Friend</code> 转为 <code>SelectableMember</code> 后注入：</p>
+<pre><code class="language-dart">// ---&gt; client/lib/src/home/view/home_page.dart
+GroupChatInfoPage(
+    friendsFetcher: () async =&gt; _friendsToMembers(),
+    // ...
+)
+</code></pre>
+<p>这个方法在第 25 章创建群聊时就写好了，现在邀请入群直接复用——同一个转换逻辑，两个使用场景。</p>
+<hr />
+<p><strong>onLeaveOrDisband：退两层的导航回调</strong></p>
+<p>退群或解散成功后，需要从 GroupChatInfoPage → ChatPage 连续退两层回到会话列表。这个导航逻辑不能写在 GroupChatInfoPage 里——它不知道自己外面套了几层页面。由 home_page 注入：</p>
+<pre><code class="language-dart">// ---&gt; client/lib/src/home/view/home_page.dart
+GroupChatInfoPage(
+    onLeaveOrDisband: () {
+        Navigator.of(context).popUntil((route) =&gt; route.isFirst);
+        _convCubit.loadConversations();
+    },
+    // ...
+)
+</code></pre>
+<blockquote>
+<p><code>popUntil((route) =&gt; route.isFirst)</code> 退到根路由，不管中间套了几层页面都能正确退回。比 <code>..pop()..pop()</code> 硬编码层数更健壮，万一以后中间多插一层页面，不用改这里。</p>
+</blockquote>
+<hr />
+<h4 id="四-本章小结">四、本章小结</h4>
+<p>群聊管理其实还有非常多的细碎功能，比如群体禁言、对每个成员禁言、修改头像、管理员机制等。限于篇幅，这里只介绍最核心的功能。大家有兴趣的也可以，自己继续建一个分支处理这些功能。</p>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>群成员管理与群详情</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.15.0">v0.15.0</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/4e7034fb9bb1c0c7fb2f593cc8b14f660ffa9a3d">commit</a></td>
+</tr>
+</tbody>
+</table>
+<p>群聊从&quot;能建能搜能审批&quot;走到了&quot;能管&quot;。后端 im-group 路由翻倍到 14 个，前端 GroupChatInfoPage 从信息展示页变成了群管理中心。功能网络从 81 个节点增长到 93 个。</p>
+<p>这一章最有价值的不是那些 CRUD 接口——踢人、退群、转让的代码模式几乎一样。真正值得带走的是设计决策：</p>
+<p><strong>两种 WS 帧各司其职</strong>。<code>ConversationUpdate</code> 每条消息触发，只带预览和未读数，保持轻量；<code>GROUP_INFO_UPDATE</code> 只在群信息变更时触发，带 name/avatar/announcement/status。不把低频信息塞进高频通道，是实时系统的基本纪律。</p>
+<p><strong>组件下沉的时机</strong>。MemberPickerPage 不是一开始就设计为通用组件的——第 25 章它叫 CreateGroupPage，和&quot;创建群聊&quot;绑在一起。直到这一章邀请入群和踢人都需要选人交互时，才把它提取到 flash_shared。第一次写的时候不需要通用，第三次复用的时候自然下沉。</p>
+<p>意外收获是 <code>AppError</code>： 一个 <code>COALESCE(status, 0)</code> 的类型不匹配 bug，暴露了项目中 <code>.map_err(|_| StatusCode)</code> 反模式的危害。最好的基础设施不是提前规划的，而是被一个具体的痛点逼出来的。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-26.html">← 枝叶#3 ｜ 加群与审批</a>
+      <a class="next" href="ch-28.html">枝叶#5 ｜ 在线状态与已读回执 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-需求分析">一、需求分析</a></li>
+      <li class="lv5"><a href="#1-交互链分析">1. 交互链分析</a></li>
+      <li class="lv5"><a href="#2-逻辑流程树">2. 逻辑流程树</a></li>
+      <li class="lv5"><a href="#3-功能编号-新节点入网">3. 功能编号：新节点入网</a></li>
+      <li class="lv4"><a href="#二-后端-im-group-的生长">二、后端：im-group 的生长</a></li>
+      <li class="lv5"><a href="#1-数据模型">1. 数据模型</a></li>
+      <li class="lv5"><a href="#2-核心逻辑">2. 核心逻辑</a></li>
+      <li class="lv5"><a href="#3-apperror-一个-500-错误催生的基础设施">3. AppError：一个 500 错误催生的基础设施</a></li>
+      <li class="lv5"><a href="#4-group-_info-_update-群信息变更的实时推送">4. GROUP\_INFO\_UPDATE：群信息变更的实时推送</a></li>
+      <li class="lv5"><a href="#5-接口与测试">5. 接口与测试</a></li>
+      <li class="lv4"><a href="#三-前端-群详情页-管理中心">三、前端：群详情页 - &quot;管理中心&quot;</a></li>
+      <li class="lv5"><a href="#1-memberpickerpage-从业务组件到通用组件">1. MemberPickerPage：从业务组件到通用组件</a></li>
+      <li class="lv5"><a href="#2-群详情页-一个页面-两种面孔">2. 群详情页：一个页面，两种面孔</a></li>
+      <li class="lv5"><a href="#3-群公告页">3. 群公告页</a></li>
+      <li class="lv5"><a href="#4-异步拉取与-ws-实时同步">4. 异步拉取与 WS 实时同步</a></li>
+      <li class="lv5"><a href="#6-主应用集成与模块协作">6. 主应用集成与模块协作</a></li>
+      <li class="lv4"><a href="#四-本章小结">四、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

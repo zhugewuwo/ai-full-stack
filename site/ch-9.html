@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>种子#3 ｜ 让心脏开始跳动 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li class="active"><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>种子#3 ｜ 让心脏开始跳动</h1>
+<blockquote>
+<p>一个生命体最初的标志，不是它有多复杂，而是它的心脏开始跳动——持续地、不间断地跳动。</p>
+</blockquote>
+<p>在生物学中，心脏是最早发育成熟的器官之一。人类胚胎在第三周就开始出现心跳，比大脑、四肢、眼睛都要早。因为生命的第一要务不是思考，不是行动，而是——循环。血液必须流动起来，养分才能被输送到每一个正在生长的细胞。</p>
+<p>对一个即时通信产品来说，道理是一样的。它的&quot;心跳&quot;不是某个接口能返回一次数据，而是：<strong>客户端和服务端之间，建立一条持续的、双向的通信通道，随时可以互相感知对方的存在。</strong></p>
+<hr />
+<h4 id="一-后端支持-websocket-接口">一、后端支持 WebSocket 接口</h4>
+<p>在前面的章节中，我们已经在 playground 里跑通了 HTTP 接口请求——前端发一个请求，后端返回一个响应。那是一次性的交互，像用电极刺激了一下肌肉，看到它抽动了一下。请求结束，连接就断了。</p>
+<p>真正的心跳不是这样的。心脏不会跳一下就停，它是持续跳动的。对应到技术世界，这种&quot;持续跳动&quot;的能力，叫做 <strong>WebSocket</strong>。</p>
+<hr />
+<h5 id="1-了解-http-和-websocket-的区别">1. 了解 HTTP 和 WebSocket 的区别</h5>
+<p>在动手之前，我想先搞清楚这两个东西的本质区别。直接问 AI 吧：</p>
+<blockquote>
+<p>Q: 我在做一个即时通信产品，之前用 HTTP 实现了接口请求。现在需要实时通信能力。<br />
+请为我对比 HTTP 和 WebSocket 的区别，重点说明为什么 IM 产品必须用 WebSocket。<br />
+用通俗易懂的方式，合理使用 mermaid 展示通信流程的差异。<br />
+写到 docs/research/project/websocket_vs_http.md 中</p>
+</blockquote>
+<p>AI 给了一份非常清晰的<a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/research/project/websocket_vs_http.md">对比文档</a>。如果觉得不直观，或看不懂，甚至你可以让 AI 为你设计漫画分镜，再让支持绘制的 AI 根据分镜文案，制作图片，如下所示，可以非常直观地可看出 HTTP 和 WebSocket 的区别：</p>
+<blockquote>
+<p>Q: 我觉得是不是可以通过可爱漫画，来展示知识，这样平淡的知识也能更丰富。为我准备可爱卡通角色的对话场景和分镜。</p>
+</blockquote>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1b7d68e8fd4940ad967233005cf41f9f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1719&amp;h=866&amp;s=2066831&amp;e=png&amp;b=f4e5d4" alt="image.png" /></p>
+<p>如果 HTTP 是心脏跳一下就停，WebSocket 就是心脏持续跳动。所以对于即时通信来说，这个区别是致命的：</p>
+<ul>
+<li>用 HTTP，客户端只能主动问服务端&quot;有没有新消息？&quot;——这叫轮询，效率低，延迟高</li>
+<li>用 WebSocket，服务端可以主动推送&quot;你有一条新消息&quot;——实时、高效、自然</li>
+</ul>
+<p>好，概念清楚了。接下来让 AI 帮我们在 playground 里把这颗心脏装上去。</p>
+<hr />
+<h5 id="2-后端-给服务器装上-websocket">2.后端：给服务器装上 WebSocket</h5>
+<p>目前我们的后端只有 <code>/v</code> 和 <code>/conversation</code> 两个 HTTP 接口。现在需要加一个 WebSocket 端点，让客户端可以和服务端保持持续连接。</p>
+<h5 id="1-让-ai-添加-websocket-端点">1. 让 AI 添加 WebSocket 端点</h5>
+<blockquote>
+<p>Q: 在后端 server 项目中，新增一个 WebSocket 端点 <code>/ws</code>：</p>
+<ol>
+<li>客户端连接后，服务端发送一条欢迎消息</li>
+<li>客户端发送文本消息，服务端回复 &quot;echo: {原始消息}&quot;</li>
+<li>连接建立和断开时，在控制台打印日志<br />
+这是 playground 阶段的练习，保持简单，不需要认证</li>
+</ol>
+</blockquote>
+<p>然后 AI 在后端项目中添加了 WebSocket 的处理逻辑，而且还给了验证方式：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/316a6c749cdc4614a231122bb4d15acb~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=838&amp;h=311&amp;s=68377&amp;e=png&amp;b=eae9ed" alt="image.png" /></p>
+<p>来看看核心代码——这是 axum 处理 WebSocket 连接的关键部分:<br />
+<code>注</code>: 毕竟是编程方面的书籍，文中会放置一些核心的代码，来介绍具体实现。如果不太在意的话，也可以忽略。或者你对实现有任何问题或感兴趣的点，AI 也可以为你解答。</p>
+<pre><code class="language-rust">/// GET /ws — WebSocket 升级端点
+async fn ws_handler(ws: WebSocketUpgrade) -&gt; impl IntoResponse {
+    ws.on_upgrade(handle_socket)
+}
+
+/// 处理单个 WebSocket 连接
+async fn handle_socket(mut socket: WebSocket) {
+    println!(&quot;🔗 WebSocket 连接已建立&quot;);
+
+    let welcome = &quot;欢迎连接 Flash IM WebSocket 服务！&quot;;
+    let _ = socket.send(Message::Text(welcome.into())).await;
+
+    while let Some(Ok(msg)) = socket.next().await {
+        match msg {
+            Message::Text(text) =&gt; {
+                println!(&quot;📨 收到文本: {text}&quot;);
+                let reply = format!(&quot;echo: {text}&quot;);
+                if socket.send(Message::Text(reply.into())).await.is_err() {
+                    break;
+                }
+            }
+            Message::Close(_) =&gt; break,
+            _ =&gt; {}
+        }
+    }
+
+    println!(&quot;❌ WebSocket 连接已断开&quot;);
+}
+</code></pre>
+<p>这段代码值得仔细看一下。<code>ws.on_upgrade(handle_socket)</code> 是整个 WebSocket 的入口——它把一个普通的 HTTP 请求&quot;升级&quot;为 WebSocket 连接。升级之后，<code>handle_socket</code> 函数接管了这条连接，进入循环来持续监听客户端发来的消息。</p>
+<p>注意这个 <code>while let</code> 循环。它不会主动退出，只有当客户端断开连接（<code>recv()</code> 返回 <code>None</code>）或者收到 <code>Close</code> 帧时才会结束。这就是&quot;持续连接&quot;的本质——一个不会主动结束的循环，一直在等待、接收、响应。</p>
+<hr />
+<h5 id="3-验证-websocket-是否工作">3. 验证 WebSocket 是否工作</h5>
+<p>虽然 AI 给了在浏览器控制台快速验证的方式，但是操作起来还是有点麻烦，问它一下有没有什么可以快速验证的方式。</p>
+<blockquote>
+<p>Q: 浏览器控制台快速验证太麻烦了，有没有可以快速验证的其他方案。</p>
+</blockquote>
+<p>结构 AI 直接写了个 html 的测试台。后端服务启动时，会打印测试台的链接。然后在这里看看链接情况，已经发送消息的情况。看起来流程是 OK 的：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/20d7db1f5a47419bb435ae2ec08140bc~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1287&amp;h=502&amp;s=101483&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<hr />
+<h4 id="二-让前端-flutter-连上这颗心脏">二：让前端 Flutter 连上这颗心脏</h4>
+<p>后端的 WebSocket 端点准备好了，接下来让前端连上去。</p>
+<h5 id="1-创建心跳通信模块">1. 创建心跳通信模块</h5>
+<blockquote>
+<p>Q: 在 playground 中新增一个 &quot;心跳通信&quot; 模块：<br />
+参考刚才 html 的测试台，实现前端 Flutter 的测试。<br />
+显示连接状态（连接中、已连接、已断开）<br />
+参考已有的 conversation 模块的分层结构（model/api/view），保持代码组织一致。<br />
+在 playground 首页增加入口</p>
+</blockquote>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/268c82861b214b13a41eef2b7a146736~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=840&amp;h=209&amp;s=57806&amp;e=png&amp;b=e6e5e9" alt="image.png" /></p>
+<blockquote>
+<p>Q: 运行一下 windows 的游乐场</p>
+</blockquote>
+<p>为了方便录屏和截图，我这边运行到 windows 上，现在游乐场里多出了心跳通信的按钮：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f9bafc1992294dd198c3497bf78824d3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1115&amp;h=343&amp;s=35190&amp;e=png&amp;b=f7f2fa" alt="image.png" /></p>
+<p>效果如下，左边是后端控制台的日志，右边是 Flutter 前端，目前看来连接、断开、发送信息都是正常的：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8d6a60fe1a0b465fb07166d07c3d73d3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=938&amp;h=492&amp;s=976669&amp;e=gif&amp;f=305&amp;b=f2edf6" alt="06.gif" /></p>
+<hr />
+<h5 id="2-前端实现的核心逻辑">2. 前端实现的核心逻辑</h5>
+<p>AI 为我在练习场内生成了 <code>heartbeat</code> 文件夹，并分成 model/api/view 三个层级，分别表示数据层、逻辑层、视图层:</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3eb7b890aec344dfa8b1106bce8f69c4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=912&amp;h=478&amp;s=34147&amp;e=png&amp;b=f4f6fa" alt="image.png" /></p>
+<p><strong>数据层</strong></p>
+<p>最简单的是 model，其中定义了 <code>WsMessage</code> 来承载消息的数据：</p>
+<pre><code class="language-dart">/// WebSocket 消息实体
+class WsMessage {
+  final String text;
+  final bool isMe; // true=我发的, false=服务端回的
+  final DateTime time;
+
+  const WsMessage({
+    required this.text,
+    required this.isMe,
+    required this.time,
+  });
+
+  @override
+  String toString() =&gt; '${isMe ? &quot;→&quot; : &quot;←&quot;} $text';
+}
+</code></pre>
+<hr />
+<p><strong>逻辑层</strong></p>
+<p>api 中是前端和后端链接通信的核心，使用了 <strong>WebSocketChannel</strong> 进行连接，通过连接的 <code>_channel</code> 通道对象，可以得到 <code>Stream</code> 流：</p>
+<ul>
+<li>你可以把它看成一个信息的小河流，每次后端发的消息，都会通过这条河流，飘到前端。</li>
+</ul>
+<pre><code class="language-dart">import 'package:web_socket_channel/web_socket_channel.dart';
+import '../../config.dart';
+
+/// 连接状态
+enum WsStatus { disconnected, connecting, connected }
+
+/// WebSocket 通信层
+class WsApi {
+  WebSocketChannel? _channel;
+  WsStatus _status = WsStatus.disconnected;
+
+  WsStatus get status =&gt; _status;
+
+  /// 建立连接，返回消息流
+  Stream&lt;dynamic&gt; connect() {
+    _status = WsStatus.connecting;
+    final uri = Uri.parse(
+      'ws://${PlaygroundConfig.host}:${PlaygroundConfig.port}/ws',
+    );
+    _channel = WebSocketChannel.connect(uri);
+    _channel!.ready.then((_) =&gt; _status = WsStatus.connected);
+    return _channel!.stream;
+  }
+}
+</code></pre>
+<p>另外，前端也可以使用 <code>通道</code> 中的 <code>sink</code> 向后端发消息。比如现在后端的逻辑是: 当接收到前端的文本消息，将文本原封不动地还回去：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/11cbe98de33d4641b755cfe44afdd6ce~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=894&amp;h=208&amp;s=38819&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<pre><code class="language-dart">  /// 发送文本消息
+  void send(String text) {
+    _channel?.sink.add(text);
+  }
+
+  /// 断开连接
+  void disconnect() {
+    _channel?.sink.close();
+    _channel = null;
+    _status = WsStatus.disconnected;
+  }
+</code></pre>
+<hr />
+<p><strong>视图层</strong></p>
+<p>视图层的核心是，点击按钮，触发 <code>connect</code> 连接逻辑。然后监听 Stream 流, 每次变化时，会更新消息列表的信息。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/13f2cd38dee14743bc09fe30bf3fceb3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1103&amp;h=658&amp;s=122172&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>至于具体的界面构建，这里就不展开了，详情可以看这次的代码提交记录。</p>
+<hr />
+<h4 id="三-单元测试保障逻辑正确性">三、单元测试保障逻辑正确性</h4>
+<p>回头看一下刚才 AI 生成的心跳模块，它把代码分成了三层：<code>model</code>（数据）、<code>api</code>（逻辑）、<code>view</code>（界面）。之前的会话列表模块也是这个结构。这不是巧合，而是一种刻意的分层习惯。</p>
+<hr />
+<h5 id="1-为什么要分层">1. 为什么要分层</h5>
+<p>你可能会想：代码量这么少，全写在一个文件里不也行？当然行。但分层带来的好处，在项目长大之后会越来越明显：</p>
+<ul>
+<li><strong>职责清晰</strong>：model 只管数据长什么样，api 只管怎么和后端通信，view 只管界面怎么画。改一个地方不会牵连其他地方。</li>
+<li><strong>可替换</strong>：比如以后把 WebSocket 换成别的协议，只需要改 api 层，view 层完全不用动。</li>
+<li><strong>可测试</strong>：这是最关键的一点——分层之后，每一层都可以单独拿出来验证。</li>
+</ul>
+<p>最后这一点，引出了一个非常重要的开发习惯：<strong>单元测试</strong>。</p>
+<hr />
+<h5 id="2-单元测试是什么">2. 单元测试是什么</h5>
+<p>简单说，单元测试就是：写一小段代码，去验证另一小段代码的行为是否符合预期。</p>
+<p>刚才我们验证 WebSocket 是否正常工作，靠的是打开 UI 手动点&quot;连接&quot;、输入消息、看回复。这当然可以，但问题是——无论是启动，还是交互，检验，都要耗费时间和精力。每次改了代码都要重复这套操作。如果有 10 个功能要验证呢？</p>
+<p>单元测试就是把这个&quot;手动验证&quot;的过程变成代码。写一次，以后每次改完代码跑一下，几秒钟就知道有没有破坏已有的功能。这就像体检。你不会等到身体出了大问题才去医院，定期体检能提前发现隐患。单元测试就是代码的体检。</p>
+<p>但是，在古法编程开发中，写测试是一件&quot;知道该做但经常偷懒&quot;的事。原因很简单：写测试本身也需要时间和精力，尤其是要构造各种测试数据、模拟各种边界情况。</p>
+<hr />
+<h5 id="3-ai-时代的单元测试">3. AI 时代的单元测试</h5>
+<p>但在 AI 时代，这件事变得轻松多了。刚才我们费了不少功夫在 UI 上点来点去验证 WebSocket，现在让 AI 帮我们把这个验证过程自动化：</p>
+<blockquote>
+<p>Q: 帮我验证一下心跳通信模块的代码逻辑是否正确，脱离 UI，直接测试 WebSocket 的连接和收发消息</p>
+</blockquote>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/089769a00a574f10a3d7635f05c098f5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1314&amp;h=628&amp;s=113074&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>这样查看 api 层的逻辑是否正确，就可以脱离 UI，直接验证 WebSocket 连接逻辑：</p>
+<pre><code class="language-sh">#启动后端
+cargo run
+
+#运行测试
+flutter test test/playground/heartbeat/ws_api_test.dart
+
+</code></pre>
+<p>注意看这几个测试做了什么：连接后能收到欢迎消息、发送文本能收到 echo 回复、断开后状态正确。这些就是我们刚才在 UI 上手动验证的那些事情，现在全部变成了可重复执行的代码。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c60190aa82de4eeeb1daca5d0914683d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=936&amp;h=484&amp;s=408468&amp;e=gif&amp;f=175&amp;b=0e0e0e" alt="07.gif" /></p>
+<hr />
+<h5 id="4-测试的本质是信心">4. 测试的本质是信心</h5>
+<p>写测试不是为了追求覆盖率的数字，而是为了给自己信心：<strong>改了代码之后，我敢说它还是对的。</strong></p>
+<p>在 AI 辅助开发的模式下，这一点尤其重要。AI 帮你生成了大量代码，你不可能逐行去审查每一行。但如果有一套测试在那里守着，你就有了一道安全网——AI 写的代码对不对，跑一下测试就知道。所以我的建议是：</p>
+<blockquote>
+<p>每完成一个模块，顺手让 AI 帮你生成测试。成本几乎为零，但收益是持续的。</p>
+</blockquote>
+<hr />
+<h4 id="四-本章小结">四、本章小结</h4>
+<p>快速连接: <a href="https://juejin.cn/book/7591146810538721332/section/7617530392026824747"><strong>附录#认知：推与拉——两种世界观</strong></a></p>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WebSocket 简单通信</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/releases/tag/v0.2.0">v0.2.0</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/d2aa8aea692ef3752000390e0bb69fc8c8808329">d2aa8ae</a></td>
+</tr>
+</tbody>
+</table>
+<p>这一章，我们完成了三件事：</p>
+<ul>
+<li>
+<p><strong>让产品有了心跳</strong>——后端新增 WebSocket 端点，前端 Flutter 连上去，客户端和服务端之间建立了持续的双向通信通道。</p>
+</li>
+<li>
+<p><strong>学会了分层的价值</strong>——model/api/view 的结构不是形式主义，而是让每一层都能独立替换、独立测试的基础。</p>
+</li>
+<li>
+<p><strong>用测试守住正确性</strong>——借助 AI 生成测试代码，把手动验证变成了可重复执行的自动化检查，几秒钟就能确认核心逻辑没被破坏。</p>
+</li>
+</ul>
+<p>到这里，Flash IM 的前后端通信的心脏已经跳起来了。但心跳只是活着的证明，不是安全的保障。试想一下：现在随便一个人知道了你的 WebSocket 地址，就能连上来收发消息——服务端根本不知道对面是谁。个没有身份认证的通信系统，就像一部谁都能接听的电话。<br />
+下一章，我们来解决这个问题。</p>
+<hr />
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-8.html">← 种子#2 ｜ 产品的功能网络</a>
+      <a class="next" href="ch-10.html">种子#4 ｜ 我是谁？ 身份标识 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-后端支持-websocket-接口">一、后端支持 WebSocket 接口</a></li>
+      <li class="lv5"><a href="#1-了解-http-和-websocket-的区别">1. 了解 HTTP 和 WebSocket 的区别</a></li>
+      <li class="lv5"><a href="#2-后端-给服务器装上-websocket">2.后端：给服务器装上 WebSocket</a></li>
+      <li class="lv5"><a href="#1-让-ai-添加-websocket-端点">1. 让 AI 添加 WebSocket 端点</a></li>
+      <li class="lv5"><a href="#3-验证-websocket-是否工作">3. 验证 WebSocket 是否工作</a></li>
+      <li class="lv4"><a href="#二-让前端-flutter-连上这颗心脏">二：让前端 Flutter 连上这颗心脏</a></li>
+      <li class="lv5"><a href="#1-创建心跳通信模块">1. 创建心跳通信模块</a></li>
+      <li class="lv5"><a href="#2-前端实现的核心逻辑">2. 前端实现的核心逻辑</a></li>
+      <li class="lv4"><a href="#三-单元测试保障逻辑正确性">三、单元测试保障逻辑正确性</a></li>
+      <li class="lv5"><a href="#1-为什么要分层">1. 为什么要分层</a></li>
+      <li class="lv5"><a href="#2-单元测试是什么">2. 单元测试是什么</a></li>
+      <li class="lv5"><a href="#3-ai-时代的单元测试">3. AI 时代的单元测试</a></li>
+      <li class="lv5"><a href="#4-测试的本质是信心">4. 测试的本质是信心</a></li>
+      <li class="lv4"><a href="#四-本章小结">四、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

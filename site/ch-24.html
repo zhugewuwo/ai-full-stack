@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>枝叶#1 ｜ 好友关系 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li class="active"><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>枝叶#1 ｜ 好友关系</h1>
+<blockquote>
+<p>能说话不等于认识，认识不等于信任。关系，是双向确认的产物。</p>
+</blockquote>
+<p>上一章结束时，闪讯已经能发文字、图片、视频、文件了。但有一个尴尬的事实：任何人都可以给任何人发消息。没有好友的概念，没有申请和确认的过程，用户之间并没有存在真正的关系，如同一个个可以被任意连接的孤岛。这一章，我们要给岛屿修建专属的通路——建立好友关系系统。<br />
+最核心的是三大块，界面如下:</p>
+<ul>
+<li>通讯录中，展示用户的好友关系;可与好友发起对话。</li>
+<li>实现新添加朋友→搜索用户/扫码 →添加好友的流程。</li>
+<li>收到好友申请，用户可以在在审批界面进行统一和拒绝。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>通讯录展示</th>
+<th>添加朋友</th>
+<th>好友申请</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7c791d5b95a44fc798dd0f15df769f75~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=107896&amp;e=png&amp;b=fbfbfb" alt="MuMu-20260410-225956-200.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0fda7051764243ba92ba4d4401f0f54c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=98829&amp;e=png&amp;b=f9f9f9" alt="MuMu-20260411-000831-660.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9efd735800324c11b6d830ff54e6dc92~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=126358&amp;e=png&amp;b=fcfcfc" alt="MuMu-20260410-230024-687.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="一-好友与会话">一、好友与会话</h4>
+<p>好友关系和会话，可能在很多人眼里看起来很像。从用户感知来说，&quot;好友&quot;和&quot;聊天对象&quot;几乎是同义词。但从系统设计的角度看，它们是两个完全不同的领域。</p>
+<hr />
+<h5 id="1-好友与会话的区别">1. 好友与会话的区别</h5>
+<p>你认识一个人，和你跟这个人说过话，是两件事。你的通讯录里有一个人的号码，不代表你们之间有过任何对话。反过来，你在一个群里跟某人聊得热火朝天，但你们可能根本不是好友。这就是这个在概念上的本质区别：</p>
+<blockquote>
+<p>好友是关系，会话是行为的容器。</p>
+</blockquote>
+<p>关系是静态的、持久的、需要双方确认的。它回答的问题是 <strong>&quot;我们之间有没有连接&quot;</strong> 。它有状态——pending(发送中)、accepted(接收)、rejected(拒绝)——像一个有限状态机。</p>
+<p>会话是动态的、临时的、单方面就能发起的。它回答的问题是 <strong>&quot;消息往哪里投递&quot;</strong>。它没有&quot;申请&quot;和&quot;确认&quot;的概念，创建即存在。</p>
+<p>有趣的是，用户几乎感知不到这个区别。在微信里，点好友列表里的人，进入聊天；你点消息列表里的人，也进入聊天。入口不同，终点相同。用户眼里只有&quot;人&quot;，没有&quot;关系&quot;和&quot;会话&quot;的分别。</p>
+<hr />
+<h5 id="2-好友与会话的关系">2.好友与会话的关系</h5>
+<p>想想现实世界。你的手机通讯录里有 500 个人，但你上周只跟其中 12 个人说过话。</p>
+<blockquote>
+<p>通讯录是关系的存档，聊天记录是行为的痕迹。关系是&quot;势能&quot;，会话是&quot;动能&quot;。</p>
+</blockquote>
+<p>你认识一个人，这是势能；你们开始聊天，势能转化为动能。但势能不会因为动能消失而消失——你们一个月没聊天，不代表你们不是朋友了。这揭示了一个更深的设计原则：<strong>状态和行为应该分开存储</strong>。好友关系是状态（谁认识谁），会话是行为的容器（谁在跟谁说话）。</p>
+<p>在闪讯中，两者之间的关系是：</p>
+<ul>
+<li>接受好友请求之后，会自动创建一个会话，并附加对方申请时的留言。</li>
+<li>通讯录点击好友后，会进入详情页，其中可以发消息来打开或新建会话。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>标题</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e2b93407dc864ef093e0ca8eb83954fe~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=195375&amp;e=png&amp;b=fcfcfc" alt="MuMu-20260411-083353-967.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8fea8e2065a94bb4b090f6d4e8566f88~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=63576&amp;e=png&amp;b=fafafa" alt="MuMu-20260411-085802-781.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="3-在系统中区分的意义">3. 在系统中区分的意义</h5>
+<p>理解了势能和动能的区别，再看系统设计就清晰了。好友和会话必须分开，不是因为技术偏好，而是因为它们在三个维度上有本质差异：</p>
+<ul>
+<li>
+<p><strong>生命周期不同</strong>。 删除好友时，聊天记录应该还在。如果好友和会话是同一个东西，删好友就意味着删会话——势能归零的同时，动能的历史痕迹也被抹去了。但用户的期望是：我不想在通讯录里看到这个人了，但我们之前聊过的东西别丢。分开存储，才能满足这种&quot;选择性遗忘&quot;。</p>
+</li>
+<li>
+<p><strong>参与规则不同</strong>。 好友关系是点对点的、对称的、需要双方确认的。会话可以是一对多的、不对称的——群聊里的人不需要互为好友。如果把关系和会话绑在一起，群聊就没法设计了：难道群里每两个人都要先加好友？</p>
+</li>
+<li>
+<p><strong>扩展方向不同</strong>。 好友关系会长出备注、分组、黑名单、权限——这些都是关系的属性。会话会长出消息类型、已读回执、置顶、免打扰——这些都是行为容器的属性。两棵树从同一个根分叉，但枝叶完全不同。把它们放在同一张表里，每加一个功能都要小心翼翼地区分&quot;这是关系的事还是会话的事&quot;。</p>
+</li>
+</ul>
+<p>分开之后，好处立竿见影：好友模块可以独立测试，不注入会话服务照样跑得通。</p>
+<hr />
+<h4 id="二-好友系统的需求分析">二、好友系统的需求分析</h4>
+<p>了解好友和会话的联系和区别后，继续通过需求三段论，来整理 AI 开发流程文档。下面是本章最终的，前后端功能鸟瞰图，大家可以先整体了解一下在干什么：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91aaefdf80774338af403152c4c0ff18~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=4812&amp;h=2651&amp;s=602217&amp;e=png&amp;a=1&amp;b=fbfbfb" alt="mermaid-diagram (58).png" /></p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>friend/v0.0.1</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/im/friend/v0.0.1/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/im/friend/v0.0.1/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/im/friend/v0.0.1/client/tasks.md">tasks.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/im/friend/v0.0.1/server/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/master/docs/features/im/friend/v0.0.1/server/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="1-交互链与目标">1. 交互链与目标</h5>
+<p>和上一章的富媒体消息不同，好友关系的交互链不是线性的&quot;发送→接收&quot;，而是一个双方参与的协商过程。A 发起申请，B 决定是否接受，接受后系统自动创建会话并发送打招呼消息。这个&quot;接受后的连锁操作&quot;是整个功能中最复杂的部分。</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>用户故事</th>
+<th>操作路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>搜索并添加</td>
+<td>作为用户 A，我想搜索并添加 B 为好友</td>
+<td>通讯录 → + → 添加朋友 → 搜索 → 点击用户 → 添加+留言 → 申请已发送</td>
+</tr>
+<tr>
+<td>接受申请</td>
+<td>作为用户 B，我想处理收到的好友申请</td>
+<td>通讯录红点 → 新的朋友 → 看到申请+留言 → 接受 → 成为好友+自动创建会话</td>
+</tr>
+<tr>
+<td>拒绝申请</td>
+<td>作为用户 B，我想拒绝陌生人的申请</td>
+<td>新的朋友 → 拒绝 → 申请消失</td>
+</tr>
+<tr>
+<td>查看好友</td>
+<td>作为用户，我想找到好友并聊天</td>
+<td>通讯录 → 好友列表 → 点击好友 → 详情页 → 发消息</td>
+</tr>
+<tr>
+<td>删除好友</td>
+<td>作为用户 A，我想删除不再联系的人</td>
+<td>好友详情页 → 删除好友 → 确认 → 双方关系解除</td>
+</tr>
+</tbody>
+</table>
+<p>前后端的目标诉求:</p>
+<p><strong>前端</strong></p>
+<ul>
+<li>新增 flash_im_friend 模块：好友列表页 + 好友申请页 + 用户搜索页</li>
+<li>扩展 WsClient：新增三条好友 Stream（FRIEND_REQUEST / FRIEND_ACCEPTED / FRIEND_REMOVED）</li>
+<li>重新生成 Dart proto 文件（ws.proto 新增帧类型和通知消息）</li>
+<li>改造 HomePage 底部导航&quot;通讯录&quot;Tab：从占位文本变为真实的好友列表</li>
+<li>通讯录 Tab 红点：收到好友申请时显示未读数</li>
+<li>扫码添加好友：扫描对方个人二维码，跳转资料页添加</li>
+</ul>
+<p><strong>后端</strong></p>
+<ul>
+<li>新增 im-friend 模块：好友申请管理 + 好友关系管理</li>
+<li>新增数据库迁移：friend_requests 表 + friend_relations 表</li>
+<li>新增 8 个好友 HTTP 接口：发送/接受/拒绝申请、查询收到/发送的申请、好友列表、删除好友、删除申请记录</li>
+<li>新增 2 个用户 HTTP 接口：GET /api/users/search + GET /api/users/:id（扩展 flash-user）</li>
+<li>扩展 ws.proto：新增 FRIEND_REQUEST / FRIEND_ACCEPTED / FRIEND_REMOVED 帧类型</li>
+<li>扩展 im-ws dispatcher：新增三个好友通知推送方法</li>
+<li>接受好友后自动创建私聊会话 + 发送打招呼消息</li>
+</ul>
+<hr />
+<h5 id="2-逻辑流程树">2. 逻辑流程树</h5>
+<p>好友系统的核心逻辑有两处：<strong>发送申请</strong> + <strong>申请审批</strong>，下面逐一看一下：<br />
+发送申请的逻辑比较直白：校验（不能加自己、用户存在、非好友）→ 写入申请表 → WS 通知对方。</p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+<th>产生的新事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T0</td>
+<td>A 发起 &quot;添加好友&quot;</td>
+<td>前端调用 POST /api/friends/requests</td>
+<td>—</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>服务端校验</td>
+<td>不能加自己、用户存在、非好友</td>
+<td>—</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>校验通过</td>
+<td>UPSERT friend_requests(status=pending)</td>
+<td>触发 WS 通知</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>WS 推送</td>
+<td>FRIEND_REQUEST 帧推送给 B</td>
+<td>B 端收到通知</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>B 端收到</td>
+<td>FriendCubit 更新申请列表，pendingCount++</td>
+<td>通讯录红点</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2bf4a5f787994c86b57d56792bce3215~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2731&amp;h=1330&amp;s=199626&amp;e=png&amp;a=1&amp;b=ececec" alt="mermaid-diagram (57).png" /></p>
+<p>有意思的是接受申请，它触发了一连串的副作用：</p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+<th>产生的新事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T0</td>
+<td>B 点击&quot;接受&quot;</td>
+<td>POST /api/friends/requests/:id/accept</td>
+<td>—</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>校验通过</td>
+<td>UPDATE friend_requests SET status=accepted</td>
+<td>—</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>创建好友关系</td>
+<td>INSERT friend_relations 双向（A→B 和 B→A），事务</td>
+<td>—</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>自动创建会话</td>
+<td>ConversationService.create_private(A, B)</td>
+<td>会话创建</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>发送打招呼消息</td>
+<td>以 A 的身份发送留言内容（或默认文本）</td>
+<td>消息广播</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>WS 通知 A</td>
+<td>FRIEND_ACCEPTED 帧 + CONVERSATION_UPDATE 帧</td>
+<td>A 端更新</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5339231b6a6c404c83adf2083c5c6465~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3570&amp;h=1618&amp;s=273010&amp;e=png&amp;a=1&amp;b=ececec" alt="mermaid-diagram (56).png" /></p>
+<hr />
+<h5 id="3-功能编号-新节点入网">3. 功能编号：新节点入网</h5>
+<p>分析完交互链和逻辑树，再看一下当前需求的功能节点，进入功能网络中的情况，下面是该局域网的总览关系图：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ba00adf1aa2c4719ab3ae90690b723fd~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3838&amp;h=1886&amp;s=583749&amp;e=png&amp;a=1&amp;b=fcfcfc" alt="mermaid-diagram (60).png" /></p>
+<p>加上这 13 个节点后，闪讯的功能网络从 52 个节点增长到 65 个。图中可以看到两个清晰的聚落：</p>
+<ul>
+<li>后端的好友领域（D-14~D-17）通过虚线连接已有的会话和消息模块，</li>
+<li>前端的好友页面群（P-20~P-27）围绕 FriendCubit 展开，通过 F-09 好友 WS 流分发接收实时通知。</li>
+</ul>
+<p>好友系统和消息系统的接触点只有两个：接受好友后调用 D-01 创建会话、调用 D-06 发送打招呼消息。除此之外，两个领域完全独立。这种&quot;只在特定时刻产生交集&quot;的结构，正是前面讨论的势能与动能分离在代码中的体现。</p>
+<p>前端的页面跳转链路也值得注意：P-25（添加朋友页）是入口枢纽，向下分叉出 P-22（搜索）和 P-27（扫码）两条路径，两条路径汇聚到 P-26（陌生人资料页），再流向 D-14（发送申请）。P-20（好友列表）则通过 P-24（好友详情页）连接到 D-01（会话创建），完成从&quot;认识&quot;到&quot;聊天&quot;的势能→动能转化。</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>新增编号</th>
+<th>节点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D（领域）</td>
+<td>D-14 ~ D-17</td>
+<td>好友申请管理、好友关系管理、好友实时通知、用户搜索/资料</td>
+</tr>
+<tr>
+<td>F（前端基础）</td>
+<td>F-09</td>
+<td>好友 WS 流分发（WsClient 新增三条 Stream）</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-20 ~ P-27</td>
+<td>好友列表页、好友申请页、用户搜索页、好友申请通知、好友详情页、添加朋友页、陌生人资料页、扫码页</td>
+</tr>
+</tbody>
+</table>
+<p>到这里，需求分析的三个投影面就齐了。相比于 <code>实现好友关系</code> 几个字，上面的三点功能分析，是不是更能让你了解，我们真正在做什么，需要干什么。其实对于 AI 也是一样，它明确该做什么是非常重要的前提。这就是需求分析的价值：</p>
+<ul>
+<li>交互链告诉我们用户会走什么路，</li>
+<li>逻辑树告诉我们系统在背后做了什么，</li>
+<li>功能节点入网，通过编号展示在全局网络中的位置。</li>
+</ul>
+<hr />
+<h4 id="三-后端-im-friend-模块">三、后端：im-friend 模块</h4>
+<p>好友是一个独立的领域。它和会话没有从属关系，和消息也没有直接依赖。所以后端选择新建一个独立的 crate（im-friend），而不是塞进 im-conversation 里。下面是 <code>im-friend</code> 模块在整个后端系统中的功能和关系：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d3dba9f729de403dadaa08a45335a358~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3449&amp;h=1650&amp;s=440755&amp;e=png&amp;a=1&amp;b=fafafa" alt="mermaid-diagram (61).png" /></p>
+<hr />
+<h5 id="1-数据模型-请求与关系表">1. 数据模型：请求与关系表</h5>
+<p>好友系统只需要两张新表，<code>friend_requests</code> 表记录好友申请的数据；<code>friend_relations</code> 表记录好友关系。好友的背后都是用户，所以它们都和账户表有所关联。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e8d8f9111b594c30b74a197bc6a251bd~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1694&amp;h=699&amp;s=74636&amp;e=png&amp;b=f2f0f5" alt="image.png" /></p>
+<p>先看好友申请表 <strong>friend_requests</strong> ：</p>
+<pre><code class="language-sql">-- ---&gt; server/migrations/20260407_004_friends.sql
+CREATE TABLE friend_requests (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    from_user_id BIGINT NOT NULL,
+    to_user_id BIGINT NOT NULL,
+    message VARCHAR(200),              -- 申请留言
+    status SMALLINT NOT NULL DEFAULT 0, -- 0:待处理 1:已接受 2:已拒绝
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    UNIQUE(from_user_id, to_user_id)   -- 同一对用户只能有一条申请
+);
+</code></pre>
+<p>UNIQUE 约束 <code>(from_user_id, to_user_id)</code> 是关键。配合 repository 层的 <code>ON CONFLICT DO UPDATE</code>，实现了 upsert 语义。重复发送申请不会报错，而是覆盖旧的留言并重置状态为 pending。这个策略对齐了微信的行为——你可以反复给同一个人发申请，修改留言内容，对方会收到最新的通知。</p>
+<pre><code>// ---&gt; server/modules/im-friend/src/repository.rs
+fn create_request(from_user_id, to_user_id, message):
+    INSERT INTO friend_requests (from_user_id, to_user_id, message)
+    VALUES ($1, $2, $3)
+    ON CONFLICT (from_user_id, to_user_id)
+    DO UPDATE SET message = $3, status = 0, updated_at = NOW()
+    RETURNING *
+</code></pre>
+<hr />
+<p>再看好友关系表 <strong>friend_relations</strong>。这里好友关系是要双向存储的，也就是说 A 和 B 成为好友时，插入两条记录：A→B 和 B→A。</p>
+<pre><code class="language-sql">CREATE TABLE friend_relations (
+    user_id BIGINT NOT NULL,
+    friend_id BIGINT NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    PRIMARY KEY (user_id, friend_id)
+);
+</code></pre>
+<p>查询&quot;我的好友列表&quot;时，只需要 <code>WHERE user_id = $1</code>，不需要 <code>WHERE user_id = $1 OR friend_id = $1</code> 这种 OR 条件。索引友好，查询简单。代价是写入时要在事务里插入两条记录：</p>
+<pre><code>// ---&gt; server/modules/im-friend/src/repository.rs
+fn create_relation(user_id, friend_id):
+    BEGIN TRANSACTION
+    INSERT INTO friend_relations (user_id, friend_id) VALUES ($1, $2) ON CONFLICT DO NOTHING
+    INSERT INTO friend_relations (user_id, friend_id) VALUES ($2, $1) ON CONFLICT DO NOTHING
+    COMMIT
+</code></pre>
+<p>删除好友同理，事务里删除两条。写入频率远低于查询频率，这个取舍是值得的。</p>
+<hr />
+<h5 id="2-三层架构-repository-service-api">2. 三层架构：repository → service → api</h5>
+<p>im-friend 的内部结构和 im-conversation、im-message 一致，三层各司其职：</p>
+<pre><code class="diagram language-rust" style="font-size:13.5px">// ---&gt; server/modules/im-friend/src/
+├── models.rs       # FriendRequest, FriendRelation, FriendError 等
+├── repository.rs   # 数据库操作（申请/关系的 CRUD）
+├── service.rs      # 业务逻辑（校验 + 调用 repo）
+├── api.rs          # HTTP 路由（8 个好友接口 + 错误响应）
+└── lib.rs          # 模块入口
+</code></pre>
+<p>models.rs 定义了错误枚举，每种错误映射到对应的 HTTP 状态码：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-friend/src/models.rs
+pub enum FriendError {
+    UserNotFound,       // → 404
+    RequestNotFound,    // → 404
+    RelationNotFound,   // → 404
+    AlreadyFriends,     // → 400
+    CannotAddSelf,      // → 400
+    Forbidden,          // → 403
+    Database(sqlx::Error), // → 500
+}
+</code></pre>
+<p>service 层负责业务校验。以 <code>send_request</code> 为例，三个校验然后直接 upsert：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-friend/src/service.rs
+fn send_request(from_user_id, to_user_id, message):
+    if from_user_id == to_user_id:  return Err(CannotAddSelf)
+    if !user_exists(to_user_id):    return Err(UserNotFound)
+    if is_friend(from, to):         return Err(AlreadyFriends)
+    // 允许重复发送（upsert 覆盖旧申请），不检查 pending 状态
+    return repo.create_request(from_user_id, to_user_id, message)
+</code></pre>
+<p><code>accept_request</code> 的校验更严格——只有被申请者（to_user_id）能接受，且申请必须是 pending 状态：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-friend/src/service.rs
+fn accept_request(request_id, user_id):
+    req = repo.find_request_by_id(request_id)  // → RequestNotFound
+    if req.to_user_id != user_id:              return Err(Forbidden)
+    if req.status != Pending:                  return Err(Forbidden)
+    repo.update_request_status(request_id, Accepted)
+    repo.create_relation(req.from_user_id, req.to_user_id)  // 双向事务
+</code></pre>
+<hr />
+<p>接受申请的 handler 是整个模块最复杂的函数，完整的连锁操作：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-friend/src/api.rs
+fn accept_request(state, headers, path_id):
+    user_id = extract_user_id(headers)
+    request_id = parse_uuid(path_id)
+
+    // 1. 获取申请信息（用于后续连锁操作）
+    req_info = service.repo.find_request_by_id(request_id)
+
+    // 2. 接受申请（校验 + 更新状态 + 创建双向关系）
+    relation = service.accept_request(request_id, user_id)
+
+    // 3. 自动创建私聊会话（幂等）
+    greeting = req_info.message ?? &quot;我们已经是好友了，开始聊天吧&quot;
+    conv = conv_service.create_private(req_info.from_user_id, user_id)
+
+    // 4. 以申请者身份发送打招呼消息
+    msg_service.send(NewMessage {
+        conversation_id: conv.id,
+        sender_id: req_info.from_user_id,  // 注意：是申请者发的
+        content: greeting,
+        msg_type: 0,  // 文本
+    })
+
+    // 5. WS 通知申请者：好友已接受
+    (nickname, avatar) = service.repo.get_user_profile(user_id)
+    dispatcher.notify_friend_accepted(req_info.from_user_id, ...)
+
+    return 200 { &quot;data&quot;: null }
+</code></pre>
+<hr />
+<p>ws.proto 新增三种帧类型和对应的 Notification 消息：</p>
+<pre><code class="language-protobuf">// ---&gt; proto/ws.proto
+FRIEND_REQUEST = 7;   // 好友申请通知
+FRIEND_ACCEPTED = 8;  // 好友接受通知
+FRIEND_REMOVED = 9;   // 好友删除通知
+
+message FriendRequestNotification {
+  string request_id = 1;
+  string from_user_id = 2;
+  string nickname = 3;
+  string avatar = 4;
+  string message = 5;       // 申请留言
+  int64 created_at = 6;
+}
+
+message FriendAcceptedNotification {
+  string friend_id = 1;
+  string nickname = 2;
+  string avatar = 3;
+  int64 created_at = 4;
+}
+
+message FriendRemovedNotification {
+  string friend_id = 1;
+}
+</code></pre>
+<p>dispatcher 新增三个推送方法，模式完全一致：构造 Notification → 封装为 WsFrame → send_to_user：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-ws/src/dispatcher.rs
+fn notify_friend_request(to_user_id, request_id, from_user_id, nickname, avatar, message, created_at):
+    notification = FriendRequestNotification { ... }
+    frame = WsFrame { type: FRIEND_REQUEST, payload: notification.encode() }
+    ws_state.send_to_user(to_user_id, frame.encode())
+</code></pre>
+<hr />
+<h5 id="3-接口一览与用户搜索">3. 接口一览与用户搜索</h5>
+<p>8 个好友接口 + 2 个用户接口：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>路径</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/api/friends/requests</td>
+<td>发送好友申请（upsert，可重复发送）</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/friends/requests/received</td>
+<td>收到的申请列表（仅 pending）</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/friends/requests/sent</td>
+<td>发送的申请列表（含所有状态）</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/api/friends/requests/:id/accept</td>
+<td>接受申请（连锁：创建关系+会话+消息+通知）</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/api/friends/requests/:id/reject</td>
+<td>拒绝申请</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/api/friends/requests/:id</td>
+<td>删除申请记录</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/friends</td>
+<td>好友列表（带昵称/头像/签名）</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/api/friends/:id</td>
+<td>删除好友（双向解除）</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/users/search</td>
+<td>搜索用户</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/users/:id</td>
+<td>获取用户公开资料</td>
+</tr>
+</tbody>
+</table>
+<p>用户搜索接口放在 flash-user 模块而不是 im-friend，因为搜索用户是通用能力。它支持三种匹配方式：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/flash-user/src/handler.rs
+fn search_users(keyword, limit):
+    pattern = &quot;%{keyword}%&quot;
+    id_match = keyword.parse::&lt;i64&gt;().unwrap_or(0)
+
+    SELECT p.account_id, p.nickname, p.avatar
+    FROM user_profiles p
+    JOIN accounts a ON a.id = p.account_id
+    LEFT JOIN auth_credentials c ON c.account_id = a.id AND c.auth_type = 'phone'
+    WHERE a.status = 0
+      AND (p.nickname ILIKE $1        -- 昵称模糊匹配
+           OR c.identifier = $2       -- 手机号精确匹配
+           OR a.id = $3)              -- 闪讯号精确匹配
+    ORDER BY p.nickname
+    LIMIT $4
+</code></pre>
+<p>输入&quot;橘&quot;能模糊找到&quot;橘橙&quot;，输入&quot;13800010002&quot;能精确找到对应用户，输入&quot;6&quot;能精确找到 id=6 的用户。keyword 中的 <code>%</code> 和 <code>_</code> 会被转义，防止 SQL 注入。</p>
+<hr />
+<h5 id="4-接口测试">4. 接口测试</h5>
+<p>后端接口完成，别忘了使用 <code>Link Test Writer</code> 生成接口测试，并基于测试自动生成接口文档：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c0611461f57747049af8385a2f8d5d2c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1626&amp;h=1106&amp;s=272374&amp;e=png&amp;b=efeef1" alt="image.png" /></p>
+<p>接口测试通过后，就可以开始前端的任务了。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b2e894b0a32407f9dbbaceade181e04~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1335&amp;h=379&amp;s=44789&amp;e=png&amp;b=0c0c0c" alt="image.png" /></p>
+<hr />
+<h4 id="四-前端-通讯录从占位到真实">四、前端：通讯录从占位到真实</h4>
+<p>后端 10 个接口就绪，WS 三种帧类型就绪。前端要做的事情更多：新建一个完整的 flash_im_friend 模块，改造 HomePage 的通讯录 Tab，扩展 WsClient 的帧分发。下面是当前需求在前端的全景图：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d82c15e3c7b4a088c14f7782c0c5427~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=4710&amp;h=2727&amp;s=802016&amp;e=png&amp;a=1&amp;b=fbfbfb" alt="mermaid-diagram (62).png" /></p>
+<p>先看整体文件结构：</p>
+<pre><code class="diagram" style="font-size:13.5px">// ---&gt; client/modules/flash_im_friend/lib/src/
+├── data/
+│   ├── friend.dart                # Friend / FriendRequest / SearchUser / UserProfile
+│   └── friend_repository.dart     # 10 个 HTTP 接口调用
+├── logic/
+│   ├── friend_cubit.dart          # 好友列表 + 申请 + WS 通知状态管理
+│   └── friend_state.dart          # 状态定义
+├── utils/
+│   └── pinyin_helper.dart         # 拼音工具（字母索引用）
+└── view/
+    ├── friend_list_page.dart      # 通讯录主页（字母索引列表）
+    ├── friend_request_page.dart   # 好友申请（TabBar：收到/发送）
+    ├── friend_detail_page.dart    # 好友详情页（微信风格）
+    ├── add_friend_page.dart       # 添加朋友主页（搜索入口+扫码+二维码）
+    ├── user_search_page.dart      # 用户搜索（独立页面）
+    ├── user_profile_page.dart     # 陌生人资料页
+    ├── send_request_page.dart     # 申请表单页（留言+发送）
+    ├── scan_page.dart             # 扫码页（摄像头扫描二维码）
+    ├── indexed_contact_list.dart  # 带字母索引的联系人列表
+    └── friend_tile.dart           # 好友列表项
+</code></pre>
+<hr />
+<h5 id="1-wsclient-扩展-三条新-stream">1. WsClient 扩展：三条新 Stream</h5>
+<p>WsClient 原来有三条分发流（chatMessage / messageAck / conversationUpdate），现在加三条。改动模式完全一致：</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_core/lib/src/logic/ws_client.dart
+
+// 新增三个 StreamController
+final _friendRequestController = StreamController&lt;WsFrame&gt;.broadcast();
+final _friendAcceptedController = StreamController&lt;WsFrame&gt;.broadcast();
+final _friendRemovedController = StreamController&lt;WsFrame&gt;.broadcast();
+
+Stream&lt;WsFrame&gt; get friendRequestStream =&gt; _friendRequestController.stream;
+Stream&lt;WsFrame&gt; get friendAcceptedStream =&gt; _friendAcceptedController.stream;
+Stream&lt;WsFrame&gt; get friendRemovedStream =&gt; _friendRemovedController.stream;
+</code></pre>
+<p>在 <code>_onData</code> 的 switch 块中新增三个 case，在 <code>dispose</code> 中关闭三个 Controller。proto 的 Dart 文件需要重新生成（<code>python scripts/proto/gen.py</code>），才能拿到新的帧类型枚举和 Notification 消息类。</p>
+<p>数据流向变成了六条：</p>
+<pre><code class="diagram" style="font-size:13.5px">WsClient.frameStream
+  ├── CHAT_MESSAGE        → chatMessageStream        → ChatCubit（已有）
+  ├── MESSAGE_ACK         → messageAckStream         → ChatCubit（已有）
+  ├── CONVERSATION_UPDATE → conversationUpdateStream → ConversationListCubit（已有）
+  ├── FRIEND_REQUEST      → friendRequestStream      → FriendCubit（新增）
+  ├── FRIEND_ACCEPTED     → friendAcceptedStream     → FriendCubit（新增）
+  └── FRIEND_REMOVED      → friendRemovedStream      → FriendCubit（新增）
+</code></pre>
+<hr />
+<h5 id="2-friendcubit-统一的状态管理">2. FriendCubit：统一的状态管理</h5>
+<p>FriendCubit 是整个前端好友模块的核心。它同时管理好友列表、收到的申请、发送的申请、未读数，并订阅 WsClient 的三条好友 Stream。状态定义：</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_friend/lib/src/logic/friend_state.dart
+class FriendState extends Equatable {
+  final List&lt;Friend&gt; friends;
+  final List&lt;FriendRequest&gt; receivedRequests;
+  final List&lt;FriendRequest&gt; sentRequests;
+  final int pendingCount;          // 未读申请数（通讯录红点）
+  final bool isLoading;
+  final String? error;
+}
+</code></pre>
+<p>为什么好友列表和申请列表放在同一个 Cubit 里，而不是拆成 FriendListCubit 和 FriendRequestCubit？因为 pendingCount 需要跨页面同步——通讯录 Tab 的红点、好友申请页的列表、接受/拒绝后的计数更新，都要看同一份数据。拆开反而要引入额外的通信机制。</p>
+<hr />
+<p>WS 帧的处理是 FriendCubit 的另一个职责。用通知里携带的数据（昵称、头像、ID）构造对象插入本地列表，
+如下三个 handler 都是纯内存操作，不需要重新拉取接口：</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_friend/lib/src/logic/friend_cubit.dart
+
+void _handleFriendRequest(WsFrame frame) {
+  final notification = FriendRequestNotification.fromBuffer(frame.payload);
+  final request = FriendRequest(
+    id: notification.requestId,
+    // ...
+  );
+  emit(state.copyWith(
+    receivedRequests: [request, ...state.receivedRequests],
+    pendingCount: state.pendingCount + 1,
+  ));
+}
+
+void _handleFriendAccepted(WsFrame frame) {
+  final notification = FriendAcceptedNotification.fromBuffer(frame.payload);
+  final friend = Friend(
+    friendId: notification.friendId,
+    // ...
+  );
+  // 去重后插入
+  if (!state.friends.any((f) =&gt; f.friendId == friend.friendId)) {
+    emit(state.copyWith(friends: [...state.friends, friend]));
+  }
+}
+
+void _handleFriendRemoved(WsFrame frame) {
+  final notification = FriendRemovedNotification.fromBuffer(frame.payload);
+  final updated = state.friends
+      .where((f) =&gt; f.friendId != notification.friendId).toList();
+  emit(state.copyWith(friends: updated));
+}
+</code></pre>
+<p>接受申请时，先调用 HTTP 接口，成功后从 receivedRequests 移除对应条目、pendingCount--，然后重新 loadFriends()（因为新好友出现了）。删除申请记录时，同时从 receivedRequests 和 sentRequests 中移除，确保切换 Tab 不会复活已删除的条目。</p>
+<hr />
+<h5 id="3-搜索与扫码-两条路径汇聚到资料页">3. 搜索与扫码：两条路径汇聚到资料页</h5>
+<p>搜索和扫码是添加好友的两个入口，但它们最终汇聚到同一个页面——UserProfilePage（陌生人资料页）。</p>
+<p>搜索路径：AddFriendPage → 点击搜索栏 → UserSearchPage → 点击搜索结果 → 全屏 loading → <code>GET /api/users/:id</code> → UserProfilePage。</p>
+<p>扫码路径：AddFriendPage → 点击&quot;扫一扫&quot; → ScanPage → 识别 <code>flashim://user/{id}</code> → 全屏 loading → <code>GET /api/users/:id</code> → UserProfilePage。</p>
+<table>
+<thead>
+<tr>
+<th>添加朋友</th>
+<th>搜索用户</th>
+<th>陌生人资料页</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0fda7051764243ba92ba4d4401f0f54c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=98829&amp;e=png&amp;b=f9f9f9" alt="MuMu-20260411-000831-660.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/841f7977cc974ddeb8d46c3674ac0c14~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=67404&amp;e=png&amp;b=fdfdfd" alt="MuMu-20260411-000951-552.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/df72ae9e181b450c9b98fff14735afee~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=56245&amp;e=png&amp;b=f8f8f8" alt="MuMu-20260411-000753-753.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>UserProfilePage 展示完整资料（大头像 + 昵称 + 闪讯号 + 个性签名）+ &quot;添加到通讯录&quot;蓝色文字按钮。点击后进入 SendRequestPage（申请表单页：留言输入框 + 蓝色发送按钮），发送成功后回调 <code>FriendCubit.loadSentRequests()</code> 刷新&quot;我的申请&quot;Tab，然后 pop 两层返回搜索页。</p>
+<p>搜索栏被封装为两个共享组件放在 flash_shared 中：<code>FlashSearchBar</code>（带灰色背景容器，支持占位/输入两种模式）和 <code>FlashSearchInput</code>（纯输入框，白色圆角 + 搜索图标 + 文字垂直居中，用 <code>expands: true</code> + <code>textAlignVertical: center</code> 实现）。</p>
+<table>
+<thead>
+<tr>
+<th>标题</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3f6a276ea5d241aaa641a6f4eb615fd1~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=42058&amp;e=png&amp;b=f6f6f6" alt="MuMu-20260411-001114-046.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c34c7d173e304f4c8fb66c2eb85e880e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=168495&amp;e=png&amp;b=fcfcfc" alt="MuMu-20260412-170059-136.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="4-通讯录与用户信息页">4. 通讯录与用户信息页</h5>
+<p>通讯录的视图表现，完全参照微信截图，让 AI 实现。效果如下：</p>
+<ul>
+<li>通讯录顶部固定三个 Tab ，目前只实现 <code>新的朋友</code> 栏，查看申请信息。</li>
+<li>Tab 上和底部导航栏，有未读的数字指示器，引导用户点击查看。</li>
+<li>好友根据字母分组，并且右侧有索引指示器，可以点击定位。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>通讯录</th>
+<th>好友信息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6c5c7be84fb64690b2d2cb46e0283832~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=106306&amp;e=png&amp;b=fbfbfb" alt="MuMu-20260412-173447-665.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/483b4320363d4201a5619878a7e2ce2d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=98445&amp;e=png&amp;b=fafafa" alt="MuMu-20260412-173528-954.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>点击好友不是直接进入聊天，而是进入 FriendDetailPage。搜索好友后，点击产看用户信息，进入 FriendDetailPage。
+这个交互对齐了微信，你点一个联系人或者用户，先看到他的资料页，再决定是发消息还是做其他操作。</p>
+<table>
+<thead>
+<tr>
+<th>FriendDetailPage</th>
+<th>UserProfilePage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8fea8e2065a94bb4b090f6d4e8566f88~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=63576&amp;e=png&amp;b=fafafa" alt="MuMu-20260411-085802-781.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/df72ae9e181b450c9b98fff14735afee~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=56245&amp;e=png&amp;b=f8f8f8" alt="MuMu-20260411-000753-753.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="5-主应用集成与脚本工具">5. 主应用集成与脚本工具</h5>
+<p>main.dart 中创建 FriendRepository 和 FriendCubit，注入到 Widget 树：</p>
+<pre><code class="language-dart">// ---&gt; client/lib/main.dart
+final friendRepo = FriendRepository(dio: httpClient.dio);
+
+// MultiBlocProvider 中新增
+BlocProvider(
+  create: (_) =&gt; FriendCubit(
+    repository: friendRepo,
+    wsClient: wsClient,
+  ),
+),
+</code></pre>
+<p>FriendCubit 在 WsClient.connect() 之前创建，确保 Stream 订阅不丢帧。HomePage 的 initState 中调用 <code>context.read&lt;FriendCubit&gt;().loadFriends()</code> 加载好友列表。</p>
+<p>通讯录 Tab 的红点用 BlocBuilder 监听 FriendCubit：</p>
+<pre><code class="language-dart">// ---&gt; client/lib/src/home/view/home_page.dart
+Widget? _buildPendingBadge() {
+  return BlocBuilder&lt;FriendCubit, FriendState&gt;(
+    builder: (context, state) {
+      if (state.pendingCount &lt;= 0) return const SizedBox.shrink();
+      final text = state.pendingCount &gt; 99 ? '99+' : '${state.pendingCount}';
+      return Container(
+        padding: EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+        decoration: BoxDecoration(color: Colors.red, borderRadius: 8),
+        child: Text(text, style: TextStyle(color: Colors.white, fontSize: 10)),
+      );
+    },
+  );
+}
+</code></pre>
+<p>好友列表 → 聊天的跳转链路涉及三个模块的协作：点击好友 → push FriendDetailPage → 点击&quot;发消息&quot; → pop 详情页 → <code>ConversationRepository.createPrivate(friendId)</code>（幂等）→ push ChatPage。<code>createPrivate</code> 是幂等的——如果已有会话直接返回，没有则创建。这样不需要在好友模块里维护&quot;好友→会话&quot;的映射关系，每次都走一遍创建接口就行，简单可靠。</p>
+<hr />
+<p>还记得在发送消息时，我们写了个 <code>send_message.py</code> 脚本，可以以 A 的 身份发消息给 B 吗？对于好友申请来说，切换账号发送好友申请也是个非常麻烦的活，对测试很不友好。同理，可以准备一个脚本 <code>send_friend_request.py</code> 帮助我们批量发送好友申请:</p>
+<pre><code class="language-sh">批量发送好友申请
+用法:
+  # A → B 单个申请
+  python scripts/server/im/send_friend_request.py 0001 0002
+
+  # A → B,C,D 批量申请（A 发给多人）
+  python scripts/server/im/send_friend_request.py 0001 0002,0003,0004
+
+  # 连续序号：A → 0002~0010
+  python scripts/server/im/send_friend_request.py 0001 0002-0010
+
+  # B,C,D → A 反向批量（多人发给 A）
+  python scripts/server/im/send_friend_request.py 0002,0003,0004 0001
+
+  # 连续序号反向：0002~0010 → A
+  python scripts/server/im/send_friend_request.py 0002-0010 0001
+
+  # 带留言
+  python scripts/server/im/send_friend_request.py 0001 0002-0005 &quot;你好&quot;
+
+  # 发送并自动接受
+  python scripts/server/im/send_friend_request.py 0001 0002-0005 --accept
+
+参数:
+  第1个: 发送方（单个后缀 / 逗号分隔 / 连字符范围）
+  第2个: 接收方（同上）
+  第3个: 留言（可选）
+  --accept: 发送后自动让接收方接受
+</code></pre>
+<hr />
+<h4 id="五-本章小结">五、本章小结</h4>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>图片视频与文件消息</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/releases/tag/v0.12.0">v0.12.0</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/0017583">0017583</a></td>
+</tr>
+</tbody>
+</table>
+<p>这一章给闪讯的用户之间修了路。后端新建了 im-friend 独立 crate（10 个接口 + 3 种 WS 帧类型），前端新建了 flash_im_friend 模块（微信风格通讯录 + 好友详情 + 添加朋友 + 搜索 + 扫码 + 申请管理）。功能网络从 52 个节点增长到 65 个。</p>
+<p>回头看，好友系统的核心挑战不在于某个接口有多难写，而在于&quot;关系&quot;这个概念本身的复杂性。它是双向的（需要双方确认）、有状态的（pending → accepted / rejected）、有副作用的（接受后连锁创建会话和消息）。把这些复杂性拆解到正确的层次——service 管校验、api 管编排、WS 管通知——是这一章最重要的架构决策。</p>
+<p>好友关系是 IM 系统的社交基础。有了它，后续的群聊（从好友中选人建群）、朋友圈（只对好友可见）、黑名单（屏蔽特定用户）才有了依托。目前还没有做好友备注、好友分组、在线状态这些功能，但数据模型和模块边界已经为它们预留了空间。</p>
+<p>另外值得一提的是，这一章的开发过程中，项目的脚本体系也做了一次整理：所有 PowerShell 脚本统一迁移为 Python（start.py、reset_db.py、seed.py、run.py、gen.py），支持 Windows / macOS / Linux 跨平台。这不是功能需求驱动的，而是开发体验驱动的——当你每天要跑十几次脚本时，一套统一的工具链比什么都重要。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-23.html">← 根芽#6 ｜ 图片、视频、文件消息</a>
+      <a class="next" href="ch-25.html">枝叶#2 ｜ 创建群聊 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-好友与会话">一、好友与会话</a></li>
+      <li class="lv5"><a href="#1-好友与会话的区别">1. 好友与会话的区别</a></li>
+      <li class="lv5"><a href="#2-好友与会话的关系">2.好友与会话的关系</a></li>
+      <li class="lv5"><a href="#3-在系统中区分的意义">3. 在系统中区分的意义</a></li>
+      <li class="lv4"><a href="#二-好友系统的需求分析">二、好友系统的需求分析</a></li>
+      <li class="lv5"><a href="#1-交互链与目标">1. 交互链与目标</a></li>
+      <li class="lv5"><a href="#2-逻辑流程树">2. 逻辑流程树</a></li>
+      <li class="lv5"><a href="#3-功能编号-新节点入网">3. 功能编号：新节点入网</a></li>
+      <li class="lv4"><a href="#三-后端-im-friend-模块">三、后端：im-friend 模块</a></li>
+      <li class="lv5"><a href="#1-数据模型-请求与关系表">1. 数据模型：请求与关系表</a></li>
+      <li class="lv5"><a href="#2-三层架构-repository-service-api">2. 三层架构：repository → service → api</a></li>
+      <li class="lv5"><a href="#3-接口一览与用户搜索">3. 接口一览与用户搜索</a></li>
+      <li class="lv5"><a href="#4-接口测试">4. 接口测试</a></li>
+      <li class="lv4"><a href="#四-前端-通讯录从占位到真实">四、前端：通讯录从占位到真实</a></li>
+      <li class="lv5"><a href="#1-wsclient-扩展-三条新-stream">1. WsClient 扩展：三条新 Stream</a></li>
+      <li class="lv5"><a href="#2-friendcubit-统一的状态管理">2. FriendCubit：统一的状态管理</a></li>
+      <li class="lv5"><a href="#3-搜索与扫码-两条路径汇聚到资料页">3. 搜索与扫码：两条路径汇聚到资料页</a></li>
+      <li class="lv5"><a href="#4-通讯录与用户信息页">4. 通讯录与用户信息页</a></li>
+      <li class="lv5"><a href="#5-主应用集成与脚本工具">5. 主应用集成与脚本工具</a></li>
+      <li class="lv4"><a href="#五-本章小结">五、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

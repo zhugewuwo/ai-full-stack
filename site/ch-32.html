@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>桢干#3 ｜ AI 全栈开发流程梳理 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li class="active"><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>桢干#3 ｜ AI 全栈开发流程梳理</h1>
+<blockquote>
+<p>生命不息，迭代不止。</p>
+</blockquote>
+<p>本章及后续将不再介绍具体的代码细节，而是专注于 AI 工作流程上的优化、以及版本迭代的文档维护。后续闪讯的功能功能更新，将以 5 文档 + 截图示意的形式给出。包括本册完结后，我对闪讯项目的持续迭代，也会以这种形式持续更新。在持续迭代的过程中，流程上的优化或新的见解，会通过附录来分享，希望有朝一日，小小的闪讯的种子，也能成长为参天大树。</p>
+<hr />
+<p>先简单介绍一下 v0.20.0 版本中，需要实现的三个功能：</p>
+<p><strong>消息转发</strong> 功能，长按消息气泡，可以想把一条消息转发给多个会话，便于消息传播。</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>operation/v0.0.2（消息转发）</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.2/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.2/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.2/client/tasks.md">tasks.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.2/server/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.2/server/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>转发按钮</th>
+<th>选择多个会话转发</th>
+<th>转发前预览</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7355103d23d24ce79377587945de55ee~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=570235&amp;e=png&amp;b=fafafa" alt="image.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/717f9fe1dba142e18fc0660a69337aa3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=97008&amp;e=png&amp;b=fcfcfc" alt="image.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d881e305092409bb7a01ffac424d1e9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=493979&amp;e=png&amp;b=747474" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>@提及</strong> 功能，群聊中用户需要 @ 某人或 @所有人，让对方注意到消息。被 @ 的人在会话列表看到红色提示，进入会话后气泡中 @文本 蓝色高亮。</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>operation/v0.0.3（@提及）</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.3/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.3/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.3/client/tasks.md">tasks.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.3/server/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.3/server/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>有人@我</th>
+<th>输入框@选择</th>
+<th>引用消息自动@</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ccc8e79fa509482e8d8dd1c67453436a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=151072&amp;e=png&amp;b=fcfcfc" alt="image.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/306f1f3ceb004db19c6de55ac44aeb14~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=245868&amp;e=png&amp;b=fcfcfc" alt="image.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/291a554d797947c2a5a6cd008ee7f5aa~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=142096&amp;e=png&amp;b=fafafa" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>消息置顶</strong> 功能，将群聊中重要消息置顶，让所有成员进入聊天页就能看到。本版实现消息置顶/取消置顶功能，ChatPage 顶部常驻展示置顶消息栏。</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>operation/v0.0.4（消息置顶）</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.4/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.4/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.4/client/tasks.md">tasks.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.4/server/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.4/server/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>置顶按钮</th>
+<th>多个置顶展开</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3f2ac7b9564941f3a5b6c15b41e2bd3e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=144315&amp;e=png&amp;b=fafafa" alt="image.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d733d6e35d9541b089eafd817c8ab852~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=161046&amp;e=png&amp;b=fafafa" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="功能版本开发流水线">功能版本开发流水线</h4>
+<p>经过这十几章的演化和验证，<strong>Feature Workflow — 功能版本开发流水线</strong> 这套 <code>全栈功能迭代</code> 工厂已经可以稳定工作了。虽然各大 AI 编程 IDE 都有自己的类似方式，但是可定制性一般，对历史需求的管理也很不到位，而且和编程 IDE 强绑定。我想做的是:</p>
+<blockquote>
+<p>打造一个可以稳定运行的，全栈功能需求迭代流水线角色，<br />
+任意的编程 AI 工具都可以给这个技能工作。</p>
+</blockquote>
+<p>本章将结合这次的功能实现，来详细说明一下这套流水线的工作流程。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d6f134bae7d24d959e6610f84d1ba5da~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1024&amp;h=559&amp;s=355648&amp;e=png&amp;b=f5ece8" alt="image.png" /></p>
+<p>这套流水线的核心思想是 <strong>面向文档编程</strong>，从 <code>需求分析</code> 到 <code>开发设计</code> 再到 <code>任务落地</code>，甚至是 <code>测试产物</code> 、都要落实到文档上，这些文档会记录在项目里，伴随项目一生。这些将成为项目最完善的 <strong>产品文档</strong>、<strong>开发文档</strong>、<strong>测试文档</strong>。<br />
+工作目录在 docs/features 下进行迭代版本的管理，每个功能需求有 5 大核心文档：</p>
+<pre><code class="diagram" style="font-size:13.5px">docs/features/{模块}/{版本}/
+├── analysis.md              # 第 1 步：需求分析
+├── server/
+│   ├── design.md            # 第 2 步：后端设计
+│   └── tasks.md             # 第 3 步：后端任务
+├── client/
+│   ├── design.md            # 第 7 步：前端设计
+│   └── tasks.md             # 第 8 步：前端任务
+└── api/                     # 第 6 步：后端测试
+    └── {module}/
+        ├── request/
+        │   └── {module}.py  # 测试脚本（Python + curl），手动编写
+        └── doc/             # 接口文档（脚本运行后自动生成，不要手动编辑）
+            ├── 00_link.md   # 大纲索引
+            └── 01_xxx.md    # 各接口文档
+</code></pre>
+<hr />
+<h4 id="一-需求分析">一、需求分析</h4>
+<p>Feature Workflow 里有对需求分析的简单描述，介绍一下三个投影面的基本概念，以及注意事项：</p>
+<pre><code>角色：Feature Analyst
+输出：`analysis.md`
+规范具体详见：#[[file:.kiro/steering/feature-analyst.md]]
+
+包含三个投影面：
+- **交互链**：用户走什么路（用户故事 + 操作路径 + mermaid flowchart，每个场景必须附图）
+- **逻辑树**：系统做什么（事件流表格 + 状态流转 + mermaid sequenceDiagram，每条事件流必须附图）
+- **功能编号**：在网络中的位置（新增节点 + 前置依赖 + 边界接口）
+
+这一步决定&quot;做什么&quot;和&quot;不做什么&quot;，是后续所有文档的源头。
+</code></pre>
+<p>通过 <code>#[[file:xxx]]</code> 可以引入其他文件。这样 AI 在工作时，可以根据具体的角色技能，生成我们预定格式的分析文件。需求分析的具体角色，会从 <code>交互链</code>、<code>逻辑树</code>、<code>功能编号</code> 三个角度去分析需求，产出 <code>analysis.md</code> 文件。</p>
+<p>通过这个工作节点，能分析出当前的功能具体是在干什么；有多少个潜在的交互流程；对用户有什么作用；具体流程中的逻辑决策是什么；当前的功能的边界在哪里；和当前整个应用功能网络的联系等。比如新增的消息置顶功能，这一步可以得到如下文件: <a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.4/analysis.md">analysis.md</a></p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6db1732c813246a2851ae7997bb41a2c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1276&amp;h=497&amp;s=95134&amp;e=png&amp;b=eeedf1" alt="image.png" /></p>
+<hr />
+<p>这个环节需要注意的是：<strong>合理把握需求的颗粒度</strong>。<br />
+颗粒度指的是这个需求有多大，比如 <code>制作微信</code> 是一个需求，<code>消息置顶</code> 也是一个需求。但你如果把前者作为需求分析的目标，基本上是无解的，它本身就不是一个合理的颗粒度。</p>
+<p><code>消息置顶</code> 作为一个需求点就刚刚好，它是有着非常明确的功能特性、交互流程、完成指标。而且体量不算太大，可以一次流程完成。另外，颗粒度也不要划分地太小，比如把它再拆成 <code>消息置顶</code>、<code>消息取消置顶</code> 等更细的功能点，虽然最后也能完成，但是流程就要跑多遍，有些浪费。</p>
+<p>如果是一些非常小的需求，甚至都没有必要通过流程来做。或者也可以攒着一批小需求，通过一次流程来一起完成。所以 AI 开发流程的起点非常重要，你需要对所使用 AI 单次战斗的上限做到心中有数。这样才能合理的评估，这项需求，适不适合通过这个开发流程一波完成。这个心中有数，需要你对 AI 的长时间使用累积经验。</p>
+<p>比如这章 <code>消息转发、@提及、消息置顶</code> 三个功能，我是放在一起做的，虽然最终完成了，但是过程上并不是太顺利。第一版时，完全不能工作，后面我和它讨论很久，才逐渐优化、迭代完成。这就是很典型的，前期没有做好准备，后期就需要更多的返工和验证。</p>
+<p>如果每一轮只做一个需求，无论是人还是 AI 都可以更专注，每一个需求的实现都是一针强心剂。而三个一起做，一鼓作气、再而衰，三而竭，错误多了，你自己也会跟着泄气。这个确实是我在开始没有做好分析，毕竟三者是完全独立的功能，体量也都不小。在 AI 编程的探索中，这种曲折也是成长的养分，真正走过的坑，在以后才会更容易避免。</p>
+<hr />
+<h4 id="二-后端">二、后端</h4>
+<p>后端是所有客户端数据访问的中枢，它提供接口契约、数据持久化和实时推送能力。后端的三步——设计、任务、实现——本质上是在回答三个递进的问题：系统长什么样？怎么拆着建？按什么顺序砌？</p>
+<hr />
+<h5 id="第-2-步-后端设计">第 2 步：后端设计</h5>
+<p><strong>feature-designer</strong> 技能角色，负责 <code>design.md</code> 文档的建设工作。</p>
+<blockquote>
+<p>角色定位: 需求设计师。当用户提出一个功能需求时，你需要输出一份结构化的设计报告（design.md），为后续的任务拆解和 AI 编码提供清晰的上下文。</p>
+</blockquote>
+<pre><code>角色：Feature Designer
+输出：`server/design.md`
+规范具体详见: #[[file:.kiro/steering/feature-designer.md]] 
+模块化拆分参考: #[[file:.kiro/skills/modular-design/SKILL.md]]
+前置参考文件: 第 1 步产物的 analysis.md
+包含：
+- 数据模型（SQL + ER 图 + 设计决策表）
+- 接口契约（请求/响应 JSON + 错误码）
+- 核心流程（时序图）
+- 技术决策（方案 + 理由）
+- 文件结构（新建/修改的文件清单，标注每个文件的单一职责）
+</code></pre>
+<p>后端设计的核心是<strong>定义契约</strong>。数据模型定义了&quot;数据长什么样&quot;，接口契约定义了&quot;对外暴露什么能力&quot;，核心流程定义了&quot;数据怎么流转&quot;。这三者构成了后端的骨架，后续的任务拆解和编码都是在这个骨架上填肉。</p>
+<p>技术决策表是一个容易被忽略但很重要的部分。每个决策必须附带理由——不是&quot;我选了方案 A&quot;，而是&quot;我选了方案 A，因为 B 有什么问题&quot;。这样做的好处是：当后续需要修改时，能快速判断当初的假设是否还成立。</p>
+<p>文件结构也很重要，新建/修改的文件清单，标注每个文件的单一职责。这不是走形式，而是在告诉 AI &quot;你的战场在哪里&quot;。没有这个清单，AI 可能把本该放在 repository 里的逻辑写进 routes，或者在 service 里直接操作数据库。明确了文件边界，代码才不会长歪。</p>
+<p>有一点很关键：design.md 是架构师视角，不要深入代码实现细节，那些留给 tasks.md。另外&quot;暂不实现&quot;这一节别小看它，它是给 AI 编码画红线的——AI 有时候会&quot;好心办坏事&quot;，把你明确说不做的功能也给实现了。写清楚边界，能省掉不少返工。比如新增的消息置顶功能，这一步可以得到如下文件: <a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.4/server/design.md">design.md</a></p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/830e93b1ad544ddaa49995eac2752ecb~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1220&amp;h=523&amp;s=100892&amp;e=png&amp;b=eeedf1" alt="image.png" /></p>
+<hr />
+<h5 id="第-3-步-后端任务">第 3 步：后端任务</h5>
+<p><strong>feature-task-maker</strong> 技能角色，负责 <code>tasks.md</code> 文档的建设工作。</p>
+<blockquote>
+<p>角色定位: 任务规划师。基于已有的设计报告（design.md），将设计方案拆解为可逐条执行的任务清单（tasks.md），让 AI 编码时每一步都有明确的指令，消除歧义和发挥空间。</p>
+</blockquote>
+<p>另外在设计时增加另一个 <code>modular-design</code> 的 SKILL ，把之前章节对模块化的拆分考量，进行总结成思考流程，便于在前端设计时，及时考量这方面。</p>
+<pre><code>角色：Feature Task Maker
+输出：`server/tasks.md`
+规范具体详见：#[[file:.kiro/steering/feature-task-maker.md]]
+前置参考文件：第 1 步产物的 analysis.md + 第 2 步产物的 server/design.md
+
+把 design.md 拆成可逐条执行的任务：
+- 每个任务对应一个文件
+- 给出函数签名和关键 SQL
+- 标注依赖顺序和执行顺序
+</code></pre>
+<p>design.md 说&quot;做什么&quot;，tasks.md 说&quot;怎么做&quot;。每个任务对应一个具体的文件改动，粒度到函数/结构体级别。给出关键代码片段（签名、结构体、SQL），不是完整实现，而是&quot;骨架&quot;。任务之间有明确的依赖顺序，AI 按顺序执行不会卡住。</p>
+<p>任务状态标记也是一个重要设计：<code>⬜ 待处理</code> → <code>🔧 进行中</code> → <code>✅ 已完成</code>。AI 每完成一个子任务后更新标记，打开 tasks.md 就能一眼看到整体进度。</p>
+<p>这里有个度的问题。一个任务对应一个文件的改动，如果一个文件改动点很多，就用子任务拆分。代码片段给骨架就好——结构体给完整定义，函数给签名加逻辑步骤，不用写完整实现。给多了 AI 反而会照抄不思考，给少了又容易跑偏。另外，执行顺序要讲究：数据结构先行，服务层跟上，路由和 UI 最后，编译验证收尾。这个顺序是为了让 AI 每一步都能编译通过，不会因为依赖还没建好就卡住。</p>
+<p>新增的消息置顶功能，这一步可以得到如下文件: <a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.4/server/tasks.md">tasks.md</a> |</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c319e21257fc4259a73ac171f211e7fe~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1292&amp;h=556&amp;s=109792&amp;e=png&amp;b=f0eff2" alt="image.png" /></p>
+<hr />
+<h5 id="第-4-步-三文档交叉审查">第 4 步：三文档交叉审查</h5>
+<p>这一步没有独立的角色技能，但它是整个流水线中最容易被忽略、也最有价值的环节。</p>
+<pre><code>联合后端 analysis + design + tasks 检查一致性：
+- 接口路径是否对齐
+- 功能编号是否覆盖
+- 遗漏的校验逻辑
+- 数据库字段是否齐全
+- analysis 中标注&quot;不做&quot;的功能是否在 design/tasks 中被移除
+</code></pre>
+<p>为什么需要交叉审查？因为三个文档是不同视角对同一个功能的描述：analysis 是产品视角，design 是架构视角，tasks 是执行视角。三个视角放在一起看，比一个文档反复看三遍更容易发现问题。</p>
+<p>常见的发现：</p>
+<ul>
+<li>analysis 里写了&quot;@所有人权限仅群主&quot;，但 design 里的接口没有权限校验</li>
+<li>design 里定义了一个字段，但 tasks 里忘了写对应的 SQL</li>
+<li>tasks 里多出了一个 analysis 标注&quot;暂不实现&quot;的功能</li>
+</ul>
+<p>跳过这一步直接写代码，大概率要返工。审查的重点不是文字表述好不好看，而是逻辑一致性——接口路径、字段名、错误码这些&quot;硬对齐&quot;最容易出错。发现问题就回去改文档，不要在脑子里记着&quot;到时候注意一下&quot;，那基本等于没注意。</p>
+<hr />
+<h5 id="第-5-步-后端实现">第 5 步：后端实现</h5>
+<p>这一步是 AI 的主战场。tasks.md 已经把每个文件要改什么、函数签名是什么、SQL 怎么写都定义好了，AI 只需要按图施工。这也是为什么前面花那么多精力写文档的原因——文档越清晰，AI 编码越准确，返工越少。</p>
+<pre><code>按 tasks.md 顺序实现，每完成一个任务标记 ✅。
+每项任务完成后，自行编译验证一下是否有异常，及时修改。
+参考规范：#[[file:.kiro/steering/rust-error-handling.md]]
+</code></pre>
+<p>后端实现有一个独立的错误处理规范（rust-error-handling.md），确保所有接口的错误响应格式统一、状态码正确。如果有其他的风格、注意事项，可以在这里增加一下。</p>
+<p>实践中有几个经验教训：</p>
+<ul>
+<li>一是让 AI 实现完后自行跑 <code>cargo build</code> 编译验证——不要等到所有任务都做完才编译，每完成一批相关任务就编译一次，发现问题及时修，不然错误会像滚雪球一样越积越多。</li>
+<li>一是每完成一个任务就标记 ✅，如果中途被打断（比如去修个别的 bug），下次回来能立刻知道做到哪了。</li>
+<li>二是遇到 tasks.md 没覆盖到的边界情况，先回去补文档再写代码，不要&quot;先写了再说&quot;——那个&quot;再说&quot;往往就没有然后了。这是为了保证文档的实时最新</li>
+</ul>
+<hr />
+<h5 id="第-6-步-后端测试">第 6 步：后端测试</h5>
+<p><strong>link-test-writer</strong> 技能角色，负责接口测试脚本的编写和接口文档的自动生成。</p>
+<blockquote>
+<p>角色定位：API 测试链编写者。基于已有的后端接口，为指定功能模块编写测试链 Python 脚本，脚本运行后自动测试所有接口并生成接口文档。</p>
+</blockquote>
+<pre><code>用 Link Test Writer 生成测试脚本，覆盖所有正常和异常场景。
+测试通过后自动生成接口文档。
+参考规范：#[[file:.kiro/steering/link-test-writer.md]]
+</code></pre>
+<p><strong>link-test-writer</strong> 是一个很有意思的设计：测试脚本既是测试工具，也是文档生成器。一个 Python 脚本，用 curl 调用所有接口，验证响应是否正确，同时把请求和响应记录下来，自动生成接口文档。</p>
+<p>这意味着：</p>
+<ul>
+<li>接口文档永远是最新的（因为是跑出来的，不是手写的）</li>
+<li>接口文档里的 curl 命令是可以直接复制执行的（带真实 token）</li>
+<li>测试覆盖了正常流程和错误场景（403、404、400 等）</li>
+</ul>
+<p>测试脚本按业务流程串联，形成有意义的&quot;链&quot;。比如先创建会话，再发消息，再转发，再置顶——模拟真实的用户操作序列。</p>
+<p>编排测试步骤时，要有业务含义，不是随机调接口。错误场景（4xx）紧跟在对应的正常步骤后面——先测&quot;置顶成功&quot;，紧接着测&quot;重复置顶返回 400&quot;，这样读起来像一个故事。另外 <code>doc/</code> 目录下的文件全部是自动生成的，千万不要手动编辑，每次跑脚本会覆盖掉你的改动。比如新增的消息置顶功能，这一步可以得到如下文件: <a href=""></a></p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91d4f19312ea420c9f0c18b5e2b24318~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1278&amp;h=716&amp;s=153594&amp;e=png&amp;b=efeef1" alt="image.png" /></p>
+<hr />
+<h4 id="三-前端">三、前端</h4>
+<p>前端是用户直接触碰的那一层，所有的交互体验最终都要落到这里。和后端不同，前端的复杂度不在数据流转，而在状态管理和 UI 表现。同一份数据，在列表页是一行文字，在聊天页是一个气泡，在选择器里是一个可勾选的条目。前端的四步（设计、任务、交叉审查、实现）本质上是在回答：界面长什么样？状态怎么流？组件怎么拆？<br />
+前端的流程和后端对称：设计 → 任务 → 交叉审查 → 实现 → 验证。</p>
+<hr />
+<h5 id="第-7-步-前端设计">第 7 步：前端设计</h5>
+<p>前端设计和后端设计用的是同一个 feature-designer 角色。 <code>modular-design</code> 的模块拆分的技能是通用的视角进行审视，同样也适用于前端设计。</p>
+<pre><code>角色：Feature Designer
+输出：`client/design.md`
+规范具体详见：#[[file:.kiro/steering/feature-designer.md]]
+模块化拆分参考：#[[file:.kiro/skills/modular-design/SKILL.md]]
+前置参考文件：第 1 步产物的 analysis.md + 第 6 步产物的 api/doc/（接口文档）
+
+包含：
+- 文件结构（新建/修改的文件清单，标注每个文件的单一职责）
+- 职责隔离（组件只管渲染，Cubit 只管状态，Repository 只管数据）
+- 页面结构、交互流程（mermaid 流程图）
+- 技术决策（方案 + 理由）
+- 变更范围（新建文件 + 修改文件，明确边界）
+</code></pre>
+<p>前端设计的核心是<strong>职责隔离</strong>。这个项目用的是 BLoC/Cubit 架构，层次分明：View 层的 Widget 只管渲染和用户交互，Cubit 层只管业务状态的流转，Repository 层只管数据的获取和缓存。不要把网络请求写在 Widget 里，不要让 Cubit 去操作 Widget 的 controller，不要让 Repository 知道 UI 长什么样。这些边界看起来是常识，但 AI 写代码时经常会&quot;图方便&quot;把逻辑塞到不该放的地方，所以设计文档里必须把职责划分写清楚。</p>
+<p>写前端设计时，文件结构要标注每个文件的单一职责。变更范围要明确区分&quot;新建&quot;和&quot;修改&quot;，修改已有文件时说清楚改哪里、为什么改，不然 AI 容易改错地方或者改多了。技术决策要优先考虑复用已有组件，比如这次的会话选择器就是复用 MemberPickerPage 加了几个参数，而不是从零写一个新页面。</p>
+<p>新增的消息置顶功能，这一步可以得到如下文件:  <a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.4/client/design.md">design.md</a></p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/624c4b07c67143c1b76ccc56a86dc201~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1386&amp;h=549&amp;s=99056&amp;e=png&amp;b=f0eff2" alt="image.png" /></p>
+<hr />
+<h5 id="第-8-步-前端任务">第 8 步：前端任务</h5>
+<p>同样使用 <strong>feature-task-maker</strong> 角色，产出 <code>client/tasks.md</code>。</p>
+<pre><code>角色：Feature Task Maker
+输出：`client/tasks.md`
+前置参考：analysis.md + client/design.md + api/doc/（接口文档）
+
+把 client/design.md 拆成可逐条执行的任务：
+- 每个任务对应一个文件改动，粒度到 Widget / Cubit 方法级别
+- UI 组件给出关键 Widget 树结构和交互行为描述
+- 状态管理给出 Cubit 方法签名和 State 字段变化
+- 修改已有文件时精确到&quot;在哪个方法里加什么&quot;
+- 标注依赖顺序和执行顺序
+</code></pre>
+<p>和后端任务的思路一样，把 design.md 拆成可逐条执行的任务。但前端任务有自己的特点：它会涉及更多的 UI 描述。一个后端任务可能就是&quot;写一个 SQL 查询 + 一个 handler&quot;，但前端任务可能是&quot;一个带动画的展开面板 + 状态联动 + 手势交互&quot;。</p>
+<p>UI 组件的描述要给出关键 Widget 树结构，但不用写完整的 build 方法。涉及状态管理的部分，要明确 Cubit 的方法签名和 State 的字段变化。如果是修改已有文件，要精确到&quot;在哪个方法里加什么&quot;，含糊地说&quot;修改 XXX 文件&quot;，AI 大概率会改错位置或者改多了。前端代码的上下文依赖比后端强得多，一个 Widget 的行为可能取决于它在树中的位置、父级传入的回调、Cubit 的当前状态，这些都要在任务描述中交代清楚。</p>
+<p>新增的消息置顶功能，这一步可以得到如下文件:  <a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.20.0/docs/features/im/operation/v0.0.4/client/tasks.md">tasks.md</a></p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fd4148741f1a42e4b9f2bc490d7b77d9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1290&amp;h=574&amp;s=112854&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<hr />
+<h5 id="第-9-步-前端交叉审查">第 9 步：前端交叉审查</h5>
+<p>和第 4 步同理，确保前端的设计和任务与需求分析对齐。但前端的交叉审查范围更广：不仅要看前端三份文档的一致性，还要和后端的 server/design 以及 api/doc 对齐，确保前端调用的接口路径、参数、响应格式和后端实际提供的一致。</p>
+<pre><code>联合 analysis + server/design + api/doc + client/design + client/tasks 综合审查：
+- analysis 中的每条交互链是否在前端设计中都有对应的页面和流程
+- 前端调用的接口路径、参数、响应格式是否与 server/design 和 api/doc 一致
+- 组件复用的边界是否合理（扩展已有组件时，是否会破坏其他调用方的行为）
+- design 中的文件职责划分是否在 tasks 中得到体现
+- &quot;暂不实现&quot;的功能是否已从 tasks 中移除
+</code></pre>
+<p>另一个常见问题是组件复用的边界。设计里说&quot;复用 MemberPickerPage&quot;，但 tasks 里写的改动可能会破坏 MemberPickerPage 在其他场景（比如创建群聊、移除成员）的行为。交叉审查时要想一想：这个改动会不会影响已有的调用方？</p>
+<hr />
+<h5 id="第-10-步-前端实现">第 10 步：前端实现</h5>
+<p>前端实现是整个流水线中代码量最大的一步。AI 按 tasks.md 的顺序逐条实现，同时受两个规范约束：UI 风格规范确保界面视觉统一，构建验证规范确保编译零错误。<br />
+这两个规范也拆分出去，被纳入了 SKILL 中。这样一方面可以保持，流水线本身简洁；到对应的流程时，也可以主动去读取加载特定规则。另一方面，独立出去也便于更新和维护，在实践中不断优化升级这些技能。</p>
+<pre><code>按 tasks.md 顺序实现。
+UI 风格规范：#[[file:.kiro/skills/flash-im-ui-style/SKILL.md]]
+构建验证规范：#[[file:.kiro/skills/flutter-build-verify/SKILL.md]]
+
+完成后必须执行全量构建验证（详见 flutter-build-verify 技能），零错误才能进入下一步。
+</code></pre>
+<p>前端实现完成后，有一个<strong>强制门禁</strong>：必须执行全量编译分析。这是在实践中加上的，早期没有这个要求，AI 经常改了 A 文件导致 B 文件编译失败，但因为没有全量检查，问题被带到了后面才发现，修复成本更高。</p>
+<p>比如涉及 drift 表定义变更，要先跑一遍代码生成再 analyze。AI 最容易犯的错是：改了模型字段但忘了更新 copyWith，改了接口签名但忘了更新调用方。多模块项目中，跨模块的类型变更是编译错误的重灾区——你改了 core 包里的一个类，chat 包和 conversation 包可能同时炸。所以全量 analyze 不是走形式，是真的能救命。必须全量类型检查和跨模块依赖验证，零错误才能进入下一步。</p>
+<hr />
+<h5 id="第-11-步-前端测试">第 11 步：前端测试</h5>
+<p>在真机或模拟器上手动验证关键路径，确认功能正常工作。</p>
+<p>验证范围：</p>
+<ul>
+<li>覆盖 analysis 中定义的所有交互链场景（正常流程）</li>
+<li>异常路径：网络断开、数据为空、权限不足等边界情况</li>
+<li>多端协同：A 发消息 B 收到、A 置顶所有人看到、A 转发后本地缓存同步等</li>
+<li>UI 表现：动画流畅度、布局溢出、键盘弹起后的适配</li>
+</ul>
+<p>发现 bug 时的处理：</p>
+<ul>
+<li>修复后回到第 10 步重新 flutter analyze，确保修复没有引入新问题</li>
+<li>设计缺陷直接修复并更新到对应的 design/tasks 文档中</li>
+</ul>
+<hr />
+<h5 id="第-12-步-归档">第 12 步: 归档</h5>
+<p>很多人觉得功能做完、代码合并就结束了。但如果你不归档，下一次开新功能时会发现：上次加了哪些节点？哪些接口是新的？哪些模块被改过？全靠记忆和翻 git log。项目越大，这种&quot;记忆负担&quot;越重，到后面每次开新功能都要花大量时间&quot;回忆上次做了什么&quot;。</p>
+<p>归档解决的就是这个问题。它把每次迭代的成果沉淀到一张持续生长的功能网中，让项目的全貌始终可见。新功能的需求分析可以直接引用已有节点的编号和依赖关系，不用从头梳理。AI 在做需求分析时，也能通过功能网快速理解&quot;当前系统已经有什么能力&quot;，避免重复建设或遗漏依赖。</p>
+<pre><code>角色：Feature Archiver
+归档规范：#[[file:.kiro/steering/feature-archiver.md]]
+- 更新 `docs/features/archiver/index.md`：节点编号表 + 网络图 + 存档记录
+- 更新 `docs/features/archiver/modules/{域}/`：局域网络
+- 创建 `docs/features/archiver/trace/{版本}_{日期}.md`：存档快照
+- git tag + 提交 + 推送 + 合并到 master
+</code></pre>
+<p><strong>feature-archiver</strong> 负责把这次迭代的成果归档到全局功能网中。功能网是整个项目的&quot;地图&quot;，每个功能是一个节点，节点之间有依赖关系。随着版本迭代，这张网越来越完整，新功能的分析也越来越快，因为前置依赖都已经清晰标注了。</p>
+<p>归档的三件事：</p>
+<ol>
+<li><strong>更新全局索引</strong>（index.md）：新增节点编号，更新网络图。这是功能网的&quot;目录&quot;，一眼看到系统有多少个功能节点、它们之间怎么连接。</li>
+<li><strong>维护局域网络</strong>（modules/）：用&quot;三焦距&quot;方法梳理模块。远景看骨骼（模块与依赖），中景看血液（数据通道与事件流），近景看神经（生命周期与订阅）。不需要读源码就能理解一个模块的全貌。</li>
+<li><strong>创建存档快照</strong>（trace/）：记录这次变更的摘要，打 git tag。快照是只读的，创建后不修改，它是项目演进历史的时间线。</li>
+</ol>
+<p>有几个规矩：编号一旦分配就不能变，废弃的节点标记 ❌ 而不是删除，因为其他地方可能引用了这个编号。归档完成后才合并到 master，确保 master 分支始终是稳定的、有完整归档的状态。</p>
+<p>归档看起来是&quot;额外工作&quot;，但它的回报是复利式的。第一次归档可能觉得麻烦，但到第十次、第二十次功能迭代时，你会发现每次需求分析的速度越来越快，因为功能网已经帮你把上下文都准备好了。这就是&quot;归档是可持续的基础&quot;这句话的含义。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/97fb546d8ad94ab59872e07b1db6d5c3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1127&amp;h=560&amp;s=64527&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<hr />
+<h4 id="小结">小结</h4>
+<p>回到本书一直在讲的&quot;生命&quot;隐喻。如果说代码是生命体的细胞，那流水线就是这个生命体的新陈代谢系统。每一次功能迭代，就是一次完整的代谢循环：从外界摄入需求（分析），在体内合成新的结构（设计 + 实现），排出废物（交叉审查剔除不一致），最终将成果固化为身体的一部分（归档）。</p>
+<p>没有代谢系统的生命体，只能长一次就停下来。有了代谢系统，生命可以持续生长，每一轮循环都让身体更强壮、更完整。这套流水线做的就是这件事：让项目的每一次功能迭代都是可持续的、可追溯的、可复用的。</p>
+<p>十几章走下来，从最初的手忙脚乱到现在的按部就班，最大的感受是：AI 编程不是&quot;让 AI 写代码&quot;这么简单。它更像是带一个能力极强但缺乏上下文的新人——你给的指令越清晰、边界越明确、上下文越完整，它的输出就越稳定。流水线的每一步，本质上都是在为 AI 准备上下文。</p>
+<p>这套方法论还在演化中。也许再过十章，会有新的步骤加入，也会有现在的步骤被简化或合并。但核心不会变：先想清楚再动手，做完了要留痕，留痕是为了下一次更快。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-31.html">← 桢干#2 ｜ 消息功能扩展</a>
+      <a class="next" href="ch-33.html">桢干#4 ｜ 项目体检，望闻问切 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#功能版本开发流水线">功能版本开发流水线</a></li>
+      <li class="lv4"><a href="#一-需求分析">一、需求分析</a></li>
+      <li class="lv4"><a href="#二-后端">二、后端</a></li>
+      <li class="lv5"><a href="#第-2-步-后端设计">第 2 步：后端设计</a></li>
+      <li class="lv5"><a href="#第-3-步-后端任务">第 3 步：后端任务</a></li>
+      <li class="lv5"><a href="#第-4-步-三文档交叉审查">第 4 步：三文档交叉审查</a></li>
+      <li class="lv5"><a href="#第-5-步-后端实现">第 5 步：后端实现</a></li>
+      <li class="lv5"><a href="#第-6-步-后端测试">第 6 步：后端测试</a></li>
+      <li class="lv4"><a href="#三-前端">三、前端</a></li>
+      <li class="lv5"><a href="#第-7-步-前端设计">第 7 步：前端设计</a></li>
+      <li class="lv5"><a href="#第-8-步-前端任务">第 8 步：前端任务</a></li>
+      <li class="lv5"><a href="#第-9-步-前端交叉审查">第 9 步：前端交叉审查</a></li>
+      <li class="lv5"><a href="#第-10-步-前端实现">第 10 步：前端实现</a></li>
+      <li class="lv5"><a href="#第-11-步-前端测试">第 11 步：前端测试</a></li>
+      <li class="lv5"><a href="#第-12-步-归档">第 12 步: 归档</a></li>
+      <li class="lv4"><a href="#小结">小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>根芽#3 ｜ 消息收发 - 后端链路 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li class="active"><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>根芽#3 ｜ 消息收发 - 后端链路</h1>
+<blockquote>
+<p>生命始于第一次呼吸，IM 始于第一条消息。</p>
+</blockquote>
+<p>上一篇搭好了会话容器：两张表、三个接口、51 个测试会话。打开 App，会话列表满满当当，但点进任何一个，都是空的。会话是信封，现在要往里面装信。本章的目的是，实现消息收发的后端链路：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/66317b5b26cf468392e1d6e5b2b5cb8d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1275&amp;h=695&amp;s=52323&amp;e=png&amp;b=f8f8f8" alt="image.png" /></p>
+<ul>
+<li>
+<ol>
+<li>A 向 B 在会话容器内发送一条消息。</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>A 发的消息存储到后端的服务器。</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>A 可以服务器接确认收到消息的信号。</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>服务端向 B 发送通知，B 收到消息。</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>服务端向 A、B 发送通知，更新会话。</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h4 id="一-消息需要什么">一、消息需要什么</h4>
+<p>回到日常体验。你在微信里给女神发了一句&quot;在吗&quot;，这个动作看起来很简单，手指点一下就完了。但站在系统的角度，这一下触发了一连串的事情：</p>
+<ul>
+<li>这句话要存下来，不能丢；</li>
+<li>女神在线时要立刻看到，不能等；</li>
+<li>如果女神不在线，下次上线时要能看到这条消息；</li>
+<li>你的会话列表要更新预览，女神的未读数要加 1；</li>
+<li>如果你发了两条，顺序不能乱。</li>
+</ul>
+<p>这些需求拆开来看，每一个都指向消息需要携带的某个信息，或者服务端需要完成的某个动作。</p>
+<hr />
+<h5 id="1-一条消息长什么样">1. 一条消息长什么样</h5>
+<p>继续用上一篇的本子比喻。一条消息就是写在本子里的一行字。但光有内容不够，还需要知道：谁写的？写在哪个本子里？是这个本子里的第几行？</p>
+<table>
+<thead>
+<tr>
+<th>信息</th>
+<th>对应字段</th>
+<th>为什么需要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>写在哪个本子里</td>
+<td>conversation_id</td>
+<td>消息归属</td>
+</tr>
+<tr>
+<td>谁写的</td>
+<td>sender_id</td>
+<td>区分发送方</td>
+</tr>
+<tr>
+<td>第几行</td>
+<td>seq</td>
+<td>排序和同步</td>
+</tr>
+<tr>
+<td>写了什么</td>
+<td>content</td>
+<td>消息内容</td>
+</tr>
+<tr>
+<td>什么时候写的</td>
+<td>created_at</td>
+<td>时间展示</td>
+</tr>
+</tbody>
+</table>
+<p>其中 seq（序列号）是最关键的。消息在网络中传输时，到达顺序不一定和发送顺序一致。A 先发&quot;你好&quot;再发&quot;在吗&quot;，但网络波动可能导致&quot;在吗&quot;先到。时间戳的精度不够（毫秒级可能重复），两端的时钟也可能不同步。</p>
+<p>seq 是服务端分配的会话内递增编号：1、2、3、4……它不依赖客户端的时钟，天然有序且唯一。后续做增量同步时，客户端只需要说&quot;我上次看到的是 seq=42&quot;，服务端就能返回 42 之后的所有消息，不用拉全量。</p>
+<hr />
+<h5 id="2-为什么需要-ack-环节">2. 为什么需要 ACK 环节</h5>
+<p>下面是 AI 给出的消息发送流程，其中有一个服务端向客户端回复 <code>ACK</code> 帧的环节。<br />
+想象你寄了一封挂号信。寄出去之后，你不知道对方收没收到，心里没底。挂号信的解决方案是回执：对方签收后，邮局给你一张回执单，上面写着&quot;已签收&quot;。你拿到回执，就放心了。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1c54eacf3a824b18a31c91fb9d1b6231~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2262&amp;h=1186&amp;s=181098&amp;e=png&amp;a=1&amp;b=eaeaea" alt="mermaid-diagram (29).png" /></p>
+<p>ACK 就是消息系统里的回执单。服务端收到消息、存入数据库、分配了 seq 之后，回复一个确认帧，里面包含消息的 ID 和 seq。A 收到 ACK，就知道这条消息安全落地了。</p>
+<p>ACK 里带 seq 也很重要。A 发消息时并不知道这条消息在会话里排第几，seq 是服务端分配的。收到 ACK 后，A 才知道&quot;我这条消息是第 42 条&quot;。前端可以用这个 seq 来更新本地消息的排序位置。</p>
+<hr />
+<h5 id="3-为什么服务端要通知会话更新">3. 为什么服务端要通知会话更新</h5>
+<p>发一条消息，影响的不只是聊天页。回想一下微信的体验：<br />
+你给女神发了一句话，聊天页里消息出现了，同时会话列表里女神那一行也跟着变了，预览文字变成了你刚发的那句话，时间变成了&quot;刚刚&quot;，这一行还会跳到列表最顶部。如果是女神给你发的，你的未读数还会加 1。</p>
+<p>这些非常细节的交互，看起来理所应当，但落到真实去做，还是需要很多考量的。如果服务端不主动通知，客户端是很难及时更新会话列表的，前端只能靠定时轮询&quot;每隔几秒拉一次会话列表&quot;来发现变化。比如每秒拉一次，大部分时候什么都没变，纯粹浪费流量和电量。</p>
+<p>更好的做法是：服务端在处理完消息后，主动推送一个 CONVERSATION_UPDATE 帧给双方。帧里带着变更后的数据：conversation_id、最新预览、最新时间、未读数。前端收到后直接更新本地列表里对应的那一行，不用重新拉整个列表。</p>
+<p>上一篇在 conversations 表里预存了 last_message_preview 和 last_message_at，在 conversation_members 表里有 unread_count。这些就是&quot;封面便签&quot;。发消息时顺便更新这些字段（数据库层面），再通过 WebSocket 推送变更通知（实时层面）。数据库保证持久化，推送保证实时性，两者配合。</p>
+<hr />
+<h4 id="二-协议与数据扩展">二、协议与数据扩展</h4>
+<p>上一篇的会话系统只涉及 HTTP 接口，不需要动 WebSocket 协议。消息收发不一样，它是实时的：A 发一条消息，B 要立刻收到，不能等 B 下次刷新才看到。这意味着消息必须通过 WebSocket 传输，而 WebSocket 传输的是 Protobuf 帧。所以：</p>
+<ul>
+<li>第一件事是扩展协议，告诉前后端&quot;现在有新类型的帧了&quot;。</li>
+<li>同时，消息需要持久化，不能只在内存里转一圈就没了，所以还需要新增数据库表。</li>
+</ul>
+<hr />
+<h5 id="1-协议-新增三种帧类型">1. 协议：新增三种帧类型</h5>
+<p>第 18 篇定义的 ws.proto 只有四种帧类型：PING、PONG、AUTH、AUTH_RESULT。消息收发需要新增三种：</p>
+<table>
+<thead>
+<tr>
+<th>帧类型</th>
+<th>编号</th>
+<th>方向</th>
+<th>对应步骤</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHAT_MESSAGE</td>
+<td>4</td>
+<td>双向</td>
+<td>①④ 发送和接收消息</td>
+</tr>
+<tr>
+<td>MESSAGE_ACK</td>
+<td>5</td>
+<td>服务端 → 客户端</td>
+<td>③ 确认</td>
+</tr>
+<tr>
+<td>CONVERSATION_UPDATE</td>
+<td>6</td>
+<td>服务端 → 客户端</td>
+<td>⑤ 会话更新</td>
+</tr>
+</tbody>
+</table>
+<p>同时新增 message.proto，定义消息相关的数据结构。每种帧类型的 payload 里装什么，都在这里约定好：</p>
+<table>
+<thead>
+<tr>
+<th>消息结构</th>
+<th>用途</th>
+<th>关键字段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatMessage</td>
+<td>完整消息（转发给接收方）</td>
+<td>id, conversation_id, sender_id, seq, type, content, status, created_at</td>
+</tr>
+<tr>
+<td>SendMessageRequest</td>
+<td>发送请求（客户端 → 服务端）</td>
+<td>conversation_id, type, content, client_id</td>
+</tr>
+<tr>
+<td>MessageAck</td>
+<td>确认回执（服务端 → 发送方）</td>
+<td>message_id, seq</td>
+</tr>
+<tr>
+<td>ConversationUpdate</td>
+<td>会话变更通知（服务端 → 双方）</td>
+<td>conversation_id, last_message_preview, last_message_at, unread_count</td>
+</tr>
+</tbody>
+</table>
+<p>SendMessageRequest 比 ChatMessage 少很多字段。客户端发消息时只需要说&quot;发到哪个会话、什么内容&quot;，id、seq、created_at 这些都是服务端分配的。服务端处理完后，用完整的 ChatMessage 转发给接收方。</p>
+<p>ConversationUpdate 是专门为会话列表设计的。前端收到后，直接用里面的字段更新本地列表对应的那一行，不用重新拉整个列表。</p>
+<hr />
+<h5 id="2-新增数据表-messages">2. 新增数据表: messages</h5>
+<p>为了使用户发的消息可以在服务器中持久化存储，这里需要准备两张表。第一个是 <code>messages</code> 表，如果说会话是一个本子，那么它就是本子里的内容。每条记录是一条消息，通过 conversation_id 知道它写在哪个本子里，通过 seq 知道它是第几行。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eab04f50f61946719feef608801d22a7~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1165&amp;h=493&amp;s=60863&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>UUID</td>
+<td>消息唯一标识</td>
+</tr>
+<tr>
+<td>conversation_id</td>
+<td>UUID</td>
+<td>属于哪个会话（哪个本子）</td>
+</tr>
+<tr>
+<td>sender_id</td>
+<td>BIGINT</td>
+<td>谁发的</td>
+</tr>
+<tr>
+<td>seq</td>
+<td>BIGINT</td>
+<td>会话内序列号，递增</td>
+</tr>
+<tr>
+<td>type</td>
+<td>SMALLINT</td>
+<td>消息类型（本版本只有 0=文本）</td>
+</tr>
+<tr>
+<td>content</td>
+<td>TEXT</td>
+<td>消息内容</td>
+</tr>
+<tr>
+<td>extra</td>
+<td>JSONB</td>
+<td>扩展信息（图片宽高、文件大小等，本版本为空）</td>
+</tr>
+<tr>
+<td>status</td>
+<td>SMALLINT</td>
+<td>0 正常，1 已撤回，2 已删除</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>TIMESTAMPTZ</td>
+<td>创建时间</td>
+</tr>
+</tbody>
+</table>
+<p>type、status、extra 这些字段本版本大部分用不上，但建表时就预留好。和上一篇 conversation_members 的 is_pinned、is_muted 一样的道理：给已有数据的生产表加字段是件麻烦事。</p>
+<hr />
+<h5 id="3-新增数据表-conversation_seq">3. 新增数据表: conversation_seq</h5>
+<p>另外还有一个 <code>conversation_seq</code> 表, 只有两个字段：conversation_id 和 current_seq。它的作用是给每个会话维护一个独立的计数器。</p>
+<p>为什么不直接从 messages 表里算 <code>MAX(seq)</code> 然后加 1？因为并发不安全。如果朱红和橘橙同时发消息，两个请求都查到 MAX=3，都用 4，seq 就重复了。</p>
+<p>conversation_seq 就是为了解决这个问题而存在的。它是一个并发安全的计数器，每个会话一行记录，只存一个数字：current_seq。发消息时不查 messages 表，而是直接对这个计数器加 1。数据库保证这个操作是原子的，两个并发请求一个拿到 4，另一个拿到 5，绝不会重复。</p>
+<p>用朱红和橘橙的对话举个例子：</p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>谁发的</th>
+<th>内容</th>
+<th>conversation_seq 变化</th>
+<th>消息拿到的 seq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10:01</td>
+<td>朱红</td>
+<td>你好</td>
+<td>0 → 1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10:01</td>
+<td>橘橙</td>
+<td>在的</td>
+<td>1 → 2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>10:02</td>
+<td>朱红</td>
+<td>周末有空吗</td>
+<td>2 → 3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>current_seq 永远等于这个会话里最新一条消息的 seq。它的唯一职责就是：给下一条消息分配编号。</p>
+<hr />
+<h4 id="三-后端实现与验证">三、后端实现与验证</h4>
+<p>和上一篇的 im-conversation 一样，消息功能封装在独立的 im-message 模块中。模块结构也一样：models → repository → service。但这次多了几个新角色：序列号生成器、广播器、在线用户管理。同时 im-ws 模块也做了较大的重构，从只处理 PING 的简单分发器，变成了能处理消息收发的完整通信枢纽。目前模块关系如下：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e05bffd6890d407b9a4e572ed4ba6793~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1242&amp;h=488&amp;s=39488&amp;e=png&amp;b=fef9f8" alt="image.png" /></p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>前端设计</th>
+<th>前端任务</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>im/core-v0.0.3</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/im/core/v0.0.3/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/im/core/v0.0.3/client/tasks.md">tasks.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/im/core/v0.0.3/server/design.md">/server/design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/im/core/v0.0.3/server/tasks.md">/server/tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="1-im-message-模块">1. im-message 模块</h5>
+<p>im-message 的核心是 service.send() 方法，它串联了消息发送的所有步骤。一条消息从进入到完成：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dbcdade733c84b05b8d7424b18b60d61~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3070&amp;h=270&amp;s=59001&amp;e=png&amp;a=1&amp;b=f8f8f8" alt="mermaid-diagram (31).png" /></p>
+<p>步骤 6 和 7 就是上一篇讲的&quot;封面便签&quot;在实际中被激活的时刻。发一条消息，conversations 表的预览信息更新了，conversation_members 表的未读数加了。两张表从&quot;空城&quot;变成了&quot;活的&quot;。
+用伪代码表示整个流程：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-message/src/service.rs
+pub async fn send(&amp;self, msg: NewMessage) -&gt; Result&lt;Message&gt; {
+    // ① 验证
+    validate_not_empty(&amp;msg.content)?;
+    validate_is_member(msg.conversation_id, msg.sender_id)?;
+
+    // ② 存储
+    let seq = self.seq_gen.next(msg.conversation_id).await?;
+    let message = self.repo.create(&amp;msg, seq).await?;
+
+    // ③ 更新封面便签
+    let preview = truncate(&amp;msg.content, 50);
+    update_last_message(msg.conversation_id, &amp;preview).await;
+    increment_unread(msg.conversation_id, msg.sender_id).await;
+
+    // ④⑤ 广播
+    let member_ids = get_member_ids(msg.conversation_id).await;
+    self.broadcaster.broadcast_message(&amp;message, &amp;member_ids, true).await;
+    self.broadcaster.broadcast_conversation_update(...).await;
+
+    Ok(message)
+}
+</code></pre>
+<p>验证、存储、更新便签、广播，四个阶段清晰分开。AI 生成这段代码时，只要把八个步骤的描述给它，它就能准确地写出来。</p>
+<hr />
+<h5 id="2-广播器-解耦存储和推送">2. 广播器：解耦存储和推送</h5>
+<p>消息存储是 im-message 的职责，消息推送是 im-ws 的职责。两个模块不应该直接依赖。如果 im-message 直接调用 im-ws 的代码来推送，两个模块就耦合在一起了，改一个就要改另一个。</p>
+<p>解决方案是一个 trait（接口）：im-message 定义 MessageBroadcaster trait，im-ws 实现它。service 在发送消息后调用 broadcaster 的方法，但它不知道也不关心消息是怎么推送出去的。这种&quot;定义接口的人不实现接口&quot;的模式，让 im-message 可以独立测试（用一个空的 NoopBroadcaster），也让推送方式可以被替换（比如未来换成推送服务）。</p>
+<p>im-message 里定义 trait：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-message/src/broadcast.rs
+#[async_trait]
+pub trait MessageBroadcaster: Send + Sync {
+    async fn broadcast_message(
+        &amp;self, message: &amp;Message, member_ids: &amp;[i64], exclude_sender: bool,
+    );
+    async fn broadcast_conversation_update(
+        &amp;self, conversation_id: Uuid, preview: &amp;str,
+        member_ids: &amp;[i64], sender_id: i64,
+    );
+}
+</code></pre>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d27dacdd0e741a0a11cf1217a235f7c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1277&amp;h=502&amp;s=42692&amp;e=png&amp;b=f8f8f8" alt="image.png" /></p>
+<p>im-ws 里实现它，把消息编码成 Protobuf 帧，通过 WsState 推送给在线用户：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-ws/src/broadcaster.rs
+#[async_trait]
+impl MessageBroadcaster for WsBroadcaster {
+    async fn broadcast_message(&amp;self, message: &amp;Message, member_ids: &amp;[i64], exclude_sender: bool) {
+        let chat_msg = ChatMessage { /* 从 message 构造 */ };
+        let frame = WsFrame { r#type: CHAT_MESSAGE, payload: chat_msg.encode_to_vec() };
+        let targets = exclude(member_ids, message.sender_id);
+        self.ws_state.send_to_users(&amp;targets, frame.encode_to_vec()).await;
+    }
+}
+</code></pre>
+<p>广播器做两件事：把 ChatMessage 帧转发给接收方（步骤 ④），把 ConversationUpdate 帧推送给双方（步骤 ⑤）。推送给发送者和接收者的 ConversationUpdate 内容不同：发送者的 unread_count=0，接收者的 unread_count=1。</p>
+<hr />
+<h5 id="3-在线用户管理与帧分发">3. 在线用户管理与帧分发</h5>
+<p>推送消息需要知道&quot;B 当前在不在线，连接在哪&quot;。im-ws 新增了一个 WsState，用 channel 管理在线用户。每个 WebSocket 连接建立时创建一个 channel，WsState 持有发送端。需要推送消息给某个用户时，往 channel 里扔数据，连接循环的另一端收到后写入 WebSocket。</p>
+<p>第 18 篇的帧分发器只处理 PING，现在扩展它处理 CHAT_MESSAGE 帧。收到 CHAT_MESSAGE 后：解析 SendMessageRequest → 调用 message_service.send()（触发存储 + 广播）→ 构造 MessageAck 帧回复给发送者。分发器本身的结构不变：读 type，查表，转发。只是表里多了一行。</p>
+<p>WsState 用 channel 管理在线用户，每个连接一个 channel：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-ws/src/state.rs
+pub struct WsState {
+    senders: RwLock&lt;HashMap&lt;i64, mpsc::UnboundedSender&lt;Vec&lt;u8&gt;&gt;&gt;&gt;,
+}
+
+impl WsState {
+    pub async fn send_to_user(&amp;self, user_id: i64, data: Vec&lt;u8&gt;) {
+        let conns = self.senders.read().await;
+        if let Some(tx) = conns.get(&amp;user_id) {
+            let _ = tx.send(data);
+        }
+    }
+}
+</code></pre>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b640527558a046b9a1458e1bbac0a7a5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1356&amp;h=778&amp;s=64363&amp;e=png&amp;b=f7f7f7" alt="image.png" /></p>
+<p>handler 里用 <code>tokio::select!</code> 同时监听两个方向：客户端发来的帧和需要推送的帧：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-ws/src/handler.rs
+loop {
+    tokio::select! {
+        // 客户端发来的帧
+        msg = ws_receiver.next() =&gt; {
+            match frame_type {
+                PING =&gt; ws_state.send_to_user(user_id, pong),
+                CHAT_MESSAGE =&gt; dispatcher.handle_chat_message(user_id, &amp;payload).await,
+                _ =&gt; {}
+            }
+        }
+        // 需要推送给客户端的帧（来自 channel）
+        Some(data) = outgoing_rx.recv() =&gt; {
+            ws_sender.send(Binary(data)).await;
+        }
+    }
+}
+</code></pre>
+<p>dispatcher 处理 CHAT_MESSAGE 帧，调用 service 后发 ACK：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-ws/src/dispatcher.rs
+pub async fn handle_chat_message(&amp;self, sender_id: i64, payload: &amp;[u8]) {
+    let request = SendMessageRequest::decode(payload)?;
+    let message = self.msg_service.send(new_msg).await?;
+
+    // service.send() 内部已经完成了广播（步骤④⑤）
+    // dispatcher 只需要发 ACK（步骤③）
+    let ack = MessageAck { message_id: message.id, seq: message.seq };
+    let ack_frame = WsFrame { r#type: MESSAGE_ACK, payload: ack.encode_to_vec() };
+    self.ws_state.send_to_user(sender_id, ack_frame.encode_to_vec()).await;
+}
+</code></pre>
+<hr />
+<h5 id="4-历史消息查询">4. 历史消息查询</h5>
+<p>除了 WebSocket 的实时消息，还需要一个 HTTP 接口来查询历史消息。用户打开聊天页时，需要加载之前的消息。往上滚动时，需要加载更早的消息。</p>
+<p>为什么历史消息走 HTTP 而不是 WebSocket？WebSocket 适合实时推送：服务端有新消息了，主动推给客户端。但历史消息是客户端主动请求的，是一个&quot;请求-响应&quot;模式：我要第几页的数据，你给我。HTTP 天然就是干这个的，有成熟的缓存、重试、错误码机制。如果把历史查询也塞进 WebSocket，就需要自己实现请求-响应的配对（发一个请求帧，等一个响应帧，还要处理超时），没必要重新造轮子。</p>
+<pre><code>GET /conversations/:id/messages?before_seq=42&amp;limit=50
+</code></pre>
+<p>两个参数：before_seq 表示&quot;给我这个序列号之前的消息&quot;，limit 表示&quot;最多给我多少条&quot;。如果不传 before_seq，返回最新的消息（打开聊天页时的场景）。
+返回的消息带上发送者的昵称和头像（关联 user_profiles 表），前端不需要再单独查用户信息：</p>
+<pre><code class="language-json">[
+  {
+    &quot;id&quot;: &quot;uuid&quot;,
+    &quot;conversation_id&quot;: &quot;uuid&quot;,
+    &quot;sender_id&quot;: &quot;1&quot;,
+    &quot;sender_name&quot;: &quot;朱红&quot;,
+    &quot;sender_avatar&quot;: &quot;identicon:1:FF461F&quot;,
+    &quot;seq&quot;: 42,
+    &quot;msg_type&quot;: 0,
+    &quot;content&quot;: &quot;你好&quot;,
+    &quot;status&quot;: 0,
+    &quot;created_at&quot;: &quot;2026-03-30T...&quot;
+  }
+]
+</code></pre>
+<hr />
+<h4 id="四-脱离前端的验证">四、脱离前端的验证</h4>
+<p>后端代码写完了，怎么验证五个步骤都跑通了？传统做法是等前端做完，打开 App 手动测试。但这有几个问题：</p>
+<ul>
+<li>前端可能还没开始做，你得等前端完成；</li>
+<li>前端可能有自己的 bug，分不清是前端的问题还是后端的问题；</li>
+<li>手动测试不可重复，每次改了后端代码都要重新点一遍。</li>
+</ul>
+<p>上一篇的会话接口用 Link Test Writer 生成了 HTTP 测试脚本，但消息收发走的是 WebSocket + Protobuf 二进制帧，HTTP 测试脚本搞不定。Postman 这类 GUI 工具也不方便，因为它们没法直接编解码 Protobuf。</p>
+<hr />
+<h5 id="1-为什么用-python">1. 为什么用 Python</h5>
+<p>现在需要一个能同时做三件事的工具：建立 WebSocket 连接、编解码 Protobuf 帧、自动化断言。Python 刚好都能做：<code>websockets</code> 库处理 WebSocket，<code>protobuf</code> 库处理编解码，标准库处理断言和流程控制。而且 Python 是跨平台的，Windows、Mac、Linux 都能跑，不像 PowerShell 脚本有编码问题。</p>
+<p>而且用不同语言的客户端来验证后端，本身就是一种多方验证。前端用 Dart 连 WebSocket，测试脚本用 Python 连 WebSocket，如果两边都能正确收发 Protobuf 帧，说明后端的协议实现是语言无关的，不是只对某个客户端碰巧能用。这比只用一种语言测试更有说服力。</p>
+<p>这里有一个值得注意的点：<br />
+我们的后端用 Rust，前端用 Dart，测试脚本用 Python。多种技术栈在同一个项目里共存。在传统开发中，这可能是个问题，因为团队成员需要掌握多种语言。但在 AI 编程时代，语言不再是壁垒。你不需要精通 Python 才能写测试脚本，你只需要告诉 AI &quot;用 Python 写一个 WebSocket 测试脚本&quot;，它就能生成。你需要的是知道&quot;该用什么工具解决什么问题&quot;，而不是&quot;怎么用这个工具的每一个 API&quot;。希望大家可以在 AI 的加持下，尽可能拓宽自己的能力范围。</p>
+<hr />
+<h5 id="2-测试流程">2. 测试流程</h5>
+<p>脚本模拟两个用户的完整交互。先准备好 Protobuf 帧的构造工具：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9cc8d86b89f643ca92b709647be63a52~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2168&amp;h=1686&amp;s=216749&amp;e=png&amp;a=1&amp;b=e9e9e9" alt="mermaid-diagram (32).png" /></p>
+<pre><code class="language-python"># ---&gt; docs/features/im/core/v0.0.3/test/ws_chat_test.py
+def make_auth_frame(token):
+    auth = ws.AuthRequest()
+    auth.token = token
+    return make_frame(ws.AUTH, auth.SerializeToString())
+
+def make_chat_frame(conversation_id, content):
+    req = msg.SendMessageRequest()
+    req.conversation_id = conversation_id
+    req.type = msg.TEXT
+    req.content = content
+    return make_frame(ws.CHAT_MESSAGE, req.SerializeToString())
+</code></pre>
+<p>然后按步骤执行。登录拿 token，建立连接，发送 AUTH 帧认证：</p>
+<pre><code class="language-python">token_a, uid_a = login(PHONE_A)
+token_b, uid_b = login(PHONE_B)
+
+ws_a = await websockets.connect(WS_URL)
+ws_b = await websockets.connect(WS_URL)
+
+await ws_a.send(make_auth_frame(token_a))
+await ws_b.send(make_auth_frame(token_b))
+</code></pre>
+<p>朱红发送消息，验证收到 ACK（步骤 ③）：</p>
+<pre><code class="language-python">await ws_a.send(make_chat_frame(conv_id, &quot;hello from A&quot;))
+
+# 等待 MESSAGE_ACK
+frame = parse_frame(await ws_a.recv())
+assert frame.type == ws.MESSAGE_ACK
+ack = msg.MessageAck()
+ack.ParseFromString(frame.payload)
+assert ack.seq == 1
+</code></pre>
+<p>验证橘橙收到消息（步骤 ④）：</p>
+<pre><code class="language-python">frame = parse_frame(await ws_b.recv())
+assert frame.type == ws.CHAT_MESSAGE
+chat = msg.ChatMessage()
+chat.ParseFromString(frame.payload)
+assert chat.content == &quot;hello from A&quot;
+assert chat.seq == 1
+</code></pre>
+<p>验证会话更新推送（步骤 ⑤），再通过 HTTP 查询确认消息已持久化：</p>
+<pre><code class="language-python"># 橘橙收到 CONVERSATION_UPDATE，unread=1
+frame = parse_frame(await ws_b.recv())
+update = msg.ConversationUpdate()
+update.ParseFromString(frame.payload)
+assert update.unread_count == 1
+
+# HTTP 查询历史消息
+r = curl(&quot;GET&quot;, f&quot;{BASE}/conversations/{conv_id}/messages&quot;, token=token_a)
+assert r[&quot;data&quot;][0][&quot;content&quot;] == &quot;hello from A&quot;
+</code></pre>
+<p>最后再发一条，验证 seq 递增到。全部通过后打印结果，就是我们代码逻辑的验收保证：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4db968bfad804031bf55476fbd3e4ac7~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1475&amp;h=766&amp;s=106354&amp;e=png&amp;b=0c0c0c" alt="image.png" /></p>
+<p>测试成功后，就可以在后台数据库里看到对应的消息数据，到这里做饭的米就已经准备就绪。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/25d25fd9a49740b4a51cb380580845be~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1157&amp;h=442&amp;s=93194&amp;e=png&amp;b=fcfcfc" alt="image.png" /></p>
+<hr />
+<h5 id="3-测试即文档">3. 测试即文档</h5>
+<p>在文档管理上，我把测试的脚本，跟随功能版本。这样可以更好地了解，哪一个版本的需求，测试了哪些东西：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aba45de24a514b96918bcb8b19e1bf87~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=683&amp;h=360&amp;s=17929&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>另外，这个脚本不只是测试工具，它还是最好的接口文档。新来的开发者想知道&quot;消息收发的完整流程是什么&quot;，不用翻设计文档，看一遍测试脚本就行。每一步做什么、期望什么结果、帧的格式是什么，全在代码里。或者让 AI 分析一下测试，梳理成文档也可以</p>
+<p>而且它是可执行的。设计文档可能过时（改了代码忘了改文档），但测试脚本不会，因为它跑不过就会报错。它是一份&quot;活的文档&quot;，永远和代码保持同步。</p>
+<p>后续每个涉及 WebSocket 的功能（好友申请推送、在线状态、已读回执），都可以用同样的方式写测试脚本。脚本之间可以复用 Protobuf 编解码和连接管理的代码，只需要替换测试步骤。</p>
+<hr />
+<p>另外信息的拉取是 http 请求，可以通过 <code>Link Test Writer</code> 写一份消息相关的测试脚本。我优化了一下结构，在 feature/模块 下统一使用 api 文件夹来维护接口测试和文档，如下所示。这个接口测试和文档不跟接口走，会时刻保持最新状态：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7c09c1d37d4245f0a41439642861622b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=675&amp;h=387&amp;s=26523&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e68d0962d45469da44ed11deb02e07f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1358&amp;h=422&amp;s=59563&amp;e=png&amp;b=0c0c0c" alt="image.png" /></p>
+<hr />
+<h4 id="五-本章小结">五、本章小结</h4>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>消息收发后端链路</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/releases/tag/v0.9.0">v0.9.0</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/49a6ed0ad836963267efac54d54d9511bb7ff01b">49a6ed0</a></td>
+</tr>
+</tbody>
+</table>
+<p>这一篇实现了消息收发的后端完整链路，也是整个 IM 系统中最核心的一环。开头定义的五个步骤：发送 → 存储 → 确认 → 转发 → 会话更新，每一步都有明确的理由和对应的实现。</p>
+<p>在协议层，ws.proto 新增了三种帧类型（CHAT_MESSAGE、MESSAGE_ACK、CONVERSATION_UPDATE），message.proto 定义了四种消息结构。在数据层，新增了 messages 表和 conversation_seq 表，后者是一个并发安全的计数器，保证每条消息拿到唯一递增的 seq。在模块层，im-message 负责存储和业务逻辑，im-ws 重构为 channel 模式支持消息推送，两者通过 broadcaster trait 解耦。</p>
+<p>验证环节引入了 Python WebSocket 测试脚本，脱离前端独立验证后端链路。多语言客户端的交叉验证，也证明了协议实现的语言无关性。测试脚本本身就是一份活的文档，永远和代码保持同步。</p>
+<p>后端的活干完了。消息能存、能送达、能确认、能推送会话更新。下一篇把消息送到用户眼前：前端聊天页。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-19.html">← 根芽#2 ｜ 会话列表</a>
+      <a class="next" href="ch-21.html">根芽#4 ｜ 流程方法论探索 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-消息需要什么">一、消息需要什么</a></li>
+      <li class="lv5"><a href="#1-一条消息长什么样">1. 一条消息长什么样</a></li>
+      <li class="lv5"><a href="#2-为什么需要-ack-环节">2. 为什么需要 ACK 环节</a></li>
+      <li class="lv5"><a href="#3-为什么服务端要通知会话更新">3. 为什么服务端要通知会话更新</a></li>
+      <li class="lv4"><a href="#二-协议与数据扩展">二、协议与数据扩展</a></li>
+      <li class="lv5"><a href="#1-协议-新增三种帧类型">1. 协议：新增三种帧类型</a></li>
+      <li class="lv5"><a href="#2-新增数据表-messages">2. 新增数据表: messages</a></li>
+      <li class="lv5"><a href="#3-新增数据表-conversation_seq">3. 新增数据表: conversation_seq</a></li>
+      <li class="lv4"><a href="#三-后端实现与验证">三、后端实现与验证</a></li>
+      <li class="lv5"><a href="#1-im-message-模块">1. im-message 模块</a></li>
+      <li class="lv5"><a href="#2-广播器-解耦存储和推送">2. 广播器：解耦存储和推送</a></li>
+      <li class="lv5"><a href="#3-在线用户管理与帧分发">3. 在线用户管理与帧分发</a></li>
+      <li class="lv5"><a href="#4-历史消息查询">4. 历史消息查询</a></li>
+      <li class="lv4"><a href="#四-脱离前端的验证">四、脱离前端的验证</a></li>
+      <li class="lv5"><a href="#1-为什么用-python">1. 为什么用 Python</a></li>
+      <li class="lv5"><a href="#2-测试流程">2. 测试流程</a></li>
+      <li class="lv5"><a href="#3-测试即文档">3. 测试即文档</a></li>
+      <li class="lv4"><a href="#五-本章小结">五、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

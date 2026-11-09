@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>果实#1 ｜ 后端部署 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li class="active"><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>果实#1 ｜ 后端部署</h1>
+<p>现在闪讯已经基本实现了第一版的预期功能，但到目前为止，后端一直住在开发机上运行。客户端也是在局域网内聊天。但这有个问题：你一关电脑，服务就没了。你的朋友想试试？得跟你连同一个 WiFi。是时候给闪讯找个正式的 <code>&quot;家&quot;</code> 了。</p>
+<hr />
+<h4 id="一-服务器环境准备">一、服务器环境准备</h4>
+<p>如果你从来没碰过服务器，先别慌。本章会像搬家指南一样，一步步带你走完全程。而且再 AI 的加持下，搬家这件事将变得更加轻松，就像是有了一辆运输机。找个新家的流程，无非就是：</p>
+<blockquote>
+<p>找房子 → 装修 → 搬东西 → 通水电 → 入住。</p>
+</blockquote>
+<hr />
+<h5 id="1-什么是服务器">1. 什么是服务器</h5>
+<p><code>服务器</code> 顾名思义，是提供服务的机器。其实之前我们一直在运行服务，本机也可以视为一个服务器。从客户端的访问来看，其实服务器最重要的有两个东西 <strong>ip</strong> 和 <strong>端口号</strong>，其中端口号是我们可以自定义的。所以最重要的就是这个 ip。</p>
+<p>正是因为本机的 ip 只能在局域网内使用，所以目前只是一个无法对外公开的服务。服务器和你的电脑之前最大的差异性在于:</p>
+<blockquote>
+<p>它可以提供一个公网 ip ，任何人都可以通过这个 ip 接入你的服务。</p>
+</blockquote>
+<p>也就是说，如果你有公网 ip，那本机也完全可以作为服务器，不过公网IP的获取方式目前应该很难了。</p>
+<hr />
+<h5 id="2-如何获取服务器">2. 如何获取服务器</h5>
+<p>服务器是一种资源，所以也不会平白无故地得到。服务器根据配置的差异，售价也云泥之别。目前国内主流的云服务商有，腾讯云、阿里云、华为云等。</p>
+<p>我们的项目还在初期阶段，配置不需要很高。<strong>1 核 2G</strong> 足够跑近千个并发连接，千人的用户日常使用应该没有太大问题。我目前用的是腾讯云的 <code>轻量应用服务器</code> ，之前活动 60 块钱买了 6年半，自己玩玩还是够用的。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/42ac3cf815cc4443a9717abb3f707242~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=934&amp;h=424&amp;s=216315&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<p>现在入手应该也就几十块钱一年，对于了解全栈流程，还是和划算的。拿到服务器后，在控制台，你应该能看看到服务器对于的 ip， 它将成为任何人使用网络，访问你服务的入口。<br />
+这里我使用的服务器操作系统是 <strong>Ubuntu 22.04 LTS</strong>，大家尽量可以保持一致。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/19875770cf654b659eed6b46048b819b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1296&amp;h=416&amp;s=314757&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<hr />
+<h5 id="3-访问你的服务器">3. 访问你的服务器</h5>
+<p>服务器供应商还会给你三个重要的东西：</p>
+<ul>
+<li><strong>公网 IP</strong>（比如 <code>82.157.176.209</code>）—— 你服务器在互联网上的门牌号</li>
+<li><strong>用户名</strong>（通常是 <code>root</code>）—— 最高权限管理员</li>
+<li><strong>密码</strong> —— 开门的钥匙</li>
+</ul>
+<p>有了这三样，表示你对这个服务器的控制权，就可以从你的电脑&quot;走进&quot;服务器了。打开终端输入：</p>
+<pre><code class="language-bash">ssh root@82.157.176.209
+</code></pre>
+<p>把 IP 换成你自己的。第一次连会问你信不信任这台机器，输入 <code>yes</code>。然后输入密码（输入时屏幕不会显示任何字符，这是正常的，盲打完回车就行）。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/13526a49e3114d81add414fc3929a1f0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=671&amp;h=195&amp;s=24410&amp;e=png&amp;b=121212" alt="image.png" /></p>
+<p>这样就表示你成功连上了你的服务器：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a9bae190c88041b4a59eadb49a4ded8f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=665&amp;h=82&amp;s=7299&amp;e=png&amp;b=0c0c0c" alt="image.png" /></p>
+<p>另外，命令行里是记不住密码的，建议可以用管理工具来维护。比如我习惯使用 <a href="https://github.com/Eugeny/">tabby</a> 维护连接，它也是一个开源项目。可以记住连接配置，丝滑连接服务器。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f145a89be60248928396a4f8d0adea0c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=818&amp;h=233&amp;s=19656&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<hr />
+<h4 id="二-装修-环境检测与数据库准备">二、装修：环境检测与数据库准备</h4>
+<p>连上服务器之后，第一件事是搞清楚&quot;这个毛坯房现在是什么状态&quot;。就像搬进新房，你得先看看水电通了没、墙刷了没、马桶能不能用。我们的闪讯后端运行起来其实只需要两样东西：</p>
+<ul>
+<li><strong>PostgreSQL</strong>：存数据的地方（用户信息、聊天记录、好友关系，全在这里面）</li>
+<li><strong>flash-im 二进制文件</strong>：编译好的可执行程序（这个从本地编译后上传，不在服务器上编译）</li>
+</ul>
+<p>其他的像 Rust 编译器、protoc 这些开发工具，服务器上完全不需要。服务器只负责&quot;跑&quot;，不负责&quot;造&quot;。我们可以本地编译好，传到服务器上。 本文的四个脚本在项目的这个位置：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9e6f376742444395a93c3a3053b3513f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=942&amp;h=473&amp;s=29497&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<hr />
+<h5 id="1-工作目录">1. 工作目录</h5>
+<p>首先在服务端创建一个文件夹，来盛放 flash_im 的项目，比如:</p>
+<blockquote>
+<p>mkdir -p ~/server/flash_im  #创建文件夹<br />
+cd ~/server/flash_im  #进入文件夹</p>
+</blockquote>
+<p>通过 <code>scp</code> 命令可以将本地的文件，传到服务器的置顶地址，比如这里写了一个 <code>env_check.sh</code> 的脚本，检测 flash_im 的环境。</p>
+<blockquote>
+<p>scp scripts/deploy/env_check.sh root@82.157.176.209:~/server/flash_im/</p>
+</blockquote>
+<p>这里给大家一个小任务，scp 命令传输时，总是要输密码。你可以尝试借助 AI ，如何解决这个问题，毕竟后期传文件到服务器上是很常用的操作。</p>
+<hr />
+<h5 id="2-环境检测-env_check-sh">2. 环境检测  <code>env_check.sh</code></h5>
+<p>这个脚本是 AI 为我写的，主要是综合检测 flash_im 的运行环境，是否已经准备就绪。上一步已经把文件传到了服务器，需要执行一次 <code>chmod +x</code> 为它赋予可执行权限，然后就能执行检测了：</p>
+<pre><code>chmod +x env_check.sh # 可执行权限
+./env_check.sh # 执行检测
+</code></pre>
+<ul>
+<li>前两个是基本信息，看一下系统和当前的内存情况</li>
+</ul>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c65c2d305f964a01a31bcc337e6bf62b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=625&amp;h=328&amp;s=29852&amp;e=png&amp;b=181818" alt="image.png" /></p>
+<hr />
+<ul>
+<li>接着是 PostgreSQL 数据库和表的情况</li>
+</ul>
+<p>新环境会自动下载并安装 PostgreSQL，以及创建数据库。但是数据表并不会在这里创建，会有警告提示。后续会有单独的数据库管理脚本，来维护数据库表。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/40f4c4ed52c3422f9796c7555542a338~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=666&amp;h=226&amp;s=29635&amp;e=png&amp;b=181818" alt="image.png" /></p>
+<hr />
+<ul>
+<li>然后是配置文件、可执行文件是否存在</li>
+</ul>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/16c6917bc1284b338dfeec4426b5acf7~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=684&amp;h=371&amp;s=42741&amp;e=png&amp;b=181818" alt="image.png" /></p>
+<hr />
+<ul>
+<li>最后检查一下端口和防火墙情况</li>
+</ul>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/072d828a9fca494cb1df4e77f18880c8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=699&amp;h=292&amp;s=32039&amp;e=png&amp;b=191919" alt="image.png" /></p>
+<p>接下来，只需要逐一处理环境中存在的问题即可，首先我们来处理一下数据库表。</p>
+<hr />
+<h4 id="3-数据库表的维护">3.数据库表的维护</h4>
+<p>之前数据库表的变更都在 <code>server/migrations</code> 中维护，使用服务端需要依据它们来创建。通过如下命令复制过去:</p>
+<blockquote>
+<p>scp -r server/migrations root@82.157.176.209:~/server/flash_im/</p>
+</blockquote>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/66a76f5dd9ea41518106a20e01156f05~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=700&amp;h=306&amp;s=27318&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<hr />
+<p><code>db.sh</code> 是专门为数据管理服务的，比如 <code>./db.sh migrate</code> 也可执行 migrate ，从而创建数据库，以后的数据库更新迭代，也可以走这个脚本：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f2dacaadc0aa4b0dba64463dba671954~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=691&amp;h=320&amp;s=40089&amp;e=png&amp;b=181818" alt="image.png" /></p>
+<p><code>./db.sh status</code> 可以查看数据库的状态：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/15ed3561b6be427ba50df50980c44c0b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=977&amp;h=916&amp;s=85973&amp;e=png&amp;b=171717" alt="image.png" /></p>
+<hr />
+<p>此时再 <code>./env_check.sh </code> 一下，也可以看到数据库就绪的信息：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b147d1515b5e4f0180997682792e1fc2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=853&amp;h=285&amp;s=43528&amp;e=png&amp;b=181818" alt="image.png" /></p>
+<hr />
+<h4 id="三-项目打包和运行">三、项目打包和运行</h4>
+<p>数据库环境准备完毕，接下来就是如何打包，让闪讯的后端在服务器上跑起来。你知道之前本机上，后端能跑起来最重要的东西是什么吗? 可以看出，是构建出了一个在本机上可以执行的二进制文件，然后运行它。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3b4b8a40a5be4ba3be8913c151abcf8c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=831&amp;h=252&amp;s=29148&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<p>聪明的你可能会想，把它丢到服务器上跑起来，能就行了嘛! 这个想法是很正确的，但只对了一半。</p>
+<hr />
+<h5 id="2-什么是交叉编译">2. 什么是交叉编译</h5>
+<p>你的开发电脑是 Windows（或 macOS），服务器是 Linux。它们的操作系统不同，编译出来的程序格式也不同：</p>
+<table>
+<thead>
+<tr>
+<th>系统</th>
+<th>可执行文件格式</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>.exe（PE 格式）</td>
+<td>flash-im.exe</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>Mach-O 格式</td>
+<td>flash-im</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>ELF 格式</td>
+<td>flash-im</td>
+</tr>
+</tbody>
+</table>
+<p>在 Windows 上直接 <code>cargo build</code> 出来的是 <code>.exe</code>，传到 Linux 上跑不了。我们需要&quot;交叉编译&quot;：在 Windows 上编译出 Linux 格式的程序。</p>
+<blockquote>
+<p>交叉编译就像翻译：你说中文（Windows），但要写一封英文信（Linux 程序）。你需要一个翻译工具。</p>
+</blockquote>
+<p>这个&quot;翻译工具&quot;就是 <strong>Docker</strong>。Docker 可以在你的电脑上模拟一个 Linux 环境，在里面编译出 Linux 程序。</p>
+<hr />
+<p>当然，构建的事也是 AI 来写脚本处理，我们也不用自己埋头干。项目里的 <code>scripts\deploy\build.py</code> 就是使用 Docker 一套龙的构建流程。第一次运行，它会提示你安装 <strong>Docker</strong>，你根据提示里的链接下载启动一下即可。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c4587121eb2f45e08946d0fec45396b8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=862&amp;h=310&amp;s=36945&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>直到编译成功，你会得到一个 <code>flash_im</code> 的编译产物。把它上传到服务器的工作目录即可：</p>
+<blockquote>
+<p>scp server/target/release/flash-im root@82.157.176.209:~/server/flash_im/</p>
+</blockquote>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e6e4e8bb6cfe4b6b898886a63ba8c79d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=809&amp;h=312&amp;s=46578&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<hr />
+<h5 id="3-在服务器运行-flash_im-后端产物">3. 在服务器运行 flash_im 后端产物</h5>
+<p>现在 server/flash_im 的运行目录有这些东西了，此时 flash-im 还没有可执行权限，需要加一下:</p>
+<blockquote>
+<p>chmod +x flash-im</p>
+</blockquote>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b9330412a4964ada8e8a2fb14781b657~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=651&amp;h=81&amp;s=12509&amp;e=png&amp;b=181818" alt="image.png" /></p>
+<p>现在环境检测还剩最后一个问题，flash-im 的运行配置信息在 <code>.env</code> 里，可以拿来一下：</p>
+<blockquote>
+<p>scp server/.env root@82.157.176.209:~/server/flash_im/</p>
+</blockquote>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a113366001434937baa733c2ff497c00~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=713&amp;h=186&amp;s=21063&amp;e=png&amp;b=181818" alt="image.png" /></p>
+<p>当所有环境准备，就绪就可以运行后端服务了, 看到熟悉的日志，表示服务重新启动:</p>
+<blockquote>
+<p>./flash_im</p>
+</blockquote>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0c84ced4b21444e08a1eb30e2fd34adf~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=715&amp;h=131&amp;s=14208&amp;e=png&amp;b=181818" alt="image.png" /></p>
+<hr />
+<h5 id="4-端口号放行">4. 端口号放行</h5>
+<p>一般云厂商在服务器里会有安全组或者防火墙规则，来配置放行的端口，不然外网无法访问这个端口。如下搜索，我在腾讯云的配置里放行了 <code>9600</code> :</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b5b0bb42ebea4290886b4449020c8d6e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1342&amp;h=443&amp;s=60483&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>然后浏览器输入 <code>公网ip:9600/v</code> 查看一下，有结果就说明后端服务通了。目前任何人都可以访问你的 flash_im 服务了。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/74524a2c9beb455a97a1c00a87b8ca60~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=639&amp;h=138&amp;s=10037&amp;e=png&amp;b=fafafa" alt="image.png" /></p>
+<hr />
+<h5 id="5-前端使用线上环境">5. 前端使用线上环境</h5>
+<p>而对于前端来说，它并不在意后端运行在哪，它们的协议是接口格式。唯一的区别是链接的途径，比如说政务大楼搬迁到新的地址，那里办理的业务和流程都没有任何变化。那对你而言，新旧的区别只在于新地址。我们只要把配置里的端口号改一下，就使用了 <strong>线上环境</strong> 。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/adb35d46021f492589f56d846e164560~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1002&amp;h=505&amp;s=63720&amp;e=png&amp;b=fffbfb" alt="image.png" /></p>
+<p>而这个线上服务，是任何人都可以访问的。也就是说，目前你的 APP，已经具备异地通信的能力了。有动手能力的，现在就可以打包一个安装包给你的小伙伴(后续会逐一介绍)。</p>
+<table>
+<thead>
+<tr>
+<th>登录</th>
+<th>信息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/932df99d75c14008a719c90eb50bb315~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=119599&amp;e=png&amp;b=ffffff" alt="image.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/df2fe733222244d8864320c82ccf5492~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=143519&amp;e=png&amp;b=fafafa" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>另外，现在手机号登录还是模拟的。如果需要的话，可以购买厂商的短信服务，把后端发假验证码的那块逻辑改成真正发送即可。</p>
+<hr />
+<h4 id="四-启动流程优化">四、启动流程优化</h4>
+<p>现在 <code>build.py</code> 可以打包上传一条龙服务。但启动流程有点单薄，命令行里手动执行可执行文件一个问题：当命令行关闭，服务也就停了。我们需要一个更优雅的方式来管理服务的启停。</p>
+<hr />
+<h5 id="1-使用脚本启停">1. 使用脚本启停</h5>
+<p>项目里准备了一个管理脚本 <code>flash.sh</code> 负责维护后端的运行事宜，把它上传到服务器的部署目录：</p>
+<pre><code class="language-bash"># 在本地执行
+scp scripts/deploy/flash.sh root@82.157.176.209:~/server/flash_im/
+</code></pre>
+<p>上传后，在服务器上就可以用它来管理服务了：</p>
+<pre><code class="language-bash">cd ~/server/flash_im
+bash flash.sh          # 后台启动（关闭终端不停止）
+bash flash.sh stop     # 停止
+bash flash.sh restart  # 重启
+bash flash.sh status   # 查看状态（PID、内存、运行时间）
+bash flash.sh log      # 看实时日志
+bash flash.sh clear    # 清空日志文件
+</code></pre>
+<p><code>flash.sh</code> 用 <code>nohup</code> 在后台运行服务，日志写到 <code>flash-im.log</code>。关闭 SSH 终端不会影响服务。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7328ce607b3e46e7b4a1a55dfce81ab0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=678&amp;h=264&amp;s=38666&amp;e=png&amp;b=181818" alt="image.png" /></p>
+<hr />
+<h5 id="2-使用-systemd-创建服务-开机自启">2. 使用 systemd 创建服务 - 开机自启</h5>
+<p>目前这还不够，因为 <strong>服务器重启后，服务不会自动恢复</strong>。你得重新 SSH 连上去手动启动。
+对于一个 7×24 小时在线的 IM 服务来说，这不够可靠。我们需要让系统帮我们管理进程：开机自动启动、崩溃自动重启、日志自动收集。Linux 上做这件事的标准工具叫 <strong>systemd</strong>。</p>
+<p>你可以把 systemd 理解为 Linux 的&quot;管家&quot;。它负责管理系统上所有的服务（service）：哪些开机要启动、哪些挂了要重启、日志存在哪里。</p>
+<p>systemd 的服务配置是一个 <code>.service</code> 文件，放在 <code>/etc/systemd/system/</code> 目录下。我们写一个 <code>flash.sh</code> 的子命令来自动创建它：</p>
+<pre><code class="language-bash">bash flash.sh install    # 注册为系统服务 + 开机自启
+bash flash.sh uninstall  # 移除系统服务
+</code></pre>
+<p>这个命令会做三件事：</p>
+<ol>
+<li>创建 <code>/etc/systemd/system/flash-im.service</code> 配置文件</li>
+<li>让 systemd 重新加载配置</li>
+<li>设置开机自启</li>
+</ol>
+<p>注册后，可以直接用 systemd 命令：</p>
+<pre><code class="language-bash">systemctl start flash-im # 启动
+systemctl stop flash-im # 停止
+systemctl restart flash-im  # 重启
+journalctl -u flash-im -f    # 查看日志
+</code></pre>
+<hr />
+<h5 id="3-服务的更新部署">3. 服务的更新部署</h5>
+<p>比如这里可以改一下版本号，重新构建上传。另外这里更新优化了一下脚本。指定公网 ip ，会自动上传、重启服务，不需要再登录服务器执行：</p>
+<blockquote>
+<p>python scripts/deploy/build.py root@82.157.176.209</p>
+</blockquote>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/11516aa834d14a7c84d6911508f1559d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=901&amp;h=226&amp;s=37966&amp;e=png&amp;b=f0eff2" alt="image.png" /></p>
+<p>运行完成后，再访问一下们可以看到更新了。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aacd51901b5d42b89a23d501243a1ed5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=573&amp;h=125&amp;s=9235&amp;e=png&amp;b=fafafa" alt="image.png" /></p>
+<p>这样一行本地命令，就可以完成服务器后端的更新，而整个过程的脚本都是 AI 完成的。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3f97843cb21649528f8681a946f02e70~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1143&amp;h=298&amp;s=45876&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<hr />
+<h4 id="四-小结">四、小结</h4>
+<p>回顾一下这一章做了什么：我们把闪讯后端从开发机搬到了云端，让它变成了一个真正的、任何人都能访问的在线服务。整个部署体系由四个脚本组成，各司其职：</p>
+<table>
+<thead>
+<tr>
+<th>脚本</th>
+<th>在哪里跑</th>
+<th>做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>build.py</code></td>
+<td>本地电脑</td>
+<td>交叉编译 + 上传 + 自动重启远程服务</td>
+</tr>
+<tr>
+<td><code>env_check.sh</code></td>
+<td>服务器</td>
+<td>检测运行环境是否就绪</td>
+</tr>
+<tr>
+<td><code>db.sh</code></td>
+<td>服务器</td>
+<td>数据库管理（迁移/重置/状态查看）</td>
+</tr>
+<tr>
+<td><code>flash.sh</code></td>
+<td>服务器</td>
+<td>服务管理（启停/日志/注册系统服务）</td>
+</tr>
+</tbody>
+</table>
+<p>日常更新只需要一行命令：</p>
+<pre><code class="language-bash">python scripts/deploy/build.py root@你的服务器IP
+</code></pre>
+<p>它会自动编译、停止旧服务、上传新二进制、重启。整个过程不需要 SSH 登录服务器。</p>
+<p>从&quot;本地 cargo run + 局域网聊天&quot;到&quot;云端 7×24 在线 + 公网可达&quot;，中间隔的不是什么高深技术，而是一系列具体的、可自动化的步骤。而这些步骤，现在都被脚本封装好了。</p>
+<blockquote>
+<p>下一章，我们来处理客户端的部署：把 Flutter app 打包成 APK，连接公网服务器，让你的朋友真正用上闪讯。</p>
+</blockquote>
+<hr />
+<h4 id="小思考-为什么不能直接把代码丢到服务器里跑">小思考: 为什么不能直接把代码丢到服务器里跑</h4>
+<p>你可能会想：把 Rust 源码传到服务器上，然后 <code>cargo run</code> 行不行？
+理论上可以，但实际上欠佳。原因有两个：</p>
+<ul>
+<li><strong>编译太吃资源</strong>。Rust 编译器是出了名的&quot;慢但精&quot;，编译一个中等项目需要 2~4G 内存。我们的服务器只有 2G，跑着 MySQL 和 PostgreSQL 之后剩余不到 1G，编译到一半就会被系统杀掉。</li>
+<li><strong>没必要在服务器上装开发工具</strong>。服务器的职责是&quot;跑服务&quot;，不是&quot;写代码&quot;。装一堆编译工具既浪费空间又增加安全风险。而且服务器资源可谓寸土寸金，被必要做这些没有太大意义的事。</li>
+</ul>
+<p>所以正确的做法是：<strong>在本地编译好，把编译产物（一个二进制文件）上传到服务器</strong>。</p>
+<blockquote>
+<p>这就像开餐厅：你不会在店里现磨面粉、现榨油。你在工厂把半成品做好，运到店里直接加热上桌。服务器就是那个&quot;店&quot;，你的开发电脑就是那个&quot;工厂&quot;。</p>
+</blockquote>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-34.html">← 桢干#5 ｜ 养护根基，虫害不生</a>
+      <a class="next" href="ch-36.html">果实#2 ｜ 构建 Android 产品 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-服务器环境准备">一、服务器环境准备</a></li>
+      <li class="lv5"><a href="#1-什么是服务器">1. 什么是服务器</a></li>
+      <li class="lv5"><a href="#2-如何获取服务器">2. 如何获取服务器</a></li>
+      <li class="lv5"><a href="#3-访问你的服务器">3. 访问你的服务器</a></li>
+      <li class="lv4"><a href="#二-装修-环境检测与数据库准备">二、装修：环境检测与数据库准备</a></li>
+      <li class="lv5"><a href="#1-工作目录">1. 工作目录</a></li>
+      <li class="lv5"><a href="#2-环境检测-env_check-sh">2. 环境检测  env_check.sh</a></li>
+      <li class="lv4"><a href="#3-数据库表的维护">3.数据库表的维护</a></li>
+      <li class="lv4"><a href="#三-项目打包和运行">三、项目打包和运行</a></li>
+      <li class="lv5"><a href="#2-什么是交叉编译">2. 什么是交叉编译</a></li>
+      <li class="lv5"><a href="#3-在服务器运行-flash_im-后端产物">3. 在服务器运行 flash_im 后端产物</a></li>
+      <li class="lv5"><a href="#4-端口号放行">4. 端口号放行</a></li>
+      <li class="lv5"><a href="#5-前端使用线上环境">5. 前端使用线上环境</a></li>
+      <li class="lv4"><a href="#四-启动流程优化">四、启动流程优化</a></li>
+      <li class="lv5"><a href="#1-使用脚本启停">1. 使用脚本启停</a></li>
+      <li class="lv5"><a href="#2-使用-systemd-创建服务-开机自启">2. 使用 systemd 创建服务 - 开机自启</a></li>
+      <li class="lv5"><a href="#3-服务的更新部署">3. 服务的更新部署</a></li>
+      <li class="lv4"><a href="#四-小结">四、小结</a></li>
+      <li class="lv4"><a href="#小思考-为什么不能直接把代码丢到服务器里跑">小思考: 为什么不能直接把代码丢到服务器里跑</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

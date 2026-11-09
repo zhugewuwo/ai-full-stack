@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>枝叶#5 ｜ 在线状态与已读回执 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li class="active"><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>枝叶#5 ｜ 在线状态与已读回执</h1>
+<blockquote>
+<p>所有通信协议解决的都是&quot;送达&quot;，但人真正在意的从来都是&quot;被感知&quot;。</p>
+</blockquote>
+<p>群聊的管理能力做完了，闪讯已经是一个基本功能完整的 IM。但用起来总觉得少了点什么，发出去的消息像石沉大海，不知道对方看没看；好友列表没有状态，不知道谁在线谁不在。这一章补上两个&quot;感知&quot;能力：<strong>在线状态</strong> 和 <strong>已读回执</strong>。下图 <code>朱红</code> 和 <code>橘橙</code> 两个人的对话，可以很好地说明本章的核心功能：</p>
+<ul>
+<li>聊天页和会话列表，都能展示用户的在线状态</li>
+<li>两者都在聊天界面聊天时，发送的消息都会被立刻标记已读。</li>
+<li><code>朱红</code> 不在聊天界面时， <code>橘橙</code> 发送的消息不会被已读。<code>朱红</code> 进去之后才会已读。</li>
+</ul>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/059cd765ace84944aa25361c70588aba~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=610&amp;h=600&amp;s=1112168&amp;e=gif&amp;f=256&amp;b=f8f7f6" alt="01.gif" /></p>
+<hr />
+<h4 id="一-需求分析">一、需求分析</h4>
+<p>在线状态和已读回执看起来是两个独立功能，但它们的核心问题是同一个：</p>
+<blockquote>
+<p><strong>怎么让一个用户的行为，实时反映到另一个用户的界面上</strong>。</p>
+</blockquote>
+<p>上线/下线是一种行为，阅读消息是另一种行为，但推送机制完全一样，都涉及 WsState 的扩展。放在一起做，基础设施只改一次。</p>
+<table>
+<thead>
+<tr>
+<th>模块名</th>
+<th>功能分析</th>
+<th>前端设计</th>
+<th>前端任务</th>
+<th>后端设计</th>
+<th>后端任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>presence/v0.0.1</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/im/presence/v0.0.1/analysis.md">analysis.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/im/presence/v0.0.1/client/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/im/presence/v0.0.1/client/tasks.md">tasks.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/im/presence/v0.0.1/server/design.md">design.md</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/features/im/presence/v0.0.1/server/tasks.md">tasks.md</a></td>
+</tr>
+</tbody>
+</table>
+<p>在实现这章需求的过程中，我尝试将所有的关键流程整合成一个技能角色，把过程细节串联起来。</p>
+<blockquote>
+<p><a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/.kiro/steering/feature-workflow.md">Feature Workflow — 功能版本开发流水线</a></p>
+</blockquote>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/836da85ae1c04aa5890bb91793697218~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2271&amp;h=2622&amp;s=488299&amp;e=png&amp;a=1&amp;b=fcfafa" alt="mermaid-diagram (96).png" /></p>
+<hr />
+<h5 id="1-交互链分析">1. 交互链分析</h5>
+<p><strong>好友上线/下线</strong></p>
+<p><code>用户故事</code>：作为用户，我想知道好友是否在线，以便决定是否发消息<br />
+<code>交互链</code>：好友上线 → 好友列表头像绿点亮起 / 会话列表头像绿点亮起；好友下线 → 绿点消失</p>
+<p>好友列表和会话列表中，单聊对方的头像右下角会出现一个微信绿的小圆点，表示对方在线。下线后圆点消失。群聊头像不显示在线状态。</p>
+<table>
+<thead>
+<tr>
+<th>用户在线</th>
+<th>用户离线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6fc0469dea24cd196e71e0eb74d768b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=416&amp;h=73&amp;s=2941&amp;e=png&amp;b=fefefe" alt="image.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/39c1ca4d94eb4fe9b2d3a78cc1159b31~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=414&amp;h=74&amp;s=2720&amp;e=png&amp;b=fefefe" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>单聊在线状态</strong></p>
+<p><code>用户故事</code>：作为正在聊天的用户，我想在聊天页看到对方是否在线<br />
+<code>交互链</code>：进入单聊 ChatPage → AppBar 标题下方显示&quot;在线&quot;或&quot;离线&quot; → 对方上线/下线时实时切换</p>
+<p>群聊不显示在线状态。</p>
+<table>
+<thead>
+<tr>
+<th>ChatPage 在线</th>
+<th>用户离线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9f3b61c13100417385dd9c7fa0ccb59e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=686&amp;h=251&amp;s=18269&amp;e=png&amp;b=f5f5f5" alt="image.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c6213e867b45480ebb9c0aec15498477~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=689&amp;h=243&amp;s=17929&amp;e=png&amp;b=f4f4f4" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>单聊已读回执</strong></p>
+<p><code>用户故事</code>：作为消息发送者，我想知道对方有没有看到我的消息<br />
+<code>交互链</code>：对方进入聊天页 → 我发的消息从空心圆变为蓝色实心勾</p>
+<p>自己发的每条消息左侧有一个已读指示器：空心蓝色圆圈表示未读，蓝色实心勾表示对方已读。对方打开聊天页后，标记实时变化。</p>
+<table>
+<thead>
+<tr>
+<th>未读（空心圆）</th>
+<th>已读（蓝色勾）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dc158688bf0f45489539898a5fbb4b45~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=605&amp;h=288&amp;s=20149&amp;e=png&amp;b=fefefe" alt="image.png" /></td>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/205e2807044e4feab17293e5ae0d0113~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=603&amp;h=299&amp;s=20422&amp;e=png&amp;b=fefefe" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>群聊已读回执</strong></p>
+<p><code>用户故事</code>：作为群消息发送者，我想知道多少人看了我的消息，以及具体是谁看了<br />
+<code>交互链</code>：群成员阅读消息 → 发送者看到&quot;N人已读&quot; → 点击 → 弹出已读/未读成员列表</p>
+<p>群聊的已读指示器显示已读人数。全部已读时变为蓝色实心勾。点击数字可以弹出详情弹窗，分&quot;已读&quot;和&quot;未读&quot;两个 Tab 列出成员。</p>
+<table>
+<thead>
+<tr>
+<th>N人已读</th>
+<th>已读详情弹窗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3837880a3d4040f7a1248a52f9f9f437~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=125174&amp;e=png&amp;b=fcfbfb" alt="MuMu-20260425-231259-953.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/42d37edbfa6e46ccacea0569dbb883b2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=74141&amp;e=png&amp;b=ffffff" alt="MuMu-20260425-232458-998.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="2-逻辑流程树">2. 逻辑流程树</h5>
+<p><strong>在线状态：只通知好友</strong></p>
+<p>一开始就要想清楚广播范围：用户上线时通知谁？全量广播在人数少时没问题，但 1000 人在线时每次上线/下线都推 1000 帧，大部分人根本不关心。合理的做法是只通知在线的好友，查 <code>friend_relations</code> 表取好友列表，和在线用户集合取交集。</p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+<th>产生的新事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>WS 认证成功</td>
+<td><code>ws_state.add(user_id, conn_id, sender)</code> 返回 is_first</td>
+<td>—</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>首次上线</td>
+<td>查好友列表 → 过滤在线好友 → 广播 USER_ONLINE</td>
+<td>在线好友收到通知</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>推送在线列表</td>
+<td>查好友中谁在线 → 发送 ONLINE_LIST 给当前用户</td>
+<td>当前用户收到在线好友列表</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/855651d5fe2c4355b5d33cca410a919d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2914&amp;h=1462&amp;s=214272&amp;e=png&amp;a=1&amp;b=ebebeb" alt="mermaid-diagram (98).png" /></p>
+<hr />
+<p><strong>已读回执：水位线模型</strong></p>
+<p>已读回执有两种思路：逐条标记和水位线。逐条标记意味着每条消息都有一个&quot;已读/未读&quot;状态，存储成本是 <code>消息数 × 成员数</code>，群聊里一条消息 200 个成员就是 200 行记录。</p>
+<p>水位线只需要一个数字，<code>last_read_seq</code>。水位线以下的消息都已读，以上的都未读。这行得通，因为聊天消息是线性流，用户几乎不会跳着看：打开聊天页，从最新的消息往上扫一眼，就算&quot;读过了&quot;。每个成员只存一个数字，群聊 200 人也只是 200 个整数。</p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>事件</th>
+<th>处理</th>
+<th>产生的新事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>用户进入聊天页</td>
+<td>前端计算当前最大 seq，1 秒防抖后上报</td>
+<td>READ_RECEIPT WS 帧</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>后端处理</td>
+<td><code>UPDATE last_read_seq = GREATEST(last_read_seq, readSeq)</code> + 重算 unread_count</td>
+<td>数据库更新</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>通知对方</td>
+<td>向会话其他在线成员推送 READ_RECEIPT 帧</td>
+<td>对方收到已读通知</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>前端更新</td>
+<td>对方 ChatCubit 更新 peerReadSeq → 消息气泡显示&quot;已读&quot;</td>
+<td>UI 刷新</td>
+</tr>
+</tbody>
+</table>
+<p>水位线只能升不能降。后端更新时用 SQL 的 <code>GREATEST</code> 函数取新旧值中的较大者：<code>SET last_read_seq = GREATEST(last_read_seq, readSeq)</code>。这样即使乱序上报（先报 seq=10，再报 seq=5），水位线仍然停在 10。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9a51b38ac69e4143b585051a66c3423f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3216&amp;h=1826&amp;s=278104&amp;e=png&amp;a=1&amp;b=eeeeee" alt="mermaid-diagram (99).png" /></p>
+<hr />
+<h5 id="3-功能编号-新节点入网">3. 功能编号：新节点入网</h5>
+<p>这一章新增 9 个功能节点，扩展 3 个已有节点，闪讯的功能网络从 93 个增长到 102 个。新节点集中在两个方向：后端的 WS 帧处理（D-31 ~ D-34）和前端的状态展示（P-41 ~ P-43），中间由 WsClient 的帧分发层（F-12、F-13）串联。</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>新增编号</th>
+<th>节点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D（领域）</td>
+<td>D-31</td>
+<td>在线状态广播：只通知在线好友</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-32</td>
+<td>在线列表推送：认证后推送在线好友列表</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-33</td>
+<td>已读回执处理：更新 last_read_seq + 通知对方</td>
+</tr>
+<tr>
+<td>D（领域）</td>
+<td>D-34</td>
+<td>已读详情查询：GET /read-status 返回已读/未读成员</td>
+</tr>
+<tr>
+<td>F（前端基础）</td>
+<td>F-12</td>
+<td>在线状态 WS 帧分发</td>
+</tr>
+<tr>
+<td>F（前端基础）</td>
+<td>F-13</td>
+<td>已读回执 WS 帧分发</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-41</td>
+<td>在线状态展示：好友列表绿点 + 会话列表绿点 + ChatPage 在线/离线</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-42</td>
+<td>已读回执展示：单聊已读标记 + 群聊已读人数 + 详情弹窗</td>
+</tr>
+<tr>
+<td>P（前端业务）</td>
+<td>P-43</td>
+<td>已读回执上报：ChatCubit 自动上报（1 秒防抖）</td>
+</tr>
+</tbody>
+</table>
+<p>扩展节点：I-08（WsState 多端连接）、I-09（帧分发器新增帧类型）、F-06（WsClient 新增 Stream）</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7b387ff81a24499fa4df50a74eb903fd~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2974&amp;h=1189&amp;s=355099&amp;e=png&amp;a=1&amp;b=fcf8f8" alt="mermaid-diagram (100).png" /></p>
+<hr />
+<h4 id="二-后端-wsstate-的第二次进化">二、后端：WsState 的第二次进化</h4>
+<p>WsState 在第 18 章诞生时只是一个 <code>HashMap&lt;i64, WsSender&gt;</code>——一个用户一个连接，够用。这一章要让它支持多端连接、上线/下线广播、在线列表查询。同时 handler.rs 要处理一种全新的帧类型——READ_RECEIPT，这是第一次在 WS 层直接操作数据库。</p>
+<pre><code>server/modules/im-ws/src/
+├── state.rs          # 重构：HashMap&lt;i64, Vec&lt;ConnectionInfo&gt;&gt;
+├── handler.rs        # 扩展：上线/下线广播 + READ_RECEIPT 处理
+└── dispatcher.rs     # 扩展：4 个新方法 + PgPool（查好友关系）
+</code></pre>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/80544e0f694044e5814cee9d0cfcdde1~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2477&amp;h=1587&amp;s=355471&amp;e=png&amp;a=1&amp;b=fbfafa" alt="mermaid-diagram - 2026-04-26T090502.752.png" /></p>
+<hr />
+<h5 id="1-wsstate-多端连接">1. WsState 多端连接</h5>
+<p>旧的 WsState 一个用户只能有一个连接。如果同一用户建立第二个 WS 连接，<code>HashMap::insert</code> 会覆盖旧的 sender，导致旧连接的推送静默丢失。</p>
+<p>新的 WsState 用 <code>Vec&lt;ConnectionInfo&gt;</code> 存储同一用户的多个连接，每个连接有唯一的 <code>conn_id</code>（UUID）。<code>add</code> 返回 <code>is_first</code>（首次上线），<code>remove</code> 返回 <code>is_last</code>（完全下线）：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-ws/src/state.rs
+pub async fn add(&amp;self, user_id: i64, conn_id: String, sender: WsSender) -&gt; bool {
+    let entry = conns.entry(user_id).or_insert_with(Vec::new);
+    let is_first = entry.is_empty();
+    entry.push(ConnectionInfo { id: conn_id, sender });
+    is_first
+}
+
+pub async fn remove(&amp;self, user_id: i64, conn_id: &amp;str) -&gt; bool {
+    user_conns.retain(|c| c.id != conn_id);
+    if user_conns.is_empty() { conns.remove(&amp;user_id); is_last = true; }
+    is_last
+}
+</code></pre>
+<p><code>send_to_user</code> 也要适配，发给同一用户的所有端：</p>
+<pre><code class="language-rust">pub async fn send_to_user(&amp;self, user_id: i64, data: Vec&lt;u8&gt;) {
+    if let Some(user_conns) = conns.get(&amp;user_id) {
+        for conn in user_conns {
+            let _ = conn.sender.send(data.clone());
+        }
+    }
+}
+</code></pre>
+<blockquote>
+<p>多端连接的关键不是&quot;怎么存&quot;，而是&quot;什么时候广播&quot;。同一用户的第二个连接上线时不应该再广播一次 USER_ONLINE，只有首次上线（<code>is_first</code>）和完全下线（<code>is_last</code>）才触发广播。</p>
+</blockquote>
+<hr />
+<h5 id="2-只通知好友">2. 只通知好友</h5>
+<p>dispatcher 新增 <code>PgPool</code> 依赖，上线/下线时查 <code>friend_relations</code> 表取好友列表，和在线用户集合取交集：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-ws/src/dispatcher.rs
+async fn get_online_friend_ids(&amp;self, user_id: i64) -&gt; Vec&lt;i64&gt; {
+    let friend_rows = sqlx::query_as(&quot;SELECT friend_id FROM friend_relations WHERE user_id = $1&quot;)
+        .bind(user_id).fetch_all(&amp;self.db).await?;
+    let online_set: HashSet&lt;i64&gt; = self.ws_state.get_online_users().await.into_iter().collect();
+    friend_rows.into_iter().map(|(id,)| id).filter(|id| online_set.contains(id)).collect()
+}
+</code></pre>
+<p><code>broadcast_user_online</code> 和 <code>send_online_list</code> 都调这个方法，只通知好友，不广播给陌生人。</p>
+<hr />
+<h5 id="3-已读回执-handler-直接操作数据库">3. 已读回执：handler 直接操作数据库</h5>
+<p>已读回执不是&quot;消息&quot;，它不需要存储、不需要序列号。它只需要更新一个数字（<code>last_read_seq</code>），然后通知会话中的其他成员。所以不走 MessageService，handler 直接操作数据库：</p>
+<pre><code class="language-rust">// ---&gt; server/modules/im-ws/src/handler.rs
+async fn handle_read_receipt(user_id: i64, payload: &amp;[u8], state: &amp;WsHandlerState) {
+    // 1. 更新 last_read_seq（GREATEST 防止回退）
+    UPDATE conversation_members SET last_read_seq = GREATEST(last_read_seq, $3)
+    WHERE conversation_id = $1 AND user_id = $2
+
+    // 2. 重新计算 unread_count
+    UPDATE conversation_members SET unread_count = (
+        SELECT COUNT(*) FROM messages m
+        WHERE m.conversation_id = cm.conversation_id
+          AND m.seq &gt; cm.last_read_seq
+          AND m.sender_id != cm.user_id
+    )
+
+    // 3. 查询会话成员，推送已读通知给其他人
+    state.dispatcher.broadcast_read_receipt(conv_id, user_id, read_seq, &amp;member_ids)
+}
+</code></pre>
+<blockquote>
+<p>为什么 handler 需要 PgPool？因为已读回执是唯一一个在 WS 层直接操作数据库的场景。其他帧（CHAT_MESSAGE）都是通过 MessageService 间接操作的。这是一个有意的设计选择，已读回执的逻辑太简单，目前不值得为它建一个 Service。</p>
+</blockquote>
+<hr />
+<h5 id="4-两个-http-接口">4. 两个 HTTP 接口</h5>
+<p>WS 负责实时推送，但有两个场景需要 HTTP：</p>
+<ul>
+<li><strong>GET /conversations/{id}/read-seq</strong>：进入聊天页时调一次，拿到所有成员的初始已读位置。单聊和群聊通用，单聊只有一个 entry，群聊有多个。</li>
+<li><strong>GET /conversations/{id}/messages/{mid}/read-status</strong>：点击&quot;N人已读&quot;时调，返回已读/未读成员列表（头像 + 昵称）。</li>
+</ul>
+<pre><code class="language-json">// GET /conversations/{id}/read-seq
+{ &quot;members_read_seq&quot;: { &quot;2&quot;: 42, &quot;3&quot;: 38 } }
+
+// GET /conversations/{id}/messages/{mid}/read-status
+{ &quot;read_members&quot;: [{ &quot;user_id&quot;: 2, &quot;nickname&quot;: &quot;橘橙&quot; }],
+  &quot;unread_members&quot;: [{ &quot;user_id&quot;: 3, &quot;nickname&quot;: &quot;藤黄&quot; }] }
+</code></pre>
+<p>后端完成之后，应该用 Python 写了一个测试脚本，WS 和 HTTP 混合调用，覆盖在线状态和已读回执的完整链路。但这里一个小插曲，一开始 AI 不太想做测试，如果那时我心软一下，或者觉得测试无所谓。那会为很后面的环节埋下隐患。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/29a55cdc3d9e44b7bcabba8af82a54a2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=935&amp;h=307&amp;s=89972&amp;e=png&amp;b=efeef1" alt="image.png" /></p>
+<p>因为在测试执行过程中，确实暴露了后端代码的一些问题。如果这些问题留到前端实现过程中解决，那前后端的对接、返工就会耗费很多精力。当下面的 10 项测试通过，我对后端就有 90% 的把握。此时再进行前端的设计、任务就会更有底气。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8f330621fede49f38c6867ffee8969bf~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1098&amp;h=591&amp;s=76242&amp;e=png&amp;b=eeedf0" alt="image.png" /></p>
+<hr />
+<h5 id="5-不确定性中的确定性">5. 不确定性中的确定性</h5>
+<blockquote>
+<p>虽然 AI 的创作带着一定的 <strong>不确定性</strong>，但在不确定中，设定领域和规格，用确切性的网固定 AI 的行为边界，让它的行为变得预期。而这个测试就是现阶段的 <strong>确定性</strong> 的成功，如果说一个功能需求的像一个随风飘动的丝带，那么这个测试就像一个图钉，把它固定在了一个可以预期的位置。</p>
+</blockquote>
+<p>我和 AI 针对这个观点进行了细致讨论，总结了下面三层：</p>
+<p><strong>第一层: 路径不确定，终点确定。</strong></p>
+<p>让 AI 实现一个功能，它走的路径我们无法完全预测。同样的 prompt，今天生成的代码和明天的可能不一样。变量名不同，拆分方式不同，甚至架构选择都可能不同。这是路径的不确定性。</p>
+<p>但我们有测试。测试不关心路径，只关心终点：给定输入，输出是否正确。这和量子力学有一个微妙的相似之处。粒子在被观测之前，状态是不确定的叠加态；一旦观测，就坍缩到一个确定的值。测试就是那次观测。AI 的代码在测试通过之前，是&quot;可能正确也可能不正确&quot;的叠加态；测试通过的那一刻，坍缩为确定。</p>
+<hr />
+<p><strong>第二层：单次不确定，统计确定</strong></p>
+<p>一次 AI 生成可能出错，但我们的流程不是一次性的。analysis → design → tasks → 实现 → 测试 → 交叉审查，每一步都是一个过滤器。单个过滤器可能漏掉问题，但串联起来，漏网的概率指数级下降。这是大数定律的工程版本：单次随机，多次收敛。</p>
+<p>热力学里有个概念叫&quot;熵减&quot;。孤立系统的熵只增不减，但开放系统可以通过输入能量来降低局部的熵。八步流水线就是那个&quot;能量输入&quot;。AI 的每次生成都在增加熵（不确定性），而我们的每一步审查都在减少熵。最终系统的熵低于任何单次生成。</p>
+<hr />
+<p><strong>第三层：内容不确定，结构确定。</strong></p>
+<p>这是最深的一层。我们不能控制 AI 写出什么代码，但能控制它在什么框架里写。Proto 定义了通信契约，数据库 schema 定义了存储边界，tasks.md 定义了执行顺序。AI 在这些约束里自由发挥，就像河水在河道里自由流淌。水的每一个分子的运动轨迹是不确定的，但河流的方向是确定的。</p>
+<p>河道越窄，水流越可预测。设计文档就是在收窄河道。</p>
+<hr />
+<p>所以&quot;不确定性中的确定性&quot;不是一个悖论，而是一个分层结构：</p>
+<blockquote>
+<p>放弃对微观路径的控制，换取对宏观行为的确定。</p>
+</blockquote>
+<p>这其实是所有复杂系统管理的本质。操作系统不控制每个进程的每条指令，但通过调度算法保证整体行为可预期。市场经济不控制每个人的交易决策，但通过价格机制让资源配置趋向最优。我们在做的事情，本质上是在设计一个&quot;AI 治理框架&quot;。不是控制 AI 的每一步，而是设计约束，让不确定的个体行为涌现出确定的系统行为。</p>
+<p>回到图钉的比喻：不需要把整条飘带钉死。只需要在关键位置钉几枚图钉，飘带自然会呈现出想要的形状。钉得太密，飘带失去灵动；钉得太疏，形状不可控。找到那个平衡点，就是这件事最有技术含量的地方。</p>
+<hr />
+<h4 id="三-前端-让感知可见">三、前端：让感知可见</h4>
+<p>后端的 WS 推送链路就绪，前端的工作分四块：WsClient 接收新帧并维护在线状态集合，ChatCubit 管理已读上报和已读状态，UI 层展示已读标记和在线绿点，最后处理几个体验细节（活跃会话未读、Equatable 陷阱）。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ccf9b2ffdcc64f6d9d60e392fd042a52~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2917&amp;h=1174&amp;s=322325&amp;e=png&amp;a=1&amp;b=fcf8f8" alt="mermaid-diagram - 2026-04-26T104259.078.png" /></p>
+<pre><code class="diagram" style="font-size:12.5px">client/modules/
+├── flash_im_core/lib/src/
+│   └── logic/ws_client.dart              # 扩展：4 个新 Stream + _onlineUserIds + sendReadReceipt
+├── flash_im_chat/lib/src/
+│   ├── logic/chat_cubit.dart             # 扩展：已读上报防抖 + readReceiptStream 监听
+│   ├── logic/chat_state.dart             # 扩展：readSeqVersion（Equatable 修复）
+│   ├── data/message_repository.dart      # 扩展：getReadSeq + getReadStatus
+│   └── view/
+│       ├── chat_page.dart                # 扩展：AppBar 在线状态
+│       ├── bubble/message_bubble.dart    # 扩展：已读指示器
+│       └── read_receipt_detail.dart      # 新建：群聊已读详情弹窗
+├── flash_im_conversation/lib/src/
+│   ├── logic/conversation_list_cubit.dart # 扩展：活跃会话不累加未读
+│   └── view/
+│       ├── conversation_tile.dart        # 扩展：单聊头像在线绿点
+│       └── conversation_list_page.dart   # 扩展：传入 onlineUserIds
+├── flash_im_friend/lib/src/
+│   ├── logic/friend_cubit.dart           # 扩展：在线状态监听
+│   └── view/indexed_contact_list.dart    # 扩展：好友绿点
+</code></pre>
+<hr />
+<h5 id="1-wsclient-在线状态集合-已读回执发送">1. WsClient：在线状态集合 + 已读回执发送</h5>
+<p>WsClient 内部维护一个 <code>Set&lt;String&gt; _onlineUserIds</code>，收到 ONLINE_LIST 时初始化，收到 USER_ONLINE 时 add，收到 USER_OFFLINE 时 remove，断连时清空。外部通过 <code>isUserOnline(userId)</code> 查询。</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_core/lib/src/logic/ws_client.dart
+void _handleUserOnline(WsFrame frame):
+    notif = UserStatusNotification.fromBuffer(frame.payload)
+    _onlineUserIds.add(notif.userId)
+
+void _handleOnlineList(WsFrame frame):
+    notif = OnlineListNotification.fromBuffer(frame.payload)
+    _onlineUserIds.clear()
+    _onlineUserIds.addAll(notif.userIds)
+</code></pre>
+<p><code>sendReadReceipt</code> 构建 <code>ReadReceiptRequest</code> proto 帧发送：</p>
+<pre><code class="language-dart">void sendReadReceipt({required String conversationId, required int readSeq}):
+    req = ReadReceiptRequest()..conversationId = conversationId..readSeq = Int64(readSeq)
+    frame = WsFrame()..type = WsFrameType.READ_RECEIPT..payload = req.writeToBuffer()
+    sendFrame(frame)
+</code></pre>
+<blockquote>
+<p>在线状态放 WsClient 而不是单独建 Cubit，因为它和 WS 连接的生命周期绑定。断连时必须清空，放在 WsClient 里，断连逻辑自然在 <code>_onDisconnected</code> 中处理。</p>
+</blockquote>
+<hr />
+<h5 id="2-chatcubit-已读上报与状态管理">2. ChatCubit：已读上报与状态管理</h5>
+<p>ChatCubit 新增 <code>isGroup</code> 参数，内部维护 <code>_peerReadSeq</code>（单聊）和 <code>_membersReadSeq</code>（群聊）。三个时机触发已读相关逻辑：</p>
+<ul>
+<li><strong>进入聊天页时</strong>：<code>loadMessages</code> 完成后调 <code>_loadReadSeq()</code>（HTTP 获取初始已读位置）和 <code>_reportReadSeq(maxSeq)</code>（WS 上报自己的已读位置）。</li>
+<li><strong>收到新消息时</strong>：<code>_handleIncomingMessage</code> 末尾调 <code>_reportReadSeq(newMsg.seq)</code>。</li>
+<li><strong>收到对方已读通知时</strong>：监听 <code>readReceiptStream</code>，更新 <code>_peerReadSeq</code> 或 <code>_membersReadSeq</code>。</li>
+</ul>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_chat/lib/src/logic/chat_cubit.dart
+void _reportReadSeq(int maxSeq):
+    if maxSeq &lt;= 0: return
+    _readReceiptTimer?.cancel()
+    _readReceiptTimer = Timer(Duration(seconds: 1), () {
+        _wsClient.sendReadReceipt(conversationId: conversationId, readSeq: maxSeq)
+    })
+</code></pre>
+<blockquote>
+<p>1 秒防抖避免快速滚动时频繁发送 WS 帧。同一会话内多次触发只发最后一次。</p>
+</blockquote>
+<hr />
+<h5 id="3-已读指示器-三种图标">3. 已读指示器：三种图标</h5>
+<p>MessageBubble 新增已读指示器，只在自己发的已发送消息上显示，放在气泡左侧底部对齐：</p>
+<p><strong>单聊</strong>：<code>peerReadSeq &gt;= msg.seq</code> → 蓝色实心勾，否则空心蓝色圆圈<br />
+<strong>群聊</strong>：统计 <code>membersReadSeq</code> 中 <code>value &gt;= msg.seq</code> 的人数（排除自己）</p>
+<ul>
+<li>全部已读 → 蓝色实心勾</li>
+<li>部分已读 → 蓝色圆圈 + 数字，可点击查看详情</li>
+<li>0 人已读 → 空心圆圈</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>未读</th>
+<th>已读</th>
+<th>N人已读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a4c9cea8ebcc48f5885e887254bdd275~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=255&amp;h=97&amp;s=5092&amp;e=png&amp;b=ffffff" alt="image.png" /></td>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/227a5531d1c9462b99b1f5b293028dc7~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=258&amp;h=127&amp;s=5334&amp;e=png&amp;b=ffffff" alt="image.png" /></td>
+<td><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6c73e7101e5746359bdb8d1711df4345~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=270&amp;h=92&amp;s=5374&amp;e=png&amp;b=ffffff" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_chat/lib/src/view/bubble/message_bubble.dart
+Widget _buildReadReceiptIndicator():
+    if isGroup: return _buildGroupReadIndicator()
+    else: return _buildPrivateReadIndicator()
+
+Widget _buildPrivateReadIndicator():
+    isRead = (peerReadSeq ?? 0) &gt;= message.seq
+    return isRead ? _AllReadIcon() : _UnreadCircle()
+
+Widget _buildGroupReadIndicator():
+    readCount = membersReadSeq.entries
+        .where(e =&gt; e.key != currentUserId &amp;&amp; e.value &gt;= message.seq).length
+    totalMembers = membersReadSeq.entries
+        .where(e =&gt; e.key != currentUserId).length
+    if readCount &gt;= totalMembers: return _AllReadIcon()
+    if readCount == 0: return _UnreadCircle()
+    return _ReadCountCircle(count: readCount)  // 可点击
+</code></pre>
+<p>点击&quot;N人已读&quot;弹出 <code>ReadReceiptDetailSheet</code>，BottomSheet 里两个 Tab（已读 N / 未读 N），每个 Tab 列出成员头像和昵称。数据从 <code>GET /conversations/{id}/messages/{mid}/read-status</code> 获取。</p>
+<hr />
+<h5 id="4-在线绿点-好友列表-会话列表-chatpage">4. 在线绿点：好友列表 + 会话列表 + ChatPage</h5>
+<p>在线状态的展示分三个位置，样式各有侧重。</p>
+<p><strong>好友列表和会话列表</strong>：头像右下角叠加绿色圆点，微信绿 <code>0xFF07C160</code>，12px，2px 白色边框。FriendCubit 监听三个 Stream（<code>userOnlineStream</code> / <code>userOfflineStream</code> / <code>onlineListStream</code>），维护 <code>FriendState.onlineIds</code> 集合。好友列表直接使用，会话列表通过 <code>BlocBuilder&lt;FriendCubit&gt;</code> 把 <code>onlineIds</code> 传入 <code>ConversationListPage</code>，复用同一份数据，不重复监听。</p>
+<table>
+<thead>
+<tr>
+<th>用户在线</th>
+<th>用户离线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6fc0469dea24cd196e71e0eb74d768b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=416&amp;h=73&amp;s=2941&amp;e=png&amp;b=fefefe" alt="image.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/39c1ca4d94eb4fe9b2d3a78cc1159b31~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=414&amp;h=74&amp;s=2720&amp;e=png&amp;b=fefefe" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_friend/lib/src/view/indexed_contact_list.dart
+if (isOnline)
+    Positioned(right: -2, bottom: -2,
+        child: Container(width: 12, height: 12,
+            decoration: BoxDecoration(color: Color(0xFF07C160), shape: circle,
+                border: Border.all(color: white, width: 2)))),
+</code></pre>
+<p><strong>ChatPage</strong>：单聊 AppBar 标题下方显示&quot;在线&quot;（绿色）或&quot;离线&quot;（灰色）文字，不加圆点，保持标题区域简洁。监听 <code>userOnlineStream</code> / <code>userOfflineStream</code> 实时更新，初始值从 <code>WsClient.isUserOnline(peerUserId)</code> 获取。群聊不显示在线状态。</p>
+<table>
+<thead>
+<tr>
+<th>ChatPage 在线</th>
+<th>用户离线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9f3b61c13100417385dd9c7fa0ccb59e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=686&amp;h=251&amp;s=18269&amp;e=png&amp;b=f5f5f5" alt="image.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c6213e867b45480ebb9c0aec15498477~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=689&amp;h=243&amp;s=17929&amp;e=png&amp;b=f4f4f4" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_chat/lib/src/view/chat_page.dart
+// initState 中监听在线/离线 Stream
+_isPeerOnline = wsClient.isUserOnline(widget.peerUserId!)
+_onlineSub = wsClient.userOnlineStream.listen((frame) {
+    notif = UserStatusNotification.fromBuffer(frame.payload)
+    if notif.userId == widget.peerUserId: setState(() =&gt; _isPeerOnline = true)
+})
+_offlineSub = wsClient.userOfflineStream.listen((frame) {
+    notif = UserStatusNotification.fromBuffer(frame.payload)
+    if notif.userId == widget.peerUserId: setState(() =&gt; _isPeerOnline = false)
+})
+
+// AppBar title 部分
+Column(children: [
+    Text(_title, style: TextStyle(fontSize: 16)),
+    Text(_isPeerOnline ? '在线' : '离线',
+        style: TextStyle(fontSize: 11,
+            color: _isPeerOnline ? Color(0xFF4CAF50) : Color(0xFFBBBBBB))),
+])
+</code></pre>
+<hr />
+<h5 id="5-过程中两个问题的处理">5. 过程中两个问题的处理</h5>
+<p><strong>注意 Equatable 对象</strong></p>
+<p>实现完后发现一个 bug：进入聊天页时已读标记不显示，退出重进也不行。<code>_loadReadSeq</code> 拿到了正确的 <code>peerReadSeq</code>，但 UI 不刷新。</p>
+<p>根因：<code>ChatLoaded</code> 用 Equatable 比较 props，<code>peerReadSeq</code> 存在 ChatCubit 的实例变量里，不在 ChatState 的 props 中。<code>_loadReadSeq</code> 完成后调 <code>emit(s.copyWith())</code>，但 copyWith 没改任何 props 字段，Equatable 判断新旧 state 相等，BlocBuilder 跳过重建。</p>
+<p>修复：给 <code>ChatLoaded</code> 加一个 <code>readSeqVersion</code> 计数器，每次已读位置变化时递增。</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_chat/lib/src/logic/chat_state.dart
+class ChatLoaded extends ChatState {
+    final int readSeqVersion;  // 每次已读变化时 ++
+    @override
+    List&lt;Object?&gt; get props =&gt; [..., readSeqVersion];
+}
+</code></pre>
+<blockquote>
+<p>Bloc + Equatable 的经典陷阱：state 外部的变量变了，但 state 本身没变，UI 就不会重建。解法要么把变量放进 state，要么用一个 version 计数器&quot;戳&quot;一下 Equatable。</p>
+</blockquote>
+<hr />
+<p><strong>让活跃会话不累加未读</strong></p>
+<p>功能验证时发现另一个体验问题：用户正在聊天页看消息，对方发来新消息，返回会话列表时该会话显示&quot;1 条未读&quot;。明明刚看过，为什么还有未读？</p>
+<p>原因是 <code>ConversationListCubit</code> 收到 <code>ConversationUpdate</code> 帧时无脑累加 <code>unreadCount</code>，不管用户是否正在看这个会话。修复思路很直接，给 <code>ConversationListCubit</code> 加一个 <code>_activeConversationId</code> 标记，进入聊天页时设置，返回时清除：</p>
+<pre><code class="language-dart">// ---&gt; client/modules/flash_im_conversation/lib/src/logic/conversation_list_cubit.dart
+final isActive = _activeConversationId == update.conversationId;
+if (isActive &amp;&amp; update.unreadCount &gt; 0) {
+    _repository.markRead(update.conversationId).catchError((_) {});
+}
+// ...
+unreadCount: c.unreadCount + (isActive ? 0 : update.unreadCount),
+</code></pre>
+<p>注意 <code>markRead</code> 那一行，不只是前端不显示，还要通知后端清零。否则 app 如果在这个窗口期被杀掉，后端 unread_count 还是 1，重启后会出现幽灵未读。实际上这里有两道保险：<code>markRead</code>（HTTP，立即清后端）和 <code>_reportReadSeq</code>（WS，1 秒后重算），谁先到都能把后端清零。</p>
+<hr />
+<h5 id="6-主应用集成">6. 主应用集成</h5>
+<p>各模块独立开发完成后，在 <code>home_page.dart</code> 中组装。这一章的集成点比较分散，涉及三个地方：</p>
+<ul>
+<li><strong>ChatCubit 构建</strong>：传入 <code>isGroup</code> 参数，让 ChatCubit 知道当前是单聊还是群聊，决定用 <code>_peerReadSeq</code> 还是 <code>_membersReadSeq</code>。</li>
+<li><strong>会话列表传入在线状态</strong>：<code>ConversationListPage</code> 外层包一个 <code>BlocBuilder&lt;FriendCubit&gt;</code>，把 <code>friendState.onlineIds</code> 传入。FriendCubit 已经在维护这个集合了，会话列表直接复用，不需要重复监听 WS Stream。</li>
+<li><strong>活跃会话标记</strong>：进入聊天页时调 <code>_convCubit.setActiveConversation(id)</code>，返回时通过 <code>_convCubit.clearActiveConversation())</code> 清除。</li>
+</ul>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/edca6c7c498e48e786766fa97952c3ec~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3024&amp;h=1048&amp;s=287877&amp;e=png&amp;a=1&amp;b=fcfcfc" alt="mermaid-diagram - 2026-04-26T120021.698.png" /></p>
+<pre><code class="language-dart">// ---&gt; client/lib/src/home/view/home_page.dart
+// 会话列表：传入在线状态，回调抽成 _openChat
+BlocBuilder&lt;FriendCubit, FriendState&gt;(
+    builder: (context, friendState) {
+        return ConversationListPage(
+            onlineUserIds: friendState.onlineIds,
+            onConversationTap: (conv) =&gt; _openChat(context, conv),
+        )
+    },
+)
+
+async void _openChat(BuildContext context, Conversation conversation):
+    _convCubit.clearUnread(conversation.id)
+    _convCubit.setActiveConversation(conversation.id)
+    await Navigator.push(ChatPage(isGroup: conversation.isGroup, ...))
+    _convCubit.clearActiveConversation()
+</code></pre>
+<hr />
+<h4 id="四-本章小结">四、本章小结</h4>
+<p>这一章做完之后，回头看，真正值得说的不是在线状态怎么广播、已读回执怎么存储，而是从第 18 章走到这里，我们一直在主动探索和优化一件事：怎么让 AI 稳定地交付一个完整功能。</p>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>在线状态与已读回执</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/v0.16.0">v0.16.0</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/be1282b435f503d16afe8513f75f70e58a92f97a">commit</a></td>
+</tr>
+</tbody>
+</table>
+<p>另外，这里引入了 <strong>交叉审核</strong>，因为 AI 在写文档时是一个个孤立的个体，这样可以让 AI 结合当前已有的核心文档，整体分析一下，有没有逻辑性的问题和缺失。比如后端会:</p>
+<p>联合 analysis + design + tasks 检查一致性：</p>
+<ul>
+<li>接口路径是否对齐</li>
+<li>功能编号是否覆盖</li>
+<li>遗漏的校验逻辑</li>
+<li>数据库字段是否齐全</li>
+<li>analysis 中标注&quot;不做&quot;的功能是否在 design/tasks 中被移除</li>
+</ul>
+<p>同理，前端会综合目前已有的五个文档进行交叉审核，确保功能在文档上的一致性。</p>
+<hr />
+<p>回想最初是边写边改，prompt 写得模糊，AI 输出的代码经常偏离预期，导致可能频繁更正和引导。后来开始写 analysis.md，把&quot;做什么&quot;先想清楚；再后来加了 design.md 和 tasks.md，把&quot;怎么做&quot;拆成可执行的工序；再后来引入交叉审查，三个文档放在一起找不一致；再后来加了测试脚本，用确定性的断言钉住不确定的输出。</p>
+<p>每一章都在发现流程的漏洞，每一章都在补上一块拼图。到这一章，十二步流水线成型了，每一步都在收窄 AI 的自由度：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d6f134bae7d24d959e6610f84d1ba5da~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1024&amp;h=559&amp;s=355648&amp;e=png&amp;b=f5ece8" alt="image.png" /></p>
+<p>analysis 说&quot;做什么不做什么&quot;，design 说&quot;用什么方式做&quot;，tasks 说&quot;按什么顺序做&quot;，测试说&quot;做没做对&quot;。前三者是河道，约束 AI 的流向；测试是水闸，只有验证通过的水才能流到下游。河道越精确，水流越可预测；水闸越严密，交付越可信赖。</p>
+<hr />
+<p>这也是本书&quot;生命成长&quot;主题的一个缩影。闪讯不是一个被设计好再实现的系统，它是在 AI 的土壤里一章一章长出来的。每一次功能迭代，不只是代码在生长，驾驭 AI 的方法论也在生长。它现在已经可以在这片土壤里，持续地、可预期地长下去了。</p>
+<p>到这里，闪讯已经能聊天、能建群、能感知对方在不在、消息看没看。但想找一个人、一条消息、一个群，还得靠记忆和手动翻找。下一章做综合搜索，搜用户、搜聊天记录、搜会话，让信息主动浮现。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-27.html">← 枝叶#4 ｜ 群聊管理</a>
+      <a class="next" href="ch-29.html">枝叶#6 ｜ 综合搜索 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-需求分析">一、需求分析</a></li>
+      <li class="lv5"><a href="#1-交互链分析">1. 交互链分析</a></li>
+      <li class="lv5"><a href="#2-逻辑流程树">2. 逻辑流程树</a></li>
+      <li class="lv5"><a href="#3-功能编号-新节点入网">3. 功能编号：新节点入网</a></li>
+      <li class="lv4"><a href="#二-后端-wsstate-的第二次进化">二、后端：WsState 的第二次进化</a></li>
+      <li class="lv5"><a href="#1-wsstate-多端连接">1. WsState 多端连接</a></li>
+      <li class="lv5"><a href="#2-只通知好友">2. 只通知好友</a></li>
+      <li class="lv5"><a href="#3-已读回执-handler-直接操作数据库">3. 已读回执：handler 直接操作数据库</a></li>
+      <li class="lv5"><a href="#4-两个-http-接口">4. 两个 HTTP 接口</a></li>
+      <li class="lv5"><a href="#5-不确定性中的确定性">5. 不确定性中的确定性</a></li>
+      <li class="lv4"><a href="#三-前端-让感知可见">三、前端：让感知可见</a></li>
+      <li class="lv5"><a href="#1-wsclient-在线状态集合-已读回执发送">1. WsClient：在线状态集合 + 已读回执发送</a></li>
+      <li class="lv5"><a href="#2-chatcubit-已读上报与状态管理">2. ChatCubit：已读上报与状态管理</a></li>
+      <li class="lv5"><a href="#3-已读指示器-三种图标">3. 已读指示器：三种图标</a></li>
+      <li class="lv5"><a href="#4-在线绿点-好友列表-会话列表-chatpage">4. 在线绿点：好友列表 + 会话列表 + ChatPage</a></li>
+      <li class="lv5"><a href="#5-过程中两个问题的处理">5. 过程中两个问题的处理</a></li>
+      <li class="lv5"><a href="#6-主应用集成">6. 主应用集成</a></li>
+      <li class="lv4"><a href="#四-本章小结">四、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

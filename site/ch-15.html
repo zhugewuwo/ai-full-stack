@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>经络#4 ｜ 事物的相互关系 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li class="active"><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>经络#4 ｜ 事物的相互关系</h1>
+<blockquote>
+<p>世界的复杂性不在事物中，而在事物之间。</p>
+</blockquote>
+<p>前两章分别完成了，后端认证升级和前端从启动到认证的链路。代码量在增长，模块在增多，但我们一直在&quot;赶路&quot;——忙着让功能跑起来，没有停下来看看脚下的路。这一篇，我们不写新功能，而是回过头来，好好聊一个贯穿整个编程世界的核心认知——<strong>事物之间的关系</strong>。这不是一个可选的话题，恰恰相反: <code>理解关系，是理解一切复杂系统的前提</code>。</p>
+<p>生物学里有一个经典的观察：<br />
+<strong>把一个人体的所有化学元素分离出来，摆在桌上，总价值不超过几百块钱。</strong></p>
+<p>碳、氢、氧、氮、钙、磷——都是最普通的元素。但这些元素按照特定的方式组合在一起，就变成了能思考、能感受、能创造的生命。<strong>价值不在元素本身，而在元素之间的组织方式。</strong> 软件也是如此。一个系统里的函数、类、模块，单独拿出来好像看起来不是很复杂。但它们之间怎么关联、怎么协作、怎么约束、这些&quot;看不见的线&quot;，才是决定系统质量的关键。</p>
+<hr />
+<h4 id="一-结构型关系">一、结构型关系</h4>
+<p>结构型关系是 <code>静态的</code> 。你打开一个文件，看它的 import、字段声明、类继承，就能把结构关系全部画出来。它是代码的骨架。在编程世界中，把代码结构之间的关系，归纳为六种。它们不是某种语言或框架的专属概念，而是所有软件系统中反复出现的通用模式。无论你用 Dart、Rust、Java 还是 Python，无论你写前端、后端还是嵌入式，这六种关系都在那里。</p>
+<hr />
+<h5 id="1-依赖-dependency-我需要你才能工作">1. 依赖（Dependency）——&quot;我需要你才能工作&quot;</h5>
+<p>最基本的关系。A 依赖 B，意味着 A 的存在或运行需要 B 的存在。拿 AuthRepository 认证仓储来说，它需要依赖网络请求获取数据，所以让 <code>Dio</code> 参与到它的构造函数中，并持有 Dio 对象。<br />
+<code>注</code> : Dio 是网络请求类库的对象，可以访问网络请求。</p>
+<pre><code class="language-dart">class AuthRepository {
+  final Dio _dio;  // AuthRepository 依赖 Dio
+  AuthRepository({required Dio dio}) : _dio = dio;
+}
+</code></pre>
+<p><strong>依赖是有方向的</strong><br />
+AuthRepository 依赖 Dio，但 Dio 不知道 AuthRepository 的存在。这种单向性非常重要——如果依赖是双向的（A 依赖 B，B 也依赖 A），就形成了<strong>循环依赖</strong>，系统会变得脆弱，改任何一方都会牵动另一方。</p>
+<p><strong>依赖关系优劣</strong></p>
+<ul>
+<li><strong>优势</strong>：依赖是最自然的关系，它让对象能 <code>复用</code> 其他对象的能力，而不用自己重新实现。<br />
+AuthRepository 依赖 Dio，就不用自己写 HTTP 请求的底层逻辑。</li>
+<li><strong>代价</strong>：每多一个依赖，就多一个&quot;被牵连&quot;的风险。<br />
+比如，Dio 升级了 API，AuthRepository 就得跟着改。依赖越多，对象越脆弱。</li>
+</ul>
+<p>在现实世界中：人依赖氧气，但氧气不依赖人。汽车依赖汽油，但汽油不依赖汽车。良好的依赖关系总是单向的，而且注意，被依赖方都是<strong>非常稳定</strong>的存在，如果氧气某天突然发生结构性变化，那么生物系统将不再识别它，那整个生命系统将无法正常工作，只能等待自然演化出新的兼容系统。</p>
+<p>所以好的设计总是在问：这个依赖真的必要吗？被依赖者稳定吗？能不能用更弱的形式（接口、回调）替代？</p>
+<hr />
+<h5 id="2-关联-association-我知道你的存在">2. 关联（Association）——&quot;我知道你的存在&quot;</h5>
+<p>关联是最松散的结构关系。LoginMixin 知道 AuthCubit 的存在，可以访问它，但之间没有从属关系，也没有类型上的继承关系：</p>
+<pre><code class="language-dart">// LoginMixin 内部
+context.read&lt;AuthCubit&gt;().login(token: token, user: user, hasPassword: hasPassword);
+</code></pre>
+<p>关联和依赖的区别在于：依赖是&quot;我的构造需要你&quot;，关联是&quot;我知道你在，偶尔找你&quot;。依赖写在构造函数或字段声明里，关联往往藏在方法体内部。</p>
+<p>关联可以是单向的（A 知道 B，B 不知道 A），也可以是双向的。在我们的项目里，LoginMixin 知道 AuthCubit，但 AuthCubit 不知道 LoginMixin——这是单向关联，也是更健康的形式。</p>
+<p><strong>关联关系优劣</strong></p>
+<ul>
+<li><strong>优势</strong>：关联是最轻量的结构关系。双方没有从属、没有继承，用完就走，互不牵扯。改动一方对另一方的影响很小。</li>
+<li><strong>代价</strong>：关联往往是隐式的——藏在方法体里，不写在字段声明中。你看类的构造函数看不出它和谁有关联，必须读方法实现才能发现。这让代码的关系网络变得不透明，重构时容易遗漏。</li>
+</ul>
+<p>在现实世界中：你在路上问一个陌生人&quot;现在几点了&quot;，他告诉你之后你们各走各的。没有任何从属关系，只是在那一刻产生了一次短暂的关联。</p>
+<hr />
+<h5 id="3-聚合-aggregation-我持有你-但你不属于我">3. 聚合（Aggregation）——&quot;我持有你，但你不属于我&quot;</h5>
+<p>聚合是&quot;整体-部分&quot;的关系，但部分可以独立于整体存在。整体持有部分的引用，但不控制部分的生命周期。</p>
+<pre><code class="language-dart">class ChatRoom {
+  final List&lt;User&gt; members;  // 聊天室持有成员，但成员不属于聊天室
+  ChatRoom({required this.members});
+  // 聊天室解散了，成员还在，可以加入别的聊天室
+}
+</code></pre>
+<p>成员不是聊天室创建的，也不会随聊天室销毁，可以同时存在于多个聊天室。这就是聚合的核心：</p>
+<blockquote>
+<p>整体持有部分，但部分的生命周期独立于整体。</p>
+</blockquote>
+<p><strong>聚合关系优劣</strong></p>
+<ul>
+<li><strong>优势</strong>：整体和部分各自独立，部分可以自由加入、离开、被多个整体共享。</li>
+<li><strong>代价</strong>：你持有的部分，随时可能不在了，而你不一定能第一时间知道。就像微信群里发了活动通知，结果关键的几个人昨晚退群了——你以为他们还在，其实已经不在了。</li>
+</ul>
+<p>未来闪讯做到聊天功能时，会大量遇到聚合——一个会话持有多条消息、一个群组持有多个成员、一个用户持有多个会话。</p>
+<hr />
+<h5 id="4-组合-composition-你是我的一部分-生死与共">4. 组合（Composition）——&quot;你是我的一部分，生死与共&quot;</h5>
+<p>组合是最紧密的&quot;整体-部分&quot;关系。部分的生命周期由整体控制——整体创建时部分被创建，整体销毁时部分跟着销毁。</p>
+<pre><code class="language-dart">class SmsLoginStrategy {
+  final phoneCtrl = TextEditingController();  // 整体创建时，部分跟着创建
+  final codeCtrl = TextEditingController();
+
+  void dispose() {
+    phoneCtrl.dispose();  // 整体销毁时，部分跟着销毁
+    codeCtrl.dispose();
+  }
+}
+</code></pre>
+<p><code>phoneCtrl</code> 只属于这一个 Strategy，不会被其他对象共享，也不会独立于 Strategy 存在。这就是组合和聚合的本质区别</p>
+<blockquote>
+<p>组合是&quot;我创建你、我销毁你&quot;，聚合是&quot;你是别人创建的，我只是借用&quot;。</p>
+</blockquote>
+<p><strong>组合关系优劣</strong></p>
+<ul>
+<li><strong>优势</strong>：生命周期管理简单明确——谁创建谁负责销毁，不存在&quot;谁来清理&quot;的歧义。</li>
+<li><strong>代价</strong>：部分只能属于一个整体，无法共享。而且整体什么都自己造，零件越来越多，最终会被自己的复杂度压垮。</li>
+</ul>
+<p>在现实世界中：房子和它的房间。房子拆了，房间就不存在了——你没法把一个房间从这栋楼搬到另一栋楼里去。</p>
+<hr />
+<h5 id="5-继承-实现-inheritance-implementation-我是你的一种">5. 继承 / 实现（Inheritance / Implementation）——&quot;我是你的一种&quot;</h5>
+<p>继承表达的是&quot;is-a&quot;关系——子类是父类的一种特化。</p>
+<pre><code class="language-dart">abstract class LoginStrategy {
+  bool get isValid;
+  Future&lt;LoginResultData&gt; login(AuthRepository repo);
+  void dispose();
+}
+
+class SmsLoginStrategy extends LoginStrategy { ... }
+class PasswordLoginStrategy extends LoginStrategy { ... }
+</code></pre>
+<p><code>SmsLoginStrategy</code> 是 <code>LoginStrategy</code> 的一种。任何期望 <code>LoginStrategy</code> 的地方，都可以传入 <code>SmsLoginStrategy</code>——这就是多态。LoginMixin 不关心当前策略的具体类型，它只知道 <code>currentStrategy</code> 能调 <code>isValid</code> 和 <code>login()</code>，底下是短信还是密码，无所谓。</p>
+<p><strong>继承关系优劣</strong></p>
+<ul>
+<li><strong>优势</strong>：多态让调用方面向抽象编程。新增一种登录方式，只需要加一个子类，不用改 LoginMixin 一行代码。</li>
+<li><strong>代价</strong>：继承是最强的绑定，一旦建立就很难撤销。父类的任何改动都会波及所有子类。如果继承层次太深，底层的类会背负所有祖先的包袱，就像一个家族企业传了四代，每一代都加了新规矩，到最后一代已经被祖训压得喘不过气。</li>
+</ul>
+<p>这也是为什么我们的 <code>LoginStrategy</code> 只定义了三个方法——不把 <code>sendSms()</code> 放进去，因为密码登录不需要发验证码。接口越厚，子类的负担越重。在现实世界中：猫是动物的一种，所有动物都能呼吸、能移动，但不是所有动物都能飞。如果&quot;动物&quot;这个抽象里强制要求&quot;飞&quot;的能力，猫就很尴尬。</p>
+<hr />
+<h5 id="6-五种结构关系总览">6.五种结构关系总览</h5>
+<table>
+<thead>
+<tr>
+<th>关系</th>
+<th>核心语义</th>
+<th>耦合强度</th>
+<th>项目中的例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关联</td>
+<td>我知道你，偶尔找你</td>
+<td>弱</td>
+<td>LoginMixin → AuthCubit</td>
+</tr>
+<tr>
+<td>依赖</td>
+<td>我需要你才能工作</td>
+<td>中</td>
+<td>AuthRepository → Dio</td>
+</tr>
+<tr>
+<td>聚合</td>
+<td>我持有你，但你不属于我</td>
+<td>中</td>
+<td>ChatRoom → List&lt;User&gt;</td>
+</tr>
+<tr>
+<td>组合</td>
+<td>你是我的一部分，生死与共</td>
+<td>强</td>
+<td>SmsLoginStrategy → phoneCtrl</td>
+</tr>
+<tr>
+<td>继承/实现</td>
+<td>我是你的一种</td>
+<td>最强</td>
+<td>SmsLoginStrategy → LoginStrategy</td>
+</tr>
+</tbody>
+</table>
+<p>五种结构关系从松到紧：关联只是&quot;知道你&quot;，依赖是&quot;需要你&quot;，聚合是&quot;借用你&quot;，组合是&quot;拥有你&quot;，继承是&quot;成为你&quot;。越紧密的关系越稳定，但也越难改变。选择哪种关系，并没有绝对的优劣，本质上是在灵活性和确定性之间做权衡。</p>
+<p>实际开发中，某处代码之间往往同时存在多种结构关系。SmsLoginStrategy 对 LoginStrategy 是继承关系，同时 SmsLoginStrategy 内部对 phoneCtrl 是组合关系。这不矛盾——继承描述的是&quot;我是你的一种&quot;，组合描述的是&quot;你是我的一部分&quot;，它们从不同角度刻画了同一个对象的不同侧面。能同时看到这些面，说明你对关系的理解已经不是单维度的了。</p>
+<hr />
+<h4 id="二-协作关系">二、协作关系</h4>
+<p>结构关系是骨架，协作关系是血液的流动。程序跑起来之后，对象之间怎么传递信息、怎么配合完成任务，靠的就是协作关系。</p>
+<p>协作关系建立在结构关系之上——没有结构，就没有协作的通道。但协作关系有自己独立的维度：它关心的不是&quot;谁持有谁&quot;，而是&quot;信息怎么流动&quot;。</p>
+<hr />
+<h5 id="1-调用-invocation-我主动叫你做事">1. 调用（Invocation）——&quot;我主动叫你做事&quot;</h5>
+<p>最直接的协作方式。我找到你，调你的方法，等你返回结果。</p>
+<pre><code class="language-dart">final result = await authRepository.login(
+  phone: phone, code: code, type: loginType,
+);
+</code></pre>
+<p>我们项目中几乎所有的业务逻辑都是通过调用来推进的。以登录流程为例，调用链是这样的：</p>
+<pre><code class="diagram" style="font-size:13.5px">LoginMixin.login()
+  └→ SmsLoginStrategy.login()
+       └→ AuthRepository.login()
+            └→ Dio.post('/auth/login')
+</code></pre>
+<p>每一层只调用自己下面那一层，方向和依赖一致：view → logic → data → network。这条链路在运行时会形成<strong>调用栈</strong>——函数一层层压入栈中，最底层的返回结果，然后上层的依次返回。调用栈会完整地告诉你&quot;错误从哪一层冒出来的&quot;，这就是调用最大的好处：<strong>路径可追踪</strong>。</p>
+<p><strong>调用关系优劣</strong></p>
+<ul>
+<li><strong>优势</strong>：执行路径一目了然。出了 bug，顺着调用链一层层往下追，总能找到问题出在哪。</li>
+<li><strong>代价</strong>：发起方必须知道接收方是谁、有什么方法、返回什么类型。接收方改了签名，所有调用方都要跟着改。就像多米诺骨牌，推倒第一张，后面全倒。</li>
+</ul>
+<hr />
+<h5 id="2-回调-callback-你掌握时机-我提供做法">2. 回调（Callback）——&quot;你掌握时机，我提供做法&quot;</h5>
+<p>回调是调用的反转。正常调用是&quot;我调你&quot;，回调是&quot;我把一个函数交给你，你来调我&quot;。最经典的例子就是按钮：</p>
+<pre><code class="language-dart">ElevatedButton(
+  onPressed: () =&gt; login(),  // 回调：你被点击的时候，替我执行这个
+  child: Text('登录'),
+)
+</code></pre>
+<p><code>ElevatedButton</code> 是 Flutter 框架的组件，它不知道你的业务逻辑是什么，也不关心点击之后要做什么。它只知道&quot;用户点了我，我就调一下 <code>onPressed</code>&quot;。至于 <code>onPressed</code> 里是登录、跳转还是弹窗——那是你的事。</p>
+<p><strong>为什么非得用回调？</strong></p>
+<p>因为框架面对的是<strong>不确定性</strong>。用户什么时候点登录按钮？没人知道——可能页面刚打开就点，可能填完表单才点，也可能永远不点。框架无法替你做这个决策，它唯一能做的就是：<strong>把决策权交出去。</strong> &quot;时机我来把控，但做什么，你说了算。&quot;</p>
+<blockquote>
+<p>回调不是一种可选的设计技巧，而是面对不确定性时的必然选择。</p>
+</blockquote>
+<hr />
+<p>在我们的项目中，回调承担了更关键的角色：</p>
+<pre><code class="language-dart">typedef TokenProvider = String? Function();
+
+class HttpClient {
+  final TokenProvider tokenProvider;  // 回调：你在需要 Token 的时候调这个函数
+  HttpClient({required this.tokenProvider});
+}
+
+// main.dart 组装时注入
+final authCubit = AuthCubit();
+final httpClient = HttpClient(
+  tokenProvider: () =&gt; authCubit.state.token,
+);
+</code></pre>
+<p>HttpClient 不知道 Token 从哪来，它只知道 &quot;需要 Token 的时候调一下 <code>tokenProvider</code>&quot;。具体的取 Token 逻辑，由 <code>main.dart</code> 在组装时注入。</p>
+<p>这里的回调同样源于不确定性: 只不过不是用户行为的不确定，而是<strong>架构层级的不确定</strong>。<br />
+HttpClient 是底层网络模块，它知道每次请求都要带 Token，但 Token 存在哪？可能在 AuthRepository 的缓存里，可能在 AuthCubit 的状态里，可能未来换成 SecureStorage。HttpClient 不该知道这些，也不可能知道——因为它比这些模块更早被设计出来。所以它唯一能做的，就是留一个 <code>tokenProvider</code> 回调：<strong>&quot;Token 我要，但怎么拿，你来告诉我&quot;</strong>。 回调解决了一个关键问题：</p>
+<blockquote>
+<p><strong>低层模块需要高层信息，但不能依赖高层。</strong></p>
+</blockquote>
+<p>回调让低层只依赖一个函数签名，由组装层来&quot;接线&quot;。本质是<strong>控制反转</strong>：不是我来决定做什么，而是你告诉我做什么，我只负责在对的 <code>时机</code> 执行。</p>
+<p><strong>回调关系优劣</strong></p>
+<ul>
+<li><strong>优势</strong>：模块之间保持单向依赖，低层不需要知道高层的存在。starter 和 auth 通过回调在 <code>main.dart</code> 里握手，但彼此不认识，可以独立开发、独立测试。</li>
+<li><strong>代价</strong>：回调多了会形成&quot;回调地狱&quot;——逻辑分散在各个注入点，就像一本书的脚注比正文还多，读起来要不停跳转。你看一个类的代码，不一定能看出它的回调最终会触发什么行为，要到组装层才能看到全貌。</li>
+</ul>
+<hr />
+<h5 id="3-事件-event-我发信号-谁关心谁来听">3. 事件（Event）——&quot;我发信号，谁关心谁来听&quot;</h5>
+<p>事件是最松散的协作方式。发布方发出一个信号，不关心谁在监听；订阅方注册监听，不关心信号从哪来。双方通过一个共享的通道来通信，彼此不直接认识。事件机制由三个角色构成：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b7b5f5e5accd4c3daed45500cdb20aea~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1166&amp;h=630&amp;s=69069&amp;e=png&amp;a=1&amp;b=e2f1fc" alt="mermaid-diagram (17).png" /></p>
+<p><strong>发布方只管&quot;说&quot;。</strong> AuthCubit 在登录成功后 emit 一个新状态，它不知道谁在听，也不关心听到之后会发生什么。它的职责到 emit 这一刻就结束了：</p>
+<pre><code class="language-dart">// 发布方：只负责发出信号
+emit(AuthState.authenticated(token: token, user: user, hasPassword: hasPassword));
+</code></pre>
+<p><strong>通道只管&quot;传&quot;。</strong> 在 Bloc 框架中，通道是 Stream——一个异步的数据流。它负责把发布方的信号传递给所有订阅方，但它不需要理解信号的含义，也不修改信号的内容。通道是纯粹的基础设施，就像水管不关心流过的是自来水还是果汁。</p>
+<p><strong>订阅方只管&quot;听&quot;。</strong> BlocBuilder 订阅了 AuthCubit 的状态流，状态变了就自动重建 UI。它不知道状态是因为登录、启动恢复还是 Token 刷新而改变的——它只关心&quot;变了没有&quot;：</p>
+<pre><code class="language-dart">// 订阅方：只关心状态变化，不关心变化的原因
+BlocBuilder&lt;AuthCubit, AuthState&gt;(
+  builder: (context, state) { /* 自动响应状态变化 */ },
+)
+</code></pre>
+<p>三个角色各自独立，互不认识。发布方不依赖订阅方，订阅方不依赖发布方，它们唯一的交集是通道。这意味着：新增一个 ProfilePage 来监听认证状态？加一个 BlocBuilder 就行，AuthCubit 一行代码都不用改。哪天 HomePage 不需要监听了？删掉 BlocBuilder，AuthCubit 同样无感。</p>
+<p>这种解耦在更大的系统中更加常见。后端的消息队列（Kafka、RabbitMQ）、前端的事件总线、操作系统的中断机制——本质上都是同一种三角结构：发布方、通道、订阅方。</p>
+<hr />
+<p><strong>事件关系优劣</strong></p>
+<ul>
+<li><strong>优势</strong>：解耦的终极形式。新增一个订阅方，不需要改发布方一行代码。系统的扩展性因此变得非常好。</li>
+<li><strong>代价</strong>：事件驱动的代码最难调试。状态变了，你不知道是谁 emit 的；UI 刷新了，你不知道是哪个事件触发的。三个角色的独立性越强，追踪一条完整的信息流就越困难——你得分别找到发布方、通道和订阅方，才能拼出全貌。</li>
+</ul>
+<hr />
+<h5 id="4-三种协作关系总览">4. 三种协作关系总览</h5>
+<p>从调用到事件，耦合度递减，灵活性递增。选择哪种协作方式，取决于你需要多大的控制力——控制力越强，越容易调试；控制力越弱，越容易扩展。</p>
+<table>
+<thead>
+<tr>
+<th>关系</th>
+<th>核心语义</th>
+<th>耦合强度</th>
+<th>调试难度</th>
+<th>项目中的例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>调用</td>
+<td>我主动叫你做事</td>
+<td>强</td>
+<td>低</td>
+<td>LoginMixin → Strategy.login()</td>
+</tr>
+<tr>
+<td>回调</td>
+<td>你掌握时机，我提供做法</td>
+<td>中</td>
+<td>中</td>
+<td>HttpClient.tokenProvider</td>
+</tr>
+<tr>
+<td>事件</td>
+<td>我发信号，谁关心谁来听</td>
+<td>弱</td>
+<td>高</td>
+<td>AuthCubit emit → BlocBuilder</td>
+</tr>
+</tbody>
+</table>
+<p>一个简单的选择建议：</p>
+<ul>
+<li>如果两个对象间的协作是明确的、一对一的，优先用调用——简单直接，出了问题看调用栈就行。</li>
+<li>如果低层需要高层的信息或决策，用回调——把&quot;做什么&quot;的权力交出去，保持依赖方向的单向性。</li>
+<li>如果一个变化需要通知多个不确定的接收方，用事件——别试图挨个调用，让订阅方自己来。</li>
+</ul>
+<p>总之，<strong>能用调用解决的，别用回调；能用回调解决的，别用事件。</strong> 复杂度是有成本的，够用就好。</p>
+<hr />
+<h4 id="三-关系在不同尺度上的体现">三、关系在不同尺度上的体现</h4>
+<p>从分子到生态系统，每个尺度上都存在&quot;关系&quot;，而且模式惊人地相似。分子之间有化学键（共价键像组合，氢键像关联），细胞之间有信号传导（像事件），器官之间有功能依赖（心脏依赖肺提供氧气，像依赖关系），物种之间有共生和竞争。尺度变了，关系的本质没变。</p>
+<p>软件世界也是如此。同样的八种关系，在不同的尺度上反复出现。从最小的变量，到最大的系统架构，关系的本质不变，只是表现形式不同。</p>
+<hr />
+<h5 id="1-语句级-变量与函数之间">1. 语句级：变量与函数之间</h5>
+<p>最小尺度的关系发生在函数内部。就像生物体内的化学反应: 一个分子的变化会触发下一个分子的变化，形成反应链。代码里也一样：</p>
+<pre><code class="language-dart">// AuthRepository.login() 内部
+final res = await _dio.post('/auth/login', data: { ... });  // res 依赖 _dio
+final loginResult = LoginResult.fromJson(res.data);          // loginResult 依赖 res
+await _saveToken(loginResult.token);                         // 副作用依赖 loginResult
+</code></pre>
+<p>一条三步的数据流：发请求 → 解析结果 → 存储 Token。每一步都依赖上一步的产物，上游任何一环出了问题（网络超时、JSON 格式变了），下游全部中断——就像一条生化反应链，中间断了一环，后面的产物就无法生成。</p>
+<p>函数的参数和返回值，定义了函数与外部世界的契约。参数是&quot;我需要什么&quot;（依赖），返回值是&quot;我提供什么&quot;（服务）。一个函数的签名，就是它和外部世界的全部关系声明——就像细胞膜上的受体，决定了这个细胞能接收什么信号、输出什么物质。</p>
+<hr />
+<h5 id="2-类级-对象与对象之间">2. 类级：对象与对象之间</h5>
+<p>把尺度放大一级，来到对象与对象之间。这就像从分子反应上升到了细胞层面——每个细胞是一个独立的功能单元，但细胞之间通过各种方式协作：有的通过直接接触（像调用），有的通过释放化学信号（像事件），有的细胞内部包含了更小的细胞器（像组合）。</p>
+<p>看一个 <code>SmsLoginStrategy</code>，它身上同时存在多种关系：</p>
+<pre><code class="language-dart">class SmsLoginStrategy extends LoginStrategy {        // 继承：我是 LoginStrategy 的一种
+  final SendSmsCallback sendSmsCallback;               // 回调：发验证码的做法由外部提供
+  final phoneCtrl = TextEditingController();           // 组合：你是我的一部分，生死与共
+  
+  Future&lt;LoginResultData&gt; login(AuthRepository repo) {
+    return repo.login(phone, credential, 'sms');       // 调用：我主动叫你做事
+  }
+}
+</code></pre>
+<p>四行关键代码，四种关系——继承、回调、组合、调用同时存在于一个类上。一个类的设计质量，很大程度上取决于它和外部世界建立了多少种关系、每种关系有多强。关系越少、越弱，这个类就越容易被理解、被测试、被替换。</p>
+<hr />
+<h5 id="3-模块级-模块与模块之间">3. 模块级：模块与模块之间</h5>
+<p>再放大，模块之间的关系就像器官之间的关系。心脏负责泵血，肺负责气体交换，肝脏负责解毒——每个器官有明确的职责边界，通过血管和神经这些&quot;通道&quot;来协作。你不会看到心脏直接伸一只手去操作肺，它们通过血液这个中间介质来传递信息。</p>
+<p>在代码里，模块之间的关系表现为 import 语句和公开 API：</p>
+<pre><code>auth 模块 → 暴露 AuthRepository、AuthCubit
+starter 模块 → 暴露 StartupRepository、StartupResult
+home 模块 → 依赖 auth 模块的 AuthCubit 和 AuthRepository
+</code></pre>
+<p>模块之间的关系应该比类之间更加 <strong>克制</strong> 。两个类之间可以有多种关系，但两个模块之间最好只有一种：单向依赖。如果 auth 模块依赖 starter 模块，同时 starter 模块也依赖 auth 模块，就像心脏和肺互相直接控制对方——一个出问题，另一个立刻跟着崩。</p>
+<p>我们的 <code>domain/model/user.dart</code> 就像血液中的红细胞——被 auth、starter、home 三个模块共同使用，但它不属于任何一个模块，而是放在独立的 <code>domain/</code> 目录下。这避免了模块之间的循环依赖。</p>
+<hr />
+<h5 id="4-系统级-前端与后端之间">4. 系统级：前端与后端之间</h5>
+<p>再放大一级，前端和后端之间的关系就像两个独立的生物体之间的关系——它们不共享内部结构，只通过 <strong>外部信号</strong> 来交流。就像两个人之间的沟通只能通过语言、文字、手势，而不能直接读取对方的大脑。</p>
+<pre><code>POST /auth/sms          → 发送验证码
+POST /auth/login        → 登录
+POST /auth/password     → 设置密码
+GET  /user/profile      → 获取用户信息
+</code></pre>
+<p>这四个接口就是前后端之间的 <code>关系契约</code> 。前端不知道后端用什么语言写的、数据库是什么、部署在哪里。后端不知道前端是 Flutter、React 还是命令行工具。它们之间的联系，完全通过 HTTP 请求和 JSON 响应来维持——就像两个国家之间的外交，只通过大使馆这个&quot;接口&quot;来沟通，内政互不干涉。</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>尺度</th>
+<th>关系的载体</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>代码级</td>
+<td>变量引用、函数参数</td>
+<td><code>res</code> → <code>loginResult</code> → <code>_saveToken</code></td>
+</tr>
+<tr>
+<td>类级</td>
+<td>字段、继承、方法调用</td>
+<td>SmsLoginStrategy extends LoginStrategy</td>
+</tr>
+<tr>
+<td>模块级</td>
+<td>import、公开 API</td>
+<td>home 模块 → auth 模块</td>
+</tr>
+<tr>
+<td>系统级</td>
+<td>HTTP 接口、消息协议</td>
+<td>Flutter 客户端 → Rust 后端</td>
+</tr>
+</tbody>
+</table>
+<p>尺度越大，关系越应该松散。函数内部的变量引用可以很紧密（反正作用域就那么大），但系统之间的关系必须通过接口契约来约定——因为双方可能由不同的团队、用不同的语言、在不同的时间开发。</p>
+<hr />
+<h4 id="四-本章小结">四、本章小结</h4>
+<p>这一章没有写一行新代码，但我们建立了一套看待代码的新视角——<strong>关系视角</strong>。编程世界中的关系分为两大领域：</p>
+<p><strong>结构关系</strong>——事物之间是什么关系（静态的、声明式的）：</p>
+<ul>
+<li><strong>依赖</strong>——我需要你才能工作</li>
+<li><strong>关联</strong>——我知道你，偶尔找你</li>
+<li><strong>聚合</strong>——我持有你，但你不属于我</li>
+<li><strong>组合</strong>——你是我的一部分，生死与共</li>
+<li><strong>继承/实现</strong>——我是你的一种</li>
+</ul>
+<p><strong>协作关系</strong>——事物之间怎么配合工作（动态的、运行时的）：</p>
+<ul>
+<li><strong>调用</strong>——我主动叫你做事</li>
+<li><strong>回调</strong>——你在合适的时候替我执行</li>
+<li><strong>事件</strong>——我发信号，谁关心谁来听</li>
+</ul>
+<p>协作建立在结构之上。这些关系在不同尺度上反复出现（从变量到系统架构），越松散越灵活，越紧密越稳定。下次你看到两段代码之间的交互，试着问自己：这是哪种关系？强度合适吗？能问出这些问题，比能写出答案更重要——因为问题问对了，答案往往就在眼前。</p>
+<p>认识了关系，下一步就是学会管理它们。契约、时序、生命周期、方向性、设计原则——这些&quot;关系的治理之道&quot;，我们留到下一章展开。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-14.html">← 经络#3 ｜ 前端 - 从启动到认证</a>
+      <a class="next" href="ch-16.html">经络#5 ｜ 模块的物理边界 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-结构型关系">一、结构型关系</a></li>
+      <li class="lv5"><a href="#1-依赖-dependency-我需要你才能工作">1. 依赖（Dependency）——&quot;我需要你才能工作&quot;</a></li>
+      <li class="lv5"><a href="#2-关联-association-我知道你的存在">2. 关联（Association）——&quot;我知道你的存在&quot;</a></li>
+      <li class="lv5"><a href="#3-聚合-aggregation-我持有你-但你不属于我">3. 聚合（Aggregation）——&quot;我持有你，但你不属于我&quot;</a></li>
+      <li class="lv5"><a href="#4-组合-composition-你是我的一部分-生死与共">4. 组合（Composition）——&quot;你是我的一部分，生死与共&quot;</a></li>
+      <li class="lv5"><a href="#5-继承-实现-inheritance-implementation-我是你的一种">5. 继承 / 实现（Inheritance / Implementation）——&quot;我是你的一种&quot;</a></li>
+      <li class="lv5"><a href="#6-五种结构关系总览">6.五种结构关系总览</a></li>
+      <li class="lv4"><a href="#二-协作关系">二、协作关系</a></li>
+      <li class="lv5"><a href="#1-调用-invocation-我主动叫你做事">1. 调用（Invocation）——&quot;我主动叫你做事&quot;</a></li>
+      <li class="lv5"><a href="#2-回调-callback-你掌握时机-我提供做法">2. 回调（Callback）——&quot;你掌握时机，我提供做法&quot;</a></li>
+      <li class="lv5"><a href="#3-事件-event-我发信号-谁关心谁来听">3. 事件（Event）——&quot;我发信号，谁关心谁来听&quot;</a></li>
+      <li class="lv5"><a href="#4-三种协作关系总览">4. 三种协作关系总览</a></li>
+      <li class="lv4"><a href="#三-关系在不同尺度上的体现">三、关系在不同尺度上的体现</a></li>
+      <li class="lv5"><a href="#1-语句级-变量与函数之间">1. 语句级：变量与函数之间</a></li>
+      <li class="lv5"><a href="#2-类级-对象与对象之间">2. 类级：对象与对象之间</a></li>
+      <li class="lv5"><a href="#3-模块级-模块与模块之间">3. 模块级：模块与模块之间</a></li>
+      <li class="lv5"><a href="#4-系统级-前端与后端之间">4. 系统级：前端与后端之间</a></li>
+      <li class="lv4"><a href="#四-本章小结">四、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

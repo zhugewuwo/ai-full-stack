@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>桢干#4 ｜ 项目体检，望闻问切 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li class="active"><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>桢干#4 ｜ 项目体检，望闻问切</h1>
+<blockquote>
+<p>复杂性是沉默的，直到它不再沉默。</p>
+</blockquote>
+<h4 id="项目体检-望闻问切">项目体检，望闻问切</h4>
+<p>一棵树苗刚种下的时候，你一眼就能看到它的全貌：几片叶子、一根细茎、一小撮根。哪里有虫咬了一口，哪里叶子发黄了，肉眼可见。但当它长成一棵三米高的树，枝繁叶茂，你站在外面看，觉得一切都好。可能树干里已经被蛀空了一半，你浑然不知。</p>
+<p>我们的闪讯项目走到这里，已经不是当初那棵小苗了。二十多个版本的迭代，前后端加起来几万行代码，十几个模块交织在一起。每次新功能都能跑通，测试也过了，看起来一切正常。但&quot;能跑&quot;和&quot;健康&quot;是两回事。一个人能走路不代表他没有高血压，一棵树能开花不代表它里面没有白蚁。</p>
+<p>前面十几章我们一直在&quot;长&quot;——长新功能、长新模块、长新接口。生长是好事，但只顾着长不顾着养，迟早会出问题。果农都知道，果树长到一定阶段要修剪、要打药、要检查有没有病虫害。不是等到果子掉了才去看，而是在一切看起来还好的时候就主动检查。</p>
+<p>接下来两章，我们就来做这件事。这一章是&quot;体检&quot;：用望闻问切的方式，把项目里潜藏的问题找出来。下一章是&quot;养护&quot;：建立长期的防护机制，让这些问题不再复发。先发现，再预防。</p>
+<hr />
+<h4 id="一-为什么需要体检">一、为什么需要体检</h4>
+<p>人年轻的时候不体检，因为身体底子好，小毛病自己能扛过去。项目也一样，早期代码少、逻辑简单，即使有些不规范的写法，也不会出大问题。但随着代码量增长，那些&quot;小毛病&quot;会慢慢积累，直到某天突然爆发。</p>
+<p>常见的&quot;慢性病&quot;：</p>
+<ul>
+<li><strong>依赖纠缠</strong>：A 模块悄悄 import 了 B 模块的内部文件，改 B 的时候 A 莫名其妙编译失败</li>
+<li><strong>职责漂移</strong>：某个 Cubit 一开始只管聊天状态，后来顺手加了网络请求、加了文件操作，变成了一个什么都管的&quot;万能类&quot;</li>
+<li><strong>死代码堆积</strong>：早期的原型代码、调试用的 print、注释掉的旧逻辑，像落叶一样堆在角落</li>
+<li><strong>命名混乱</strong>：同一个概念在不同模块里叫不同的名字，或者同一个名字在不同地方表示不同的东西</li>
+</ul>
+<p>这些问题单独看都不致命，但它们会互相叠加。依赖纠缠让重构变得困难，职责漂移让 bug 难以定位，死代码让新人（包括 AI）读代码时产生困惑。就像一个人同时有高血压、高血糖、高血脂，每个单独看都&quot;还行&quot;，但三个加在一起就是定时炸弹。</p>
+<hr />
+<h5 id="1-望-看数字-看结构">1、望：看数字，看结构</h5>
+<p>中医讲&quot;望闻问切&quot;，第一步是&quot;望&quot;——看气色。项目的&quot;气色&quot;藏在两个地方：一是数字（文件数、行数、模块大小），二是结构（目录组织、命名、模块划分）。这里以前端项目为例，看看它的气色如何：</p>
+<p>这里让 AI 写了一个 Python 脚本（<code>scripts/checkup/client_stats.py</code>），专门统计当前项目，前端各模块的文件数、行数、字符数。脚本会自动过滤掉 protobuf 生成文件、build_runner 产物、废弃的 playground 目录，只统计手写代码。跑一遍，结果一目了然：</p>
+<table>
+<thead>
+<tr>
+<th>模块</th>
+<th>文件数</th>
+<th>行数</th>
+<th>字符数</th>
+<th>占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flash_im_chat</td>
+<td>24</td>
+<td>5026</td>
+<td>160775</td>
+<td>27.4%</td>
+</tr>
+<tr>
+<td>flash_im_group</td>
+<td>11</td>
+<td>2360</td>
+<td>72290</td>
+<td>12.9%</td>
+</tr>
+<tr>
+<td>flash_im_friend</td>
+<td>16</td>
+<td>2348</td>
+<td>72779</td>
+<td>12.8%</td>
+</tr>
+<tr>
+<td>flash_im_search</td>
+<td>13</td>
+<td>1623</td>
+<td>46519</td>
+<td>8.8%</td>
+</tr>
+<tr>
+<td>flash_session</td>
+<td>10</td>
+<td>1260</td>
+<td>35758</td>
+<td>6.9%</td>
+</tr>
+<tr>
+<td>flash_shared</td>
+<td>10</td>
+<td>1246</td>
+<td>36488</td>
+<td>6.8%</td>
+</tr>
+<tr>
+<td>主工程</td>
+<td>8</td>
+<td>1212</td>
+<td>42673</td>
+<td>6.6%</td>
+</tr>
+<tr>
+<td>flash_im_cache</td>
+<td>17</td>
+<td>1157</td>
+<td>34362</td>
+<td>6.3%</td>
+</tr>
+<tr>
+<td>flash_im_conversation</td>
+<td>7</td>
+<td>887</td>
+<td>28279</td>
+<td>4.8%</td>
+</tr>
+<tr>
+<td>flash_auth</td>
+<td>13</td>
+<td>675</td>
+<td>17780</td>
+<td>3.7%</td>
+</tr>
+<tr>
+<td>flash_im_core</td>
+<td>4</td>
+<td>451</td>
+<td>13722</td>
+<td>2.5%</td>
+</tr>
+<tr>
+<td>flash_starter</td>
+<td>3</td>
+<td>100</td>
+<td>2556</td>
+<td>0.5%</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td><strong>136</strong></td>
+<td><strong>18345</strong></td>
+<td><strong>563981</strong></td>
+<td><strong>100%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>数字本身不说明问题，但对比能说明问题。flash_im_chat 一个模块占了全部代码的 27%，是第二名的两倍多。这不一定是错，聊天页本来就是 IM 最复杂的模块，但值得关注。</p>
+<p>大文件排行更有意思：</p>
+<table>
+<thead>
+<tr>
+<th>模块</th>
+<th>路径</th>
+<th>行数</th>
+<th>字符数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flash_im_group</td>
+<td>src\view\group_chat_info_page.dart</td>
+<td>924</td>
+<td>28722</td>
+</tr>
+<tr>
+<td>主工程</td>
+<td>home\view\home_page.dart</td>
+<td>822</td>
+<td>31081</td>
+</tr>
+<tr>
+<td>flash_im_chat</td>
+<td>src\logic\chat_cubit.dart</td>
+<td>773</td>
+<td>25079</td>
+</tr>
+<tr>
+<td>flash_im_chat</td>
+<td>src\view\chat_page.dart</td>
+<td>768</td>
+<td>28842</td>
+</tr>
+<tr>
+<td>flash_shared</td>
+<td>src\member_picker_page.dart</td>
+<td>515</td>
+<td>16344</td>
+</tr>
+<tr>
+<td>flash_session</td>
+<td>src\view\edit_profile_page.dart</td>
+<td>408</td>
+<td>11788</td>
+</tr>
+<tr>
+<td>flash_im_friend</td>
+<td>src\view\indexed_contact_list.dart</td>
+<td>405</td>
+<td>12157</td>
+</tr>
+<tr>
+<td>flash_im_search</td>
+<td>src\view\search_page.dart</td>
+<td>396</td>
+<td>11349</td>
+</tr>
+<tr>
+<td>flash_im_group</td>
+<td>src\view\search_group_page.dart</td>
+<td>394</td>
+<td>12915</td>
+</tr>
+<tr>
+<td>flash_im_core</td>
+<td>src\logic\ws_client.dart</td>
+<td>345</td>
+<td>10513</td>
+</tr>
+</tbody>
+</table>
+<p>超过 500 行的文件有 5 个。一般来说，一个文件超过 500 行就值得想想能不能拆。但要具体看：如果是一个完整的页面（如 group_chat_info_page），内部逻辑自洽，拆了反而增加理解成本，那就不拆。如果是一个 Cubit 里塞了太多不相关的方法（如 chat_cubit 773 行），可能需要拆分。</p>
+<hr />
+<h5 id="2-闻-跑静态分析">2、闻：跑静态分析</h5>
+<p>&quot;闻&quot;是听声音。项目的&quot;声音&quot;就是编译器和 lint 工具的输出。同样写了另一个脚本（<code>scripts/checkup/client_analyze.py</code>），它会自动跑 <code>flutter analyze</code>，解析输出，按类型分类统计，然后保存到体检目录。<br />
+但在闻之前，先在 <code>analysis_options.yaml</code> 里上加了排除规则，避免非项目代码和自动生成代码的分析，这些是没有分析意义的噪点。</p>
+<pre><code class="language-yaml">analyzer:
+  exclude:
+    - lib/playground/**       # 废弃的原型代码
+    - &quot;**/*.g.dart&quot;           # build_runner 生成
+    - &quot;**/*.freezed.dart&quot;     # freezed 生成
+</code></pre>
+<hr />
+<p>跑完之后的结果：</p>
+<table>
+<thead>
+<tr>
+<th>级别</th>
+<th>数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 error</td>
+<td>0</td>
+</tr>
+<tr>
+<td>🟡 warning</td>
+<td>15</td>
+</tr>
+<tr>
+<td>🟢 info</td>
+<td>92</td>
+</tr>
+</tbody>
+</table>
+<p>零 error 是底线，这个过了。重点看 warning 和 info。</p>
+<h5 id="warning-15-个">Warning（15 个）</h5>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>数量</th>
+<th>典型例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unused_element</td>
+<td>3</td>
+<td><code>_confirmForward</code>、<code>_showEditAvatar</code>、<code>_showManageSheet</code> 方法写了但没用</td>
+</tr>
+<tr>
+<td>unused_local_variable</td>
+<td>3</td>
+<td><code>replyName</code>、<code>isLoadingMore</code>、<code>menuPadding</code> 声明了但没用</td>
+</tr>
+<tr>
+<td>unused_shown_name</td>
+<td>2</td>
+<td>import 里 show 了 WsFrame/WsFrameType 但没用到</td>
+</tr>
+<tr>
+<td>unused_element_parameter</td>
+<td>3</td>
+<td><code>strokeWidth</code>、<code>dashWidth</code>、<code>dashSpace</code> 参数从没被传值</td>
+</tr>
+<tr>
+<td>unused_field</td>
+<td>1</td>
+<td><code>_showMentionPicker</code> 字段没用</td>
+</tr>
+<tr>
+<td>unused_import</td>
+<td>1</td>
+<td>group_models.dart 被 import 但没用</td>
+</tr>
+<tr>
+<td>unnecessary_non_null_assertion</td>
+<td>1</td>
+<td>对不可能为 null 的值用了 <code>!</code></td>
+</tr>
+<tr>
+<td>unnecessary_cast</td>
+<td>1</td>
+<td>多余的类型转换</td>
+</tr>
+</tbody>
+</table>
+<p>这些 warning 有个共同特征：都是&quot;写了但没用到&quot;。这在快速迭代中很常见，改了方案但忘了删旧代码。单个看都不严重，但积累多了说明代码里有&quot;死肉&quot;。</p>
+<h5 id="info-92-个">Info（92 个）</h5>
+<table>
+<thead>
+<tr>
+<th>规则</th>
+<th>数量</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>avoid_print</td>
+<td>46</td>
+<td>生产代码里不该有 print</td>
+</tr>
+<tr>
+<td>unnecessary_underscores</td>
+<td>21</td>
+<td>多余的下划线命名</td>
+</tr>
+<tr>
+<td>use_null_aware_elements</td>
+<td>6</td>
+<td>可以用 <code>?</code> 简化的空检查</td>
+</tr>
+<tr>
+<td>use_build_context_synchronously</td>
+<td>5</td>
+<td>异步操作后使用了 BuildContext</td>
+</tr>
+<tr>
+<td>unnecessary_import</td>
+<td>3</td>
+<td>多余的 import</td>
+</tr>
+<tr>
+<td>deprecated_member_use</td>
+<td>0</td>
+<td>排除 playground 后没有了</td>
+</tr>
+</tbody>
+</table>
+<p>46 个 <code>avoid_print</code> 占了一半。这些是开发调试时加的日志，功能做完后忘了清理。它们不影响功能，但会在控制台产生噪音，也暴露了内部实现细节。</p>
+<p>5 个 <code>use_build_context_synchronously</code> 值得关注。这意味着有 5 处代码在 async 操作后使用了 BuildContext，如果页面在等待期间被关闭，可能会报错。虽然目前没出过问题，但这是潜在的运行时风险。</p>
+<hr />
+<h4 id="3-问-让-ai-审查代码">3、问：让 AI 审查代码</h4>
+<p>&quot;问&quot;是问诊。你主动把代码拿给 AI 看，让它帮你找问题。这里有个有趣的悖论：</p>
+<blockquote>
+<p>代码是 AI 写的，现在又让 AI 来审查自己写的代码，这有用吗？</p>
+</blockquote>
+<p>答案是：有用，而且很有用。原因是 AI 写代码时的上下文和审查时的上下文不同。写代码时它专注于&quot;完成任务&quot;，审查时它可以站在更高的视角看&quot;这段代码合不合理&quot;。就像一个人写文章时沉浸在思路里，过两天回头看才发现&quot;这段话说得不清楚&quot;。</p>
+<p>这一阶段，让 AI 深入阅读关键模块的代码，从设计角度审查，结合望、闻阶段的结果，产出代码质量与问题汇报。产出 <code>03_问_代码审查.md</code>, 这里把流程性的处理，也提取为一个 <a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/.kiro/skills/project-doctor/SKILL.md"><strong>project-doctor</strong></a> 技能角色。<br />
+我这里跑出的结果在 <a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/project/checkup/v0.20.0/client/03_%E9%97%AE_%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5.md">03_问_代码审查.md</a>，其中检测到最严重的问题就是 : <strong>ChatCubit 职责过多</strong>，承担了以下所有职责：</p>
+<table>
+<thead>
+<tr>
+<th>职责</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>消息加载与分页</td>
+<td>loadMessages, loadMore</td>
+</tr>
+<tr>
+<td>文本消息发送</td>
+<td>sendMessage</td>
+</tr>
+<tr>
+<td>图片发送（含上传）</td>
+<td>sendImageFromFile</td>
+</tr>
+<tr>
+<td>视频发送（含上传）</td>
+<td>sendVideoFromFile</td>
+</tr>
+<tr>
+<td>文件发送（含上传）</td>
+<td>sendFileFromPicker</td>
+</tr>
+<tr>
+<td>文件下载</td>
+<td>downloadFile</td>
+</tr>
+<tr>
+<td>WS 消息接收</td>
+<td>_handleIncomingMessage</td>
+</tr>
+<tr>
+<td>消息确认</td>
+<td>_handleMessageAck</td>
+</tr>
+<tr>
+<td>发送超时处理</td>
+<td>_setupTimeout, _markFailed</td>
+</tr>
+<tr>
+<td>消息撤回</td>
+<td>recallMessage, _handleMessageRecalled, _replaceWithRecalled</td>
+</tr>
+<tr>
+<td>引用回复</td>
+<td>setReplyTo, clearReplyTo</td>
+</tr>
+<tr>
+<td>多选模式</td>
+<td>enterMultiSelect, exitMultiSelect, toggleSelect, deleteSelected</td>
+</tr>
+<tr>
+<td>转发</td>
+<td>forwardMessages</td>
+</tr>
+<tr>
+<td>置顶</td>
+<td>loadPinnedMessages, pinMessage, unpinMessage</td>
+</tr>
+<tr>
+<td>复制与删除</td>
+<td>copyMessage, deleteMessage</td>
+</tr>
+<tr>
+<td>已读回执</td>
+<td>_loadReadSeq, _reportReadSeq</td>
+</tr>
+</tbody>
+</table>
+<p>共 30+ 个公开/私有方法。虽然它们都和&quot;聊天&quot;相关，但文件上传、文件下载、已读回执这些可以拆到独立的 mixin 或 service 中。
+<strong>严重程度</strong>：🟡 一般。目前还能维护，但再加功能会失控。</p>
+<hr />
+<h5 id="4-切-深入诊断">4. 切：深入诊断</h5>
+<p>针对前三步发现的疑似问题，深入确认。</p>
+<pre><code>操作：
+- 对&quot;望&quot;发现的结构问题：打开具体文件，确认是否真的有问题
+- 对&quot;闻&quot;报出的 warning：判断是误报还是真问题
+- 对&quot;问&quot;发现的设计问题：评估影响范围和修复代价
+
+输出：确诊问题清单，分三级：
+- 🔴 严重：阻塞后续开发或有运行时风险，建议立即修复
+- 🟡 一般：不影响功能但影响可维护性，建议近期修复
+- 🟢 轻微：代码风格或命名问题，可以顺手修或暂时不管
+</code></pre>
+<p>我这里跑出的结果在 <a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/project/checkup/v0.20.0/client/04_%E5%88%87_%E7%A1%AE%E8%AF%8A%E5%A4%84%E6%96%B9.md">04_切_确诊处方</a>，发现了一个严重问题，下面是医嘱：</p>
+<p><strong>立即处理</strong></p>
+<ul>
+<li><strong>#1 StreamController 关闭后 add</strong>：这是唯一的运行时炸弹。虽然目前没有复现过，但在网络波动导致异步操作延迟返回时有可能触发。修复成本低（加一个 bool 标志位），建议立即修。</li>
+</ul>
+<p><strong>近期关注</strong></p>
+<ul>
+<li><strong>#2 syncAll 事务性</strong>：当前数据量小，崩溃概率低，但随着用户增多和数据量增长，风险会上升。下次改 cache 模块时顺手修。</li>
+<li><strong>#3 日期判断 bug</strong>：影响会话列表的时间显示，用户可能看到&quot;今天&quot;的消息实际是昨天的。修复简单，近期处理。</li>
+<li><strong>#5 搜索防抖</strong>：目前用户少感知不明显，但如果搜索接口变慢或用户输入快，会产生大量无效请求。</li>
+</ul>
+<p><strong>长期改善</strong></p>
+<ul>
+<li><strong>#4 空 catch 模式</strong>：这是一个系统性问题，需要建立统一的错误处理策略。可以引入一个 <code>safeCall</code> 工具方法，统一处理异常日志。</li>
+<li><strong>#6 chat_cubit 拆分</strong>：等下次有新的聊天功能需求时，借机重构。不要为了重构而重构。</li>
+<li><strong>#7 print 清理</strong>：可以一次性批量处理，或者引入 logger 后逐步替换。</li>
+</ul>
+<hr />
+<h4 id="二-报告留存的重要性">二、报告留存的重要性</h4>
+<p>体检做完了，问题也找到了，然后呢？很多人的做法是：修完 bug，关掉对话，继续写下一个功能。体检报告？不存在的，它只活在那次对话的上下文里。这是一个巨大的浪费。</p>
+<hr />
+<h5 id="1-ai-对话是易逝品">1、AI 对话是易逝品</h5>
+<p>和 AI 的对话有一个致命缺陷：<strong>它没有长期记忆</strong>。这次对话里 AI 帮你找到了 13 个问题，你修了 3 个最紧急的，剩下 10 个打算&quot;以后再说&quot;。两周后你开了一个新对话，AI 对之前的体检结果一无所知。那 10 个问题就这样消失在时间里了。</p>
+<p>更糟糕的是，你自己也会忘。两周前觉得&quot;这个问题不急&quot;，两周后连这个问题的存在都不记得了。直到某天它真的爆了，你才想起来&quot;好像之前发现过这个&quot;。</p>
+<p>这就像去医院做了全套体检，医生口头告诉你&quot;血脂偏高，注意饮食&quot;，但你没拿到纸质报告。当时你点点头记住了，三个月后复查，换了个医生，你说&quot;上次血脂偏高&quot;，医生问&quot;偏高多少？哪项偏高？上次的具体数值是多少？&quot;你答不上来。没有留存的数据，每次都是从头来过。</p>
+<p>所以体检报告必须<strong>落盘</strong>——写成文件，存在项目里，跟着代码一起走。它不是给&quot;现在的你&quot;看的，是给&quot;两周后的你&quot;、&quot;两个月后的你&quot;、&quot;下一个接手项目的人&quot;看的。</p>
+<hr />
+<h5 id="2-报告是给未来的自己看的">2、报告是给未来的自己看的</h5>
+<p>我们的体检报告存在 <code>docs/project/checkup/{版本号}/</code> 下，按前后端分目录：</p>
+<pre><code class="diagram" style="font-size:13.5px">docs/project/checkup/v0.20.0/
+├── client/
+│   ├── 01_望_结构统计.md
+│   ├── 02_闻_静态分析.md
+│   ├── 03_问_代码审查.md
+│   └── 04_切_确诊处方.md
+└── server/
+    ├── 01_望_结构统计.md
+    ├── 02_闻_静态分析.md
+    ├── 03_问_代码审查.md
+    └── 04_切_确诊处方.md
+</code></pre>
+<p>这些文件的价值不在于&quot;写完那一刻&quot;，而在于<strong>下一次体检时</strong>。</p>
+<p>当你在 v0.21.0 再做一次体检，你可以对比：</p>
+<ul>
+<li>上次 15 个 warning，这次多了还是少了？</li>
+<li>上次发现的 13 个问题，修了几个？新增了几个？</li>
+<li>chat_cubit 上次 773 行，这次是变长了还是拆分了？</li>
+<li>上次的 🔴 严重问题还在不在？</li>
+</ul>
+<p>没有历史数据，你就无法判断项目是在变好还是变差。就像体检报告上的血压值，单次看只是一个数字，连续看三年才能看出趋势。130/85 是高还是低？如果去年是 120/80，今年是 130/85，那是在往高走，需要注意。如果去年是 140/90，今年是 130/85，那是在好转，继续保持。<strong>同一个数字，有没有参照系，结论完全不同。</strong></p>
+<p>举个具体的例子。我们这次体检发现前端有 46 个 <code>avoid_print</code>（生产代码里的 print 语句）。如果这是第一次体检，你只知道&quot;有 46 个&quot;，不知道这是多还是少。但如果上次体检是 30 个，这次变成 46 个，说明最近几个版本的开发中又新增了 16 个 print 没清理——问题在恶化。反过来，如果上次是 80 个，这次降到 46 个，说明清理工作在起效——方向是对的。</p>
+<p>这就是&quot;趋势&quot;的力量。单点数据是噪音，连续数据才是信号。</p>
+<hr />
+<h5 id="3-ai-加持下的体检报告">3、AI 加持下的体检报告</h5>
+<p>这一点容易被忽略，但在 AI 辅助开发的工作流里极其重要。</p>
+<p>首先，报告的书写者是 AI。这和传统开发流程有本质区别——以前写体检报告是一件苦差事，你得自己跑工具、自己整理数据、自己写分析、自己排优先级。现在这些全交给 AI 来做。你只需要说一句&quot;给项目做个体检&quot;，望闻问切四步走完，四份报告自动生成。写报告的成本从&quot;半天&quot;降到了&quot;一句话&quot;，这才是 AI 时代体检能真正落地的原因。</p>
+<p>其次，留存的报告反过来又能喂给 AI。当你下次让 AI 做体检时，你可以把上次的报告给它：</p>
+<blockquote>
+<p>&quot;这是上次 v0.20.0 的体检报告，现在是 v0.21.0，请对比分析变化。&quot;</p>
+</blockquote>
+<p>AI 有了历史基线，就能给出更有价值的判断：</p>
+<ul>
+<li>&quot;上次发现的 #1 StreamController 问题已修复，确认不再出现&quot;</li>
+<li>&quot;warning 从 15 个降到 3 个，说明清理工作有效&quot;</li>
+<li>&quot;im-message/routes.rs 从 601 行增长到 720 行，建议拆分的优先级应该提高&quot;</li>
+<li>&quot;上次标记为 🟡 的 syncAll 事务性问题仍未修复，已经跨了两个版本，建议提升优先级&quot;</li>
+</ul>
+<p>没有留存的报告，每次体检都是从零开始——AI 不知道哪些问题是&quot;老毛病&quot;，哪些是&quot;新发现&quot;，只能把所有问题平等对待。有了留存的报告，每次体检都是在上一次的基础上递进——AI 能区分&quot;已知未修&quot;和&quot;新增问题&quot;，给出的建议也更有针对性。</p>
+<p>更进一步，如果你把体检报告放在 <code>.kiro/steering/</code> 或者作为技能的参考文件，AI 在日常开发中也能参考它。比如你让 AI 改 im-message 模块的代码，它看到体检报告里写着&quot;routes 层业务逻辑过重，应下沉到 service&quot;，就会自觉地把新逻辑写在 service 层而不是 routes 层。<strong>报告不只是诊断结果，还是行为指南。</strong></p>
+<hr />
+<h5 id="4-报告是团队的共识载体">4、报告是团队的共识载体</h5>
+<p>如果你是一个人开发，报告是给未来的自己看的。如果是团队协作，报告还有另一个作用：<strong>对齐认知</strong>。</p>
+<p>技术债是一个很模糊的概念。你问三个开发者&quot;项目有什么技术债&quot;，可能得到三个完全不同的答案。一个人觉得&quot;命名不规范是最大的问题&quot;，另一个人觉得&quot;架构需要重构&quot;，第三个人觉得&quot;现在挺好的没什么问题&quot;。每个人基于自己接触的那部分代码形成判断，视角不同，结论自然不同。</p>
+<p>体检报告把这些模糊的感受变成了<strong>具体的、可量化的、有优先级的清单</strong>。&quot;这个项目有什么技术债？&quot;——不用开会讨论，打开最近一次体检报告的确诊处方就行。哪些是 🔴 必须修的，哪些是 🟡 可以缓的，哪些是 🟢 随手改的，白纸黑字写得清清楚楚。</p>
+<p>新人入职，看一遍体检报告，就知道项目的&quot;病史&quot;和当前状态。不用老员工口头交代&quot;那个模块别乱动&quot;、&quot;这个文件有坑&quot;——报告里都写着呢。这比任何口头传承都可靠，因为口头的东西会失真、会遗漏，文字不会。</p>
+<p>更重要的是，当这些报告跨越多个版本积累起来，它就不再只是&quot;问题清单&quot;了，而是<strong>经验的财富</strong>。</p>
+<p>v0.18.0 的报告里发现&quot;routes 层写了太多业务逻辑&quot;，v0.19.0 又发现了同样的问题，v0.20.0 还是这个问题——三次体检指向同一个模式，说明这不是某个人的偶然失误，而是团队的习惯性倾向。这时候你就可以把它沉淀为一条规范：&quot;routes 层只做参数解析和响应，业务逻辑必须放在 service 层&quot;，写进 steering 文件，让 AI 在日常开发中自动遵守。</p>
+<p>再比如，连续几次体检都发现&quot;新增功能后忘了清理调试 print&quot;，这说明开发流程里缺了一个环节。于是你加一条 lint 规则或者一个 pre-commit hook，从源头杜绝。问题不再是&quot;每次体检都发现然后手动清理&quot;，而是&quot;从此不会再出现&quot;。</p>
+<p>这就是从&quot;发现问题&quot;到&quot;沉淀规范&quot;的升华。单次体检是治病，多次体检的积累是养生。一个项目如果能坚持做五次、十次体检，那些反复出现的问题会自然而然地变成团队的编码规范、变成 AI 的 steering 指令、变成 CI 的自动检查。<strong>体检报告的终极归宿不是躺在 docs 目录里吃灰，而是化为项目的免疫系统。</strong></p>
+<hr />
+<h4 id="三-体检报告的天花板">三、体检报告的天花板</h4>
+<p>前面说了这么多体检的好处，但有一个问题必须正视：<strong>体检报告的质量上限在哪里？</strong></p>
+<p>它由三个因素共同决定。你可以把体检想象成用望远镜观星：大模型是镜片的口径，决定了能收集多少光；提示词是镜筒的设计，决定了光怎么汇聚、对焦到哪里；而你自己的认知，是那个站在目镜后面的人。同一片星空，天文学家能看出星系的旋臂结构，普通人只看到&quot;好多亮点&quot;。三者叠加，口径越大看得越远，设计越精看得越清，观测者越专业读出的信息越多。</p>
+<hr />
+<h5 id="1-大模型的本身能力">1、大模型的本身能力</h5>
+<p>第一层是 AI 模型本身的能力边界。</p>
+<p>模型能看到代码结构，能识别重复模式，能根据 lint 规则判断对错。但它有天然的盲区：</p>
+<ul>
+<li><strong>上下文窗口有限</strong>。一个几万行的项目，模型不可能同时&quot;看到&quot;所有代码。它只能在有限的窗口里做局部判断，跨模块的隐性耦合可能被遗漏。</li>
+<li><strong>训练数据有时差</strong>。模型的知识截止于某个时间点，最新的框架版本、最新的最佳实践，它可能还不知道。</li>
+<li><strong>推理深度有上限</strong>。&quot;这段代码有 bug&quot;它能发现，&quot;这个架构在三个月后会成为瓶颈&quot;它很难预判。模式匹配是强项，前瞻性思考是弱项。</li>
+</ul>
+<p>这一层会随着模型迭代不断抬高。今天的模型比一年前强太多，明年的模型又会比今天强。但在任何一个时间点，它都有上限。你不能指望模型发现它能力范围之外的问题。</p>
+<hr />
+<h5 id="2-技能提示词的表述">2、技能提示词的表述</h5>
+<p>第二层是你怎么&quot;教&quot; AI 做体检，也就是技能（skill）的提示词写得好不好。</p>
+<p>同样一个模型，给它不同的指令，输出质量天差地别。我们的 <code>project-doctor</code> 技能里定义了望闻问切四步流程、每步的检查维度、输出格式、严重程度分级标准。这些提示词就像给医生的&quot;诊疗规范&quot;，规范写得越细，医生的诊断越靠谱。</p>
+<p>提示词的质量体现在：</p>
+<ul>
+<li><strong>检查维度是否全面</strong>？如果你只写了&quot;检查代码风格&quot;，AI 就不会去看架构设计、依赖方向、生命周期管理这些更深层的问题。</li>
+<li><strong>判断标准是否明确</strong>？&quot;大文件需要拆分&quot;太模糊，&quot;超过 500 行的文件需要评估是否拆分&quot;才是可执行的标准。</li>
+<li><strong>输出格式是否结构化</strong>？自由发挥的报告每次格式不同，无法做版本间对比。固定格式的报告才能形成时间序列。</li>
+</ul>
+<p>这一层是可以持续打磨的。每次体检做完，你觉得&quot;这个维度没覆盖到&quot;、&quot;那个判断标准不够精确&quot;，就回去改提示词。技能文件本身也在迭代，和代码一样。</p>
+<hr />
+<h5 id="3-个人能力的上限">3、个人能力的上限</h5>
+<p>第三层，也是最关键的一层：<strong>你自己的认知水平</strong>。</p>
+<p>AI 能帮你跑静态分析、能帮你统计行数、能帮你逐文件审查代码。但有一类问题，AI 很难独立发现，就是<strong>方向性的问题</strong>：</p>
+<ul>
+<li>&quot;这个模块的抽象层次对不对？&quot;AI 能看到代码结构，但它不知道你的业务未来会往哪个方向演进。你打算加视频通话功能，那 im-ws 模块的设计是否能承载？这需要对产品路线图的理解。</li>
+<li>&quot;这个性能瓶颈在当前规模下重要吗？&quot;AI 能指出&quot;这里有 N+1 查询&quot;，但它不知道你的用户量是 100 人还是 10 万人。100 人的时候 N+1 无所谓，10 万人的时候就是灾难。这需要对业务规模的判断。</li>
+<li>&quot;这个技术债现在该还吗？&quot;AI 能列出所有技术债，但它不知道你下个月要上线一个大功能，现在重构会不会影响进度。这需要对项目节奏的把控。</li>
+</ul>
+<p>AI 擅长&quot;发现事实&quot;，人擅长&quot;做出判断&quot;。你的认知决定了你能从报告里&quot;看出&quot;什么。同一份体检报告，一个初级开发者看到的是&quot;哦，有 15 个 warning 要修&quot;；一个资深架构师看到的是&quot;warning 集中在 im-message 模块，说明这个模块的迭代速度超过了它的设计承载力，需要重新划分边界&quot;。数据是一样的，解读完全不同。</p>
+<hr />
+<h5 id="4-人在回路中">4、人在回路中</h5>
+<p>体检报告不是 AI 的自说自话。如果你只是让 AI 跑一遍然后看看结果，那你得到的只是一份&quot;机器眼中的代码现状&quot;，充其量是一份初筛报告。真正有价值的体检，需要开发者全程参与。你要告诉 AI 哪些模块是核心、哪些是边角；你要在 AI 列出问题后追问&quot;这个影响范围有多大&quot;；你要根据自己对业务的理解去质疑、去补充、去纠正 AI 的判断。</p>
+<p>确诊清单是事实，但医嘱里的优先级排序，哪个立即修、哪个缓一缓、哪个不用管，这背后是人的决策。🔴🟡🟢 的定级，涉及业务影响、时间窗口、团队状态，这些信息只有你知道。AI 给出的分级是建议，你拍板的分级才是最终方案。</p>
+<p>所以体检的最佳实践是：</p>
+<ol>
+<li><strong>AI 负责发现和呈现</strong>：跑数据、找问题、写报告，把事实摆在桌面上</li>
+<li><strong>人负责判断和决策</strong>：看报告、定优先级、决定什么时候修什么不修</li>
+<li><strong>AI 负责执行</strong>：人决定了要修哪些，AI 去改代码、跑验证</li>
+</ol>
+<p>这个&quot;人在回路中&quot;的模式，才是体检流程的完整形态。你不是在旁边看 AI 表演，你是这场体检的主治医生，AI 是你手里的检测仪器。仪器能告诉你血压是 130/85，但要不要开药、开什么药、什么时候复查，是医生说了算。</p>
+<p><strong>体检报告的天花板 = 模型能力 + 提示词质量 + 个人认知</strong>。回到望远镜的比喻：口径在变大（模型每年都在进步）、镜筒在优化（提示词随着每次体检不断打磨）、观测者也在成长（你对项目和业务的理解越来越深）。三者叠加，每一层进步一点，你能从体检中看到的东西就多一点、深一点。</p>
+<hr />
+<h4 id="本章小结">本章小结</h4>
+<p>这一章我们用望闻问切的方式给项目做了一次完整体检：看数字、跑工具、让 AI 审查、确诊开处方。发现问题只是第一步，把报告留存下来才能看到趋势、沉淀经验。而体检的天花板取决于三者叠加：模型能力、提示词质量、你自己的认知。AI 是检测仪器，你是主治医生。</p>
+<p>下一章，我们来聊怎么把这些&quot;体检发现&quot;转化为长期的防护机制，让问题不再复发，而不是每次体检都发现同样的毛病。把体检中沉淀的经验变成自动化的防护机制。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-32.html">← 桢干#3 ｜ AI 全栈开发流程梳理</a>
+      <a class="next" href="ch-34.html">桢干#5 ｜ 养护根基，虫害不生 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#项目体检-望闻问切">项目体检，望闻问切</a></li>
+      <li class="lv4"><a href="#一-为什么需要体检">一、为什么需要体检</a></li>
+      <li class="lv5"><a href="#1-望-看数字-看结构">1、望：看数字，看结构</a></li>
+      <li class="lv5"><a href="#2-闻-跑静态分析">2、闻：跑静态分析</a></li>
+      <li class="lv5"><a href="#warning-15-个">Warning（15 个）</a></li>
+      <li class="lv5"><a href="#info-92-个">Info（92 个）</a></li>
+      <li class="lv4"><a href="#3-问-让-ai-审查代码">3、问：让 AI 审查代码</a></li>
+      <li class="lv5"><a href="#4-切-深入诊断">4. 切：深入诊断</a></li>
+      <li class="lv4"><a href="#二-报告留存的重要性">二、报告留存的重要性</a></li>
+      <li class="lv5"><a href="#1-ai-对话是易逝品">1、AI 对话是易逝品</a></li>
+      <li class="lv5"><a href="#2-报告是给未来的自己看的">2、报告是给未来的自己看的</a></li>
+      <li class="lv5"><a href="#3-ai-加持下的体检报告">3、AI 加持下的体检报告</a></li>
+      <li class="lv5"><a href="#4-报告是团队的共识载体">4、报告是团队的共识载体</a></li>
+      <li class="lv4"><a href="#三-体检报告的天花板">三、体检报告的天花板</a></li>
+      <li class="lv5"><a href="#1-大模型的本身能力">1、大模型的本身能力</a></li>
+      <li class="lv5"><a href="#2-技能提示词的表述">2、技能提示词的表述</a></li>
+      <li class="lv5"><a href="#3-个人能力的上限">3、个人能力的上限</a></li>
+      <li class="lv5"><a href="#4-人在回路中">4、人在回路中</a></li>
+      <li class="lv4"><a href="#本章小结">本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

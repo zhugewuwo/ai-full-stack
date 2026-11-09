@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>土壤#4 ｜ 对话开创环境(后端) - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li class="active"><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>土壤#4 ｜ 对话开创环境(后端)</h1>
+<p>前面几章简单认识了 AI 编程是什么。想必大家都已经摩拳擦掌，准备大干一番了。接下来我们将仅和 AI 的对话，开创基本的全栈开发环境。</p>
+<p>首先说一下，我们本册使用的全栈全端方案是 Rust 后端 + Flutter 前端的方案。当然，你可以完全不了解这两种技术，我们注重的是操作 AI 来实现产品的流程。在 AI <strong>技术平权</strong> 的现在，按照这种流程，理论上，你可以用任何技术，任何语言实现前后端。</p>
+<hr />
+<h4 id="一-第一次对话-技术评估">一、 第一次对话: 技术评估</h4>
+<p>在开始时，准备一个空文件夹，使用你手上的任何 AI 编程开发工具打开 (我使用的是 Kiro)。来提出我们的第一个对话，这次会话的主要目的，是让你感知到:</p>
+<ul>
+<li>1). AI 智能体会帮你生成文件和文件夹。</li>
+<li>2). AI 智能体具有分析和对比的能力。</li>
+<li>3). 初步认识 mermaid 流程图。</li>
+<li>4). 技术平权: 基于 AI 了解自己感兴趣的任何知识。</li>
+</ul>
+<hr />
+<h5 id="1-技术方案评估">1. 技术方案评估</h5>
+<blockquote>
+<p>为我评估一下 Rust 后端 + Flutter 前端，实现全栈全端 IM 即时通信产品的可行性，以及其他技术方案的对比。<br />
+注意是基于 AI 编程，不需要过多考虑技术能力成本,创建报告文档记录一下。<br />
+放到 docs/research/project/report.md 中，合理使用 mermaid 展示逻辑流程。</p>
+</blockquote>
+<p>我这里 AI 生成的 <a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/research/project/report.md">汇报文档</a>，大家可以看一下。其中给了详细的 Rust + Flutter 实现全端即时通讯项目的评估报告，以及各种其他技术方案的综合对比。用下面 AI 给的分析，来直观感受一下：</p>
+<p><strong>后端技术对比</strong></p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Rust</th>
+<th>Go</th>
+<th>Node.js (TypeScript)</th>
+<th>Java/Kotlin (Spring)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原始性能</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>内存效率</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>并发能力</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>开发效率</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>AI 编程友好度</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>IM 生态/SDK</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>部署运维</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>长连接承载量</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Rust 在性能、内存、部署方面有绝对优势，适合追求极致性能的 IM 场景</li>
+<li>Go 是最均衡的选择，开发效率和性能兼顾，IM 领域有 Tinode 等成熟开源项目</li>
+<li>Node.js 开发最快，AI 生成代码质量最高（训练数据最多），但高并发长连接场景是短板</li>
+<li>Java/Spring 生态最成熟，但资源消耗大，部署重</li>
+</ul>
+<p><strong>前端技术对比</strong></p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Flutter</th>
+<th>React Native</th>
+<th>Kotlin Multiplatform</th>
+<th>原生开发</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平台覆盖</td>
+<td>6 端统一</td>
+<td>移动 + Web</td>
+<td>移动（共享逻辑）</td>
+<td>各端独立</td>
+</tr>
+<tr>
+<td>UI 一致性</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>开发效率</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td>AI 编程友好度</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>IM Chat UI 生态</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Desktop 支持</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>团队维护成本</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Flutter 是全端覆盖的最优解，一套代码七端(+鸿蒙) 运行，IM UI 组件生态已成熟</li>
+<li>React Native 在移动端成熟度高，但 Desktop 支持弱，JS 桥接有性能开销</li>
+<li>KMP 适合已有 Kotlin 团队，但 UI 层仍需各端独立开发</li>
+<li>原生开发质量最高但成本最大，AI 编程时代下优势被削弱</li>
+</ul>
+<p>总的来看，AI 编程基本抹平了 Rust 的学习曲线劣势，同时保留了性能和安全性优势，配合 Flutter 七端统一，是当前做全端 IM 产品的一个很有竞争力的组合。</p>
+<hr />
+<h5 id="2-mermaid-流程图">2. Mermaid 流程图</h5>
+<p>如果你仔细查看了文档，会看到有这种流程图：它介绍了前后端架构的大致组成部分，以及各个环节的数据流向：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/15c84b7a47db46d781b04e28e093423c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=971&amp;h=626&amp;s=88244&amp;e=png&amp;b=fff8e9" alt="image.png" /></p>
+<p>这种时序图，详细介绍了发送消息时各个参与角色，执行各自功能的时间顺序：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/38d4b434216b403c85200bb061358b96~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=987&amp;h=537&amp;s=61167&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>甚至是这种，可以通过一个图表展示技术综合评估的方案：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/09cc97af24984d4fa96bac9eb00e5ea3~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1004&amp;h=585&amp;s=48876&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>这些在文档中，将流程、数据可视化呈现的方式，有着一个统一的名称叫做 <strong>Mermaid</strong>。它本质上是如下结构化的文本，在 Markdown 进行渲染。在 AI 时代，它的价值被放大了无数倍——因为 AI 逻辑性强，又能写文字，而 Mermaid 让文字变成图。这个组合打通了从&quot;想法&quot;到&quot;可视化文档&quot;的最后一公里。</p>
+<pre><code>quadrantChart
+    title 技术方案综合评估
+    x-axis &quot;开发效率低&quot; --&gt; &quot;开发效率高&quot;
+    y-axis &quot;运行性能低&quot; --&gt; &quot;运行性能高&quot;
+    quadrant-1 &quot;高性能 + 高效率 (理想区)&quot;
+    quadrant-2 &quot;高性能 + 低效率&quot;
+    quadrant-3 &quot;低性能 + 低效率&quot;
+    quadrant-4 &quot;低性能 + 高效率&quot;
+    &quot;Rust + Flutter&quot;: [0.55, 0.90]
+    &quot;Go + Flutter&quot;: [0.70, 0.75]
+    &quot;Go + React Native&quot;: [0.65, 0.70]
+    &quot;Node.js + React Native&quot;: [0.85, 0.40]
+    &quot;Java + 原生&quot;: [0.30, 0.65]
+    &quot;Rust + Flutter (AI加持)&quot;: [0.75, 0.90]
+</code></pre>
+<p>如果你对 mermaid 有更深的兴趣，其实完全可以让 AI 来为你介绍。</p>
+<blockquote>
+<p>以 mermaid 大师的身份，对完全不了解它的新手朋友，友好地介绍一下。另外说明一下它在 AI 时代的重要性。放到 docs/symbol/doc/mermaid.md 中。</p>
+</blockquote>
+<p>大家可以自己试一下，我这边产出的详见 <a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/symbol/doc/mermaid.md"> mermaid 介绍文档</a>。</p>
+<hr />
+<h5 id="3-知识平权与认知局限的矛盾">3.知识平权与认知局限的矛盾</h5>
+<p>从前面两个问题，可以看出：对于你不懂的问题，AI 工具都可以给你介绍。通过它你可以了解任何你感兴趣的知识，这就是 <strong>知识平权</strong> 。<br />
+但是一个人的认知是有局限性的，可能你完全不知道有 mermaid 这个东西，那你对 AI 的理解仍然停留在生成代码、写文章、写脚本这样的层面。但当你知道 Mermaid、系统架构图、时序建模、技术评估图这些工具存在之后，你与 AI 的对话方式就会发生变化。例如：</p>
+<ul>
+<li>用 Mermaid 生成系统架构图</li>
+<li>用 Mermaid 表达消息发送的时序</li>
+<li>用 Mermaid 对比不同技术方案</li>
+</ul>
+<p>于是，你不再只关注 “写代码”，而是在 <strong>设计系统</strong>。所以在 AI 时代，真正的门槛往往不是技术本身，而是：</p>
+<blockquote>
+<p><strong>你是否知道某件事情是可以被做到的。</strong></p>
+</blockquote>
+<p>这就是认知的差异，mermaid 算是步入 AI 编程，我赠你的第一个认知礼物。本书将致力于抹平，全栈开发过程中的认知差距，助力你知道哪些事可以通过什么方式被做到。<strong>你的认知局限，就是你能调度 AI 的上限。</strong></p>
+<hr />
+<h4 id="二-后端的第一个接口">二、后端的第一个接口</h4>
+<p>对于编程开发环境来说，没接触过编程的朋友折腾起来可能比较费劲。但这些你都可以指挥 AI 为你来做，比如可以指示：</p>
+<blockquote>
+<p>根据当前的操作系统，为我准备一份面向初学者的 Rust 环境安装文档。可以使用脚本处理的尽可能使用脚本。放到 docs/project/setup/rust.md 中。</p>
+</blockquote>
+<p>在环境方面，不同的系统流程不同，另外网络环境也可能出现奇奇怪怪的问题。所以本书并不想描绘安装环境的细枝末节。遇到什么问题都可以丢给 AI，让它给出建议或帮你解决，这也是你和 AI 磨合的好机会。<br />
+我这里生成的参考文档可以如下，有什么安装上的问题，实在解决不了，可以在评论区留言。安装完环境，AI 编程就成功一半了，加油 ~</p>
+<hr />
+<h5 id="1-技术评估">1. 技术评估</h5>
+<p>AI 智能体可以主动在网上搜集资料，在真正开始写代码之前。我们可以充分利用这点，做完善的技术评估，即使是不了解的领域，也可以快速对比，选取合适的技术选型。比如我问：</p>
+<blockquote>
+<p>为我整体分析一下 Rust 及后端架构的现状，可以综合对比一下不同的技术栈，我的目的是基于 AI 实现后端 IM 的，合理使用 mermaid 展示逻辑流程。<br />
+创建报告文档，放到 docs/research/project/rust_web.md 下</p>
+</blockquote>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/053a92573468408399419ff5748db7a7~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1281&amp;h=535&amp;s=127561&amp;e=png&amp;b=ecebef" alt="image.png" /></p>
+<p>然后 AI 就会写出对于的报告，<a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/research/project/rust_web.md">全文详见这里</a>。下面是 AI 找到的 Rust 几种后端架构的对比，进行整理后给出的表格。其中还附带了数据来源和原始链接。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>axum 0.7</th>
+<th>actix-web 4.x</th>
+<th>Rocket 0.5</th>
+<th>Warp</th>
+<th>Salvo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>性能 (req/s)</td>
+<td>~320K</td>
+<td>~350K</td>
+<td>~180K</td>
+<td>~300K</td>
+<td>~310K</td>
+</tr>
+<tr>
+<td>异步运行时</td>
+<td>Tokio（深度集成）</td>
+<td>Tokio（可选 actix-rt）</td>
+<td>Tokio</td>
+<td>Tokio</td>
+<td>Tokio / Hyper</td>
+</tr>
+<tr>
+<td>中间件生态</td>
+<td>Tower（最丰富）</td>
+<td>自有中间件体系</td>
+<td>Fairings</td>
+<td>Filter 组合</td>
+<td>自有 Handler</td>
+</tr>
+<tr>
+<td>WebSocket</td>
+<td>内置支持</td>
+<td>内置支持</td>
+<td>需第三方</td>
+<td>内置支持</td>
+<td>内置支持</td>
+</tr>
+<tr>
+<td>gRPC 兼容</td>
+<td>tonic 同端口共存</td>
+<td>需独立端口</td>
+<td>不支持</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>宏依赖</td>
+<td>极少</td>
+<td>中等</td>
+<td>重度</td>
+<td>无</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>学习曲线</td>
+<td>中等</td>
+<td>中等</td>
+<td>低</td>
+<td>高</td>
+<td>低</td>
+</tr>
+<tr>
+<td>AI 生成友好度</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>GitHub Stars</td>
+<td>~20K</td>
+<td>~22K</td>
+<td>~24K</td>
+<td>~10K</td>
+<td>~3K</td>
+</tr>
+<tr>
+<td>社区活跃度</td>
+<td>极高（Tokio 团队维护）</td>
+<td>高</td>
+<td>中</td>
+<td>低（维护放缓）</td>
+<td>中</td>
+</tr>
+</tbody>
+</table>
+<p>基准数据来源于 2025 年 5 月的实测对比，测试环境为标准 HTTP JSON 响应场景。参考 <a href="https://markaicode.com/rust-web-frameworks-performance-benchmark-2025/">markaicode.com</a>。内容已概括整理。</p>
+<hr />
+<p>最后，从多个角度 AI 给出： axum 服务端框架，符合目前的功能需求。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cabee8b6a0304aedacb2b9d05b17039c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1186&amp;h=494&amp;s=69970&amp;e=png&amp;b=f1eff6" alt="image.png" /></p>
+<p>关键优势：</p>
+<ul>
+<li>axum 与 tonic（gRPC）共享底层 Hyper + Tower，可以在同一端口同时服务 HTTP 和 gRPC</li>
+<li>Tower 中间件生态是 Rust 最丰富的，限流、重试、超时、链路追踪开箱即用</li>
+<li>Tokio 团队直接维护，与异步运行时的兼容性最佳</li>
+<li>极少使用宏，代码结构清晰，AI 生成和理解的准确率最高</li>
+</ul>
+<hr />
+<h5 id="2-使用-axum-创建第一个接口">2. 使用 Axum 创建第一个接口</h5>
+<p>面对 AI 想要什么，就直接说。但要尽可能地细节，让它理解你的意图，下面是我的对话：</p>
+<blockquote>
+<p>非常好，我现在的技术选型确定是 axum，我作为一个新手，请你为我准备第一个服务接口:<br />
+创建 server 后端项目，提供<code>/v</code> 查看后端系统信息，返回 name 和 version 字段。<br />
+服务启动后，需要打印一下本机的 ip+端口号，方便访问<br />
+并给一份面向小白的技术文档指导。写到 docs/develop/version/v.md</p>
+</blockquote>
+<p>然后它就会自己写个最基础的 server 项目，里面是啥，目前你可以完全不用在意。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e8439a267cad4944a6371e96565fb324~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1247&amp;h=717&amp;s=161939&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>一般 AI 编程智能体都有 <code>开启命令行</code> ，执行脚本的能力。接下来你只需要说一句，就可以让它帮你启动服务。并且会打印接口的访问路径：</p>
+<blockquote>
+<p>为我运行后端的 server 项目</p>
+</blockquote>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/62e5a575a4bf40f595c887bb1572f229~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1112&amp;h=651&amp;s=78178&amp;e=png&amp;b=f0eff2" alt="image.png" /></p>
+<hr />
+<p>然后你可以通过浏览器或者手机，访问局域网的接口链接，都能得到服务端的响应。到这里，第一个接口就跑通了。</p>
+<table>
+<thead>
+<tr>
+<th>浏览器</th>
+<th>手机(同一wifi)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/daa2d76b3a2d4dcdb6dfa388e13d0d24~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=645&amp;h=441&amp;s=35132&amp;e=png&amp;b=fefefe" alt="image.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/127f845cb2814cb993155a5e09bdf3b2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=657&amp;h=500&amp;s=51798&amp;e=png&amp;b=fcfcfc" alt="image.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="3-返回一个静态的会话列表">3. 返回一个静态的会话列表</h5>
+<p>下面可以来个稍微复杂点的，比如一些静态的会话数据：</p>
+<blockquote>
+<p>模拟 20 个假的会话数据，提供<code>/conversation</code> 接口<br />
+每个数据项返回 title 、lastMsg、time字段。</p>
+</blockquote>
+<p>做完后，可以让它重新启动服务。这样就可以通过链接访问，得到数据。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1a06e0ff8a0340a6b71d028cb1d77bea~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1261&amp;h=836&amp;s=89355&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<hr />
+<h4 id="三-阶段小结">三、 阶段小结</h4>
+<p>到目前为止，我们没有写一行代码，但一个后端的服务切，实地运行起来了。回顾整个流程，我们是在将自己的想法、困惑、求知欲，向 AI 诉说，从而调度它生成文档、生成代码、运行项目。</p>
+<p>AI 智能体编程和普通的 AI 聊天最大的区别在于，它可以访问更多的工具，比如文件读写、搜索网页、命令行等。而输出文档本身，也是一种持久化记录的好方式。这些调研、开发、认知等重要的文件，我将其称之为 <strong>项目资产</strong>。</p>
+<p>如果不及时记录有价值的信息，随着你关闭聊天，或者重开会话。一切就重头来个，之前有意义的内容，就会像沙子上的文字，风一吹就无影无踪了。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e0af437f09843eca9b2c67cd997cefc~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=873&amp;h=391&amp;s=31419&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<p>后面我会提出 <strong>面向文档开发</strong> 的思想，到时候，你会发现项目资产，对于 AI 编程来说是多么重要。后端的环境准备就绪，下一章，我们将前往前端，看看 Flutter 如何连接后端，实现第一个全栈的通信。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-4.html">← 土壤#3 ｜ AI Agent 编程智能体</a>
+      <a class="next" href="ch-6.html">土壤#5 ｜ 对话开创环境(前端) →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-第一次对话-技术评估">一、 第一次对话: 技术评估</a></li>
+      <li class="lv5"><a href="#1-技术方案评估">1. 技术方案评估</a></li>
+      <li class="lv5"><a href="#2-mermaid-流程图">2. Mermaid 流程图</a></li>
+      <li class="lv5"><a href="#3-知识平权与认知局限的矛盾">3.知识平权与认知局限的矛盾</a></li>
+      <li class="lv4"><a href="#二-后端的第一个接口">二、后端的第一个接口</a></li>
+      <li class="lv5"><a href="#1-技术评估">1. 技术评估</a></li>
+      <li class="lv5"><a href="#2-使用-axum-创建第一个接口">2. 使用 Axum 创建第一个接口</a></li>
+      <li class="lv5"><a href="#3-返回一个静态的会话列表">3. 返回一个静态的会话列表</a></li>
+      <li class="lv4"><a href="#三-阶段小结">三、 阶段小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

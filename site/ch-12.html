@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>经络#1 ｜ 模块化的分工协作 - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li class="active"><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>经络#1 ｜ 模块化的分工协作</h1>
+<blockquote>
+<p>生命走向复杂的第一步，不是变大，而是学会分工。</p>
+</blockquote>
+<p>目前我们已经拥有了一颗具有生命力的种子。这一卷将通过五章的篇幅，了解各个系统间的关系、设计这颗种子的经络，如何更好地组织、分工，共同维持生命的成长空间。</p>
+<hr />
+<h4 id="一-软件生命体的组织结构">一、软件生命体的组织结构</h4>
+<p>在开始，我希望做一个有趣的思想对比。一个成年人身体大概有 <strong>30万亿~40万亿个细胞</strong>，你有没有惊讶过，为什么这么多体量的单体，可以这么有序的协作。软件工程可以从中汲取什么灵感，能有利于代码组织呢？哪怕只是亿分之一的灵感 ~</p>
+<p>众所周知，生物学有一条非常经典的<code>层次结构</code>，用来描述生命从小到大的组成：</p>
+<blockquote>
+<p>细胞 → 组织 → 器官 → 系统 → 个体</p>
+</blockquote>
+<hr />
+<h5 id="1-细胞-最小功能单元">1. 细胞 - 最小功能单元</h5>
+<p><strong>细胞</strong> 是最基础的单位，是能独立完成生命活动的最小结构。这很像软件工程中的 <strong>函数/结构体</strong>，它们都是具体功能的执行单元或数据载体。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4ea735d8fab842289b07fdf62495ea83~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1559&amp;h=603&amp;s=349076&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<hr />
+<h5 id="2-组织-明确分工边界">2. 组织 - 明确分工边界</h5>
+<p>单个细胞的力量微乎其微，但多个功能相似的细胞聚集形成 <strong>组织</strong> 时，就产生了<strong>量变到质变</strong>的功能。比如大量功能相近的肌肉细胞，聚集成肌肉组织，它将零散的单元逻辑（细胞收缩）整合成<strong>可预测、可控制、高输出</strong>的服务能力。它是生命体这个复杂程序中，负责 “动作执行” 的最关键层级，有了明确的分工边界。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/355a11b458694592915ebe04cd764363~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1553&amp;h=615&amp;s=517626&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<p>软件工程中，职责相近、逻辑内聚的单元聚集成 <strong>层</strong>。比如界面视图相关的表现层，由视图元素聚合而成，就像生物的上皮组织，负责与外界交换信息（皮肤、粘膜 -&gt; 用户交互、输入），保护内部逻辑不被直接触碰(用户只看到界面，无法修改内部逻辑)。</p>
+<hr />
+<h5 id="3-器官-接口契约">3. 器官 - 接口契约</h5>
+<p>而当多种不同的组织，为了完成一个具体业务而<strong>垂直整合</strong>时，就构成了 <strong>器官</strong>。心脏就是一个典型的“功能模块”。它内部集成了动力（肌肉组织）、调度（自身节律与外部调节）和支撑（结缔组织），但对整个循环系统而言，它只暴露标准的<strong>接口契约</strong>。对外界而言它不解释内部如何运作，只严格遵守协议：输入什么，输出什么。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1a12e9e88451401381e7ab2dced04a50~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1563&amp;h=676&amp;s=490639&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<p>这种<strong>接口契约</strong>是复杂系统的减速器。在软件架构中，一个支付 <strong>模块</strong> 就像一个器官，它封装了从校验到持久化的所有层次，外部调用者只需通过标准的 API 契约与其交互。只要契约不变，内部逻辑的重构（组织细胞的代谢）就不会引起整个系统的崩溃。</p>
+<p>组织解决的是“同类单元如何归纳”，而器官解决的是“多类单元如何协同并对外提供能力”。在维度扩张上：</p>
+<ul>
+<li>组织是同一个维度上的 <strong>横向扩张</strong>，是由无数个功能单一、同质化的单元聚合而成；</li>
+<li>器官则是<strong>纵向的穿透</strong>，同职能的单元通过契约串联调度。</li>
+</ul>
+<hr />
+<h5 id="4-系统-全局协同">4. 系统 - 全局协同</h5>
+<p>单个器官即便再精密，也无法独立支撑生命。只有当心脏、血管、肺部等器官，通过血液循环与神经调控彼此联动时，才形成完整的<strong>循环系统（功能域 / Domain）</strong>。这一层级不再关注某个局部如何运作，而是关注整体的<strong>物质与信息流转</strong>。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e19863a3f0634290ac788c3356678f06~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1561&amp;h=701&amp;s=563707&amp;e=png&amp;b=fefefe" alt="image.png" /></p>
+<p>在软件工程中，这对应 <strong>领域驱动设计</strong> 中的子系统（Subsystem）或功能域。例如一个“电商履约域”，需要库存、物流、支付等模块协同运作。模块之间通过接口调用、事件机制或消息传递进行通信，既可以是同步的调用关系，也可以是类似“广播与订阅”的异步协作，共同完成端到端的业务流程。</p>
+<hr />
+<h5 id="5-生命体">5. 生命体</h5>
+<p>当多个<strong>系统</strong> 最终汇聚在一起，就形成了一个完整的 <strong>生物体</strong>，也就是软件工程中的 <strong>应用（Application）</strong> 或 <strong>平台（Platform）</strong> 。在这一层，单一的功能已经不再是主角，取而代之的是全局的资源调度与稳态维持。而一个生命体，又何尝不是社会的一个微小执行单元呢？</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1c30485fd517405f9204a29ca6c91f9a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1557&amp;h=672&amp;s=729879&amp;e=png&amp;b=ffffff" alt="image.png" /></p>
+<p>一个 IM 产品，认证系统、消息系统、存储系统等各自独立运行。但用户感知到的是一个完整的体验：&quot;我打开 App，登录，看到消息，回复，对方秒收到。&quot;这个流畅的体验不属于任何一个系统，它是所有系统协作的涌现结果。</p>
+<p>从 <code>细胞（函数）</code>的微观执行，到<code>组织（层）</code>的水平聚合，再到<code>器官（模块）</code>的垂直整合，最后到<code>系统（功能域）</code>的全局协同。我们构建的不只是一行行代码，而是一个具备生命节律的数字实体。这种类比让我们看清了一个真相：好的架构，本质上是对生命进化智慧，在某种程度上的致敬。</p>
+<hr />
+<h4 id="二-简单认识结构拆分">二、简单认识结构拆分</h4>
+<p>前面我们用生物学的视角，看到了生命体从细胞到个体的五级结构。但这引出了一个关键问题：生命为什么要走向多细胞？单细胞生物活了几十亿年，不也好好的吗？答案是：</p>
+<blockquote>
+<p><strong>单细胞有极限。</strong></p>
+</blockquote>
+<hr />
+<h5 id="1-单细胞的极限">1. 单细胞的极限</h5>
+<p>生物学中有一个经典的物理约束： 细胞越大，表面积与体积的比值越小。表面积决定了营养交换的效率，体积决定了需要供养的内容。  当细胞长到一定大小，表面积不够用了——养分进不来，废物排不出，细胞就会窒息。所以地球上几乎不存在，巴掌大的单核细胞生物。它要么分裂，要么死亡。</p>
+<p>细胞变大，问题不只是“交换效率下降”，本质是 <strong>边界承载能力跟不上内部复杂度增长</strong>。表面积是边界，是接口；体积是内部状态，是逻辑与负担。当增长不成比例时，系统就会失衡。</p>
+<p>细胞并没有无限变大来解决问题，而是走向了另一条路径。它们开始分化，形成组织，再进一步形成器官与系统。也就是说，生命并没有试图优化 <code>单个单元</code> ，而是通过“结构升级”，来承载更高的复杂度。也许，在亿万年的演化中，所有试图靠单一结构承载复杂性的路径，几乎都被淘汰了。只有最终留下来的，才是我们所见到的。</p>
+<hr />
+<p>软件系统也是一样。当一个函数、一个文件、甚至一个模块试图承载过多复杂性时，问题并不在于“写得不够好”，而在于它违背了一个更底层的规律：</p>
+<blockquote>
+<p>单一单元无法无限承载复杂度。</p>
+</blockquote>
+<p>这不是工程经验，也不是某种最佳实践，而是一种跨越生物与软件的共同约束：
+复杂性一旦超过边界的承载能力，系统就必须通过结构分化来继续存在。否则，它就会像那些在演化中消失的路径一样，被淘汰。</p>
+<hr />
+<h5 id="2-看看我们的代码">2. 看看我们的代码</h5>
+<p>回头看看我们的后端。大约 500 行的代码都集中在 <code>server/src/main.rs</code>。它虽然可以继续成长，但只是停在“单细胞阶段”。<br />
+你仔细看会发现，其实结构已经“隐约存在”了。认证是一块，WebSocket 是一块，聊天室又是一块，这些逻辑本来就是不同的事情，有各自的功能和规则。但现在，它们只是被写在一起，而不是被组织起来。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c543b8697cfc4da1b946affef0b35f4e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1102&amp;h=443&amp;s=103081&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>这就像一个细胞，内部已经变得很复杂了，但外部还是一个壳。所有交换、所有变化，都必须从这一个边界进出。时间一长，就会出现那种感觉：代码不是不能看，而是越来越费劲，改一处要顾很多地方。</p>
+<blockquote>
+<p>Q: 分析一下 server/src/main.rs ，整理出它的构成成分，以及各个成分的代码量。以下面的形式输出：</p>
+</blockquote>
+<pre><code class="diagram" style="font-size:13.5px">main.rs（约 445 行）
+├── 构成1（xx行）（Symbol1, Symbol2...）
+├── 构成2（xx行）（Symbol1, Symbol2...）
+</code></pre>
+<p>可以用上面的对话，让 AI 帮你整理一下，结果如下。用生命体类比来看，这就是一个典型的&quot;巨型单细胞&quot;——六七种完全不同的职责（认证、JWT、WebSocket、聊天室、模拟数据、网络工具）全部挤在同一个细胞膜里。</p>
+<pre><code class="diagram" style="font-size:13.5px">main.rs（约 445 行）
+├── 依赖导入（17行）
+├── 共享状态定义（15行）（AppState, User）
+├── JWT 相关（25行）（Claims, generate_token, verify_token）
+├── 认证接口（74行）（SmsRequest/Response, send_sms, LoginRequest/Response, login）
+├── 用户信息接口（17行）（profile）
+├── 模拟数据接口（51行）（VersionInfo, Conversation, conversation, version）
+├── WebSocket 基础（26行）（ws_handler, handle_socket）
+├── WebSocket 认证（73行）（ws_auth_handler, handle_auth_socket, wait_for_auth）
+├── 聊天室广播（80行）（ws_chat_room_handler, handle_chat_room）
+├── 启动入口（29行）（main, 路由注册, 服务启动）
+└── 网络工具（24行）（get_local_ip, try_get_ip, is_real_lan_ip）
+</code></pre>
+<hr />
+<h5 id="3-拆分与组织代码">3. 拆分与组织代码</h5>
+<blockquote>
+<p>Q：当前main.rs 承担的太多了，有什么好的方案，可以更好地提升它的可维护性。</p>
+</blockquote>
+<p>AI 给出的建议是: 按功能域分目录, auth/、ws/、mock/、util/ 各管各的</p>
+<pre><code class="diagram" style="font-size:13.5px">server/src/
+├── main.rs          # 组装路由，启动服务
+├── state.rs         # 共享状态
+├── auth/            # 认证（JWT、登录、短信、用户信息）
+├── ws/              # WebSocket（基础echo、认证连接、聊天室广播）
+├── mock/            # 模拟数据（版本号、会话列表）
+└── util/            # 工具（局域网IP获取）
+</code></pre>
+<ul>
+<li>每个目录内按职责分文件：路由（URL 映射）、处理器（业务逻辑）、模型（数据结构）</li>
+<li>共享的东西提到顶层：state.rs 是所有模块都需要的，放在 src 根目录</li>
+<li>main.rs 只做一件事：组装路由，启动服务</li>
+</ul>
+<hr />
+<p>如果把之前 <a href="https://github.com/toly1994328/flash_im_by_ai/blob/d8ea65800b3743269166d9b7d43f8f291a08c792/server/src/main.rs">main.rs</a> 里的函数逻辑，比作一堆功能各异的细胞汇集地。那么此时，AI 为我们做的，就是将各类功能的细胞，归门别类地，放在不同的文件夹(功能区)中。这就是最简单的功能拆分的方式：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bfcb386d5a834b83baa7a0ad6933855d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=983&amp;h=617&amp;s=99123&amp;e=png&amp;b=dedde1" alt="image.png" /></p>
+<p>由于目前整体的逻辑并不复杂，这里只是进行简单地拆分、重新摆放，并未体现出过高结构化。不过此时 <a href="">main.rs</a> 已经非常清爽了：</p>
+<ul>
+<li>打印的 ip 地址，通过 <code>get_local_ip</code> 方法获取；</li>
+<li>各个模块的路由，下放给模块内部维护，通过 merge 合并；</li>
+</ul>
+<p>如果对 Rust 的文件模块拆分感兴趣的，也可以让 AI 给你介绍一下。一边聊天，一边学习，学不会也没什么关系，反正也不影响功能实现。但混个脸熟，多一点认知，也不是什么坏事。</p>
+<blockquote>
+<p>Q: 可以简单介绍一下目前 rust 的拆分手段吗，比如文件的导入和使用。<br />
+写到 docs\develop\modules\rust\01_xxx.md, 以使用到的关键字命名，下划线连接。</p>
+</blockquote>
+<p>简单介绍一下，mod、use、pub 三个关键词配合，构成 Rust 模块之间的最基本的边界和通道。细节就不展开了，感兴趣的可以看看 <a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/develop/modules/rust/01_mod_use_pub.md">AI写的 01_mod_use_pub</a></p>
+<ul>
+<li><code>mod</code> 声明&quot;我有哪些子模块&quot;，</li>
+<li><code>use</code> 声明&quot;我要用别人的什么东西&quot;，</li>
+<li><code>pub</code> 决定&quot;我愿意让别人用我的什么东西&quot;。</li>
+</ul>
+<hr />
+<h5 id="4-单元测试的信心">4. 单元测试的信心</h5>
+<p>我们刚才相当于重构了整个后端的代码，那么问题来了。我怎么知道有没有改出 Bug 呢？前端目前用我现在的接口会不会出问题呢？</p>
+<p>还记得之前我们写过的前端测试用例吗？它就是为了这一刻而生的。如果测试用例覆盖完全，只要跑一遍，哪里有问题，就可以立刻发现。没有问题，就说明当前的重构功能已经对齐。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3492adba60ec4659b0e80261222e4c0c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1793&amp;h=684&amp;s=247757&amp;e=png&amp;b=101010" alt="image.png" /></p>
+<p>我常把重构比作一种蜕变，它的结果通常是生物获得了全新的生存维度。在生物蜕变前，旧的表皮（旧代码）会变得僵硬、限制生长。此时，内部逻辑（生命体）已经演进到了旧外壳无法容纳的地步。</p>
+<p>在自然界，蜕变失败意味着死亡，最危险的时刻是新皮尚未坚硬时。在软件工程中，重构失败意味着线上事故。此时，<strong>测试用例就是防弹衣</strong>。只要测试全绿，就意味着新旧逻辑的“功能等价性”得到了保证，而外界（前端）甚至感知不到内部已经发生了一场革命。</p>
+<hr />
+<h4 id="三-拆分之后-看看内部">三、拆分之后，看看内部</h4>
+<p>拆分完成了，测试也通过了。但如果只是把代码从一个文件搬到多个文件，那和搬家没什么区别——东西还是那些东西，只是换了个房间。真正值得关注的是：拆分之后，每个模块内部长什么样？它们之间是怎么协作的？让我们打开几个文件，看看&quot;细胞分化&quot;之后的结果。</p>
+<hr />
+<h5 id="1-模块的内部分层">1. 模块的内部分层</h5>
+<p>以 <code>auth/</code> 模块为例，它内部被拆成了四个文件：</p>
+<pre><code class="diagram" style="font-size:13.5px">auth/
+├── mod.rs       # 模块声明：告诉外界&quot;我有哪些子模块&quot;
+├── routes.rs    # 路由定义：URL 和处理函数的映射
+├── handler.rs   # 业务逻辑：发验证码、登录、获取用户信息
+├── jwt.rs       # JWT 工具：Token 的生成与验证
+└── model.rs     # 数据模型：请求和响应的结构体定义
+</code></pre>
+<p>这不是随意的拆法。每个文件对应一种<strong>职责</strong>：</p>
+<ul>
+<li><code>routes.rs</code> 只关心&quot;哪个 URL 对应哪个函数&quot;，不关心函数里做了什么：</li>
+<li><code>handler.rs</code> 只关心业务逻辑：验证手机号、比对验证码、生成 Token，不关心自己被挂在哪个 URL 上。</li>
+<li><code>model.rs</code> 只定义数据的形状：<code>SmsRequest</code> 长什么样、<code>LoginResponse</code> 有哪些字段，不关心数据怎么被处理。</li>
+<li><code>jwt.rs</code> 只管 Token 的生成和验证，不关心谁在调用它。</li>
+</ul>
+<hr />
+<p>当再让 AI 改代码时，这种分层的好处，会立刻体现出来。比如你想在现有验证码登录的基础上，再增加一种 <code>密码登录</code> 的方式，只需要告诉 AI：</p>
+<blockquote>
+<p>Q: 在 server/src/auth/ 模块中增加密码登录功能，新增登录类型枚举。<br />
+你可以内置几个内存数据。注意保持代码结构性的整洁。</p>
+</blockquote>
+<p>此时 AI 就可以把关注的精力从之前的整个文件，缩减到认证的模块的具体文件。比如这里只在登录的模型层，为 <code>LoginRequest</code> 增加了类型字段。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c781e819731e4f079b71aa549e82fa3c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1091&amp;h=399&amp;s=86733&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>具体的功能逻辑，会聚焦到 <code>handler.rs</code> 中, 根据类型类型进行不同的认证行为。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/09c7461767dd439e997d77c8a7c2f666~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1205&amp;h=406&amp;s=126673&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<hr />
+<p>由于后端改动了登录的逻辑，此时可能会影响前端。这就要有请测试用例来干活了，跑一下认证相关的测试用例，确实报错了：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f75f21db7d0b4816890502255f05d2e8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1155&amp;h=494&amp;s=91510&amp;e=png&amp;b=f0eff2" alt="image.png" /></p>
+<p>AI 总结: 发送验证码的 4 个测试全部通过（/auth/sms 接口没改），但所有涉及登录的测试都挂了——422 Unprocessable Entity，因为前端发的是 {phone, code}，后端现在期望 {phone, type, credential}，serde 反序列化直接拒绝了。</p>
+<p>此时，你可以让 AI 基于测试用例的结果，来修正前端逻辑。</p>
+<blockquote>
+<p>Q: 为我基于测试用例的异常信息，修正前端逻辑。在进行测试，直到没有问题。<br />
+另外，为我增加一下密码登录的测试用例。</p>
+</blockquote>
+<p>可以看到，AI 编程的关键，就是在每个流程节点上，真正干活的都是 AI，我们则是把控方向。贯穿起开发的流程。比如这个密码登录这个新的功能需求，就这样被融入到了后端系统。同理，你也可以将这个功能，同步到前端界面上，最终让用户可以使用。</p>
+<hr />
+<h5 id="2-模块之间的协作">2. 模块之间的协作</h5>
+<p>拆分不是孤立的。看看 <code>ws/auth.rs</code> 里的这行代码：</p>
+<pre><code class="language-rust">use crate::auth::jwt::verify_token;
+</code></pre>
+<p>WebSocket 认证模块需要验证 Token，但它不自己实现验证逻辑，而是从 <code>auth</code> 模块&quot;借用&quot;了 <code>verify_token</code> 这个能力。再看 <code>ws/chat_room.rs</code>：</p>
+<pre><code class="language-rust">use super::auth::wait_for_auth;
+</code></pre>
+<p>聊天室需要认证用户身份，它也不自己写认证流程，而是复用了同模块下 <code>auth.rs</code> 提供的 <code>wait_for_auth</code> 函数。</p>
+<p>这就是第一节里说的<strong>接口契约</strong>在实际代码中的体现。<code>verify_token</code> 的契约很简单：给我一个 Token 字符串，我还你一个 <code>user_id</code>。至于 Token 是用 HS256 还是 RS256 签的、密钥存在哪里、过期时间多长——调用方完全不需要知道。哪天你想把 JWT 换成 Session，只要 <code>verify_token</code> 的签名不变，<code>ws/auth.rs</code> 和 <code>ws/chat_room.rs</code> 一行都不用改。</p>
+<p>用生物学的话说：心脏（聊天室）不需要知道血液（Token）是怎么造出来的，它只需要知道血液会按时送到。造血的事，交给骨髓（auth 模块）就好。</p>
+<hr />
+<h5 id="3-共享状态-贯穿全身的血液">3. 共享状态：贯穿全身的血液</h5>
+<p>还有一个值得注意的角色：<code>state.rs</code>。它没有被放进任何模块，而是独立在 <code>src/</code> 根目录下：</p>
+<pre><code class="language-rust">pub struct AppState {
+    pub users: Mutex&lt;HashMap&lt;String, User&gt;&gt;,       // 用户表
+    pub sms_codes: Mutex&lt;HashMap&lt;String, String&gt;&gt;, // 验证码表
+    pub next_id: Mutex&lt;i64&gt;,                       // 自增 ID
+    pub chat_tx: broadcast::Sender&lt;String&gt;,        // 聊天室广播通道
+}
+</code></pre>
+<p><code>AppState</code> 被 <code>auth</code>、<code>ws</code>、<code>mock</code> 三个模块共同依赖。它就像生物体中的<strong>血液</strong>——不属于任何一个器官，但流经每一个器官，为它们提供共享的资源。</p>
+<p>这也是为什么它被放在顶层而不是某个模块内部。如果把 <code>AppState</code> 放进 <code>auth/</code> 模块，那 <code>ws/</code> 模块就要反向依赖 <code>auth/</code>，模块之间的关系就会变得纠缠不清。把共享的东西提到更高的层级，是保持模块独立性的一个简单但重要的原则。</p>
+<hr />
+<h5 id="4-回头看-main-rs">4. 回头看 main.rs</h5>
+<p>最后再看一眼重构后的 <code>main.rs</code>：</p>
+<pre><code class="language-rust">mod state;
+mod auth;
+mod ws;
+mod mock;
+mod util;
+
+#[tokio::main]
+async fn main() {
+    let state = state::create_app_state();
+    let local_ip = util::network::get_local_ip();
+    let app = Router::new()
+        .merge(auth::routes::router())
+        .merge(ws::routes::router())
+        .merge(mock::routes::router())
+        .nest_service(&quot;/static&quot;, ServeDir::new(&quot;static&quot;))
+        .with_state(state);
+    // ...启动服务
+}
+</code></pre>
+<p>它现在只做两件事：<strong>创建共享状态</strong>和<strong>组装路由</strong>。就像生物体的 DNA 不直接参与任何具体的生命活动，但它定义了整个生命体的蓝图——哪些器官要被创建、它们之间如何连接。<code>main.rs</code> 就是这个项目的 DNA：它不处理任何业务逻辑，但它决定了整个系统的组装方式。</p>
+<hr />
+<h4 id="四-本章小结">四、本章小结</h4>
+<p>从 445 行到 30 行，减少的不只是代码量，而是<strong>认知负担</strong>。打开 <code>main.rs</code>，你一眼就能看清整个系统的骨架：有认证、有 WebSocket、有模拟数据、有静态文件服务。想深入哪个部分，再进对应的目录去看。这就是模块化带来的最直接的好处——<strong>你可以选择在什么层级上思考问题</strong>。</p>
+<p>这种结构上的清晰，会立刻兑现为效率。比如我们给认证模块增加密码登录，整个过程只动了 <code>auth/</code> 下的三个文件，其余模块完全无感。后端接口格式一变，前端测试立刻报红；改了一行请求体字段，测试重新全绿。</p>
+<p><strong>改动有边界，验证有手段</strong>——模块的边界限制了爆炸半径，测试用例在第一时间发出警报。两者配合，才让这个不断生长的代码体，具备了基本的自愈能力。</p>
+<p>当然，由于目前功能较少、代码量不大，这次的结构重构是最朴素的——按功能域分目录、按职责分文件，仅此而已。没有抽象接口、没有依赖注入、没有分层架构。但这恰恰是对的：架构应该匹配当前的复杂度，而不是预支未来的复杂度。</p>
+<p>随着功能不断生长，结构自然会跟着演化。比如当 auth/handler.rs 随着功能越来越多，它本身也会变得臃肿。我们就要考虑将认证，从 <code>组织</code> 到 <code>器官</code> 的进化。到那时候，再做更深层次的拆分和抽象也不迟。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-11.html">← 种子#5 ｜ 版本控制的回溯能力</a>
+      <a class="next" href="ch-13.html">经络#2 ｜ 后端 - 认证系统升级 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-软件生命体的组织结构">一、软件生命体的组织结构</a></li>
+      <li class="lv5"><a href="#1-细胞-最小功能单元">1. 细胞 - 最小功能单元</a></li>
+      <li class="lv5"><a href="#2-组织-明确分工边界">2. 组织 - 明确分工边界</a></li>
+      <li class="lv5"><a href="#3-器官-接口契约">3. 器官 - 接口契约</a></li>
+      <li class="lv5"><a href="#4-系统-全局协同">4. 系统 - 全局协同</a></li>
+      <li class="lv5"><a href="#5-生命体">5. 生命体</a></li>
+      <li class="lv4"><a href="#二-简单认识结构拆分">二、简单认识结构拆分</a></li>
+      <li class="lv5"><a href="#1-单细胞的极限">1. 单细胞的极限</a></li>
+      <li class="lv5"><a href="#2-看看我们的代码">2. 看看我们的代码</a></li>
+      <li class="lv5"><a href="#3-拆分与组织代码">3. 拆分与组织代码</a></li>
+      <li class="lv5"><a href="#4-单元测试的信心">4. 单元测试的信心</a></li>
+      <li class="lv4"><a href="#三-拆分之后-看看内部">三、拆分之后，看看内部</a></li>
+      <li class="lv5"><a href="#1-模块的内部分层">1. 模块的内部分层</a></li>
+      <li class="lv5"><a href="#2-模块之间的协作">2. 模块之间的协作</a></li>
+      <li class="lv5"><a href="#3-共享状态-贯穿全身的血液">3. 共享状态：贯穿全身的血液</a></li>
+      <li class="lv5"><a href="#4-回头看-main-rs">4. 回头看 main.rs</a></li>
+      <li class="lv4"><a href="#四-本章小结">四、本章小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

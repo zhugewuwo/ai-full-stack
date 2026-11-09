@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>土壤#5 ｜ 对话开创环境(前端) - AI 全栈编程生存指南</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-title" href="index.html">AI 全栈编程生存指南</a>
+    <div class="topbar-right">
+      <a class="login-btn" href="https://github.com/toly1994328/flash_im_by_ai" target="_blank" rel="noopener">项目源码</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="chapter-list">
+      <ol>
+        <li><a href="ch-1.html"><span class="num">1</span><span class="info"><span class="t">序言 ｜ 生命不息</span><span class="d">阅读时长: 4分58秒</span></span></a></li>
+        <li><a href="ch-2.html"><span class="num">2</span><span class="info"><span class="t">土壤#1 ｜ 从刀耕火种到机械工业</span><span class="d">阅读时长: 8分4秒</span></span></a></li>
+        <li><a href="ch-3.html"><span class="num">3</span><span class="info"><span class="t">土壤#2 ｜ 新时代的编程活动</span><span class="d">阅读时长: 9分42秒</span></span></a></li>
+        <li><a href="ch-4.html"><span class="num">4</span><span class="info"><span class="t">土壤#3 ｜ AI Agent 编程智能体</span><span class="d">阅读时长: 12分58秒</span></span></a></li>
+        <li><a href="ch-5.html"><span class="num">5</span><span class="info"><span class="t">土壤#4 ｜ 对话开创环境(后端)</span><span class="d">阅读时长: 9分14秒</span></span></a></li>
+        <li class="active"><a href="ch-6.html"><span class="num">6</span><span class="info"><span class="t">土壤#5 ｜ 对话开创环境(前端)</span><span class="d">阅读时长: 10分26秒</span></span></a></li>
+        <li><a href="ch-7.html"><span class="num">7</span><span class="info"><span class="t">种子#1 ｜ 产品的基因序列</span><span class="d">阅读时长: 6分42秒</span></span></a></li>
+        <li><a href="ch-8.html"><span class="num">8</span><span class="info"><span class="t">种子#2 ｜ 产品的功能网络</span><span class="d">阅读时长: 6分58秒</span></span></a></li>
+        <li><a href="ch-9.html"><span class="num">9</span><span class="info"><span class="t">种子#3 ｜ 让心脏开始跳动</span><span class="d">阅读时长: 9分37秒</span></span></a></li>
+        <li><a href="ch-10.html"><span class="num">10</span><span class="info"><span class="t">种子#4 ｜ 我是谁？ 身份标识</span><span class="d">阅读时长: 11分56秒</span></span></a></li>
+        <li><a href="ch-11.html"><span class="num">11</span><span class="info"><span class="t">种子#5 ｜ 版本控制的回溯能力</span><span class="d">阅读时长: 9分52秒</span></span></a></li>
+        <li><a href="ch-12.html"><span class="num">12</span><span class="info"><span class="t">经络#1 ｜ 模块化的分工协作</span><span class="d">阅读时长: 14分0秒</span></span></a></li>
+        <li><a href="ch-13.html"><span class="num">13</span><span class="info"><span class="t">经络#2 ｜ 后端 - 认证系统升级</span><span class="d">阅读时长: 13分48秒</span></span></a></li>
+        <li><a href="ch-14.html"><span class="num">14</span><span class="info"><span class="t">经络#3 ｜ 前端 - 从启动到认证</span><span class="d">阅读时长: 15分9秒</span></span></a></li>
+        <li><a href="ch-15.html"><span class="num">15</span><span class="info"><span class="t">经络#4 ｜ 事物的相互关系</span><span class="d">阅读时长: 15分7秒</span></span></a></li>
+        <li><a href="ch-16.html"><span class="num">16</span><span class="info"><span class="t">经络#5 ｜ 模块的物理边界</span><span class="d">阅读时长: 13分41秒</span></span></a></li>
+        <li><a href="ch-17.html"><span class="num">17</span><span class="info"><span class="t">经络#6 ｜ 生命的时间跨度</span><span class="d">阅读时长: 11分29秒</span></span></a></li>
+        <li><a href="ch-18.html"><span class="num">18</span><span class="info"><span class="t">根芽#1 ｜ 协议与连接</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-19.html"><span class="num">19</span><span class="info"><span class="t">根芽#2 ｜ 会话列表</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-20.html"><span class="num">20</span><span class="info"><span class="t">根芽#3 ｜ 消息收发 - 后端链路</span><span class="d">阅读时长: 16分12秒</span></span></a></li>
+        <li><a href="ch-21.html"><span class="num">21</span><span class="info"><span class="t">根芽#4 ｜ 流程方法论探索</span><span class="d">阅读时长: 18分33秒</span></span></a></li>
+        <li><a href="ch-22.html"><span class="num">22</span><span class="info"><span class="t">根芽#5 ｜ 解读项目，破除黑箱</span><span class="d">阅读时长: 18分6秒</span></span></a></li>
+        <li><a href="ch-23.html"><span class="num">23</span><span class="info"><span class="t">根芽#6 ｜ 图片、视频、文件消息</span><span class="d">阅读时长: 18分5秒</span></span></a></li>
+        <li><a href="ch-24.html"><span class="num">24</span><span class="info"><span class="t">枝叶#1 ｜ 好友关系</span><span class="d">阅读时长: 21分54秒</span></span></a></li>
+        <li><a href="ch-25.html"><span class="num">25</span><span class="info"><span class="t">枝叶#2 ｜ 创建群聊</span><span class="d">阅读时长: 17分8秒</span></span></a></li>
+        <li><a href="ch-26.html"><span class="num">26</span><span class="info"><span class="t">枝叶#3 ｜ 加群与审批</span><span class="d">阅读时长: 24分57秒</span></span></a></li>
+        <li><a href="ch-27.html"><span class="num">27</span><span class="info"><span class="t">枝叶#4 ｜ 群聊管理</span><span class="d">阅读时长: 23分17秒</span></span></a></li>
+        <li><a href="ch-28.html"><span class="num">28</span><span class="info"><span class="t">枝叶#5 ｜ 在线状态与已读回执</span><span class="d">阅读时长: 20分55秒</span></span></a></li>
+        <li><a href="ch-29.html"><span class="num">29</span><span class="info"><span class="t">枝叶#6 ｜ 综合搜索</span><span class="d">阅读时长: 15分2秒</span></span></a></li>
+        <li><a href="ch-30.html"><span class="num">30</span><span class="info"><span class="t">桢干#1 ｜ 本地缓存与同步</span><span class="d">阅读时长: 17分44秒</span></span></a></li>
+        <li><a href="ch-31.html"><span class="num">31</span><span class="info"><span class="t">桢干#2 ｜ 消息功能扩展</span><span class="d">阅读时长: 19分37秒</span></span></a></li>
+        <li><a href="ch-32.html"><span class="num">32</span><span class="info"><span class="t">桢干#3 ｜ AI 全栈开发流程梳理</span><span class="d">阅读时长: 21分24秒</span></span></a></li>
+        <li><a href="ch-33.html"><span class="num">33</span><span class="info"><span class="t">桢干#4 ｜ 项目体检，望闻问切</span><span class="d">阅读时长: 16分23秒</span></span></a></li>
+        <li><a href="ch-34.html"><span class="num">34</span><span class="info"><span class="t">桢干#5 ｜ 养护根基，虫害不生</span><span class="d">阅读时长: 13分23秒</span></span></a></li>
+        <li><a href="ch-35.html"><span class="num">35</span><span class="info"><span class="t">果实#1 ｜ 后端部署</span><span class="d">阅读时长: 13分36秒</span></span></a></li>
+        <li><a href="ch-36.html"><span class="num">36</span><span class="info"><span class="t">果实#2 ｜ 构建 Android 产品</span><span class="d">阅读时长: 12分39秒</span></span></a></li>
+        <li><a href="ch-37.html"><span class="num">37</span><span class="info"><span class="t">果实#3 ｜ 构建 iOS 产品</span><span class="d">阅读时长: 16分24秒</span></span></a></li>
+        <li><a href="ch-38.html"><span class="num">38</span><span class="info"><span class="t">果实#4 ｜ 构建 MacOS 产品</span><span class="d">阅读时长: 13分58秒</span></span></a></li>
+        <li><a href="ch-39.html"><span class="num">39</span><span class="info"><span class="t">果实#5 ｜ 构建 Windows 产品</span><span class="d">阅读时长: 11分18秒</span></span></a></li>
+        <li><a href="ch-40.html"><span class="num">40</span><span class="info"><span class="t">果实#6 ｜ 构建 Linux 产品</span><span class="d">阅读时长: 10分0秒</span></span></a></li>
+        <li><a href="ch-41.html"><span class="num">41</span><span class="info"><span class="t">果实#7 ｜ 构建 Web 产品</span><span class="d">阅读时长: 12分13秒</span></span></a></li>
+        <li><a href="ch-42.html"><span class="num">42</span><span class="info"><span class="t">果实#8 ｜ 构建纯血鸿蒙产品</span><span class="d">阅读时长: 17分40秒</span></span></a></li>
+        <li><a href="ch-43.html"><span class="num">43</span><span class="info"><span class="t">生生不息 ｜ 软件更新，持续成长</span><span class="d">阅读时长: 14分15秒</span></span></a></li>
+        <li><a href="ch-44.html"><span class="num">44</span><span class="info"><span class="t">附录#迭代 - 后续闪信版本更新记录</span><span class="d">阅读时长: 11分55秒</span></span></a></li>
+        <li><a href="ch-45.html"><span class="num">45</span><span class="info"><span class="t">附录#技能 ｜ 需求分析师 Feature Analyst</span><span class="d">阅读时长: 3分17秒</span></span></a></li>
+        <li><a href="ch-46.html"><span class="num">46</span><span class="info"><span class="t">附录#技能 ｜ 设计规划师 Feature Designer</span><span class="d">阅读时长: 3分7秒</span></span></a></li>
+        <li><a href="ch-47.html"><span class="num">47</span><span class="info"><span class="t">附录#技能 ｜ 任务规划师 Feature Task Maker</span><span class="d">阅读时长: 2分23秒</span></span></a></li>
+        <li><a href="ch-48.html"><span class="num">48</span><span class="info"><span class="t">附录#技能 ｜ 功能测试链 Link Test Writer</span><span class="d">阅读时长: 3分24秒</span></span></a></li>
+        <li><a href="ch-49.html"><span class="num">49</span><span class="info"><span class="t">附录#技能 ｜ 功能归档者 Feature Archiver</span><span class="d">阅读时长: 3分48秒</span></span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="markdown-body">
+      <h1>土壤#5 ｜ 对话开创环境(前端)</h1>
+<p>要论多端开发的能力，Flutter 可谓天花板级别的存在。它可以将一个项目，构建出 7 个平台的应用产品。</p>
+<ul>
+<li>移动端: Android、iOS、HarmonyOS</li>
+<li>桌面端: Windows、Macos、Linux</li>
+<li>网页端： Web</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/db1419e1f16843dcaf6b01d7b3b9931a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1376&amp;h=768&amp;s=1410478&amp;e=png&amp;b=11577a" alt="image.png" /></p>
+<p>从 2018 年 Flutter 1.0 发布，到目前 2026 年 <code>Flutter 3.41.4</code> 历经了 8 年，Flutter 已然保持着版本更新、社区活跃。在新的时代 , Flutter 也在积极地拥抱 AI，比如官方推出的 MCP 和 skills 可以让 AI 更好的使用 Flutter 技术。</p>
+<hr />
+<h4 id="一-flutter-环境的安装">一、Flutter 环境的安装</h4>
+<p>虽然 Flutter 框架很强大，但是真的要产出七个平台产物，也不是那么容易的。特别对于新手而言，开发环境搭建是一个非常大的坎，特别是跨平台的技术，涉及面比较广。<br />
+我以前在 bilibili 发表过几个视频，介绍 Flutter 在各个平台开发应用的环境搭建。遇到问题朋友，可以根据视频中的操作来搭建开发环境，尽可能降低门槛。这里同样不花费宝贵的笔墨折腾环境了。</p>
+<blockquote>
+<p><a href="https://www.bilibili.com/video/BV1uY4y1s7Q4"> (主要) Flutter 全平台开发环境 | SDK 和 开发工具</a><br />
+<a href="https://www.bilibili.com/video/BV1Ea411s7xx">(主要) Flutter 全平台开发环境 | Android 设备运行项目</a><br />
+<a href="https://www.bilibili.com/video/BV1d34y1V7n9/">(选看) Flutter 全平台开发环境 | Window 平台桌面应用</a><br />
+<a href="https://www.bilibili.com/video/BV1v94y1X7zT">(选看) Flutter 全平台开发环境 | iOS/macOS 平台应用</a></p>
+</blockquote>
+<p>其实不同的平台开发，最大的区别是在 <code>打包构建流程</code> ，这些在最后发布阶段会进行逐一介绍。我们在一开始可以<strong>专注于一端</strong>开发，由于是一套逻辑代码，其他端最终表现也是一致的。这里给你一些建议:</p>
+<ul>
+<li>如果你是 Windows 电脑，
+<ul>
+<li>熟悉或喜欢 Android，推荐开发过程中使用 Android 运行。</li>
+<li>不想搞 Android 环境，可以尝试运行 Windows 应用。</li>
+</ul>
+</li>
+<li>如果你是 MacOS 电脑，
+<ul>
+<li>推荐开发过程中使用 iOS 运行。</li>
+<li>熟悉 Android，推荐开发过程中使用 Android 运行。</li>
+<li>想体验桌面端，直接运行 MacOS 应用。</li>
+</ul>
+</li>
+<li>啥也不想折腾，可以直接运行到浏览器。</li>
+</ul>
+<hr />
+<p>同样，你也可以试着让 AI 给你一些文档，让它引导你去完成这个艰难而重要的任务。</p>
+<blockquote>
+<p>我是一个初学者，请你为我准备一些 Flutter 开发环境搭建的教程。尽可能简洁扼要，并且流程细致。放在 docs\project\setup\flutter 文件夹下，包括一下内容:<br />
+<a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/project/setup/flutter/01_windows_sdk.md">1. Windows 系统中安装和配置 Flutter SDK </a><br />
+<a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/project/setup/flutter/02_macos_linux_sdk.md">2. MacOS/Linux 系统中安装和配置 Flutter SDK</a><br />
+<a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/project/setup/flutter/03_android.md">3. 在 Android 平台运行 Flutter 项目</a><br />
+<a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/project/setup/flutter/04_ios_macos.md">4. 在 iOS/Macos 平台运行 Flutter项目</a><br />
+<a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/project/setup/flutter/05_windows.md">5. 在 Windows 平台运行 Flutter 项目</a><br />
+<a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/project/setup/flutter/06_web.md">6. 在 Web 平台运行 Flutter 项目</a><br />
+<a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/project/setup/flutter/07_linux.md">7. 在 Linux 平台运行 Flutter 项目</a><br />
+<a href="https://github.com/toly1994328/flash_im_by_ai/blob/master/docs/project/setup/flutter/08_harmonyos.md">8. 在 HarmonyOS 平台运行 Flutter 项目</a></p>
+</blockquote>
+<hr />
+<h5 id="1-创建-flutter-前端应用">1. 创建 Flutter 前端应用</h5>
+<p>到这里，我默认你已经安装好了 Flutter 环境，并至少拥有了一端的运行能力。我们本书使用的是最新的 Flutter 3.41.4 版本。接下来让 AI 创建项目：</p>
+<blockquote>
+<p>在 client 文件夹下，为我用命令创建一个全端的 Flutter 应用程序，<br />
+应用名是 flash_im , 包名是 com.toly1994.flash_im</p>
+</blockquote>
+<p>这样就得到了 Flutter 项目代码：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/750eab757fe34676b2e40ea42ef99619~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1057&amp;h=699&amp;s=49841&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>这样项目整体结构，就基本确定了：包括文档和两端项目</p>
+<pre><code class="language-sh">flash_im # 项目
+   docs # 文档
+   client #客户端
+   server # 服务端
+</code></pre>
+<hr />
+<h5 id="2-运行项目">2. 运行项目</h5>
+<p>项目创建之后，可以让 AI 帮你运行 Flutter 项目，比如：</p>
+<blockquote>
+<p>为我将前端项目运行到 [Android 设备] 中</p>
+</blockquote>
+<p>你可以根据自己的情况和喜好，选择具体的设备类型。比如文档 Windows 电脑可以运行 Android、Windows、Web
+下面是 AI 为我运行到三端后的表现效果：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3b7f1c893d6d4cd5a33e5dd8c0160efe~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1869&amp;h=1493&amp;s=189319&amp;e=png&amp;b=fbf0fe" alt="image.png" /></p>
+<ul>
+<li>如果你已经运行起任意一端，那恭喜你，你已经手握一把威力无比的利剑，后面将一路披荆斩棘。</li>
+<li>如果你是毫无编程经验或者从未接触过 Flutter或 Rust 的朋友，凭借 AI 走到这里，那个这场最初的 AI使用试炼，你已经完美通关。</li>
+<li>如果你无法抵达这里，或遇到了这种问题，也很正常。不要灰心，可以把你的问题留在评论区，我们和大家将一起为你解答，在这条路上互帮互助，争取走到终点。</li>
+</ul>
+<hr />
+<h5 id="3-放个烟花庆祝一下吧">3. 放个烟花庆祝一下吧</h5>
+<p>为了庆祝环境安装成功，让 AI 给表演个界面吧。大家可以把你 AI 生成的烟花秀，在评论区秀一下，记录这个美好的瞬间。</p>
+<blockquote>
+<p>终于装好环境，并运行起来了，我现在非常激动，希望你可以为我实现一个小功能。<br />
+在主页加个 <code>烟花秀</code> 的按钮，点击跳转到对应界面。其中可以点击屏幕，释放五彩斑斓的烟花。
+你可以随意发挥你的创造能力，尽可能炫酷来衬托此时的心情。<br />
+要求：烟花秀的代码独立出来，保持良好的代码结构和组织形式。相信你可以的</p>
+</blockquote>
+<p>下面是我的演示：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/959281ce2c5a490183df1979a0d83b8b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=600&amp;h=320&amp;s=875683&amp;e=gif&amp;f=119&amp;b=0a0a0a" alt="无标题项目35cd39ec.autosave.gif" /></p>
+<hr />
+<h4 id="二-建造-playground-开发游乐场">二、建造 Playground 开发游乐场</h4>
+<p>应用的开发过程并不是一蹴而就的，我们有时候需要在 <strong>真实项目</strong> 之外，提供演练、测试、学习的场所，我称之为 <code>开发游乐场</code>。你可以在这里尽情搞一些小测试，来记录一下学习过程、
+比如刚才的放烟花就很适合放进去，它不会真正的入住最终的产品，却也是我们路程中的一部分。</p>
+<hr />
+<h5 id="1-和-ai-探讨游乐场的结构">1.和 AI 探讨游乐场的结构</h5>
+<p>至于游乐场该怎么搭建，和 AI 沟通探讨一下吧。</p>
+<blockquote>
+<p>有时候需要在 <strong>真实项目</strong> 之外，提供演练、测试、学习的场所。我称之为 <code>开发游乐场</code>。你对这个观点怎么看?</p>
+</blockquote>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d0e383e5744d49608acf9fea9a70aced~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=866&amp;h=364&amp;s=118798&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<blockquote>
+<p>我希望在 client 的前端项目里，搭建一个游乐场，但是在真正打包产品时，不会受到影响，你有什么开发和建议吗？</p>
+</blockquote>
+<p>然后它会去读取项目，然后给出具体的方案：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7488e4757e5d43f79ddd989f8eec96a4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=866&amp;h=459&amp;s=117713&amp;e=png&amp;b=efeef1" alt="image.png" /></p>
+<p>以及建议的目录结构，总体来看它的思路还是很清晰的。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d7abedf28be1444c99bdae2b8e3d4d1d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1015&amp;h=377&amp;s=33098&amp;e=png&amp;b=e0dfe3" alt="image.png" /></p>
+<hr />
+<h5 id="2-搭建游乐场">2. 搭建游乐场</h5>
+<blockquote>
+<p>很好，为我搭建游乐场吧，另外顺便把放烟花的功能放到游乐场里。</p>
+</blockquote>
+<p>目前烟花就  以后，就可以在 playground 里随意玩耍了。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3bdff81539a44cbbac370f64ad2ddf89~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=939&amp;h=432&amp;s=31149&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<hr />
+<h4 id="三-网络接口调用">三、网络接口调用</h4>
+<p>后端已经有了一个 conversation 的小接口，接下来，踏出全栈的第一步，使用 <code>网络请求</code> 联通前后端。比如我这边后端运行起来的是：</p>
+<blockquote>
+<p>http://192.168.1.75:9600/conversation</p>
+</blockquote>
+<p><code>注</code>: 不同设备运行的 ip 地址不同，我这边是 192.168.1.75</p>
+<hr />
+<h5 id="1-让-ai-请求接口">1.让 AI 请求接口</h5>
+<p>AI 智能体本身可以操作命令行，所以它可以使用 curl 请求接口。所以想要知道接口返回的什么数据，可以直接让 AI 返回请求，然后将结果输出到指定文件。这样数据可以 <strong>持久化存储</strong>，也就是数据会一直在那里：</p>
+<ul>
+<li>你可以随时检阅，了解接口返回数据情况。</li>
+<li>AI 也可以随时检阅，了解接口返回数据情况。</li>
+</ul>
+<blockquote>
+<p>为我通过 curl 请求 http://192.168.1.75:9600/conversation 接口，<br />
+并将请求结果数据存储到本地的 docs/data/playground/conversation/list.json 中</p>
+</blockquote>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6f82c0fac9ab44bd9162f430bbfb3fb2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1274&amp;h=298&amp;s=53717&amp;e=png&amp;b=f0eef2" alt="image.png" /></p>
+<p>无论是文档、还是接口数据，都是项目的资产。应该隶属于文档范畴，而文档则是 AI 了解项目的最精纯的养料。后续你会逐渐领略，面向文档编程的魅力。</p>
+<hr />
+<h5 id="2-让-ai-写前端请求代码">2.让 AI 写前端请求代码</h5>
+<p>刚才将 <code>list.json</code> 保存到本地，目的就是让 AI 可以了解输出结果的具体，以便它可以更好地写代码。这和古法编程时代的开发流程也很像，知道数据长啥样，然后设计实体类、接口请求。只不过想在 AI 取代了编码的苦力活。</p>
+<blockquote>
+<p>结合刚才的请求结果，为我在 playground 里做一个简单的网络请求单元，叫做 conversation。<br />
+要求结构分层合理，用实体类、请求层，使用 dio 库，ip 地址可能变化，需要可配置。
+另外接口请求可独立测试，写到合适的测试文件中。</p>
+</blockquote>
+<p>这样， AI 为我们学好了，会话接口的请求的相关代码：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c91c86001297442ba1f3268647ffe58f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=880&amp;h=465&amp;s=33218&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>并且在测试文件中书写好了测试用例，保证接口随时可以测试，检验逻辑的正确性。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8ac6b59908004f01b79d7ebf8c33d25a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1342&amp;h=596&amp;s=136564&amp;e=png&amp;b=f1f0f3" alt="image.png" /></p>
+<p>除此之外，它还可以为我们进行测试，如果出现错误，他也能根据异常自主修这个代码，直至逻辑正确，所有测试通过。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e3a8553b9c91495e87f5854ea19e9813~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1091&amp;h=679&amp;s=115742&amp;e=png&amp;b=f0eff2" alt="image.png" /></p>
+<hr />
+<h5 id="3-让-ai-真正看见">3. 让 AI 真正看见</h5>
+<p>目前 AI 编程工具一般都可以识别图片，使用给一个微信截图，让它参考进行操作：</p>
+<blockquote>
+<p>结合这个截图，为我实现会话的视图层，注意代码结构的分离。</p>
+</blockquote>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/035016c7a82e401bac3d259a7da74467~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1215&amp;h=557&amp;s=168137&amp;e=png&amp;b=efeef1" alt="image.png" /></p>
+<p>它完成完成任务，甚至主动修改了后端，通过 picsum 随机图片，为每个会话增加了随机头像：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b3ebf2cf14d44f4dba05805b8939ddcd~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1178&amp;h=322&amp;s=47375&amp;e=png&amp;b=edecf0" alt="image.png" /></p>
+<p>最后，可以看到，它对截图的还原度还是非常高的：</p>
+<table>
+<thead>
+<tr>
+<th>游乐场</th>
+<th>对截图的还原</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7280cd17781f463a9acda34ad3bfb2a9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=86544&amp;e=png&amp;b=fbf1fe" alt="MuMu-20260314-002758-845.png" /></td>
+<td><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ce3d9a90bf47402996af3627f5d831c5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1080&amp;h=2400&amp;s=504489&amp;e=png&amp;b=fefefe" alt="MuMu-20260314-002845-970.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>仔细看我和 AI 的聊天，会发现，我会把我想要的内容，尽可能完善而精准地告诉它。你在使用 AI 时，可以把它当成一个为你干活的 <code>人</code>，你说的任务越精确，它理解的就会越清楚，就约不会出错。大家都会聊天，但具体聊什么，是非常关键的。</p>
+<hr />
+<h4 id="三-阶段小结">三、 阶段小结</h4>
+<table>
+<thead>
+<tr>
+<th>存档点</th>
+<th>tag</th>
+<th>提交点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前后端环境 OK</td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/releases/tag/v0.1.0">v0.1.0</a></td>
+<td><a href="https://github.com/toly1994328/flash_im_by_ai/tree/e85619671a1f7002c35c49465c8bb5a830ad0ace">e856196</a></td>
+</tr>
+</tbody>
+</table>
+<p>现在来会回顾一下。从后端接口、到前端请求、再到测试、最后到界面渲染，整个流程，我们只是在和 AI 纯聊天。甚至最好，还可以让 AI 帮忙，整理总结 conversation 真个流程，给一个汇报：</p>
+<blockquote>
+<p>目前游乐场中 conversation 从 0到1，全流程给予 AI 处理，我只是在聊天而已。你可以帮我总结一下，其中涉及的比较重要的流程点，给一份汇报文档，写入到 docs/develop/report 里</p>
+</blockquote>
+<p>它总结得很到位，基本上一个全栈的功能，都可以通过这一条流程贯穿前后端：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b5bb10a5cee247e9a21b06f2a0015548~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1286&amp;h=119&amp;s=15672&amp;e=png&amp;b=f1eff7" alt="image.png" /></p>
+<p>试想一下，随着功能需求一直增加，你只是一味的让 AI 自己埋头苦干。不出三四个版本的迭代，你就很可能不知道项目在干什么了，也就失去了战场的指挥权。</p>
+<p>可以看出，我在一边实现功能，一边尽可能记录开发过程中涉及到的一切。俗话说 <code>好记性不如烂笔头</code> 。这样，当一个项目开发完毕，你拥有的就不只是一个软件产品，还有完整的项目文档资产。<br />
+而这个文档即能让你对整个项目有所 <code>把控</code> ，又可以作为 AI 的养分，让它迅速理解项目的功能点、数据信息、开发规范等等。为这个资产，也可以为你下一个产品提供宝贵的经验。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6eca94d98ba34878bb87102232ab0222~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1123&amp;h=527&amp;s=52356&amp;e=png&amp;b=f2f1f4" alt="image.png" /></p>
+<p>虽然目前只是一个非常小小的使用开胃菜，但其中涉及的流程和思想还是非常重要的。至于文档结构的合理规划方面，我也在不断地尝试和探索，这并不是最终的形态，后续我们也可以一起成长。</p>
+<p>不管怎么说，恭喜你，仅靠和 AI 聊天实现了一个贯穿前后端的小功能。有什么想法和建议，欢迎评论区探讨，后面几章，我们将专注于思考产品的功能设计，了解这个即时通信项目究竟要做些什么，该怎么规划、怎么拆解、怎么实现。</p>
+
+    </article>
+    <div class="pager">
+      <a class="prev" href="ch-5.html">← 土壤#4 ｜ 对话开创环境(后端)</a>
+      <a class="next" href="ch-7.html">种子#1 ｜ 产品的基因序列 →</a>
+    </div>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-head"><span>目录</span><span class="toc-toggle">≫</span></div>
+    <ul><li class="lv4"><a href="#一-flutter-环境的安装">一、Flutter 环境的安装</a></li>
+      <li class="lv5"><a href="#1-创建-flutter-前端应用">1. 创建 Flutter 前端应用</a></li>
+      <li class="lv5"><a href="#2-运行项目">2. 运行项目</a></li>
+      <li class="lv5"><a href="#3-放个烟花庆祝一下吧">3. 放个烟花庆祝一下吧</a></li>
+      <li class="lv4"><a href="#二-建造-playground-开发游乐场">二、建造 Playground 开发游乐场</a></li>
+      <li class="lv5"><a href="#1-和-ai-探讨游乐场的结构">1.和 AI 探讨游乐场的结构</a></li>
+      <li class="lv5"><a href="#2-搭建游乐场">2. 搭建游乐场</a></li>
+      <li class="lv4"><a href="#三-网络接口调用">三、网络接口调用</a></li>
+      <li class="lv5"><a href="#1-让-ai-请求接口">1.让 AI 请求接口</a></li>
+      <li class="lv5"><a href="#2-让-ai-写前端请求代码">2.让 AI 写前端请求代码</a></li>
+      <li class="lv5"><a href="#3-让-ai-真正看见">3. 让 AI 真正看见</a></li>
+      <li class="lv4"><a href="#三-阶段小结">三、 阶段小结</a></li></ul>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/app.js"></script>
+</body>
+</html>
